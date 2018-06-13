@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<buttonBarTemplate>
+	<buttonBar name="lccmsButtonBar" row = "5" colum = "1" >
+		<button name="buttonEnlarge" type="toggleIconButton" content="图形放大"
+				cmd="buttonEnlarge"  icon="/icon/close.gif" selectedIcon="/icon/cut.gif"
+				userTaskName = "zoom" methodName = "buttonEnlarge"/>
+		<button name="buttonReduce" type="toggleIconButton" content="图形缩小"
+				cmd="buttonReduce"  icon="/icon/close.gif" selectedIcon="/icon/cut.gif"
+				userTaskName = "zoom" methodName = "buttonReduce"/>
+		<button name="buttonAddLoadRegion" type="toggleIconButton" content="新增建设土地" 
+				cmd="buttonAddLoadRegion"  icon="/icon/open.gif" selectedIcon="/icon/cut.gif"  pressedIcon="/icon/close.gif"
+				userTaskName = "drawPolyLine" methodName = "buttonAddLoadRegion" />
+	</buttonBar>
+</buttonBarTemplate>

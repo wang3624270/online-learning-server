@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<buttonBarTemplate>
+	<buttonBar name="workflowButtonBar" row = "3" column = "1" >
+		<button name="buttonOpen" type="toggleIconButton" content="打开" 
+				cmd="buttonOpen"  icon="/icon/open.gif" selectedIcon="/icon/cut.gif"  pressedIcon="/icon/close.gif"/>
+		<button name="buttonClose" type="toggleIconButton" content="关闭"
+				cmd="buttonClose"  icon="/icon/close.gif" selectedIcon="/icon/cut.gif"/>
+		<button name="buttonPrint" type="toggleIconButton" content="打印"
+				cmd="buttonprint"  icon="button" selectedIcon="/icon/cut.gif"/>
+	</buttonBar>
+	<buttonBar name="graphEditCommandButtonBar" row="1"	column="7">
+		<button name="clear" type="button" content="清空"  cmd="clear"  />
+		<button name="create" type="button" content="新建"  cmd="create"  />
+		<button name="save" type="button" content="保存"  cmd="save"  />
+		<button name="load" type="button" content="加载"  cmd="load"  />
+		<button name="export" type="button" content="导出"  cmd="export"  />
+	</buttonBar>
+</buttonBarTemplate>

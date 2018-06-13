@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menutemplate>
+	<menu name="displayStyle" content="工作区显示风格" hander="file">
+		<menuItem name="singlePanelStyle" type="radioMenuItem"
+			content="单面板显示" defaultSelected="false" cmd="singlePanelDisplay"
+			handler="displayStyle" />
+		<menuItem name="tabPanelStyle" type="radioMenuItem" content="标签面板显示"
+			defaultSelected="true" cmd="tabPanelDisplay" handler="displayStyle" />
+	</menu>
+	<menu name="file" content="文件">
+		<menuItem name="saveFile" type="menuItem" content="保存" cmd="saveFile"
+			handler="file" />
+		<menuItem name="print" type="menuItem" content="打印" cmd="printFile"
+			handler="file" />
+		<menuItem name="displayStyle" type="menu" cmd="printFile"
+			handler="file" />
+		<menuItem name="separator" type="separator" hander="file" />
+		<menuItem name="quit" type="menuItem" content="退出" cmd="quit"
+			handler="file" />
+		<menuItem name="测试框架" type="menuItem" content="测试框架" cmd="frame/test.do"
+			handler="file" />
+	</menu>
+	<menu name="password" content="系统管理">
+		<menuItem name="auth_change_password" type="menuItem"
+			content="更改密码" cmd="OPEN_PANEL" handler="password" />
+		<menuItem name="auth_sys_relogin" type="menuItem"
+			content="重新登陆" cmd="NO_PANEL" />
+	</menu>
+	<menu name="degree_popup_displayStyle" content="工作区显示风格" handler="file">
+		<menuItem name="popup_singlePanelStyle" type="menuItem"
+			content="单面板显示" cmd="singlePanelDisplay" handler="displayStyle" />
+		<menuItem name="popup_tabPanelStyle" type="menuItem" content="标签面板显示"
+			cmd="tabPanelDisplay" handler="displayStyle" />
+	</menu>
+</menutemplate>

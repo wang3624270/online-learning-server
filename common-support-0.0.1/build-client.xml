@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="deploy" default="default">
+
+	<property environment="env" />
+	<property name="appname" value="badmintonhot" />
+
+	<property name="tmpdir" value="${java.io.tmpdir}/${appname}/" />
+	<property name="clientjar.file" value="${user.home}/${appname}.jar" />
+	<property name="badmintonhotDir" value="${basedir}/../badmintonhot" />
+
+
+	<import file="${basedir}/../apache-com-support-0.0.1/build.xml"
+		as="apache" />
+	<import file="${basedir}/../common-support-0.0.1/build.xml" as="common" />
+	<import file="${basedir}/../octopus-platform-0.0.1/build.xml" as="octopus" />
+	<import file="${basedir}/../octopus-auth-0.0.1/build.xml" as="auth" />
+	<import file="${basedir}/../uims-support/build.xml" as="uims" />
+
+
+
+	<!-- ================================= target: clientjar ================================= -->
+	<target name="default">
+		<mkdir dir="${tmpdir}" />
+
+		<unjar dest="${tmpdir}" src="${common-support-dir}/lib/gson-2.5.jar" />
+		<unjar dest="${tmpdir}" src="${common-support-dir}/lib/jxl-2.6.12.jar" />
+
+		<unjar dest="${tmpdir}" src="${octopusDir}/WebContent/WEB-INF/lib/sdu_itext.jar" />
+
+		<unjar dest="${tmpdir}" src="${uims-support-dir}/lib/dom4j-1.6.1.jar" />
+
+		<delete file="${clientjar.file}" />
+		<jar destfile="${clientjar.file}" duplicate="preserve" index="on">
+
+			<fileset dir="${apache-com-support-supportDir}/bin">
+				<include name="org/apache/log4j/**/*.*" />
+			</fileset>
+
+			<fileset dir="${common-support-dir}/bin">
+				<include name="cn/edu/sdu/common/**/*.*" />
+				<include name="org/sdu/**/*.*" />
+			</fileset>
+			
+			<fileset dir="${octopusDir}/WebContent/WEB-INF/classes">
+				<include name="org/octopus/common_business/data_dictionary/form/DataDictionary.class" />
+				<include name="org/octopus/common_business/data_dictionary/ClientDataDictionary.class" />
+
+				<include name="org/octopus/common_business/globalinfo/configure/*.xml" />
+				<include name="org/octopus/common_business/globalinfo/constants/*.class" />
+				<include name="org/octopus/common_business/globalinfo/form/*.class" />
+				<include name="org/octopus/common_business/globalinfo/util/*.class" />
+				
+			</fileset>
+
+			<fileset dir="${uims-support-dir}/bin">
+				<include name="cn/edu/sdu/uims/**/*.*" />
+				<include name="cn/edu/sdu/commoncomponent/form/ExtendItemObject.class" />
+				<include name="cn/edu/sdu/commoncomponent/util/*.class" />
+			</fileset>
+			<fileset dir="${badmintonhotDir}/WebContent/WEB-INF/classes">
+				<include name="cn/edu/sdu/badmintonhot/*.class" />
+				<include name="cn/edu/sdu/badmintonhot/*.xml" />
+				<include name="cn/edu/sdu/badmintonhot/filter/*.class" />
+				<include name="cn/edu/sdu/badmintonhot/component/*.class" />
+				<include name="cn/edu/sdu/badmintonhot/form/*.class" />
+				<include name="cn/edu/sdu/badmintonhot/object/*.class" />
+				<include name="cn/edu/sdu/badmintonhot/util/badmintonhotUtils.class" />
+				<include name="cn/edu/sdu/badmintonhot/base/configure/*.xml" />
+				<include name="cn/edu/sdu/badmintonhot/base/form/*.class" />
+				<include name="cn/edu/sdu/badmintonhot/base/handler/*.class" />
+				<include name="cn/edu/sdu/badmintonhot/commodity/configure/*.xml" />
+				<include name="cn/edu/sdu/badmintonhot/commodity/form/*.class" />
+				<include name="cn/edu/sdu/badmintonhot/commodity/handler/*.class" />
+				<include name="cn/edu/sdu/badmintonhot/merchant/configure/*.xml" />
+				<include name="cn/edu/sdu/badmintonhot/merchant/form/*.class" />
+				<include name="cn/edu/sdu/badmintonhot/merchant/handler/*.class" />
+				<include name="cn/edu/sdu/badmintonhot/sale/configure/*.xml" />
+				<include name="cn/edu/sdu/badmintonhot/sale/form/*.class" />
+				<include name="cn/edu/sdu/badmintonhot/sale/handler/*.class" />
+				<include name="*.gif" />
+				<include name="client.properties" />
+				<include name="clientlog4j.properties" />
+			</fileset>
+			<fileset dir="${tmpdir}">
+			</fileset>
+			<manifest id="MANIFEST.MF">
+				<attribute name="Main-Class" value="cn.edu.sdu.badmintonhot.BadmintonhotClientMain" />
+				<attribute name="Class-Path" value="" />
+			</manifest>
+		</jar>
+		<delete dir="${tmpdir}" />
+	</target>
+</project>

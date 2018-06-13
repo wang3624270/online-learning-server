@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dictionarymaptemplate>
+	<dictionarymaaping name = "jybbao">
+		<dictionary name = "LXB" >
+			<map value ="01" mapValue ="01"/>
+		</dictionary>
+	</dictionarymaaping>	
+</dictionarymaptemplate>

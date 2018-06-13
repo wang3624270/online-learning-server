@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modetemplate>
+	<mode method="initPageTemplate" key="bsFormPanel"
+		fileName="commoncomponent/configure/commoncomponent-bsformpagetemplate.xml" />
+ 	<mode method="initFilterTemplate" key="filter"
+		fileName="commoncomponent/configure/commoncomponent-filtertemplate.xml" />
+	<mode method="initTableTemplate" key="formDataTable"
+		fileName="commoncomponent/configure/commoncomponent-formdatatabletemplate.xml" />
+	<mode method="initPanelTemplate" key="dialog"
+		fileName="commoncomponent/configure/commoncomponent-dialogtemplate.xml" />		
+ </modetemplate>

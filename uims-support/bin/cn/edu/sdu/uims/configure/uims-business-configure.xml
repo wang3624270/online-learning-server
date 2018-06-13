@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rmi-config>
+	<action-mappings>
+		<action cmd="getTemplate" method="getTemplate"
+			beanId="uModelCommunicate" description="getTemplate">
+		</action>
+		<action cmd="getBsTemplate" method="getBsTemplate"
+			beanId="uModelCommunicate" description="getTemplate">
+		</action>
+		<action cmd="initApplication" method="initApplication"
+			beanId="uModelCommunicate" description="initApplication">
+		</action>
+		<action cmd="getStrokeByName" method="getStrokeByName"
+			beanId="uModelCommunicate" description="getStrokeByName">
+		</action>
+		<action cmd="getParagraphTemplateByName" method="getParagraphTemplateByName"
+			beanId="uModelCommunicate" description="getParagraphTemplateByName">
+		</action>
+		<action cmd="getPaperTemplateByName" method="getPaperTemplateByName"
+			beanId="uModelCommunicate" description="getPaperTemplateByName">
+		</action>
+		<action cmd="getPromptTemplateByName" method="getPromptTemplateByName"
+			beanId="uModelCommunicate" description="getPromptTemplateByName">
+		</action>
+		<action cmd="getTypeValue" method="getTypeValue"
+			beanId="uModelCommunicate" description="getTypeValue">
+		</action>
+		<action cmd="getPointCursorByName" method="getPointCursorByName"
+			beanId="uModelCommunicate" description="getPointCursorByName">
+		</action>
+		<action cmd="getFontByName" method="getFontByName"
+			beanId="uModelCommunicate" description="getFontByName">
+		</action>
+		<action cmd="getBorderByName" method="getBorderByName"
+			beanId="uModelCommunicate" description="getBorderByName">
+		</action>
+		<action cmd="getFilterTemplateByName" method="getFilterTemplateByName"
+			beanId="uModelCommunicate" description="getFilterTemplateByName">
+		</action>
+		<action cmd="getDefaultClassByType" method="getDefaultClassByType"
+			beanId="uModelCommunicate" description="getDefaultClassByType">
+		</action>
+		<action cmd="getDefaultClassByTypeIntKey" method="getDefaultClassByTypeIntKey"
+			beanId="uModelCommunicate" description="getDefaultClassByTypeIntKey">
+		</action>
+		<action cmd="getColorByName" method="getColorByName"
+			beanId="uModelCommunicate" description="getColorByName">
+		</action>
+		<action cmd="getApplicationTemplate" method="getApplicationTemplate"
+			beanId="uModelCommunicate" description="getApplicationTemplate">
+		</action>
+		<action cmd="getClientFrameTemplate" method="getClientFrameTemplate"
+			beanId="uModelCommunicate" description="getClientFrameTemplate">
+		</action>
+		<action cmd="getUserTaskMap" method="getUserTaskMap"
+			beanId="uModelCommunicate" description="getUserTaskMap">
+		</action>
+		<action cmd="getGraphModel2DObject" method="getGraphModel2DObject"
+			beanId="uModelCommunicate" description="getGraphModel2DObject">
+		</action>
+		<action cmd="getModelTimestampFromServer"
+			method="getModelTimestampFromServer" beanId="uModelCommunicate"
+			description="" />
+		<action cmd="getTemplateByStream" method="getTemplateByStream"
+			beanId="uModelCommunicate" description="getTemplateByStream">
+		</action>
+		<action cmd="getClientFrameTemplateByStream" method="getClientFrameTemplateByStream"
+			beanId="uModelCommunicate" description="getClientFrameTemplateByStream">
+		</action>
+		<action cmd="getUserTaskMapByStream" method="getUserTaskMapByStream"
+			beanId="uModelCommunicate" description="getUserTaskMapByStream">
+		</action>
+		<action cmd="getGraphModel2DObjectByStream" method="getGraphModel2DObjectByStream"
+			beanId="uModelCommunicate" description="getGraphModel2DObjectByStream">
+		</action>
+		<action cmd="loadModelFromXML" method="loadModelFromXML"
+			beanId="uModelCommunicate" description="loadModelFromXML">
+		</action>
+		<action cmd="getClassroomTemplateInfoObject" method="getClassroomTemplateInfoObject"
+			beanId="uModelCommunicate" description="getClassroomTemplateInfoObject">
+		</action>
+		<action cmd="sendDisplayMessageToServer" method="sendDisplayMessageToServer"
+			beanId="uModelCommunicate" description="sendDisplayMessageToServer">
+		</action>
+		<action cmd="getTemplateNameList" method="getTemplateNameList"
+			beanId="uModelCommunicate" description="getTemplateNameList">
+		</action>
+
+		<action cmd="resetUimsAllModel" method="resetUimsAllModel"
+			beanId="uModelCommunicate" description="resetUimsAllModel">
+		</action>
+		<action cmd="getEnvironmentTemplate" method="getEnvironmentTemplate"
+			beanId="uModelCommunicate" description="getEnvironmentTemplate">
+		</action>
+		<action cmd="getDictionaryMappingTemplateByName" method="getDictionaryMappingTemplateByName"
+			beanId="uModelCommunicate" description="getDictionaryMappingTemplateByName">
+		</action>
+		<action cmd="getRoomLayoutTemplate" method="getRoomLayoutTemplate"
+			beanId="uModelCommunicate" description="getRoomLayoutTemplate">
+		</action>
+		<action cmd="getEnvironmentProperties" method="getEnvironmentProperties"
+			beanId="uModelCommunicate" description="getEnvironmentProperties">
+		</action>
+		<action cmd="getTimeControlActionListByPanelName" method="getTimeControlActionListByPanelName"
+			beanId="uModelCommunicate" description="geTimeControlActionListByPanelName">
+		</action>
+
+		<action cmd="reloadModleTemplate" method="reloadModleTemplate"
+			beanId="uModelCommunicate" description="getTemplate">
+		</action>
+
+		<action cmd="uimsGetQueryDataListByInputString" method="getQueryDataListByInputString"
+			beanId="uModelCommunicate" description="getTemplate">
+		</action>
+
+		<action cmd="uimsGetAppJarModifyTime" method="getAppJarModifyTime"
+			beanId="uModelCommunicate" description="getTemplate">
+		</action>
+
+		<action cmd="newHandlerInstance" method="newHandlerInstance"
+			beanId="uHandlerCommunicate" description="newHandlerInstance">
+		</action>
+		<action cmd="newFormInstance" method="newFormInstance"
+			beanId="uHandlerCommunicate" description="newFormInstance">
+		</action>
+		<action cmd="getDataFormFromHandler" method="getDataFormFromHandler"
+			beanId="uHandlerCommunicate" description="getDataFormFromHandler">
+		</action>
+		<action cmd="getinitDataFromHandler" method="getinitDataFromHandler"
+			beanId="uHandlerCommunicate" description="getinitDataFromHandler">
+		</action>
+		<action cmd="removeHandlerObject" method="removeHandlerObject"
+			beanId="uHandlerCommunicate" description="sendDisplayMessageToServer">
+		</action>
+		<action cmd="sendhandlerProcess" method="sendhandlerProcess"
+			beanId="uHandlerCommunicate" description="sendhandlerProcess">
+		</action>
+		<action cmd="sendHandlerRequestData" method="sendHandlerRequestData"
+			beanId="uHandlerCommunicate" description="sendHandlerRequestData">
+		</action>
+		<action cmd="initPanelServerData" method="initPanelServerData"
+			beanId="uHandlerCommunicate" description="initPanelServerData">
+		</action>
+		<action cmd="initDialogServerData" method="initDialogServerData"
+			beanId="uHandlerCommunicate" description="initDialogServerData">
+		</action>
+
+
+		<action cmd="newHandlerInstanceByMap" method="newHandlerInstance"
+			beanId="uHandlerCommunicateByMap" description="newHandlerInstance">
+		</action>
+		<action cmd="newFormInstanceByMap" method="newFormInstance"
+			beanId="uHandlerCommunicateByMap" description="newFormInstance">
+		</action>
+		<action cmd="getDataFormFromHandlerByMap" method="getDataFormFromHandler"
+			beanId="uHandlerCommunicateByMap" description="getDataFormFromHandler">
+		</action>
+		<action cmd="getinitDataFromHandlerByMap" method="getinitDataFromHandler"
+			beanId="uHandlerCommunicateByMap" description="getinitDataFromHandler">
+		</action>
+		<action cmd="removeHandlerObjectByMap" method="removeHandlerObject"
+			beanId="uHandlerCommunicate" description="sendDisplayMessageToServer">
+		</action>
+		<action cmd="sendhandlerProcessByMap" method="sendhandlerProcess"
+			beanId="uHandlerCommunicateByMap" description="sendhandlerProcess">
+		</action>
+		<action cmd="sendHandlerRequestDataByMap" method="sendHandlerRequestData"
+			beanId="uHandlerCommunicateByMap" description="sendHandlerRequestData">
+		</action>
+		<action cmd="initPanelServerDataByMap" method="initPanelServerData"
+			beanId="uHandlerCommunicateByMap" description="initPanelServerData">
+		</action>
+		<action cmd="initDialogServerDataByMap" method="initDialogServerData"
+			beanId="uHandlerCommunicateByMap" description="initDialogServerData">
+		</action>
+
+		<action cmd="graphModelSaveModelConfigInfo" method="saveModelConfigInfo"
+			beanId="modelProcessRuleBean" description="initDialogServerData">
+		</action>
+		<action cmd="graphModelGetModelConfigInfoByModelId" method="getModelConfigInfoByModelId"
+			beanId="modelProcessRuleBean" description="initDialogServerData">
+		</action>
+
+
+	</action-mappings>
+</rmi-config>

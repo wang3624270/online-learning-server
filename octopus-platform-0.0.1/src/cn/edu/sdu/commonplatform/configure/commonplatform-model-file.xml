@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modetemplate>
+	<mode method="initPanelTemplate" key="dialog"
+		fileName="commonplatform/configure/commonplatform-dialogtemplate.xml" />
+	<mode method="initPanelTemplate" key="formPanel"
+		fileName="commonplatform/configure/commonplatform-formpaneltemplate.xml" />
+	<mode method="initTableTemplate" key="formDataTable"
+		fileName="commonplatform/configure/commonplatform-formdatatabletemplate.xml" />
+ </modetemplate>

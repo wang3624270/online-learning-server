@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pagetemplate>
+	<page name="bsCommonBaseDataQueryPage" type="form" title="详细信息列表"
+		beanId="">
+		<section type="commonBaseDataQuery" title="详细信息列表" name="commonBaseDataQuerySection"
+			formClassName="cn.edu.sdu.commoncomponent.form.CommonBaseDataQueryForm" rowNum = "1" 
+			itemWithTd = "false" >
+			<item type = "select" name="collegeId" label="学院" width="40" />
+			<item type = "select" name="stuTypeLevel1" label="类型" width="40" />
+			<item type = "select" name="stuTypeLevel2" label="" width="40" />
+			<item type = "select" name="stuTypeLevel3" label="" width="40" />
+			<item type = "select" name="stuTypeCode" label="类型" width="40" />
+			<item type = "select" name="teaTypeCode" label="类型" width="40" />
+			<item type = "select" name="majorId" label="专业" width="40" />
+			<item type = "select" name="grad" label="年级" width="40" />
+			<item type = "select" name="classId" label="班级" width="40" />
+			<item type = "text" name="perNum" label="学号" width="40" />
+			<item type = "text" name="perName" label="姓名" width="40" />
+			<item type = "buttonQuery" name="query" label="查询" width="40" />
+		</section>
+	</page>
+</pagetemplate>

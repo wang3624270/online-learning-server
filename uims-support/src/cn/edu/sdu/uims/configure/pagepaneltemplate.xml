@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pagepaneltemplate>
+	<page pagename="framework-test" type = "pagePanel" dataFormClassName = "cn.edu.sdu.framework.bs.TestForm" showFormElement = "true" >
+		<css src="css/common.css" />
+		<!-- 要用逗号隔开 -->
+		<javascript src="scripts/check.js,scripts/ajax.js" />
+		<!-- 
+		<jsp src = "framework/tt.jsp" />
+		 -->
+		<javascript>
+			<![CDATA[
+				function testJs(){
+					alert();
+				}
+			]]>
+		</javascript>
+		<components>
+			<component type = "label" text = "您现在的位置----测试程序"  y = "1" x = "1" />
+			<component name = "member" type = "pagePanel" templateName = "framework-test2" y = "2" x = "1" >
+				<!-- 
+				<event  action = "query-localRefreshTable-showTable" depend = "country,nation" target = "queryshow" />
+				 -->
+			</component>
+			<component name="query" type="button" text = "查询" y = "3" x = "1" >
+				<event-bs action="bsubmit-showTable" />
+			</component>
+			<component name="queryshow" type="formDataTable" templateName="framework-test2-table" y = "4" x = "1"/>
+		</components>
+	</page>
+	
+	<page pagename = "framework-test2" type = "pagePanel"  dataFormClassName = "cn.edu.sdu.framework.bs.MemberForm" showFormElement = "true" >
+		<components>
+			<component label = "国家" name="country" type="textField" validate = "required,maxlength{20}"  y = "1" x = "1-1" />
+			<component label = "民族" name="nation" type="textField" validate = "required,maxlength{20}" y = "1" x = "1-1" />
+		</components>
+	</page>
+	
+	
+</pagepaneltemplate>

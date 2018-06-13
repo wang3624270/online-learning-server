@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<parametertemplate>
+	<prompts>
+		<prompt name="uimsFriendlyPrompty" info="友情提示" infoEng="FriendlyPrompty"  />
+		<prompt name="uimsSystemInstruction" info="系统说明" infoEng="SystemInstruction"  />
+	</prompts>
+</parametertemplate>

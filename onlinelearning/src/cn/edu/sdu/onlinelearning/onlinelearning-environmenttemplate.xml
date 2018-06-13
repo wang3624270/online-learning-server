@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<template>
+	<environment name="onlinelearning" applicationTitle = "onlinelearning" 
+		supportEmail = "onlinelearning@sdu.edu.cn" >
+	    <menuControl roleNames = "system" toolbarTemplateName="onlinelearningSystemToolBar" isDispMenuTree ="true" isDispMenuBar ="false" />
+	</environment>
+	<panel name="onlinelearningLoginDialog" type="dialog" locateMode="locate"
+		title="欢迎登陆onlinelearning系统" imageName="bggrad.gif" enTitle = "BIENVENIDO A onlinelearning"
+		dataFormClassName="cn.edu.sdu.uims.frame.form.LoginForm"
+		handlerClassName="cn.edu.sdu.uims.handler.impl.ULoginDialogHandler"
+		width="400" height="300" ok="" cancel="">
+		<components>
+			<component name="userNameLabel" type="label"   text= "用户:"  enLabel = "USUARIO:"  horizontalAlignment="right"
+				 font="dialogFont" border="fnull" x="45"
+				y="80" w="100" h="20">
+			</component>
+		    <component name="userNameField" type="textField"
+				dataFormMember="strLoginName" font="dialogFont" border="fnull" x="155"
+				y="80" w="145" h="20">
+				<event type="action" />
+			</component>
+			<component name="passwordLabel" type="label"   text= "密码:"  enLabel = "CLAVE:"  
+				 font="dialogFont" border="fnull" x="45"  horizontalAlignment ="right"
+				y="125" w="100" h="20">
+				<event type="action" />
+			</component>
+			<component name="passwordField" type="passwordField"
+				dataFormMember="strPassword" font="dialogFont" border="fnull" x="155"
+				y="125" w="145" h="20">
+				<event type="action" />
+			</component>
+			<component name="isSaveCheck" type="checkBox"  text = "保存密码"  enLabel = "GUARDAR CLAVE"
+				dataFormMember="isSave" font="dialogFont" border="fnull" x="145"
+				y="165" w="170" h="20">
+			</component>
+			<component name="loginButton" type="button" content="登录"  enLabel = "INGRESAR"
+				cmd="loginCommand" font="dialogFont" border="fnull" x="85" y="205"
+				w="120" h="25" horizontalAlignment="center">
+				<event type="action" />
+				<event type="key" />
+			</component>
+			<component name="cancelButton" type="button" content="取消"  enLabel = "CANCELAR"
+				cmd="cancelCommand" font="dialogFont" border="fnull" x="215" y="205"
+				w="120" h="25" horizontalAlignment="center">
+				<event type="action" />
+			</component>
+		</components>
+	</panel>
+	<clientframe name="onlinelearningClientFrame" type = "desktop" toolbarName = "commandToolBar"
+	    startPanelName = "onlinelearningMerchantHelpInfoViewPanel" >
+		<title content="onlinelearning" image="test.jpg" />
+		<logo content="onlinelearning" image="logo" />
+		<!--  		<attribute  closeExistPanel = "true" /> -->
+		<menuBar name="manMenuBar" className="cn.edu.sdu.uims.component.menu.UMenuBar"
+			alignment="top" dataMenu="root" >
+		</menuBar>
+		<treeMenu name="treeMenu" alignment="left" dataMenu="root" >
+		</treeMenu>
+		<statusbar name="testStatusBar" className="cn.edu.sdu.uims.component.UStatusBar"
+			department="onlinelearning" version="1.0" email="onlinelearning@sdu.edu.cn"
+			hasProgress="true" />
+		<workbench name="platformCSWorkBench" locateMode="table"
+			className="cn.edu.sdu.uims.component.workbench.UWorkbenchTable">
+			<components>
+			</components>
+		</workbench>
+	</clientframe>
+	
+	
+
+</template>

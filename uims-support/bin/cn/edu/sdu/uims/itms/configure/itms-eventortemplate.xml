@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eventortemplate>
+  <eventor name ="leftClick" className = "cn.edu.sdu.uims.itms.eventor.IEventorLeftClick" />
+  <eventor name ="leftUp" className = "cn.edu.sdu.uims.itms.eventor.IEventorLeftUp" />
+  <eventor name ="leftDown" className = "cn.edu.sdu.uims.itms.eventor.IEventorLeftDown" />
+  <eventor name ="mouseMove" className = "cn.edu.sdu.uims.itms.eventor.IEventorMouseMove" />
+  <eventor name ="leftDoubleClick" className = "cn.edu.sdu.uims.itms.eventor.IEventorDoubleClick" />
+  <eventor name ="mouseDrag" className = "cn.edu.sdu.uims.itms.eventor.IEventorMouseDrag" />
+  <eventor name ="rightClick" className = "cn.edu.sdu.uims.itms.eventor.IEventorRightClick" />
+  <eventor name ="keyDown" className = "cn.edu.sdu.uims.itms.eventor.IEventorKeyDown" />
+  <eventor name ="oneClickForThreePoints" className = "cn.edu.sdu.uims.itms.eventor.IEventorClickForThreePoints" />
+  <eventor name ="taskend" className = "cn.edu.sdu.uims.itms.eventor.IEventorTaskEnd" />
+</eventortemplate>

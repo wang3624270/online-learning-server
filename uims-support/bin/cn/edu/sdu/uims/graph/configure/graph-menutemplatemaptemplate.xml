@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menumaptemplate>
+	<map name="uims_graph_inteaction_panel_testPoly"
+		template="uims_graph_inteaction_panel">
+		<parameter name="name" value="testPoly" />
+	</map>
+	<map name="uims_workflow_inteaction_panel"
+		template="uims_graph_inteaction_panel">
+		<parameter name="name" value="testGraphics" />
+	</map>
+	<map name="uims_graph_inteaction_panel_edit_testPoly"
+		template="uims_graph_inteaction_panel_edit">
+		<parameter name="name" value="test_graph_model_poly" />
+	</map>
+</menumaptemplate>

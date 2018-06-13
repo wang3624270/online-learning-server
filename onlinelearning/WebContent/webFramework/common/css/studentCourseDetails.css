@@ -1,0 +1,51 @@
+.head-icon{
+	float: left;
+}
+.comment-body{
+	position:relative;
+	margin-left: 60px; 
+}
+.comment-body-1{
+	position:relative;
+	margin-left: 60px;    
+	height: 130px;
+}
+.comment-body-2{
+	position:relative; 
+}
+.comment-name{
+	font-weight: bold;
+	color: #000000;
+	font-size: 15px;
+}
+.comment-content{
+	color: #000000;
+}
+.comment-time{
+	font-size: 10px;
+}
+.comment-time-1{
+	margin-right: 50px;
+}
+.save-btn{
+	float: right;
+	margin-top: 5px;
+}
+.comment{
+	font-size: 14px !important;
+}
+.am-btn-sm{
+	font-size: 14px !important;
+}
+.score-panel{
+	float: left;
+    margin-top: 5px;
+}
+.interlocution-content{
+	color: #000000;
+	font-size: 15px;
+    font-weight: bold;
+}
+.interlocution-time{
+	font-size: 10px;
+}

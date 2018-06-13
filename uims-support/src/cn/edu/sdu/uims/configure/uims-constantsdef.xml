@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<constantsdef>
+	<typedef name="mapKey">
+		<constant string="dictionaryMapping" int="1000" />
+		<constant string="filter" int="1001" />
+		<constant string="handler" int="1002" />
+		<constant string="roomLayout" int="1003" />
+		<constant string="photoLayout" int="1004" />
+		<constant string="dataTestInfo" int="1005" />
+		<constant string="dataTestProcess" int="1006" />
+
+
+		<constant string="font" int="1011" />
+		<constant string="color" int="1012" />
+		<constant string="paper" int="1013" />
+		<constant string="paragraph" int="1014" />
+		<constant string="pagenumber" int="1015" />
+		<constant string="border" int="1016" />
+		<constant string="stroke" int="1017" />
+		<constant string="pointCursor" int="1018" />
+		<constant string="uistyle" int="1019" />
+		<constant string="prompt" int="1020" />
+
+
+		<constant string="formFixTable" int="1021" />
+		<constant string="viewFixTable" int="1022" />
+		<constant string="pageFixTable" int="1023" />
+		<!-- liuyang add  -->
+		<constant string="docFixTable" int="1024" />
+		<constant string="image" int="1111" />
+		<!-- liuyang end  -->
+		<constant string="formDataTable" int="1031" />
+		<constant string="viewDataTable" int="1032" />
+		<constant string="pageDataTable" int="1033" />
+		<constant string="docDataTable" int="1034" />
+
+		<!-- liuyang add  -->
+		<constant string="docRowSpanTable" int="1036" />
+		<constant string="printDataTable" int="1037" />
+		<!-- liuyang end  -->
+		<constant string="sheetDataTable" int="1035" />
+		<constant string="formRandomTable" int="1041" />
+		<constant string="viewRandomTable" int="1042" />
+		<constant string="pageRandomTable" int="1043" />
+		<constant string="docRandomTable" int="1044" />
+		<constant string="sheetRandomTable" int="1045" />
+		<constant string= "dataIo" int = "1046" />
+
+
+		<constant string="cursor" int="1051" />
+		<constant string="eventor" int="1052" />
+		<constant string="statusdiagram" int="1053" />
+		<constant string="task" int="1054" />
+		<constant string="userTask" int="1055" />
+
+
+
+		<constant string="menu" int="1081" />
+		<constant string="toolbar" int="1082" />
+		<constant string="graphToolBar" int="1082" />
+		<constant string="statusbar" int="1083" />
+		<constant string="progrssbar" int="1084" />
+		<constant string="shortcutkey" int="1085" />
+		<constant string="graphButtonBar" int="1086" />
+
+
+		<constant string="formPanel" int="1091" />
+		<constant string="graphInteractionPnael" int="1091" />
+		<constant string="viewPanel" int="1092" />
+		<constant string="pagePanel" int="1093" />
+		<constant string="docPanel" int="1094" />
+		<constant string="sheetPanel" int="1095" />
+		<constant string="printPanel" int="1096" />
+		<constant string="oldCSPanelPanel" int="1097" />
+
+		<constant string="dialog" int="1098" />
+		<constant string="workbench" int="1099" />
+		<constant string="menuMap" int="1100" />
+		<constant string="noPanelAction" int="1110" />
+		
+		<constant string= "clientFrame" int = "1112" />
+		<constant string= "visual" int = "1113" />
+		<constant string= "clientDialog" int = "1114" />
+		
+		<constant String = "graphModel"  int = "9001" />
+		
+	</typedef>
+	<typedef name="layoutMode">
+		<constant string="locate" int="101" />
+		<constant string="shift" int="102" />
+		<constant string="page" int="103" />
+		<constant string="table" int="104" />
+		<constant string="hdiv" int="105" />
+		<constant string="vdiv" int="106" />
+		<constant string="vhdiv" int="107" />
+		<constant string="hvdiv" int="108" />
+		<constant string="border" int="109" />
+		<constant string="flow" int="110" />
+		<constant string="hideable" int="111" />
+		<constant string="vhdivns" int="112" />
+		<constant string="hvdivns" int="113" />
+		<constant string="one" int="114" />
+		<constant string="adaptive" int="115" />
+		
+	</typedef>
+	<typedef name="componentType">
+		<constant string="locate" int="201" />
+		<constant string="shift" int="202" />
+		<constant string="define" int="203" />
+		
+		
+		<constant string="label" int="211" />
+		<constant string="labelTitle" int="2111" />
+		<constant string="labelMultiLine" int="2112" />
+		<constant string="pLabel" int="2008" />
+		<constant string="textField" int="212" />
+		<constant string="textFieldInt" int="2130" />
+		<constant string="textFieldDouble" int="2131" />
+		<constant string="numberField" int="2121" />
+		<constant string="numberFieldWithAddMinus" int="2122" />
+		<constant string="passwordField" int="2123" />
+		<constant string="textFieldCheck" int="2124" />
+		<constant string="textFieldPinyin" int="2125" />
+		<constant string="textFieldUnit" int="2126" />
+		<constant string="copositeFieldIP" int="2127" />
+		<constant string="textFieldExpression" int="2128" />
+		<constant string="idCardField" int="2129" />
+		<constant string="button" int="213" />
+		<constant string="submit" int="2002" />
+		<constant string="radioButton" int="2131" />
+		<constant string="radioGroup" int="2132" />	
+		<constant string="checkBox" int="214" />
+		<constant string="checkBoxGroup" int="2141" />
+		<constant string="checkBoxvalue" int="2142" />
+		<constant string="checkBoxGroupRegion" int="2143" />
+		<constant string="checkBox01" int="2144" />
+		<constant string="gedit" int="215" />
+		<constant string="comboBox" int="216" />
+		<constant string="comboBoxType" int="2161" />
+		<constant string="comboBoxDate" int="2162" />
+		<constant string="list" int="217" />
+		<constant string="listSelect" int="2171" />
+		<constant string="tree" int="218" />
+		<constant string="treeRegion" int="2181" />
+		<constant string="textArea" int="219" />
+		<constant string="separator" int="220" />
+		<constant string="progressBar" int="2201" />
+		<constant string="localShow" int="2007" />
+
+
+		<constant string="line" int="221" />
+		<constant string="box" int="222" />
+		<constant string="text" int="223" />
+		<constant string="paragraph" int="224" />
+		<constant string="image" int="225" />
+		<constant string="formImage" int="2251" />
+		<constant string="barcode" int="226" />
+		<constant string="date" int="227" />
+		
+		<constant string="formFixTable" int="231" />
+		<constant string="viewFixTable" int="232" />
+		<constant string="pageFixTable" int="233" />
+		<constant string="formDataTable" int="241" />
+		<constant string="viewDataTable" int="242" />
+		<constant string="pageDataTable" int="243" />
+		<constant string="docDataTable" int="244" />
+		<constant string="sheetDataTable" int="245" />
+		<constant string="printDataTable" int="246" />
+		<constant string="formRandomTable" int="251" />
+		<constant string="viewRandomTable" int="252" />
+		<constant string="pageRandomTable" int="253" />
+		<constant string="docRandomTable" int="254" />
+
+		<constant string="cubeView" int="261" />
+		<constant string="cubeViewGraph" int="262" />
+		<constant string="cubeViewTable" int="263" />
+
+		<constant string="importXLS" int="1211" />
+		<constant string="export" int="1211" />
+		
+
+		<constant string="graphView" int= "271" />
+		<constant string="graphViewRegion" int= "272" />
+		<constant string="graphToolBar" int= "273" />
+		<constant string="graphButtonBar" int= "274" />
+		<constant string="graphViewCube" int= "275" />
+		<constant string="cubeDispView" int= "276" />
+		<constant string="biGraphView" int="277"/>
+		<constant string="visualDirllMap" int="278"/>
+
+		<constant string="menu" int="281" />
+		<constant string="menuItem" int="282" />
+		<constant string="radioMenuItem" int="283" />
+
+		<constant string="formPanel" int="291" />
+		<constant string="graphInteractionPnael" int="2911" />
+		<constant string="viewPanel" int="292" />
+		<constant string="pagePanel" int="293" />
+		<constant string="docPanel" int="294" />
+		<constant string="sheetPanel" int="295" />
+		<constant string="printPanel" int="296" />
+		<constant string="oldCSPanelPanel" int="297" />
+		<constant string="dialog" int="298" />
+		<constant string="camera" int="299" />
+		
+
+		<constant string="treeview" int="2000" />
+
+		<constant string="visualViewGraph" int="300" />
+	</typedef>
+	<typedef name="paragraphType">
+		<constant string="text" int="501" />
+		<constant string="heading0" int="502" />
+		<constant string="heading1" int="503" />
+		<constant string="heading2" int="504" />
+		<constant string="heading3" int="505" />
+		<constant string="heading4" int="506" />
+		<constant string="heading5" int="507" />
+		<constant string="heading6" int="508" />
+	</typedef>
+	<typedef name="pageNumberLayoutType">
+		<constant string="null" int="511" />
+		<constant string="center" int="512" />
+		<constant string="rightbottom" int="513" />
+		<constant string="out" int="514" />
+	</typedef>
+	<typedef name="pageNumberType">
+		<constant string="1" int="521" />
+	</typedef>
+	<typedef name="borderLayoutType">
+		<constant string="null" int="901" />
+		<constant string="all" int="902" />
+		<constant string="bottom" int="903" />
+		<constant string="top" int="904" />
+		<constant string="left" int="905" />
+		<constant string="right" int="906" />
+	</typedef>
+	<typedef name="alignmentType">
+		<constant string="center" int="0" />
+		<constant string="top" int="1" />
+		<constant string="left" int="2" />
+		<constant string="bottom" int="3" />
+		<constant string="right" int="4" />
+		<constant string="tip" int="10" />
+		<constant string="leading" int="11" />
+		<constant string="trailing" int="12" />
+		<constant string="null" int="-1" />
+
+	</typedef>
+	<typedef name="fontStyleType">
+		<constant string="plain" int="0" />
+		<constant string="bold" int="1" />
+		<constant string="italic" int="2" />
+		<constant string="bolditalic" int="3" />
+		<constant string="normal" int="0" />
+	</typedef>
+	<typedef name="arrangeType">
+		<constant string="horizontal" int="0" />
+		<constant string="vertical" int="1" />
+		<constant string="grid" int="2" />
+		<constant string="flow" int="3" />
+	</typedef>
+
+	<typedef name="gridBagFillType">
+		<constant string="none" int="0" />
+		<constant string="both" int="1" />
+		<constant string="horizontal" int="2" />
+		<constant string="vertical" int="3" />
+	</typedef>
+	<typedef name="gridBagAnchorType">
+		<constant string="center" int="10" />
+		<constant string="north" int="11" />
+		<constant string="northeast" int="12" />
+		<constant string="east" int="13" />
+		<constant string="southeast" int="14" />
+		<constant string="south" int="15" />
+		<constant string="southwest" int="16" />
+		<constant string="west" int="17" />
+		<constant string="northwest" int="18" />
+	</typedef>
+
+	<typedef name="chartType">
+		<constant string="cell" int="0" />
+		<constant string="histogram" int="1" />
+		<constant string="pie" int="2" />
+		<constant string="curve" int="3" />
+	</typedef>
+	<typedef name="rowArrangeType">
+		<constant string="close" int="1" />
+		<constant string="loose" int="2" />
+	</typedef>
+	<typedef name="dateStyle">
+		<constant string="cnDate1" int="0" />
+		<constant string="cnDate2" int="1" />
+		<constant string="cnDateTime1" int="2" />
+		<constant string="cnDateTime2" int="3" />
+	</typedef>
+	<typedef name="graphContentType">
+		<constant string="graphregion" int="0" />
+		<constant string="graphToolBar" int="1" />
+	</typedef>
+	<typedef name="graphRegionLayoutMode">
+		<constant string="center" int="0" />
+		<constant string="north"  int="1" />
+		<constant string="south"  int="2" />
+		<constant string="west" int="3" />
+		<constant string="east" int="4" />
+	</typedef>
+</constantsdef>

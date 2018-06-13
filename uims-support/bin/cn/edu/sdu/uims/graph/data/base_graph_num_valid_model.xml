@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graph_num_valid>
+<!-- row当中的increment表示起点的增量，而column当中的increment表示编号的增加 -->
+	<graph_num_valid name="seatGraphNumInvalid" graphname="seatGraph1" no="0">
+		<rows>
+			<row count="2" increment="+0"> 
+				<columns>
+					<column size="8" increment="+1"></column>
+				</columns>
+			</row>
+		</rows>
+	</graph_num_valid>
+</graph_num_valid>

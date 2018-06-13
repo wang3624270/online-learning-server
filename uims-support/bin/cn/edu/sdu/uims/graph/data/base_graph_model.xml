@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graph_model_template>
+<!-- 单个座位的seat模型 -->
+<!-- column  属性 dx x偏移量 dy y偏移量 dsx x方向放缩比 dsy y方向放缩比 dra旋转角度-->
+	<graph_model name="seat" xpoint="15" ypoint="10">
+		<rows>
+			<row space="20" count="1">
+				<columns>
+					<column  dx="15" dy="10" count="1" dsx="0"	dsy="0" dra="0">
+						<elements>
+							<element  type="line" x1="-15"
+								y1="-10" x2="15" y2="-10" />
+							<element  type="line" x1="-15"
+								y1="-10" x2="-15" y2="10" />
+							<element  type="line" x1="-15"
+								y1="10" x2="15" y2="10" />
+							<element  type="line" x1="15"
+								y1="10" x2="15" y2="-10" />
+						</elements>
+					</column>
+				</columns>
+			</row>
+		</rows>
+	</graph_model>
+	
+	<!-- '门'的模型 count 循环次数 -->
+	<graph_model name="door" xpoint="15" ypoint="8">
+		<rows>
+			<row space="20" count="1">
+				<columns>
+					<column  dx="0" dy="0" count="1" dsx="0"	dsy="0" dra="0">
+						<elements>
+							<element  type="line" x1="-15"
+								y1="-8" x2="15" y2="-8" />
+							<element  type="line" x1="-15"
+								y1="-8" x2="-15" y2="8" />
+							<element  type="line" x1="-15"
+								y1="8" x2="15" y2="8" />
+							<element  type="line" x1="15"
+								y1="8" x2="15" y2="-8" />
+						</elements>
+					</column>
+				</columns>
+			</row>
+		</rows>
+	</graph_model>
+	
+	<!-- '讲台'的模型 -->
+	<graph_model name="dais" xpoint="15" ypoint="8">
+		<rows>
+			<row space="20" count="1">
+				<columns>
+					<column  dx="0" dy="0" count="1" dsx="0"	dsy="0" dra="0">
+						<elements>
+							<element  type="line" x1="-18"
+								y1="-8" x2="18" y2="-8" />
+							<element  type="line" x1="-18"
+								y1="-8" x2="-18" y2="8" />
+							<element  type="line" x1="-18"
+								y1="8" x2="18" y2="8" />
+							<element  type="line" x1="18"
+								y1="8" x2="18" y2="-8" />
+						</elements>
+					</column>
+				</columns>
+			</row>
+		</rows>
+	</graph_model>
+	
+	<!-- '标题栏'的模型 -->
+	<graph_model name="title" xpoint="125" ypoint="25">
+		<rows>
+			<row space="20" count="1">
+				<columns>
+					<column  dx="0" dy="0" count="1" dsx="0"	dsy="0" dra="0">
+						<elements>
+							<element  type="line" x1="-125"
+								y1="-25" x2="125" y2="-25" />
+							<element  type="line" x1="-125"
+								y1="-25" x2="-125" y2="25" />
+							<element  type="line" x1="-125"
+								y1="25" x2="125" y2="25" />
+							<element  type="line" x1="125"
+								y1="25" x2="125" y2="-25" />
+						</elements>
+					</column>
+				</columns>
+			</row>
+		</rows>
+	</graph_model>
+	
+	<!-- 整个教室的seat模型 -->
+	<graph_model name="seatGraph1" xpoint="15" ypoint="10">
+		<rows>
+		<!-- 第一行 门和讲台的安排 -->
+		<row space="40" count="1">
+				<columns>
+					<column  dx="50" dy="-2" count="1" dsx="0"	dsy="0" dra="0">
+						<elements>
+							<element type ="subGraph" subName = "door"/>
+						</elements>
+					</column>
+					<column  dx="140" dy="0" count="1" dsx="0"	dsy="0" dra="0">
+						<elements>
+							<element type ="subGraph" subName = "dais"/>
+						</elements>
+					</column>
+					<column  dx="140" dy="0" count="1" dsx="0"	dsy="0" dra="0">
+						<elements>
+							<element type ="subGraph" subName = "door"/>
+						</elements>
+					</column>
+				</columns>
+			</row>
+			
+			<!-- 第二行 座位的安排 -->
+			<row space="20" count="2">
+				<columns>
+					<column  dx="30" dy="0" count="2" dsx="0"	dsy="0" dra="0">
+						<elements>
+							<element type ="subGraph" subName = "seat"/>
+						</elements>
+					</column>
+					<column  dx="50" dy="0" count="1" dsx="0"	dsy="0" dra="0">
+						<elements>
+							<element type ="subGraph" subName = "seat"/>
+						</elements>
+					</column>
+					<column  dx="30" dy="0" count="2" dsx="0"	dsy="0" dra="0">
+						<elements>
+							<element type ="subGraph" subName = "seat"/>
+						</elements>
+					</column>
+					<column  dx="50" dy="0" count="1" dsx="0"	dsy="0" dra="0">
+						<elements>
+							<element type ="subGraph" subName = "seat"/>
+						</elements>
+					</column>
+					<column  dx="30" dy="0" count="2" dsx="0"	dsy="0" dra="0">
+						<elements>
+							<element type ="subGraph" subName = "seat"/>
+						</elements>
+					</column>
+				</columns>
+			</row>
+			
+			<!-- 第三行 标题栏的安排 -->
+				<row space="20" count="1">
+				<columns>
+					<column  dx="125" dy="10" count="1" dsx="0"	dsy="0" dra="0">
+						<elements>
+							<element type ="subGraph" subName = "title"/>
+						</elements>
+					</column>
+				</columns>
+			</row>
+		</rows>
+	</graph_model>
+</graph_model_template>

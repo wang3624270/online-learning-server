@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modetemplate>
+	<mode method="initPanelTemplate" key="dialog"
+		fileName="video/configure/video-dialogtemplate.xml" />
+	<mode method="initPanelTemplate" key="formPanel"
+		fileName="video/configure/video-formpaneltemplate.xml" />
+	<mode method="initTableTemplate" key="formDataTable"
+		fileName="video/configure/video-formdatatabletemplate.xml" />
+ </modetemplate>

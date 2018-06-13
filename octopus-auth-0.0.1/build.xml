@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ====================================================================== 
+	Ant build.xml ====================================================================== -->
+<project name="octopus-auth-deploy" default="deploy">
+
+	<property name="octopusAuthDir" value="${basedir}/../octopus-auth-0.0.1" />
+	<!-- ================================= target: deploy ================================= -->
+	<target name="deploy">
+		<copy todir="${deployDir}/">
+			<fileset dir="${octopusAuthDir}/WebContent">
+
+			</fileset>
+		</copy>
+
+	</target>
+</project>

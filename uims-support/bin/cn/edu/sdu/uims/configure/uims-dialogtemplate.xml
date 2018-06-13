@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<formpaneltemplate>
+	<panel name="uimsMutiInfomShowDialog" type="dialog" xo="100" yo="100"
+		width="800" height="600" ok="" locateMode="locate"
+		dataFormClassName="cn.edu.sdu.uims.form.impl.UMutiInfoForm"
+		handlerClassName="cn.edu.sdu.uims.handler.impl.UDialogHandler">
+		<components>
+			<component name="infoArea" type="textArea" text="" font="formFont"
+				border="f1" x="10" y="10" w="720" h="500" dataFormMember="info" />
+		</components>
+	</panel>
+	<panel name="uimsTableDetailInfoDialog" type="dialog" xo="100"
+		yo="100" width="800" height="600" ok="" locateMode="one"
+		dataFormClassName="cn.edu.sdu.uims.form.impl.UTableForm"
+		handlerClassName="cn.edu.sdu.uims.handler.impl.UDialogHandler">
+		<components>
+			<component name="infoTable" type="formDataTable"
+				templateName="uimsTableDetailInfoTable" font="formFont" border="f1"
+				x="10" y="10" w="720" h="500" dataFormMember="items" />
+		</components>
+	</panel>
+	<panel name="uimsTableColumnSortSetDialog" type="dialog" xo="100"
+		yo="100" width="400" height="400" ok="" cancel="" locateMode="one"
+		dataFormClassName="cn.edu.sdu.uims.form.impl.UTableForm"
+		handlerClassName="cn.edu.sdu.uims.handler.impl.UTableColumnSortSetDialogHandler">
+		<components>
+			<component name="dataTable" type="formDataTable"
+				templateName="uimsTableColumnSortItemTable" font="formFont" border="f1"
+				x="10" y="10" w="720" h="500" dataFormMember="items">
+				<event type="action" />
+			</component>
+		</components>
+	</panel>
+	<panel name="uimsFileUploadProcessDialog" type="dialog" xo="100"
+		yo="100" width="800" height="600" ok="" locateMode="locate"
+		dataFormClassName="cn.edu.sdu.uims.form.impl.FileUploadProcessForm"
+		handlerClassName="cn.edu.sdu.uims.handler.impl.FileUploadProcessDialogHandler">
+		<components>
+			<component name="countLable" type="label" font="formFont"
+				border="f1" x="10" y="10" w="720" h="30" />
+			<component name="infoArea" type="textArea" font="formFont"
+				border="f1" x="10" y="40" w="720" h="470" dataFormMember="dispLayInfo" />
+		</components>
+	</panel>
+	<panel name="uimsDataImportProcessDialog" type="dialog" xo="100"
+		yo="100" width="800" height="600" ok="" locateMode="locate"
+		dataFormClassName="cn.edu.sdu.uims.form.impl.DataIoProcessForm"
+		handlerClassName="cn.edu.sdu.uims.handler.impl.DataImportProcessDialogHandler">
+		<components>
+			<component name="countLable" type="label" font="formFont"
+				border="f1" x="10" y="10" w="720" h="30" />
+			<component name="infoArea" type="textArea" font="formFont"
+				border="f1" x="10" y="40" w="720" h="470" dataFormMember="dispLayInfo" />
+		</components>
+	</panel>
+	<panel name="uimsDataImportValidateDialog" type="dialog" xo="100"
+		yo="100" width="800" height="600" ok="" locateMode="locate"
+		dataFormClassName="cn.edu.sdu.uims.form.impl.DataIoProcessForm"
+		handlerClassName="cn.edu.sdu.uims.handler.impl.DataImportValidateDialogHandler">
+		<components>
+			<component name="countLabel" type="label" font="formFont"
+				border="f1" x="10" y="10" w="720" h="30" />
+			<component name="infoArea" type="textArea" font="formFont"
+				border="f1" x="10" y="40" w="720" h="470" dataFormMember="dispLayInfo" />
+		</components>
+	</panel>
+	<panel name="uimsDataExportProcessDialog" type="dialog"
+		locateMode="locate" title="正在导出..."
+		dataFormClassName="cn.edu.sdu.uims.form.impl.DataIoProcessForm"
+		handlerClassName="cn.edu.sdu.uims.handler.impl.DataExportProcessDialogHandler"
+		width="400" height="150" ok="" cancel="">
+		<components>
+			<component name="progressInfo" type="label" text="数据导出中，请稍候。"
+				font="formFont" border="fnull" x="20" y="10" w="300" h="20">
+			</component>
+			<component name="progressBar" type="progressBar" font="formFont"
+				border="fnull" x="20" y="40" w="350" h="50">
+			</component>
+		</components>
+	</panel>
+	<panel name="uimsDataExportServerWithProcessDialog" type="dialog"
+		locateMode="locate" title="正在导出..."
+		dataFormClassName="cn.edu.sdu.uims.form.impl.DataIoProcessForm"
+		handlerClassName="cn.edu.sdu.uims.handler.impl.DataExportServerWithProcessDialogHandler"
+		width="400" height="150" ok="" cancel="">
+		<components>
+			<component name="progressInfo" type="label" text="数据导出中，请稍候。"
+				font="formFont" border="fnull" x="20" y="10" w="300" h="20">
+			</component>
+			<component name="progressBar" type="progressBar" font="formFont"
+				border="fnull" x="20" y="40" w="350" h="50"
+				className="cn.edu.sdu.service.common.progress.ProgressPanel">
+			</component>
+		</components>
+	</panel>
+	<panel name="uimsCommonProgressServerDialog" type="dialog"
+		locateMode="locate" title="正在处理..."
+		dataFormClassName="cn.edu.sdu.uims.form.impl.CommonProgressDataForm"
+		handlerClassName="cn.edu.sdu.uims.handler.impl.CommonProgressServerDialogHandler"
+		width="400" height="150" ok="" cancel="">
+		<components>
+			<component name="progressInfo" type="label" text="数据处理中，请稍候。"
+				font="formFont" border="fnull" x="20" y="10" w="300" h="20">
+			</component>
+			<component name="progressBar" type="progressBar" font="formFont"
+				border="fnull" x="20" y="40" w="350" h="50"
+				className="cn.edu.sdu.service.common.progress.ProgressPanel">
+			</component>
+		</components>
+	</panel>
+	<panel name="uimsCommonProgressClientDialog" type="dialog"
+		locateMode="locate" title="正在导出..."
+		dataFormClassName="cn.edu.sdu.uims.form.impl.CommonProgressDataForm"
+		handlerClassName="cn.edu.sdu.uims.handler.impl.CommonProgressClientDialogHandler"
+		width="400" height="150" ok="" cancel="">
+		<components>
+			<component name="progressInfo" type="label" text="数据处理中，请稍候。"
+				font="formFont" border="fnull" x="20" y="10" w="300" h="20">
+			</component>
+			<component name="progressBar" type="progressBar" font="formFont"
+				border="fnull" x="20" y="40" w="350" h="50"
+				className="cn.edu.sdu.uims.component.UProgressBar">
+			</component>
+		</components>
+	</panel>
+	<panel name="uimsHttpDownFileProgressClientDialog" type="dialog"
+		locateMode="locate" title="正在下载..."
+		dataFormClassName="cn.edu.sdu.uims.form.impl.CommonProgressDataForm"
+		handlerClassName="cn.edu.sdu.uims.handler.impl.HttpDownFileProgressClientDialogHandler"
+		width="400" height="150" ok="" cancel="">
+		<components>
+			<component name="progressInfo" type="label" text="数据处理中，请稍候。"
+				font="formFont" border="fnull" x="20" y="10" w="300" h="20">
+			</component>
+			<component name="progressBar" type="progressBar" font="formFont"
+				border="fnull" x="20" y="40" w="350" h="50"
+				className="cn.edu.sdu.uims.component.UProgressBar">
+			</component>
+		</components>
+	</panel>
+	<panel name="uimsGraphPrintPreviewDialog" type="dialog"
+		locateMode="one" title="打印预览"
+		dataFormClassName="cn.edu.sdu.uims.graph.form.GraphPrintPreviewDataForm"
+		handlerClassName="cn.edu.sdu.uims.handler.impl.UDialogHandler" width="800"
+		height="700" ok="打印">
+		<components>
+			<component name="imageView" type="imageView" font="formFont"
+				border="fnull" x="20" y="10" w="300" h="20">
+			</component>
+		</components>
+	</panel>
+	<panel name="uimsPdfPrintPreviewDialog" type="dialog" locateMode="one"
+		title="打印预览" dataFormClassName="cn.edu.sdu.uims.graph.form.USinglePdfViewDataForm"
+		handlerClassName="cn.edu.sdu.uims.handler.impl.UDialogHandler" width="800"
+		height="700" ok="" cancel="">
+		<components>
+			<component name="pdfView" type="pdfView" dataFormMember="data"
+				font="formFont" border="fnull" x="20" y="10" w="300" h="20">
+			</component>
+		</components>
+	</panel>
+	
+	<panel name="uimsMutilePdfPrintPreviewDialog" type="dialog" locateMode="border"
+		title="打印预览" dataFormClassName="cn.edu.sdu.uims.graph.form.UMutilePdfViewDataForm"
+		handlerClassName="cn.edu.sdu.uims.graph.handler.UMutilePdfPrintPreviewDialogHandler" width="1000"
+		height="700" ok="" cancel="">
+		<components>
+			<component name="pdfList" type="listData" dataFormMember = "pdfList"
+				font="formFont" border="fnull" x="20" y="10" w="300" h="20" layout="left" >
+				<event type="listSelection"></event>	
+			</component>
+			<component name="pdfView" type="pdfView" dataFormMember="data"
+				font="formFont" border="f1" x="20" y="10" w="300" h="20" layout="center">
+			</component>
+			<component name="commandPanel" type="formPanel" templateName = "uimsMutilePdfPrintPreviewCommandPanel"
+				font="formFont" border="fnull" x="20" y="10" w="300" h="40" layout="bottom">
+				<event type = "action"/>
+			</component>
+		</components>
+	</panel>	
+	<panel name="uimsHtmlInfomShowDialog" type="dialog" xo="100" yo="100"
+		width="800" height="600" ok="" locateMode="one"  cancel="" 
+		dataFormClassName="cn.edu.sdu.uims.form.impl.UMutiInfoForm"
+		handlerClassName="cn.edu.sdu.uims.handler.impl.UDialogHandler">
+		<components>
+			<component name="infoArea" type="htmlArea" text="" font="formFont"
+				border="f1" x="10" y="10" w="720" h="500" dataFormMember="info" />
+		</components>
+	</panel>
+		<panel name="uimsListDataSingleSelectionDialog" type="dialog"
+		className="cn.edu.sdu.uims.component.dialog.UDialogPanel" locateMode="border"
+		title="课程查询" dataFormClassName="cn.edu.sdu.uims.form.impl.UDataListForm"
+		handlerClassName="cn.edu.sdu.uims.handler.impl.ListDataSingleSelectionDialogHandler" width="200"
+		height="820"  ok = "" cancel = "" >
+		<components>
+			<component name="dataList" type="listData" border="f1"  layout ="center"
+				x="0" y="0" w="1000" h="8000" 
+				dataFormMember="dataList">
+				<event type = "listSelection"/>
+			</component>
+		</components>
+	</panel>
+	
+	<panel name="uimsClientBusinessProcessDialog" type="dialog" xo="100" yo="100"
+		width="800" height="600" cancel="" ok="" locateMode="one"
+		dataFormClassName="cn.edu.sdu.uims.form.impl.UMutiInfoForm"
+		handlerClassName="cn.edu.sdu.uims.handler.impl.UClientBusinessProcessDialogHandler">
+		<components>
+			<component name="infoArea" type="textArea" text="" font="formFont"
+				border="f1" x="10" y="10" w="720" h="500" dataFormMember="info" />
+		</components>
+	</panel>
+	
+	<panel name="uimsImageAttachViewDialog" type="dialog" xo="50"
+		yo="50" width="980" height="820" cancel="" ok="" locateMode="locate"
+		dataFormClassName="cn.edu.sdu.uims.form.impl.ImageAttachViewForm"
+		handlerClassName="cn.edu.sdu.uims.handler.impl.UImageAttachViewDialogHandler">
+		<components>
+			<component name="imageDate" type="imageLabel"  dataFormMember = "imageData"  
+				x="5" y="5" w="960" h="720" border="fnull" font="formFont">
+				<event type = "mouse" />
+			</component>
+			<component name="doUpload" type="button"  text = "导入"   horizontalAlignment = "center"
+				x="200" y="730" w="90" h="30" >
+				<event type = "action" />
+	  		</component>
+		   <!-- <component name="doEnlarge" type="button"  text = "放大"   horizontalAlignment = "center"
+				x="200" y="730" w="90" h="30" >
+				<event type = "action" />
+	  		</component>
+	  		<component name="doShrink" type="button"  text = "缩小"   horizontalAlignment = "center"
+				x="300" y="730" w="90" h="30" >
+				<event type = "action" />
+	  		</component> -->			
+			<component name="leftScale" type="button"  text = "左旋转"   horizontalAlignment = "center"
+				x="300" y="730" w="90" h="30" >
+				<event type = "action" />
+	  		</component>			
+		   <component name="rightScale" type="button"  text = "右旋转"   horizontalAlignment = "center"
+				x="400" y="730" w="90" h="30" >
+				<event type = "action" />
+	  		</component>			
+		   <component name="doSave" type="button"  text = "保存"   horizontalAlignment = "center"
+				x="500" y="730" w="90" h="30" >
+				<event type = "action" />
+	  		</component>
+	  		<component name="doDelete" type="button"  text = "删除"   horizontalAlignment = "center"
+				x="600" y="730" w="90" h="30" >
+				<event type = "action" />
+	  		</component>			
+		   	<!-- <component name="doDownload" type="button"  text = "下载"   horizontalAlignment = "center"
+				x="700" y="730" w="90" h="30" >
+				<event type = "action" />
+	  		</component> -->			
+		   	<component name="cancelCommand" type="button"  text = "返回"   horizontalAlignment = "center"
+				x="700" y="730" w="90" h="30" >
+				<event type = "action" />
+	  		</component>			
+		   </components>
+	</panel>
+		
+	<panel name="uimsHtmlContentItemEditDialog" type="dialog" xo="100" yo="100"
+		width="800" height="600" locateMode="hdiv" divw = "160" 
+		dataFormClassName="cn.edu.sdu.uims.form.impl.HtmlContentItemEditForm"
+		handlerClassName="cn.edu.sdu.uims.handler.impl.UimsHtmlContentItemEditDialogHandler">
+		<components>
+			<component name="itemList" type="list" text="" font="formFont"
+				border="f1" x="10" y="10" w="720" h="500" filter="uims_common_filter" >
+				<event type = "listSelection" />
+			</component>				
+			<component name="content" type="htmlEdit" text="" dataFormMember = "content"
+				font="formFont" border="f1" x="310" y="5" w="650" h="250" >
+			</component>
+		</components>
+	</panel>
+						
+</formpaneltemplate>

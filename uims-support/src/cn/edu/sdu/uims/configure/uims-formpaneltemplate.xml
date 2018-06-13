@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<formpaneltemplate>
+	<panel name="towListAdjustPanel" type="formPanel"
+		locateMode="locate"
+		dataFormClassName="cn.edu.sdu.uims.form.impl.UListSelectForm"
+		handlerClassName="cn.edu.sdu.uims.handler.impl.TowListAdjustHandler">
+		<components>
+			<component name="leftList" type="list" text=""
+				font="formFont" border="f1" x="10" y="10" w="140" h="200"
+				filter="uims_common_filter">
+				<event type="mouse" />
+			</component>
+			<component name="leftShiftButton" type="button" content="》》"
+				cmd="leftShiftCmd" font="formFont" border="f1" x="160" y="60" w="60"
+				h="24">
+				<event type="action" />
+			</component>
+			<component name="rightShiftButton" type="button"
+				content="《《" cmd="rightShiftCmd" font="formFont" border="f1" x="160"
+				y="130" w="60" h="24">
+				<event type="action" />
+			</component>
+			<component name="rightList" type="list" border="f1" x="230"
+				y="10" w="140" h="200" filter="uims_common_filter">
+				<event type="mouse" />
+			</component>
+		</components>
+	</panel>
+	<panel name="uimsQueryByNumOrIdCardPanel" type="formPanel"
+		locateMode="locate" width = "800" height = "40"
+		dataFormClassName="cn.edu.sdu.uims.form.impl.QueryByNumOrIdCardForm"
+		handlerClassName="cn.edu.sdu.uims.handler.impl.QueryByNumOrIdCardHandler">
+		<components>
+			<component name="labelProm" type="label" border="fnull"
+				text="编号" x="60" y="10" w="80" h="25" />
+			<component name="numInput" type="textField" border="fnull"
+				text="" x="160" y="10" w="100" h="23" dataFormMember="num">
+				<event type="action" />
+			</component>
+			<component name="cardCodelabel" type="label" text="证件号码"
+				font="formFont" border="fnull" x="280" y="10" w="40" h="25">
+			</component>
+			<component name="idCardInput" type="textField"
+				font="formFont" x="320" y="10" w="130" h="25"
+				dataFormMember="idCard">
+				<event type="action" />
+			</component>
+			<component name="query" type="button" text=" 查询"
+				font="formFont" border="fnull" x="540" y="10" w="70" h="25">
+				<event type = "action" />
+			</component>
+		</components>
+	</panel>
+	<panel name="uimsPrintModelTestPanel" type="formPanel"
+		locateMode="locate" width = "800" height = "40" 
+		dataFormClassName="cn.edu.sdu.uims.graph.form.ModelPrintTestForm"
+		handlerClassName="cn.edu.sdu.uims.graph.handler.ModelPrintTestHandler">
+		<components>
+			<component name="modelNameLabel" type="label" border="fnull"
+				text="模板名称" x="20" y="20" w="80" h="30" />
+			<component name="modelNameText" type="textField" border="fnull"
+				text="" x="110" y="20" w="200" h="30" dataFormMember = "modelName"/>
+			<component name="printButton" type="button" border="fnull"
+				text="打印" x="330" y="20" w="80" h="30" >
+				<event type = "action" />
+			</component>
+		</components>
+	</panel>
+	<panel name="uimsTestTestPanel" type="formPanel"
+		locateMode="locate" width = "800" height = "40">
+		<components>
+			<component name="labelProm" type="label" border="fnull"
+				text="编号" x="60" y="10" w="80" h="25" />
+			<component name="labelProm1" type="label" border="fnull"
+				text="编号" x="360" y="360" w="80" h="25" />
+			<component name="labelProm2" type="label" border="fnull"
+				text="编号" x="720" y="720" w="80" h="25" />
+			<component name="labelProm3" type="label" border="fnull"
+				text="编号" x="1300" y="1000" w="80" h="25" />
+		</components>
+	</panel>	
+
+	<panel name="csUimsTestQueryPanel" type="formPanel"
+		locateMode="locate" width = "800" height = "40"
+		handlerClassName="cn.edu.sdu.uims.handler.impl.UInnerHandler">
+		<components>
+			<component name="dateTimeLabel" type="label" border="fnull"
+				text="日期" x="10" y="10" w="80" h="25" >
+			</component>
+			<component name="dateTime" type="comboBoxDate" border="fnull"
+				 x="100" y="10" w="100" h="25"  style = "cnDateTime1">
+			</component>
+			<component name="dateSectionLabel" type="label" border="fnull"
+				text="时段" x="200" y="10" w="80" h="25" >
+			</component>
+			<component name="dateSection" type="textFieldPanel" border="fnull" panelTemplateName ="resourceRoomQueryTextFieldPanel"
+				 x="300" y="10" w="100" h="25" >
+			</component>
+			<component name="roomLabel" type="label" border="fnull"
+				text="房间" x="400" y="10" w="100" h="25" >
+			</component>
+			<component name="room" type="comboBox" border="fnull"
+				 x="500" y="10" w="100" h="25" >
+			</component>
+			<component name="query" type="button" border="fnull"  text= "查询"
+				 x="600" y="10" w="100" h="25"  >
+				 <event type = "action" />
+			</component>
+		</components>
+	</panel>
+	<panel name="csUimsTestPanel" type="formPanel"
+		locateMode="locate" divh = "50"
+		dataFormClassName="cn.edu.sdu.uims.form.impl.UTableForm"
+		handlerClassName="cn.edu.sdu.uims.handler.UTestHandler">
+		<components>
+			<component name="com1" type="comboBoxType" border="fnull"
+				x="60" y="10" w="100" h="25"  filter="commoncomponenCommonBaseDataFilterNation">
+			</component>
+			<component name="com2" type="comboBoxType" border="fnull"
+				x="60" y="60" w="100" h="25"  filter="commoncomponenCommonBaseDataFilterPeopleCode">
+			</component>
+			<component name="com3" type="commonRegionQuery" border="fnull"
+				x="60" y="110" w="500" h="25"  >
+				 <event type = "action" />
+			</component>
+			<component name="com4" type="commonRoomQuery" border="fnull"
+				x="60" y="160" w="400" h="25"  >
+				 <event type = "action" />
+			</component>
+	
+		</components>
+	</panel>
+	<panel name="baseDataReloadPanel" type="formPanel"
+		locateMode="locate" divh = "50"
+		dataFormClassName="cn.edu.sdu.common.form.UForm"
+		handlerClassName="cn.edu.sdu.uims.handler.impl.BaseDataReloadHandler">
+		<components>
+			<component name="dictionaryLoad" type="button" border="fnull" text ="数据字典加载"
+				x="60" y="100" w="150" h="30"  >
+				 <event type = "action" />
+			</component>
+			<component name="menuLoad" type="button" border="fnull" text ="菜单加载"
+				x="60" y="150" w="150" h="30"  >
+				 <event type = "action" />
+			</component>
+			<component name="modelLoad" type="button" border="fnull" text ="模版加载"
+				x="60" y="200" w="150" h="30"  >
+				 <event type = "action" />
+			</component>
+			<component name="commonDataLoad" type="button" border="fnull" text ="基础数据加载"
+				x="60" y="250" w="150" h="30"  >
+				 <event type = "action" />
+			</component>
+		</components>
+	</panel>
+	
+<!--  graph edit -->	
+	<panel name="graphEditModelInfoPanel" type="formPanel"
+		locateMode="flow" align = "left" divw = "5" 
+		dataFormClassName="cn.edu.sdu.common.form.UForm"
+		handlerClassName="cn.edu.sdu.uims.handler.impl.BaseDataReloadHandler">
+		<components>
+			<component name="modelInfoLabel"  type="label" border="fnull" text ="模型"  />
+			<component name="modelInfo"  type="textField"   maxLength = "20"/>
+
+			<component name="graphWidthLabel"  type="label" border="fnull" text ="图宽"  />
+			<component name="graphWidth"  type="textField"  maxLength = "8" />
+
+			<component name="graphHeightLabel"  type="label" border="fnull" text ="图高"  />
+			<component name="graphHeight"  type="textField" maxLength = "8"  />
+
+			<component name="graphNameLabel"  type="label"  text ="图名"  />
+			<component name="graphName"  type="textField" maxLength = "10"  />
+		</components>
+	</panel>
+
+	<panel name="graphEditGraphAttributeChoosePanel" type="formPanel"
+		locateMode="column" 
+		dataFormClassName="cn.edu.sdu.common.form.UForm"
+		handlerClassName="cn.edu.sdu.uims.handler.impl.UInnerHandler">
+		<components>
+			<component name="page"  type="comboBox"  filter = "uims_common_filter" w= "60" h="30" />
+			<component name="graphlayer"  type="comboBox"  filter = "uims_common_filter" />
+			<component name="subGraph"  type="comboBox"  filter = "uims_common_filter" />
+			<component name="font"  type="comboBox"  filter = "uims_common_filter" />
+			<component name="color"  type="comboBox"  filter = "uims_common_filter" />
+			<component name="pen"  type="comboBox"  filter = "uims_common_filter" />
+		</components>
+	</panel>
+	
+<!-- test Panel -->	
+	
+	<panel name="uimsTestPrintModelPanel" type="formPanel"
+		locateMode="flow" divh = "50"
+		dataFormClassName="cn.edu.sdu.uims.test.TestGraphPrintForm"
+		handlerClassName="cn.edu.sdu.uims.test.TestGraphPrintHandler">
+		<components>
+			<component name="modelLabel" type="label" border="fnull" text ="打印模板"
+				x="60" y="100" w="60" h="30"  >
+			</component>
+			<component name="modelName" type="textField" border="fnull"  text =""
+				x="60" y="300" w="300" h="30"  maxLength = "20" dataFormMember="modelName">
+			</component>
+			<component name="print" type="button" border="fnull" text ="打印"
+				x="60" y="200" w="100" h="30"  >
+				 <event type = "action" />
+			</component>
+		</components>
+	</panel>
+
+ 	<panel name="uimsTestPanelOld" type="formPanel"
+		locateMode="gridBag" colNum = "2" rowNum = "2" divw = "200" divh = "60"
+		dataFormClassName="cn.edu.sdu.common.form.UForm"
+		handlerClassName="cn.edu.sdu.uims.handler.impl.UFormHandler">
+		<components>
+			<component name="b1" type="textField" border="fnull"  text= "按钮一"
+				x="60" y="60" w="100" h="25"   
+				gridwidth = "1" gridheight ="2" weightx="0.0" weighty = "0.0" fill = "both" anchor= "southwest" 
+				validatorName ="validatorNotEmpty" validatorMsg="输入域" >
+				<event type="action" />				
+			</component>
+			<component name="b2" type="button" border="fnull"  text= "按钮二"
+				x="60" y="60" w="100" h="25" 
+				gridwidth = "0" gridheight ="1" weightx="1.0" weighty = "0.8" fill = "none" anchor= "southwest">
+				<event type="action" />				
+				<event type="mouse" />
+			</component>
+			<component name="b3" type="textFieldQuery" border="fnull" text= ""  maxLength="20"
+				x="60" y="110" w="500" h="25"  
+				beanName ="serviceQueryProcessRuleBean" valueActionNum ="2" 
+				gridwidth = "1" gridheight ="1" weightx="1" weighty = "0.2" fill = "both" anchor= "southwest" >
+			</component>
+		</components>
+	</panel>
+ 		
+	<panel name="uimsTestPanelCurriulum" type="formPanel"
+		locateMode="one" colNum = "2" rowNum = "2" divw = "200" divh = "60"
+		dataFormClassName="cn.edu.sdu.uims.form.UTestItemForm"
+		handlerClassName="cn.edu.sdu.uims.handler.UTestHandler">
+		<components>
+			<component name="curriculum" type="curriculum" border="fnull"  
+				x="60" y="60" w="100" h="25" >
+				<event type="action" />				
+			</component>
+		</components>
+	</panel>
+	<panel name="uimsTestPanelold1" type="formPanel"
+		locateMode="locate" colNum = "2" rowNum = "2" divw = "200" divh = "60"
+		dataFormClassName="cn.edu.sdu.uims.form.UTestItemForm"
+		handlerClassName="cn.edu.sdu.uims.handler.UTestHandler">
+		<components>
+			<component name="b1" type="textField" border="fnull"  text= ""  dataFormMember = "dateTime"
+				x="60" y="60" w="100" h="25"   
+				validatorName ="validatorNotEmpty" validatorMsg="输入域" >
+				<event type="action" />				
+			</component>
+			<component name="b2" type="button" border="fnull"  text= "按钮二"
+				x="60" y="120" w="100" h="25" >
+				<event type="action" />				
+			</component>
+		</components>
+	</panel>
+
+	<panel name="uimsMainPanel" type="formPanel"
+		locateMode="locate" colNum = "2" rowNum = "2" divw = "200" divh = "60"
+		dataFormClassName="cn.edu.sdu.uims.form.UTestItemForm"
+		handlerClassName="cn.edu.sdu.uims.handler.impl.UMainPanelHandler">
+		<components>
+			<component name="enter" type="button" cmd = "pmInfoManagePanel" border="fnull"  text= "项目任务管理"
+				x="60" y="120" w="100" h="25" >
+				<event type="action" />				
+			</component>
+		</components>
+	</panel>
+
+	<panel name="uimsTestPanel" type="formPanel"
+		locateMode="vhdiv"  divw = "250" divh = "40"
+		dataFormClassName="cn.edu.sdu.uims.component.complex.form.GraphEditForm"
+		handlerClassName="cn.edu.sdu.uims.handler.UTestHandler">
+		<components>
+			<component name="query" type="commonRoomQuery" border="fnull"  
+				x="60" y="60" w="100" h="25"  >
+			<parameters name="visibleItems" value="area/campus/building/roomType/roomSecondType/status/locateCode/locationCode/leftCapacity/college/query" />	
+				<event type="action" />				
+			</component>
+			<component name="bulding" type="treeList" border="fnull" filter = "uims_tree_filter"  
+				x="60" y="60" w="100" h="25" >
+				<event type="action" />				
+			</component>
+			<component name="graph" type="graphEdit" border="fnull"  
+				x="60" y="60" w="100" h="25" >
+				<event type="action" />		
+			<parameters name = "graphPage" value = "A4|A3" />		
+			<parameters name = "graphLayer" value = "true" />		
+			<parameters name = "graphName" value = "true" />		
+			<parameters name = "graphFont" value = "red|black" />		
+			<parameters name = "graphColor" value = "red|black" />		
+			<parameters name = "graphPen" value = "red|black" />		
+			<parameters name="infoPanelName" value="graphEditModelInfoPanel" />	
+			<parameters name="commandBarName" value="graphEditCommandButtonBar" />	
+			<parameters name="toolBarName" value="graphEditToolToolBar" />	
+			</component>
+		</components>
+	</panel>
+	<panel name="uimsMutilePdfPrintPreviewCommandPanel" type="formPanel"
+		locateMode="flow"  divw = "200"  height = "40" width = "1000"
+		dataFormClassName="cn.edu.sdu.common.form.UForm"
+		handlerClassName="cn.edu.sdu.uims.handler.impl.UInnerHandler">
+		<components>
+			<component name="mergeSave" type="button"  border="fnull"  text= "合并导出"
+				x="60" y="120" w="100" h="25" >
+				<event type="action" />				
+			</component>
+			<component name="mergePrint" type="button"  border="fnull"  text= "合并打印"
+				x="60" y="120" w="100" h="25" >
+				<event type="action" />				
+			</component>
+		</components>
+	</panel>
+	<panel name="uimsWebSystemApplicationPanel" type="formPanel"
+		locateMode="one"  divw = "200"  height = "40" width = "1000"
+		dataFormClassName="cn.edu.sdu.common.form.UForm"
+		handlerClassName="cn.edu.sdu.uims.handler.impl.UWebSystemApplicationPanelHandler">
+		<components>
+			<component name="content" type="webApp"  border="fnull"  text= ""
+				x="60" y="120" w="100" h="25" >
+			</component>
+		</components>
+	</panel>
+	<panel name="uimsWebSystemAccountApplicationPanel" type="formPanel"
+		locateMode="one"  divw = "200"  height = "40" width = "1000"
+		dataFormClassName="cn.edu.sdu.common.form.UForm"
+		handlerClassName="cn.edu.sdu.uims.handler.impl.UWebSystemApplicationPanelHandler">
+		<components>
+			<component name="content" type="webApp"  border="fnull"  text= ""
+				x="60" y="120" w="100" h="25" isClientUser = "false" >
+			</component>
+		</components>
+	</panel>
+	<panel name="uimsWebCommandPanel" type="formPanel"
+		locateMode="one"  divw = "200"  height = "40" width = "1000"
+		dataFormClassName="cn.edu.sdu.common.form.UForm"
+		handlerClassName="cn.edu.sdu.uims.handler.impl.UWebSystemApplicationPanelHandler">
+		<components>
+			<component name="workBench" type="webApp"  border="fnull"  text= ""
+				x="60" y="120" w="100" h="25" isMenuCommand = "true" >
+			</component>
+		</components>
+	</panel>    
+			
+</formpaneltemplate>

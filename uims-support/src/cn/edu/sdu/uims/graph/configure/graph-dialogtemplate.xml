@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<formpaneltemplate>
+	<panel name="graph_dialog" type="printDialog"
+		className="cn.edu.sdu.uims.component.dialog.UPrintDialogPanel"
+		locateMode="locate" title="打印对话框"
+		dataFormClassName="cn.edu.sdu.uims.graph.form.GraphPrintDialogForm"
+		handlerClassName="cn.edu.sdu.uims.graph.handler.GraphDialogHandler"
+		width="800" height="600" ok="" cancel="">
+		<components>
+			<component name="printGraphView" type="graphView"
+				font="font20" border="fnull" x="25" y="25" w="750" h="500"
+				dataFormMember="graphPrintForm">
+			</component>
+			<component name="print" type="button" text="打印"
+				horizontalAlignment="center" font="formFont" border="fnull" x="290"
+				y="530" w="60" h="20">
+				<event type="action" />
+			</component>
+			<component name="btnClose" type="button" text="取消"
+				horizontalAlignment="center" font="formFont" border="fnull" x="450"
+				y="530" w="60" h="20">
+				<event type="action" />
+			</component>
+		</components>
+	</panel>
+</formpaneltemplate>

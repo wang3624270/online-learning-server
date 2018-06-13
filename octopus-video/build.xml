@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ====================================================================== 
+	Ant build.xml ====================================================================== -->
+<project name="octopus-video-deploy" default="deploy">
+
+	<property name="octopusVideoDir" value="${basedir}/../octopus-video" />
+	<!-- ================================= target: deploy ================================= -->
+	<target name="deploy">
+		<copy todir="${deployDir}/">
+			<fileset dir="${octopusVideoDir}/WebContent">
+				<exclude name="**/WEB-INF/lib/javax.el-api-*.jar" />
+				<exclude name="**/WEB-INF/lib/javax.servlet-api-*.jar" />
+				<exclude name="**/WEB-INF/lib/javax.servlet.jsp-api-*.jar" />
+				<exclude name="**/WEB-INF/lib/javax.websocket-api-*.jar" />
+				<exclude name="**/WEB-INF/lib/javax.faces-*.jar" />
+			</fileset>
+		</copy>
+	</target>
+</project>

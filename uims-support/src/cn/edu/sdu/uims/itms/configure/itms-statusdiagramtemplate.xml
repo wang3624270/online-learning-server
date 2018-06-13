@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<statusdiagramtemplate>
+	<statusdiagram name="rectDiagram">
+		<status name="S" type="start" esc="true" help="true"
+			userSwitch="">
+			<trans name="t1" eventType="leftDown" eventor="leftDown" next="1" />
+		</status>
+		<status name="1" type="normal" esc="true" help="true"
+			userSwitch="">
+			<trans name="t2" eventType="mouseMove" next="1" />
+			<trans name="t3" eventType="leftDown" eventor="leftDown" next="E" />
+		</status>
+		<status name="E" type="end">
+			<trans name="t4" eventType="end" />
+		</status>
+	</statusdiagram>
+	<statusdiagram name="moveDiagram">
+		<status name="S" type="start" esc="true" help="true"
+			userSwitch="">
+			<trans name="t1" eventType="leftDown" eventor="leftDown" next="1" action="selectDrageRectPart"/>
+		</status>
+		<status name="1" type="normal" esc="true" help="true"
+			userSwitch="">
+			<trans name="t2" eventType="mouseMove" next="1" />
+			<trans name="t3" eventType="leftDown" eventor="leftDown" next="E" />
+		</status>
+		<status name="E" type="end">
+			<trans name="t4" eventType="end" />
+		</status>
+	</statusdiagram>
+	<statusdiagram name="zoomDiagram">
+		<status name="S" type="start" esc="true" help="true"
+			userSwitch="">
+			<trans name="t1" eventType="leftDown" action="zoomIn" next="E" />
+			<trans name="t2" eventType="spaceKeyDown" action="zoomOut"
+				next="E" />
+		</status>
+		<status name="E" type="end">
+			<trans name="t4" />
+		</status>
+	</statusdiagram>
+
+	<statusdiagram name="pointDiagram">
+		<status name="S" type="start" esc="true" help="true"
+			userSwitch="">
+			<trans name="t1" eventType="leftDown" eventor="leftDown" next="E" />
+		</status>
+		<status name="E" type="end">
+			<trans name="t4" />
+		</status>
+	</statusdiagram>
+
+	<statusdiagram name="directionLineDiagram">
+		<status name="S" type="start" esc="true" help="true"
+			userSwitch="">
+			<trans name="t1" eventType="leftDown" eventor="leftDown" next="1" />
+		</status>
+		<status name="1" type="normal" esc="true" help="true"
+			userSwitch="">
+			<trans name="t2" eventType="mouseMove" next="1" />
+			<trans name="t3" eventType="leftDown" eventor="leftDown" next="E" />
+		</status>
+		<status name="E" type="end">
+			<trans name="t4" />
+		</status>
+	</statusdiagram>
+
+	<statusdiagram name="polyLineDiagram">
+		<status name="S" type="start" esc="true" help="true"
+			userSwitch="">
+			<trans name="t1" eventType="leftDown" eventor="leftDown" next="1" />
+		</status>
+		<status name="1" type="normal" esc="true" help="true"
+			userSwitch="">
+			<trans name="t2" eventType="mouseMove" next="1" />
+			<trans name="t3" eventType="leftDown" eventor="leftDown" next="1" />
+			<trans name="t5" eventType="spaceKeyDown" eventor="keyDown"
+				next="E" />
+			<trans name="t5" eventType="leftDoubleClick" eventor="leftDoubleClick"
+				next="E" />
+			<trans name="t5" eventType="taskEnd" eventor="taskEnd" next="E" />
+		</status>
+		<status name="E" type="end">
+			<trans name="t4" />
+		</status>
+	</statusdiagram>
+	<statusdiagram name="dragDiagram">
+		<status name="S" type="start" esc="true" help="true"
+			userSwitch="">
+			<trans name="t1" eventType="leftDown" eventor="leftDown" next="1" />
+		</status>
+		<status name="1" type="normal" esc="true" help="true"
+			userSwitch="">
+			<trans name="t2" eventType="mouseDrag" next="1" />
+			<trans name="t3" eventType="leftDown" eventor="leftDown" next="E" />
+		</status>
+		<status name="E" type="end">
+			<trans name="t4" eventType="end" />
+		</status>
+	</statusdiagram>
+</statusdiagramtemplate>

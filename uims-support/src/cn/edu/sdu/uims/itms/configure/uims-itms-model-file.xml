@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modeltemplate>
+	<mode method="initICursorTemplate" key="cursor"
+		fileName="uims/itms/configure/itms-cursortemplate.xml" />
+    <mode method="initIEventorTemplate" key="eventor"
+		fileName="uims/itms/configure/itms-eventortemplate.xml" />
+	<mode method="initIStatusDiagramTemplate" key="statusdiagram"
+		fileName="uims/itms/configure/itms-statusdiagramtemplate.xml" />
+	<mode method="initITaskTemplate" key="task"
+		fileName="uims/itms/configure/itms-tasktemplate.xml" />
+</modeltemplate>

@@ -1,0 +1,226 @@
+
+CREATE TABLE  `base_data_dictionary` (
+  `dataItemId` int(11) NOT NULL AUTO_INCREMENT,
+
+  `dataItemNum` varchar(50) DEFAULT NULL,
+
+  `dataItemName` varchar(100) DEFAULT NULL,
+
+  `roleId` int(11) DEFAULT NULL,
+
+  `fatherItemId` int(11) DEFAULT NULL,
+
+  `dataItem` varchar(200) DEFAULT NULL,
+
+  `isLeaf` int(11) DEFAULT NULL,
+
+  `isVisual` varchar(2) DEFAULT NULL,
+
+  `remark` varchar(200) CHARACTER SET utf8 COLLATE utf8_bin DEFAULT NULL,
+
+  `orderNum` int(11) DEFAULT NULL,
+
+  `dataItemEngName` varchar(100) DEFAULT NULL,
+
+  PRIMARY KEY (`dataItemId`),
+
+  KEY `FK_base_data_dictionary_1` (`fatherItemId`),
+
+  CONSTRAINT `FK_base_data_dictionary_1` FOREIGN KEY (`fatherItemId`)
+ REFERENCES `base_data_dictionary` (`dataItemId`) ON DELETE CASCADE ON UPDATE CASCADE
+)
+ ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+CREATE TABLE  `info_person_info` (
+  `personId` int(11) NOT NULL AUTO_INCREMENT,
+
+  `perName` varchar(50) DEFAULT NULL,
+
+  `perTypeCode` varchar(5) DEFAULT NULL COMMENT '0：用户，1：教练',
+ 
+ `perIdCard` varchar(18) DEFAULT NULL,
+  
+`genderCode` varchar(5) DEFAULT NULL COMMENT '1男 2女',
+ 
+ `perBirthday` date DEFAULT NULL,
+ 
+ `mobilePhone` varchar(15) DEFAULT NULL,
+
+  `perAddress` varchar(500) DEFAULT NULL,
+
+  `perPostalCode` varchar(6) DEFAULT NULL,
+
+  `perTelephone` varchar(20) DEFAULT NULL,
+
+  `qq` varchar(20) DEFAULT NULL,
+
+  `createTime` date DEFAULT NULL,
+
+  `perNum` varchar(45) DEFAULT NULL,
+ 
+ `wechat` varchar(60) DEFAULT NULL,
+ 
+ `email` varchar(45) DEFAULT NULL,
+
+  `modifyTime` datetime DEFAULT NULL,
+
+  `modifyerId` int(11) DEFAULT NULL,
+ 
+ `remark` varchar(100) DEFAULT NULL,
+
+  `headimgurl` varchar(200) DEFAULT NULL COMMENT '从微信得到用户头像',
+  
+PRIMARY KEY (`personId`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+
+CREATE TABLE  `sys_user` (
+  `sysusrid` int(11) NOT NULL AUTO_INCREMENT,
+
+  `loginName` varchar(45) NOT NULL,
+
+  `password` varchar(45) DEFAULT NULL,
+
+  `userid` int(11) DEFAULT NULL,
+
+  `unionid` varchar(60) DEFAULT NULL,
+
+  `authority` varchar(100) DEFAULT NULL,
+
+  `enabled` tinyint(1) NOT NULL DEFAULT '0' COMMENT '账号是否为可用',
+
+  `pwd` varchar(20) DEFAULT NULL,
+
+  PRIMARY KEY (`sysusrid`),
+  UNIQUE KEY `username_UNIQUE` (`loginName`),
+
+  KEY `FK_users_userid_idx` (`userid`),
+  CONSTRAINT `FK_users_userid` FOREIGN KEY (`userid`) REFERENCES
+ `info_person_info` (`personId`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+
+CREATE TABLE  `base_attachment_info` (
+  `attachId` int(11) NOT NULL AUTO_INCREMENT,
+
+  `attachType` varchar(50) DEFAULT NULL,
+
+  `docType` varchar(50) DEFAULT NULL,
+
+  `ownerId` int(11) DEFAULT NULL,
+
+  `urlAddress` varchar(256) DEFAULT NULL,
+
+  `fileName` varchar(128) DEFAULT NULL,
+
+  `uploadTime` datetime DEFAULT NULL,
+
+  `remark` varchar(200) DEFAULT NULL,
+
+  `attachIndex` varchar(45) DEFAULT NULL,
+
+  `permanentFileName` varchar(256) DEFAULT NULL,
+
+  `uploader` int(11) DEFAULT NULL,
+
+  PRIMARY KEY (`attachId`),
+  UNIQUE KEY `attachId` (`attachId`),
+
+  UNIQUE KEY `base_attachment_info_attachId_unique` (`attachId`),
+
+  KEY `uploader` (`uploader`),
+
+  CONSTRAINT `base_attachment_info_ibfk_1` FOREIGN KEY (`uploader`) REFERENCES `info_person_info` (`personId`) 
+ON DELETE SET NULL ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+CREATE TABLE  `starfish_menu_access` (
+  `id` int(11)  NOT NULL AUTO_INCREMENT,
+
+  `menuName` varchar(45) NOT NULL,
+
+  `menuURL` varchar(100) DEFAULT NULL,
+
+  `authDetail` varchar(100) NOT NULL,
+
+  `updateTime` datetime DEFAULT NULL,
+
+  `logicId` varchar(45) NOT NULL,
+
+  `parentLogicId` varchar(45) DEFAULT NULL,
+
+  `positionNum` int(10) unsigned DEFAULT '0',
+
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+
+CREATE TABLE  `system_global_variable` (
+  `variableId` int(11) NOT NULL AUTO_INCREMENT,
+
+  `variableName` varchar(30) DEFAULT NULL,
+
+  `variableValue` varchar(30) DEFAULT NULL,
+
+  `modifyTime` datetime DEFAULT NULL,
+
+  `modifyCmd` varchar(100) DEFAULT NULL,
+
+  `modifier` int(11) DEFAULT NULL,
+
+  `variableType` varchar(2) DEFAULT NULL,
+
+  `variableDes` varchar(45) DEFAULT NULL,
+
+  PRIMARY KEY (`variableId`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+
+CREATE TABLE  `news_info` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+
+  `createrId` int(11) DEFAULT NULL,
+
+  `title` varchar(200) NOT NULL,
+  `brief` varchar(200) DEFAULT NULL,
+
+  `newsNum` varchar(10) DEFAULT NULL,
+
+  `attachId` int(11) DEFAULT NULL,
+
+  `newsType` varchar(2) DEFAULT NULL,
+
+  `readCount` int(11) DEFAULT NULL,
+
+  `createTime` datetime NOT NULL,
+
+  `modifyTime` datetime DEFAULT NULL,
+
+  `isVisable` int(11) DEFAULT NULL COMMENT '是否可见  1是 0否',
+
+  `orderNum` int(11) DEFAULT NULL,
+
+  `URL` varchar(100) DEFAULT NULL,
+
+  PRIMARY KEY (`id`),
+
+  KEY `FK_badminton_news_theme_1_idx` (`createrId`)
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

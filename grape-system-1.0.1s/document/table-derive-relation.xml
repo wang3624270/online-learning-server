@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<derive-groups>
+	<group mainTable="info_person_info">
+		<derive outerKey="school01" table="info_peroson_info_1" />
+		<derive outerKey="school02" table="info_peroson_info_2" />
+		<derive outerKey="school03,school04" table="info_peroson_info_3" />
+	</group>
+</derive-groups>

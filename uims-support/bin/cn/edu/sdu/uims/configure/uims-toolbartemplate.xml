@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<toolbartemplate>
+	<toolbar name="commandToolBar" >
+		<tool name="toolNew" type="button" content="新建"
+			icon="toolbar_new.gif" />
+		<tool name="toolOpen" type="button" content="打开"
+			icon="toolbar_open.gif" />
+		<tool name="toolClose" type="button" content="关闭"
+			icon="toolbar_close.gif" />
+		<tool name="toolSeparator" type="separator" />
+		<tool name="toolPrintSetup" type="button" content="打印设置"
+			icon="toolbar_printSetting.gif" />
+		<tool name="toolPrint" type="button" content="打印"
+			icon="toolbar_print.gif" />
+		<tool name="toolPrintPreview" type="button" content="打印预览"
+			icon="toolbar_printPreview.gif" />
+		<tool name="toolSeparator" type="separator" />
+		<tool name="toolCut" type="button" content="剪切"
+			icon="toolbar_cut.gif" />
+		<tool name="toolCopy" type="button" content="复制"
+			icon="toolbar_copy.gif" />
+		<tool name="toolPaste" type="button" content="粘贴"
+			icon="toolbar_paste.gif" />
+		<tool name="toolSeparator" type="separator" />
+		<tool name="toolRefresh" type="button" content="获取数据"
+			icon="toolbar_refresh.gif" />
+		<tool name="toolTableDetail" type="button" content="详细"
+			icon="toolbar_tableDetail.gif" />
+		<tool name="toolAdd" type="button" content="添加"
+			icon="toolbar_add.gif" />
+		<tool name="toolModify" type="button" content="修改"
+			icon="toolbar_modify.gif" />
+		<tool name="toolDelete" type="button" content="删除"
+			icon="toolbar_delete.gif" />
+		<tool name="toolCheck" type="button" content="审核"
+			icon="toolbar_check.gif" />
+		<tool name="toolBatch" type="button" content="批量置数"
+			icon="toolbar_batch.gif" />
+		<tool name="toolImport" type="button" content="导入"
+			icon="toolbar_import.gif" />
+		<tool name="toolExport" type="button" content="导出"
+			icon="toolbar_export.gif" />
+		<tool name="toolExportDBF" type="button" content="导出DBF"
+			icon="toolbar_exportdbf.gif" />
+		<tool name="toolInfoSend" type="button" content="通知"
+			icon="toolbar_infosend.gif" />
+		<tool name="toolSeparator" type="separator" />
+		<tool name="toolQuery" type="button" content="查询"
+			icon="toolbar_query.gif" />
+		<tool name="toolFilter" type="button" content="过滤"
+			icon="toolbar_filter.gif" />
+		<tool name="toolSeparator" type="separator" />
+		<tool name="toolSelectAll" type="button" content="全选"
+			icon="toolbar_selectAll.gif" />
+		<tool name="toolSelectNone" type="button" content="不选"
+			icon="toolbar_selectNone.gif" />
+		<tool name="toolSelectReverse" type="button" content="反选"
+			icon="toolbar_selectReverse.gif" />
+		<tool name="toolSeparator" type="separator" />
+		<tool name="toolFirstPage" type="button" content="第一页"
+			icon="toolbar_firstPage.gif" />
+		<tool name="toolPreviousPage" type="button" content="上一页"
+			icon="toolbar_previousPage.gif" />
+		<tool name="toolNextPage" type="button" content="下一页"
+			icon="toolbar_nextPage.gif" />
+		<tool name="toolLastPage" type="button" content="最后页"
+			icon="toolbar_lastPage.gif" />
+		<tool name="toolSeparator" type="separator" />
+		<tool name="toolHelp" type="button" content="帮助"
+			icon="toolbar_help.gif" />
+	</toolbar>
+	<toolbar name="graphCommandToolBar" row="5" col="5" >
+		<tool name="toolOpen" type="colorButton" color="colorRed" 
+		      userTaskName="addTaskNode" methodName="buttonAddTaskNode" />
+		<tool name="toolClose" type="toggleButton" content="关闭"
+			icon="toolbar_close.gif" />
+		<tool name="toolSeparator" type="separator" />
+		<tool name="toolPrintSetup" type="toggleButton" content="打印设置"
+			icon="toolbar_printSetting.gif" />
+		<tool name="toolPrint" type="toggleButton" content="打印"
+			icon="toolbar_print.gif" />
+		<tool name="toolPrintPreview" type="toggleButton" content="打印预览"
+			icon="toolbar_printPreview.gif" />
+		<tool name="toolSeparator" type="separator" />
+		<tool name="toolCut" type="toggleButton" content="剪切"
+			icon="toolbar_cut.gif" />
+		<tool name="toolCopy" type="toggleButton" content="复制"
+			icon="toolbar_copy.gif" />
+		<tool name="toolPaste" type="toggleButton" content="粘贴"
+			icon="toolbar_paste.gif" />
+		<tool name="toolSeparator" type="separator" />
+		<tool name="toolRefresh" type="toggleButton" content="获取数据"
+			icon="toolbar_refresh.gif" />
+		<tool name="toolAdd" type="toggleButton" content="添加"
+			icon="toolbar_add.gif" />
+		<tool name="toolModify" type="toggleButton" content="修改"
+			icon="toolbar_modify.gif" />
+		<tool name="toolDelete" type="toggleButton" content="删除"
+			icon="toolbar_delete.gif" />
+		<tool name="toolBatch" type="toggleButton" content="批量置数"
+			icon="toolbar_batch.gif" />
+		<tool name="toolImport" type="toggleButton" content="导入"
+			icon="toolbar_import.gif" />
+		<tool name="toolExport" type="toggleButton" content="导出"
+			icon="toolbar_export.gif" />
+		<tool name="toolInfoSend" type="toggleButton" content="通知"
+			icon="toolbar_infosend.gif" />
+		<tool name="toolSeparator" type="separator" />
+		<tool name="toolQuery" type="toggleButton" content="查询"
+			icon="toolbar_query.gif" />
+		<tool name="toolFilter" type="toggleButton" content="过滤"
+			icon="toolbar_filter.gif" />
+		<tool name="toolSeparator" type="separator" />
+		<tool name="toolSelectAll" type="toggleButton" content="全选"
+			icon="toolbar_selectAll.gif" />
+		<tool name="toolSelectNone" type="toggleButton" content="不选"
+			icon="toolbar_selectNone.gif" />
+		<tool name="toolSelectReverse" type="toggleButton" content="反选"
+			icon="toolbar_selectReverse.gif" />
+		<tool name="toolSeparator" type="separator" />
+		<tool name="toolFirstPage" type="toggleButton" content="第一页"
+			icon="toolbar_firstPage.gif" />
+		<tool name="toolPreviousPage" type="toggleButton" content="上一页"
+			icon="toolbar_previousPage.gif" />
+		<tool name="toolSeparator" type="separator" />
+		<tool name="toolHelp" type="toggleButton" content="帮助"
+			icon="toolbar_help.gif" />
+	</toolbar>
+	<toolbar name="graphEditToolToolBar" row="8" col="2">
+		<tool name="toolOpen" type="colorButton" color="colorRed" icon="toolbar_Open.gif" />
+		<tool name="toolClose" type="toggleButton" content="关闭"  icon="toolbar_close.gif" />
+		<tool name="toolPrintSetup" type="toggleButton" content="打印设置" icon="toolbar_printSetting.gif" />
+		<tool name="toolPrint" type="toggleButton" content="打印" icon="toolbar_print.gif" />
+		<tool name="toolCut" type="toggleButton" content="剪切" icon="toolbar_cut.gif" />
+		<tool name="toolCopy" type="toggleButton" content="复制" icon="toolbar_copy.gif" />
+		<tool name="toolPaste" type="toggleButton" content="粘贴" icon="toolbar_paste.gif" />
+		<tool name="toolRefresh" type="toggleButton" content="获取数据" 	icon="toolbar_refresh.gif" />
+		<tool name="toolAdd" type="toggleButton" content="添加" icon="toolbar_add.gif" />
+		<tool name="toolTest" type="toggleButton" content="打开" icon="toolbar_open.gif" />
+		<tool name="toolAdd" type="toggleButton" content="添加" icon="toolbar_add.gif" />
+		<tool name="toolTest" type="toggleButton" content="打开" icon="toolbar_open.gif" />
+		<tool name="toolAdd" type="toggleButton" content="添加" icon="toolbar_add.gif" />
+		<tool name="toolTest" type="toggleButton" content="打开" icon="toolbar_open.gif" />
+		<tool name="toolAdd" type="toggleButton" content="添加" icon="toolbar_add.gif" />
+		<tool name="toolTest" type="toggleButton" content="打开" icon="toolbar_open.gif" />
+	</toolbar>
+</toolbartemplate>

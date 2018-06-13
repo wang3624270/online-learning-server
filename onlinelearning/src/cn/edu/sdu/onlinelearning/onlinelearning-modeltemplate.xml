@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modetemplate>
+	<file name="commonplatform/configure/commonplatform-model-file.xml" />
+			
+	<mode method="initToolbarTemplate" key="toolbar" fileName="onlinelearning/onlinelearning-toolbartemplate.xml" />
+	<mode method="initPanelTemplate"  key="dialog" fileName="onlinelearning/onlinelearning-dialogtemplate.xml" />
+	<mode method="initPanelTemplate"  key="formPanel" fileName="onlinelearning/onlinelearning-formpaneltemplate.xml" />
+	<mode method="initTableTemplate"  key="formDataTable" fileName="onlinelearning/onlinelearning-formdatatabletemplate.xml" />
+	
+</modetemplate>

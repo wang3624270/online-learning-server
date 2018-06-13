@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graphmodeltemplate>
+	<graph num = "20091001" name="resource.class.a" type="graph"
+		locateMode="locate" >
+		<defs> 
+			<def  name = "length" value = "50" />
+		</defs>
+		<elements>
+			<element name ="s1" type="max"  x1="-@l" y1="-@l" x2="@l" y2="-@l" />
+			<element name ="l1" type="line"  x1="@l" y1="-@l" x2="@l" y2="@l" />
+			<element name ="l2" type="line"  x1="@l" y1="@l" x2="-@l" y2="@l" />
+			<element name ="l3" type="line"  x1="-@l" y1="@l" x2="-@l" y2="-@l" />
+		</elements>
+	</graph>
+</graphmodeltemplate>

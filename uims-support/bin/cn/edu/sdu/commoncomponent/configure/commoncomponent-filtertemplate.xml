@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<filtertemplate>
+	<filter name="commoncomponenCommonBaseDataFilterCampus"
+		className="cn.edu.sdu.commoncomponent.filter.CommonBaseDataComboBoxFilterCampus" parameter="general" />
+	<filter name="commoncomponenCommonBaseDataFilterCollegeAll"
+		className="cn.edu.sdu.commoncomponent.filter.CommonBaseDataComboBoxFilterCollegeAll" parameter="general"/>
+	<filter name="commoncomponenCommonBaseDataFilterCollege"
+		className="cn.edu.sdu.commoncomponent.filter.CommonBaseDataComboBoxFilterCollege" parameter="general"/>
+	<filter name="commoncomponenCommonBaseDataFilterCollegeMajor"
+		className="cn.edu.sdu.commoncomponent.filter.CommonBaseDataComboBoxFilterCollegeMajor" parameter="general"/>
+	<filter name="commoncomponenCommonBaseDataFilterStuTypeCode"
+		className="cn.edu.sdu.commoncomponent.filter.CommonBaseDataComboBoxFilterStuTypeCode" parameter="general"/>
+	<filter name="commoncomponenCommonBaseDataFilterTeaTypeCode"
+		className="cn.edu.sdu.commoncomponent.filter.CommonBaseDataComboBoxFilterTeaTypeCode" parameter="general"/>
+	<filter name="commoncomponenCommonBaseDataFilterTerm"
+		className="cn.edu.sdu.commoncomponent.filter.CommonBaseDataComboBoxFilterTerm" parameter="general"/>
+	<filter name="commoncomponenCommonBaseDataFilterGrade"
+		className="cn.edu.sdu.commoncomponent.filter.CommonBaseDataComboBoxFilterGrade" parameter="general"/>
+	<filter name="commoncomponenCommonBaseDataFilterClass"
+		className="cn.edu.sdu.commoncomponent.filter.CommonBaseDataComboBoxFilterClass" parameter="general"/>
+	<filter name="commoncomponenCommonBaseDataFilterStatus"
+		className="cn.edu.sdu.commoncomponent.filter.CommonBaseDataComboBoxFilterStatus" parameter="general"/>
+	<filter name="commoncomponenCommonBaseDataFilterTeachTask"
+		className="cn.edu.sdu.commoncomponent.filter.CommonBaseDataComboBoxFilterTeachTask" parameter="general"/>
+	<filter name="commoncomponenCommonBaseDataFilterRoomApply"
+		className="cn.edu.sdu.commoncomponent.filter.CommonBaseDataComboBoxFilterRoomApply" parameter="general"/>
+	<filter name="commoncomponenCommonBaseDataFilterNation"
+		className="cn.edu.sdu.commoncomponent.filter.CommonBaseDataComboBoxFilterNation" parameter="general"/>
+	<filter name="commoncomponenCommonBaseDataFilterProvince"
+		className="cn.edu.sdu.commoncomponent.filter.CommonBaseDataComboBoxFilterProvince" parameter="general"/>
+	<filter name="commoncomponenCommonBaseDataFilterPeopleCode"
+		className="cn.edu.sdu.commoncomponent.filter.CommonBaseDataComboBoxFilterPeopleCode" parameter="general"/>
+	<filter name="commoncomponenCommonBaseDataFilterLoanStatus"
+		className="cn.edu.sdu.commoncomponent.filter.CommonBaseDataComboBoxFilterLoanStatus" parameter="general"/>
+	<filter name="commoncomponenCommonBaseDataFilterLoanStatusName"
+		className="cn.edu.sdu.commoncomponent.filter.CommonBaseDataComboBoxFilterLoanStatusName" parameter="general"/>
+	<filter name="commoncomponenCommonBaseDataFilterProcess"
+		className="cn.edu.sdu.commoncomponent.filter.CommonBaseDataComboBoxFilterProcess" parameter="general"/>
+		
+	<filter name="commoncomponenCommonBaseDataFilterFriendlySchool"
+		className="cn.edu.sdu.commoncomponent.filter.CommonBaseDataComboBoxFilterFriendlySchool" parameter="general"/>
+	<filter name="commoncomponenCommonBaseDataFilterPostgraduateMajor"
+		className="cn.edu.sdu.commoncomponent.filter.CommonBaseDataComboBoxFilterPostgraduateMajor" parameter="general" />
+	<filter name="commoncomponenCommonBaseDataFilterUndergraduateMajor"
+		className="cn.edu.sdu.commoncomponent.filter.CommonBaseDataComboBoxFilterUndergraduateMajor" parameter="general" />
+	<filter name="commoncomponenCommonBaseDataFilterCultivateUnit"
+		className="cn.edu.sdu.commoncomponent.filter.CommonBaseDataComboBoxFilterCultivateUnit" parameter="general" />
+	
+	
+	
+	<filter name="commoncomponenCommonBaseDataFilterAchieveModalNumYouLiang"
+		className="cn.edu.sdu.commoncomponent.filter.CommonBaseDataFilterAchieveModalNumYouLiang" parameter="general"/>
+	<filter name="commoncomponenCommonBaseDataFilterAchieveModalNumABCDF"
+		className="cn.edu.sdu.commoncomponent.filter.CommonBaseDataFilterAchieveModalNumABCDF" parameter="general" />
+	<filter name="commoncomponenCommonBaseDataFilterAchieveModalNumDF"
+		className="cn.edu.sdu.commoncomponent.filter.CommonBaseDataFilterAchieveModalNumDF" parameter="general" />
+	<filter name="commoncomponenCommonBaseDataFilterAchieveModalNumHeGe"
+		className="cn.edu.sdu.commoncomponent.filter.CommonBaseDataFilterAchieveModalNumHeGe" parameter="general" />			
+</filtertemplate>

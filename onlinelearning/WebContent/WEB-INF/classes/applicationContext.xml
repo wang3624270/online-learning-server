@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+	xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+       http://www.springframework.org/schema/tx
+       http://www.springframework.org/schema/tx/spring-tx-4.2.xsd
+       http://www.springframework.org/schema/aop
+       http://www.springframework.org/schema/aop/spring-aop-4.2.xsd
+                  http://www.springframework.org/schema/mvc
+       http://www.springframework.org/schema/mvc/spring-mvc-4.2.xsd
+                  http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context-4.2.xsd
+              http://www.springframework.org/schema/data/jpa
+       http://www.springframework.org/schema/data/jpa/spring-jpa-1.8.xsd">
+
+	<import resource="onlinelearning-datasource-local.xml" />
+
+	<context:component-scan base-package="org.starfish" />
+	<context:component-scan base-package="org.sdu.spring_util" />
+	<context:component-scan base-package="cn.edu.sdu.uims.service" />
+
+	<context:component-scan base-package="org.octopus">
+		<context:exclude-filter type="regex"
+			expression=".*restapi\.[^.]*" />
+	</context:component-scan>
+
+	<context:component-scan base-package="cn.edu.sdu.exam">
+		<context:exclude-filter type="regex"
+			expression=".*web\.[^.]*" />
+	</context:component-scan>
+
+	<context:component-scan base-package="cn.edu.sdu.examPaper">
+		<context:exclude-filter type="regex"
+			expression=".*web\.[^.]*" />
+	</context:component-scan>
+
+	<context:component-scan base-package="cn.edu.sdu.onlineExam">
+		<context:exclude-filter type="regex"
+			expression=".*web\.[^.]*" />
+	</context:component-scan>
+
+	<context:component-scan base-package="cn.edu.sdu.questionDB">
+		<context:exclude-filter type="regex"
+			expression=".*web\.[^.]*" />
+	</context:component-scan>
+
+	<context:component-scan base-package="cn.edu.sdu.onlinelearning">
+		<context:exclude-filter type="regex"
+			expression=".*web\.[^.]*" />
+	</context:component-scan>
+	
+	<context:component-scan base-package="cn.edu.sdu.course">
+		<context:exclude-filter type="regex"
+			expression=".*web\.[^.]*" />
+	</context:component-scan>
+	
+	<context:component-scan base-package="cn.edu.sdu.homework">
+		<context:exclude-filter type="regex"
+			expression=".*web\.[^.]*" />
+	</context:component-scan>
+	
+	<context:component-scan base-package="cn.edu.sdu.exam">
+		<context:exclude-filter type="regex"
+			expression=".*web\.[^.]*" />
+	</context:component-scan>
+	
+	<context:component-scan base-package="cn.edu.sdu.homepage">
+		<context:exclude-filter type="regex"
+			expression=".*web\.[^.]*" />
+	</context:component-scan>
+	
+	<context:component-scan base-package="com.badminton">
+		<context:exclude-filter type="regex"
+			expression=".*web\.[^.]*" />
+	</context:component-scan>
+
+	<context:component-scan base-package="com.video">
+		<context:exclude-filter type="regex"
+			expression=".*web\.[^.]*" />
+	</context:component-scan>
+	
+	<tx:annotation-driven transaction-manager="transactionManager"
+		proxy-target-class="true" />
+
+
+	<bean id="validator"
+		class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">
+		<property name="providerClass" value="org.hibernate.validator.HibernateValidator" />
+		<property name="validationMessageSource" ref="messageSource" />
+	</bean>
+	
+	<!-- 文件上传配置auther: wangqianqian -->
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">  
+         <!-- 请求编码格式 -->  
+         <property name="defaultEncoding" value="utf-8"></property>  
+         <!-- 上传文件大小(单位:字节) -->  
+         <property name="maxUploadSize" value="10000000000"></property>  
+         <!-- 缓冲区大小(单位:KB) -->  
+         <property name="maxInMemorySize" value="102400"></property>  
+    </bean> 
+
+
+	<bean id="messageSource"
+		class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+		<property name="basenames">
+			<list>
+				<value>classpath:org/octopus/auth/message/authMessage</value>
+				<value>classpath:org/octopus/dim_manage/dim_org/message/message
+				</value>
+			</list>
+		</property>
+		<property name="useCodeAsDefaultMessage" value="false" />
+		<property name="defaultEncoding" value="UTF-8" />
+	</bean>
+	<jpa:repositories base-package="org.octopus,com.seascape"
+		repository-impl-postfix="JpaDao" entity-manager-factory-ref="entityManagerFactory"
+		transaction-manager-ref="transactionManager">
+	</jpa:repositories>
+	<bean name="objectMapper" class="com.fasterxml.jackson.databind.ObjectMapper" />
+	<import resource="applicationContext-security.xml" />
+	<import resource="starfish/beans.xml" />
+	<import resource="rmi/beans.xml" />
+
+
+</beans>
+

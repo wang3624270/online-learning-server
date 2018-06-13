@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<userTasktemplate>
+	<userTaskGroup name="graphCommandUserTask">
+		<userTask name="drawRect" hciTask="rect" pointCursor ="crosshair" repeat="true"
+			dataForm="cn.edu.sdu.uims.hcims.form.PointForm" />
+		<userTask name="drawTaskNode" hciTask="taskNode" repeat="true"
+			dataForm="cn.edu.sdu.uims.hcims.form.PointForm"/>
+		<userTask name="zoom" hciTask="zoom" pointCursor ="hand" repeat="true"
+			dataForm="cn.edu.sdu.uims.hcims.form.PointForm" />
+		<userTask name="drawPolyLine" pointCursor ="crosshair" hciTask="polyLineTask"
+			repeat="true" dataForm="cn.edu.sdu.uims.hcims.form.PointForm" />
+		<userTask name="addTaskNode" hciTask="point" pointCursor ="crosshair" repeat="true"
+			dataForm="cn.edu.sdu.uims.hcims.form.PointForm" />
+		<userTask name="addTransitionLine" hciTask="directionLine" pointCursor ="crosshair" repeat="true"
+			dataForm="cn.edu.sdu.uims.hcims.form.PointForm" />
+	</userTaskGroup>
+</userTasktemplate>
+ 

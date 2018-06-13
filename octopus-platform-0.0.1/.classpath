@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="config"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/websocket-api.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/javax.el-api-2.2.5.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/javax.servlet.jsp-api-2.2.1.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/hibernate-validator-4.3.2.Final.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/validation-api-1.0.0.GA.jar" sourcepath="E:/apache-maven-3.0.5/repo/javax/validation/validation-api/1.0.0.GA/validation-api-1.0.0.GA-sources.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/dom4j-1.6.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="WebContent/WEB-INF/lib/jxl.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/poi-3.8-20120326.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/poi-ooxml-3.8-20120326.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/poi-ooxml-schemas-3.8-20120326.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/xmlbeans-2.3.0.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/apache-com-support-0.0.1"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/common-support-0.0.1"/>
+	<classpathentry kind="lib" path="/common-support-0.0.1/lib/spring-support-4.2.4.jar" sourcepath="/spring-support-4.2.4"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/hibernate-commons-annotations-4.0.5.Final.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/hibernate-core-4.3.11.Final.jar"/>
+	<classpathentry kind="lib" path="/apache-com-support-0.0.1/lib/commons-beanutils.jar"/>
+	<classpathentry kind="lib" path="/common-support-0.0.1/lib/javax.servlet-api-3.0.1.jar"/>
+	<classpathentry kind="lib" path="/common-support-0.0.1/lib/jackson-annotations-2.4.6.jar"/>
+	<classpathentry kind="lib" path="/common-support-0.0.1/lib/jackson-core-2.4.6.jar"/>
+	<classpathentry kind="lib" path="/common-support-0.0.1/lib/jackson-databind-2.4.6.jar"/>
+	<classpathentry kind="lib" path="/common-support-0.0.1/lib/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/sdu_itext.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/jxl-2.6.12.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/commons-digester-1.7.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/commons-collections-3.2.1.jar"/>
+	<classpathentry kind="lib" path="/common-support-0.0.1/lib/grape-system-1.0.1s.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/topwellsoft-docbricks.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/sdu_itext-rtf.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/struts.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/json-lib-2.2.3-jdk15.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/commons-lang.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/commons-logging.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/ezmorph-1.0.4.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/okhttp-3.9.0.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/okio-1.13.0.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/ffmpeg-macosx-x86_64.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/ffmpeg.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/javacpp.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/javacv.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/opencv-macosx-x86_64.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/opencv.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/junit-4.9.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/ffmpeg-windows-x86_64.jar"/>
+	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/opencv-windows-x86_64.jar"/>
+	<classpathentry kind="lib" path="/common-support-0.0.1/lib/hibernate-jpa-2.1-api-1.0.0.Final.jar"/>
+	<classpathentry kind="output" path="WebContent/WEB-INF/classes"/>
+</classpath>

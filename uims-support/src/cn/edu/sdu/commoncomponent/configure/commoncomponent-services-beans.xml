@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+       http://www.springframework.org/schema/tx
+       http://www.springframework.org/schema/tx/spring-tx-4.1.xsd
+       http://www.springframework.org/schema/aop
+       http://www.springframework.org/schema/aop/spring-aop-4.1.xsd">
+
+ 
+   <bean id="baseRoomAdditionalInfoDaoImpl"
+		class="cn.edu.sdu.resource.room.dao.daoImpl.BaseRoomAdditionalInfoDaoImpl">
+		<property name="hibernateTemplate">
+			<ref bean="hibernateTemplate" />
+		</property>
+	</bean>
+      <bean id="officeManagerRoomRefDaoImpl"
+		class="cn.edu.sdu.resource.room.dao.daoImpl.OfficeManagerRoomRefDaoImpl">
+		<property name="hibernateTemplate">
+			<ref bean="hibernateTemplate" />
+		</property>
+	</bean>
+   <bean id="baseFriendlySchoolDaoImpl"
+		class="cn.edu.sdu.service.base.dao.daoImpl.BaseFriendlySchoolDaoImpl">
+		<property name="hibernateTemplate">
+			<ref bean="hibernateTemplate" />
+		</property>
+	</bean>
+	    
+   
+	<bean id="baseCollegeMapDaoImpl"
+		class="cn.edu.sdu.collegemap.dao.impl.BaseCollegeMapDaoImpl">
+		<property name="hibernateTemplate">
+			<ref bean="hibernateTemplate" />
+		</property>
+	</bean>
+	<bean id="commonBaseDataQueryProcessRuleBean"
+		class="cn.edu.sdu.commoncomponent.rule.CommonBaseDataQueryProcessRule">
+	    <property name="baseCollegeDao">
+			<ref bean="baseCollegeDaoImpl" />
+		</property>
+		<property name="sysUserDao">
+			<ref bean="sysUserDaoImpl" />
+		</property>
+		<property name="infoPersonInfoDao">
+			<ref bean="infoPersonInfoDaoImpl" />
+		</property>
+		<property name="basePostGradMajorCodeDao">
+			<ref bean="basePostGradMajorCodeDaoImpl" />
+		</property>
+		<property name="baseClassDao">
+			<ref bean="baseClassDaoImpl" />
+		</property>
+		<property name="baseFacultyDao">
+			<ref bean="baseFacultyDaoImpl" />
+		</property>
+		<property name="baseCollegeMapDao">
+			<ref bean="baseCollegeMapDaoImpl" />
+		</property>		
+		<property name="sysRoleDao">
+			<ref bean="sysRoleDaoImpl" />
+		</property>		
+		<property name="sysUserGroupDao">
+			<ref bean="sysUserGroupDaoImpl" />
+		</property>		
+		<property name="sysRoleDataFilterDao">
+			<ref bean="sysRoleDataFilterDaoImpl" />
+		</property>		
+	</bean>
+	<bean id="commonRegionQueryProcessRuleBean"
+		class="cn.edu.sdu.commoncomponent.rule.CommonRegionQueryProcessRule">
+	</bean>
+		
+</beans>
+

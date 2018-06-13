@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<syncparticipants>
+<participant displayName="SVN (/apache-com-support-0.0.1, /common-support-0.0.1, /grape-system-1.0.1s, /octopus-auth-0.0.1, /octopus-platform-0.0.1, /octopus-video, /onlinelearning, /uims-support)" id="org.tigris.subversion.subclipse.participant" secondary_id="1525614560615">
+<data root="false">
+<org.eclipse.team.ui.TEAMSUBSRCIBERSETTINGS org.eclipse.team.ui.SCOPE_TYPE="ResourceScope">
+<org.eclipse.team.ui.TEAMSUBSRCIBER_REFRESHSCHEDULE org.eclipse.team.ui.CTX_REFRESHSCHEDULE_ENABLED="false" org.eclipse.team.ui.CTX_REFRESHSCHEDULE_INTERVAL="3600" org.eclipse.team.ui.CTX_REFRESHSCHEDULE_RUNONCE="false"/>
+<resource_scope_roots resource_scope_root_resource="/apache-com-support-0.0.1"/>
+<resource_scope_roots resource_scope_root_resource="/common-support-0.0.1"/>
+<resource_scope_roots resource_scope_root_resource="/grape-system-1.0.1s"/>
+<resource_scope_roots resource_scope_root_resource="/octopus-auth-0.0.1"/>
+<resource_scope_roots resource_scope_root_resource="/octopus-platform-0.0.1"/>
+<resource_scope_roots resource_scope_root_resource="/octopus-video"/>
+<resource_scope_roots resource_scope_root_resource="/onlinelearning"/>
+<resource_scope_roots resource_scope_root_resource="/uims-support"/>
+</org.eclipse.team.ui.TEAMSUBSRCIBERSETTINGS>
+</data>
+</participant>
+</syncparticipants>

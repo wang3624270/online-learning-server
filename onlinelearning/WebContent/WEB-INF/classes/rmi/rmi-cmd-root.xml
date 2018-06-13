@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rmi-cmd-set>
+	<cmd-file
+		path="/org/octopus/common_business/globalinfo/configure/common_business-globalinfo-rmi-cmds.xml" />
+	<cmd-file
+		path="/org/octopus/common_business/attachment/configure/common_business-attachment-rmi-cmds.xml" />
+	<cmd-file
+		path="/org/octopus/common_business/news/configure/common_business-news-rmi-cmds.xml" />
+	<cmd-file
+		path="/org/octopus/common_business/town/configure/common_business-town-rmi-cmds.xml" />
+	<cmd-file
+		path="/cn/edu/sdu/commonplatform/configure/commonplatform-rmi-cmds.xml" />
+	<cmd-file
+		path="/cn/edu/sdu/badminton/configure/badminton-rmi-cmds.xml" />
+
+	<cmd key="sysInit_getDataDictionary" method="dataDictionaryGet"
+		beanId="dataDictionaryInfoInitRule" description="数据字典" authToken="permitAll" />
+	<cmd key="changeUserPasswd" method="changePassword"	beanId="rmiCommonAuthBean" description="修改密码" />
+	<cmd key="uimsGetQueryDataListByInputString" method="getQueryDataListByInputString"
+		beanId="uimsRmiRequestProcessRule" description="getTemplate" />
+	<cmd key="login" method="rmiLogin" beanId="rmiCommonAuthBean"
+		description="" authToken="permitAll" />
+	<cmd key="menuStrcture" method="menuStrcture" beanId="rmiCommonAuthBean"
+		description="反回rootMenu，为菜单树" />
+</rmi-cmd-set>
+ 

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rmi-cmd-set>
+    	<cmd key="globalinfoGetApplicationName" method="getApplicationName"
+			beanId="systemGlobalVariableProcessRule" description="保存下载人员数据" authToken="permitAll" />
+    	<cmd key="globalinfoGetSystemGlobalVariableList" method="getSystemGlobalVariableList"
+			beanId="systemGlobalVariableProcessRule" description="保存下载人员数据" authToken="permitAll" />
+		<cmd key="globalinfoUpdateSystemGlobalVariable" method="updateSystemGlobalVariable"
+			beanId="systemGlobalVariableProcessRule" description="保存下载人员数据" />
+		<cmd key="globalinfoGetSystemGlobalVariableMap" method="getSystemGlobalVariableMap"
+			beanId="systemGlobalVariableProcessRule" description="保存下载人员数据" />
+		<cmd key="globalinfoUpdateSystemGlobalVariableByName" method="updateSystemGlobalVariableByName"
+			beanId="systemGlobalVariableProcessRule" description="保存下载人员数据" />
+</rmi-cmd-set>

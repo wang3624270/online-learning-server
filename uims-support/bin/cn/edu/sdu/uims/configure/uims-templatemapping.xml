@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templatemapping>
+	<map type="fileDownload" template="cn.edu.sdu.uims.component.complex.def.UFileDownloadTemplate" />
+	<map type="fileUpload"  template="cn.edu.sdu.uims.component.complex.def.UFileUploadTemplate" />
+	<map type="dataImport"	template="cn.edu.sdu.uims.component.complex.def.UDataIoTemplate" />
+	<map type="dataExport" 	template="cn.edu.sdu.uims.component.complex.def.UDataIoTemplate" />
+	<map type="timeInput"	template="cn.edu.sdu.uims.component.complex.def.UTimeInputTemplate" />
+	<map type="curriculum" 	template="cn.edu.sdu.uims.component.complex.def.UCurriculumTemplate" />
+	<map type="curriculumEdit" 	template="cn.edu.sdu.uims.component.complex.def.UCurriculumTemplate" />
+	<map type="calendar"	template="cn.edu.sdu.uims.component.complex.def.UCalendarTemplate" />
+	<map type="schedule"	template="cn.edu.sdu.uims.component.complex.def.UCalendarTemplate" />
+	<map type="imageIcon"	template="cn.edu.sdu.uims.component.complex.def.UImageIconTemplate" />
+	<map type="treeList"	template="cn.edu.sdu.uims.component.complex.def.UTreeListTemplate" />
+	<map type="graphControl"	template="cn.edu.sdu.uims.component.complex.def.UGraphControlTemplate" />
+	<map type="roomPlaneGraph"	template="cn.edu.sdu.uims.component.complex.def.URoomPlaneTemplate" />
+	<map type="roomDistributeGraph"	template="cn.edu.sdu.distribute.cs.URoomDistributeGraphTemplate" />
+	<map type="buildingDistributeGraph"	template="cn.edu.sdu.distribute.cs.UBuildingDistributeGraphTemplate" />
+	<map type="floorDormInfoGraph"	template="cn.edu.sdu.distribute.cs.UFloorDormInfoGraphTemplate" />
+	<map type="graphEdit"	template="cn.edu.sdu.uims.component.complex.def.UGraphEditTemplate" />
+	<map type="3DMap"	template="cn.edu.sdu.uims.component.complex.def.U3DMapTemplate" />
+	<map type="roomLayoutEdit"	template="cn.edu.sdu.roomlayout.component.URoomLayoutEditTemplate" />
+	<map type="graphView"	template="cn.edu.sdu.uims.def.UGraphViewTemplate" />
+	<map type="multiLevelComTable" template="cn.edu.sdu.uims.component.complex.def.UMultiLevelComTableTemplate" />
+	<map type="dataStatistics" template="cn.edu.sdu.datastatistics.def.UDataStatisticsTemplate" />
+	<map type="attachFile"  template="cn.edu.sdu.uims.component.complex.def.UAttachFileTemplate" />
+	<map type="imageView"  template="cn.edu.sdu.uims.component.complex.def.UPageImageViewTemplate" />
+	<map type="webView"  template="cn.edu.sdu.uims.component.complex.def.UWebViewTemplate" />
+	<map type="mapView"  template="cn.edu.sdu.uims.component.complex.def.UWebViewTemplate" />
+	<map type="webApp"  template="cn.edu.sdu.uims.component.complex.def.UWebAppTemplate" />
+				
+	<map type="labelTitle"
+		template="cn.edu.sdu.uims.def.ULabelTitleTemplate" />
+	<map type="imageLabel"
+		template="cn.edu.sdu.uims.def.UImageLabelTemplate" />
+	<map type="imageAttach"
+		template="cn.edu.sdu.uims.def.UImageAttachTemplate" />
+	<map type="pdfLabel"
+		template="cn.edu.sdu.uims.def.UImageAttachTemplate" />
+	<map type="audioLabel"
+		template="cn.edu.sdu.uims.def.UImageAttachTemplate" />
+	<map type="videoLabel"
+		template="cn.edu.sdu.uims.def.UImageAttachTemplate" />
+	<map type="labelMultiLine"
+		template="cn.edu.sdu.uims.def.ULabelMultiLineTemplate" />
+	<map type="radioGroup"
+		template="cn.edu.sdu.uims.def.UButtonGroupTemplate" />
+	<map type="buttonGroup"
+		template="cn.edu.sdu.uims.def.UButtonGroupTemplate" />
+	<map type="button" template="cn.edu.sdu.uims.def.UButtonTemplate" />
+	<map type="buttonFold" template="cn.edu.sdu.uims.def.UButtonTemplate" />
+	<map type="iconButton" template="cn.edu.sdu.uims.def.UButtonTemplate" />
+
+	<map type="labelTextField"
+		template="cn.edu.sdu.uims.def.UTextFieldTemplate" />
+	<map type="textField"
+		template="cn.edu.sdu.uims.def.UTextFieldTemplate" />
+	<map type="textFieldInt"
+		template="cn.edu.sdu.uims.def.UTextFieldTemplate" />
+	<map type="textFieldDate"
+		template="cn.edu.sdu.uims.def.UTextFieldTemplate" />
+		<map type="textFieldDouble"
+		template="cn.edu.sdu.uims.def.UTextFieldTemplate" />
+	<map type="textFieldFixLength"
+		template="cn.edu.sdu.uims.def.UTextFieldTemplate" />
+	<map type="numberField"
+		template="cn.edu.sdu.uims.def.UTextFieldTemplate" />
+	<map type="numberFieldWithAddMinus"
+		template="cn.edu.sdu.uims.def.UTextFieldTemplate" />
+	<map type="copositeFieldIP"
+		template="cn.edu.sdu.uims.def.UTextFieldTemplate" />
+	<map type="textFieldExpression"
+		template="cn.edu.sdu.uims.def.UTextFieldTemplate" />
+	<map type="idCardField"
+		template="cn.edu.sdu.uims.def.UTextFieldTemplate" />
+	<map type="campusCardField"
+		template="cn.edu.sdu.uims.def.UTextFieldTemplate" />
+	<map type="textFieldQuery"
+		template="cn.edu.sdu.uims.def.UTextFieldQueryTemplate" />
+	<map type="textFieldAttach"
+		template="cn.edu.sdu.uims.def.UTextFieldTemplate" />
+	<map type="textFieldTable"
+		template="cn.edu.sdu.uims.def.UTextFieldTemplate" />
+	<map type="textFieldWithSelectedList"
+		template="cn.edu.sdu.uims.def.UTextFieldTemplate" />
+	<map type="textFieldFormat"
+		template="cn.edu.sdu.uims.def.UTextFieldTemplate" />
+			
+	<map type="checkBoxGroup"
+		template="cn.edu.sdu.uims.def.UCheckBoxGroupTemplate" />
+	<map type="checkBoxGroupLayer"
+		template="cn.edu.sdu.uims.def.UCheckBoxGroupTemplate" />
+	<map type="copositeFieldIP"
+		template="cn.edu.sdu.uims.def.UTextFieldTemplate" />
+	<map type="passwordField"
+		template="cn.edu.sdu.uims.def.UTextFieldTemplate" />
+	<map type="textFieldCheck"
+		template="cn.edu.sdu.uims.def.UTextFieldTemplate" />
+	<map type="textFieldPinyin"
+		template="cn.edu.sdu.uims.def.UTextFieldTemplate" />
+	<map type="textFieldUnit"
+		template="cn.edu.sdu.uims.def.UTextFieldTemplate" />
+
+	<map type="docFixTable"
+		template="cn.edu.sdu.uims.def.UTableTemplate" />
+	<map type="docRowSpanTable"
+		template="cn.edu.sdu.uims.def.UTableTemplate" />
+	<map type="docPanel"
+		template="cn.edu.sdu.uims.def.UDocumentTemplate" />
+	<map type="comboBoxDate"
+		template="cn.edu.sdu.uims.def.UComboBoxDateTemplate" />
+	<map type="comboBoxDateTime"
+		template="cn.edu.sdu.uims.def.UComboBoxDateTemplate" />
+	<map type="printPanel"
+		template="cn.edu.sdu.uims.def.UPrintTemplate" />
+	<map type="visualViewGraph"
+		template="cn.edu.sdu.uims.def.UVisualizationTemplate" />
+	<map type = "graphFrame" template = "cn.edu.sdu.uims.graph.frame.UGraphFrameTemplate" /> 	
+
+	<map type="tree" template="cn.edu.sdu.uims.def.UTreeTemplate" />
+	<map type="photoCollect"	template="cn.edu.sdu.personinfo.photo.component.UPhotoCollectTemplate" />
+	
+	
+	<map type="jfxBarChart" template="cn.edu.sdu.uims.component.jfx.tem.JFXChartTemplate"/>
+	<map type="jfxPieChart" template="cn.edu.sdu.uims.component.jfx.tem.JFXChartTemplate"/>
+	<map type="jfxAreaChart" template="cn.edu.sdu.uims.component.jfx.tem.JFXChartTemplate"/>
+	<map type="jfxBubbleChart" template="cn.edu.sdu.uims.component.jfx.tem.JFXChartTemplate"/>
+	<map type="jfxLineChart" template="cn.edu.sdu.uims.component.jfx.tem.JFXChartTemplate"/>
+	<map type="jfxScatterChart" template="cn.edu.sdu.uims.component.jfx.tem.JFXChartTemplate"/>		
+			
+	<!-- 
+		<map type="printDataTable"
+		template="cn.edu.sdu.uims.def.UPrintTableTemplate" />
+	-->
+</templatemapping>

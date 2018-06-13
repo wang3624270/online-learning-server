@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<formpaneltemplate>
+	<!-- 测试面板 added by xjm -->
+	<panel name="uims_graph_inteaction_panel" type="formPanel"
+		className="cn.edu.sdu.uims.component.panel.UFPanel" locateMode="one"
+		width="100" height="40" divw="200"
+		dataFormClassName="cn.edu.sdu.uims.graph.form.GraphViewForm"
+		handlerClassName="cn.edu.sdu.uims.graph.handler.GraphViewHandler"
+		userTaskGroupName="graphCommandUserTask">
+		<components>
+			<component name="graphVeiw" type="graphView" font="font20"
+				border="fnull" x="20" y="90" w="400" h="200"
+				menu="model_editor_graph_pop_menu" dataFormMember="currentGraphObject" />
+		</components>
+	</panel>
+</formpaneltemplate>

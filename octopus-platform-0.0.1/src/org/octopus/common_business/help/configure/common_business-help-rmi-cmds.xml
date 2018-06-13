@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rmi-cmd-set>
+    	<cmd key="commonBusinessTownRequestProvinceList" method="requestProvinceList"
+			beanId="baseProTownProcessRule" description="保存下载人员数据" authToken="permitAll" />
+    	<cmd key="commonBusinessTownRequestCityListByProvince" method="requestCityListByProvince"
+			beanId="baseProTownProcessRule" description="保存下载人员数据" authToken="permitAll" />
+		<cmd key="commonBusinessTownRequestTownListByProvinceAndCity" method="requestTownListByProvinceAndCity"
+			beanId="baseProTownProcessRule" description="保存下载人员数据" />
+</rmi-cmd-set>

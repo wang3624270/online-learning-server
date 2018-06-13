@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<formpaneltemplate>
+	<panel name="commonplatformPersonChooseDialog" type="dialog" locateMode="border" height="600" width ="800" title="人员选择"
+		dataFormClassName="cn.edu.sdu.uims.form.impl.UTableForm"  ok= ""  cancel = ""
+		handlerClassName="cn.edu.sdu.commonplatform.handler.InfoPersonInfoChooseDialogHandler"  >
+		<components>
+		    <component name="queryPanel" type="formPanel" border="f1" layout= "top"
+				x="0" y="0" w="1000" h="40" templateName = "commonplatformPersonChooseQueryPanel">
+				<event type="action" />
+			</component>
+		    <component name="personTable" type="formDataTable" border="f1" dataFormMember="items" layout= "center"
+				x="0" y="0" w="1000" h="800" templateName = "commonplatformInfoPersonInfoItemTable" >
+				<event type = "mouse" />
+			</component>
+		</components>
+	</panel>
+
+	<panel name="commonplatformPersonChooseDialogMulti" type="dialog" locateMode="border" height="600" width ="800" title="人员选择"
+		dataFormClassName="cn.edu.sdu.uims.form.impl.UTableForm"  ok= ""  cancel = ""
+		handlerClassName="cn.edu.sdu.commonplatform.handler.InfoPersonInfoChooseDialogHandler"  >
+		<components>
+		    <component name="queryPanel" type="formPanel" border="f1" layout= "top"
+				x="0" y="0" w="1000" h="40" templateName = "commonplatformPersonChooseQueryPanel">
+				<event type="action" />
+			</component>
+		    <component name="personTable" type="formDataTable" border="f1" dataFormMember="items" layout= "center"
+				x="0" y="0" w="1000" h="800" templateName = "commonplatformInfoPersonInfoItemTableMulti">
+				<event type="action" />
+			</component>
+		</components>
+	</panel>			
+				
+</formpaneltemplate>

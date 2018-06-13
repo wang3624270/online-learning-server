@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<toolbartemplate>
+	<toolbar name="onlinelearningSystemToolBar" defaultEnable= "true" >
+		<tool name="toolNew" type="button" content="修改密码"	enContent="MODIF.CONTRASENA" icon="changePassword.gif" cmd = "commonplatformUserPasswordChangePanel"/>
+		<tool name="toolOpen" type="button" content="系统管理"	enContent="EDITAR DATOS" icon="basicInformationMaintenance.gif" cmd = "badmintonSystemInfoMaintainPanel" />
+		<tool name="toolClose" type="button" content="新闻管理" 	enContent="CONSULTAR PRECIOS" icon="GoodsAndInquiry.gif" cmd = "commonplatformNewsManagePanel" />
+		<tool name="toolClose" type="button" content="场地维护" 	enContent="EDITAR PRODUCTOS" icon="commodityInformationMaintenanceA.gif" cmd = "badmintonVenueUnitManagePanel" />
+		<tool name="toolPrint" type="button" content="会员管理"	enContent="LISTADO DE VENDEDORES" icon="purchaserInformation.gif" cmd = "badmintonPersonManagePanel" />
+		<tool name="toolClose" type="button" content="教练管理" 	enContent="EDITAR PRODUCTOS" icon="commodityPriceMaintenance.gif" cmd = "badmintonTrainerManagePanel" />
+		<tool name="toolClose" type="button" content="群组维护" 	enContent="EDITAR PRODUCTOS" icon="commodityInformationMaintenanceGroup.gif" cmd = "badmintonGroupManagePanel" />
+		<tool name="toolClose" type="button" content="周期组活动管理" 	enContent="EDITAR PRODUCTOS" icon="commodityPriceMaintenance.gif" cmd = "badmintonEventsScheduleManagePanel" />
+		<tool name="toolClose" type="button" content="群组活动管理" 	enContent="EDITAR PRODUCTOS" icon="commodityPricesBatchAutomaticMaintenance.gif" cmd = "badmintonEventsManagePanel" />
+		<tool name="toolPrintSetup" type="button" content="培训需求管理" enContent="CONSULTAS Y PEDIDOS." icon="orderBrowse.gif" cmd = "badmintonCourseDemandManagePanel" />
+		<tool name="toolPrint" type="button" content="培训课程管理"	enContent="FICHA PROVEEDORES" icon="BrowseTheSupplier.gif" cmd = "badmintonCourseInfoManagePanel" />
+		<tool name="toolPrintSetup" type="button" content="收费管理"	enContent="AYUDA" icon="supnuevoMerchantHelp.gif" cmd = "badmintonPayManagePanel" />
+		<tool name="toolPrintPreview" type="button" content="收费统计" 	enContent="MENSAJES" icon="MessageReply.gif" cmd = "badmintonPayStatisticsPanel" />
+		<tool name="toolCut" type="button" content="竞赛管理" 	enContent="ASISTENCIA TECNICA" icon="contactWebmaster.gif" cmd = "badmintonCompetitionManagePanel" />
+		<tool name="toolPrintSetup" type="button" content="帮助"	enContent="AYUDA" icon="supnuevoMerchantHelp.gif" cmd = "supnuevoMerchantHelpInfoViewPanel" />
+	</toolbar>						
+</toolbartemplate>

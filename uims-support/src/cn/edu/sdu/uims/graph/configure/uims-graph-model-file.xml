@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modeltempalte>
+	<mode method="initPanelTemplate" key="dialog"
+		fileName="uims/graph/configure/graph-dialogtemplate.xml" />
+	<mode method="initPanelTemplate" key="formPanel"
+		fileName="uims/graph/configure/graph-formpaneltemplate.xml" />
+	<mode method="initGraphButtonBarTemplate" key="graphButtonBar"
+		fileName="uims/graph/configure/graph-graphbuttonbartemplate.xml" />
+	<mode method="initMenuTemplatMapTemplate" key="menuMap"
+		fileName="uims/graph/configure/graph-menutemplatemaptemplate.xml" />
+	<mode method="initUserTaskTemplate" key="userTask"
+		fileName="uims/graph/configure/graph-usertasktemplate.xml" />
+</modeltempalte>

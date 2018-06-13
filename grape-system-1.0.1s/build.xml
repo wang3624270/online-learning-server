@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="grape_system-deploy" default="deploy">
+	<!-- ================================= property: grape_system ================================= -->
+	<property name="grape_systemDir" value="${basedir}/../grape-system-1.0.1s" />
+
+	<!-- ================================= target: grape_system ================================= -->
+	<target name="deploy">
+		<copy todir="${deployDir}/WEB-INF/classes/">
+			<fileset dir="${grape_systemDir}/bin">
+				<!-- <exclude name="com/jolbox/**" /> -->
+
+			</fileset>
+		</copy>
+
+	</target>
+</project>

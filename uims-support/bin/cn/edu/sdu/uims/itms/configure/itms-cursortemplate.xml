@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cursortemplate>
+	<cursor name="crossLine" className="cn.edu.sdu.uims.itms.cursor.ICursorCrossLine" />
+	<cursor name="polyLine" className="cn.edu.sdu.uims.itms.cursor.ICursorPolyLine" />
+	<cursor name="directionLine" className="cn.edu.sdu.uims.itms.cursor.ICursorDirectionLine" />
+	<cursor name="paintbrush" className="cn.edu.sdu.uims.itms.cursor.ICursorPaintbrush" />
+	<cursor name="eraser" className="cn.edu.sdu.uims.itms.cursor.ICursorEraser" />
+	<cursor name="rectangle" className="cn.edu.sdu.uims.itms.cursor.ICursorRect" />
+	<cursor name="line" className="cn.edu.sdu.uims.itms.cursor.ICursorLine" />
+	<cursor name="default" className="cn.edu.sdu.uims.itms.cursor.ICursorBase" />
+	<cursor name="oval" className="cn.edu.sdu.uims.itms.cursor.ICursorOval" />
+	<cursor name="leanEllipse" className="cn.edu.sdu.uims.itms.cursor.ICursorLeanEllipse" />
+	<cursor name="arcStrip" className="cn.edu.sdu.uims.itms.cursor.ICursoArcStrip" />
+	<cursor name="diamond" className="cn.edu.sdu.uims.itms.cursor.ICursorDiamond" />
+	<cursor name="parallelogram" className="cn.edu.sdu.uims.itms.cursor.ICursorParallelogram" />
+	<cursor name="cnvxPoly" className="cn.edu.sdu.uims.itms.cursor.ICursorCnvxPoly" />
+	<cursor name="concavePolygon" className="cn.edu.sdu.uims.itms.cursor.ICursorConcavePolygon" />
+	<cursor name="centerLine" className="cn.edu.sdu.uims.itms.cursor.ICursorCenterLine" />
+	<cursor name="arcCenterLine" className="cn.edu.sdu.uims.itms.cursor.ICursorArcCenterLine" />
+	<cursor name="mulBezier" className="cn.edu.sdu.uims.itms.cursor.ICursorMulBezier" />
+	<cursor name="mulArc" className="cn.edu.sdu.uims.itms.cursor.ICursorMulArc" />
+	<cursor name="mulLine" className="cn.edu.sdu.uims.itms.cursor.ICursorMulLine" />
+	<cursor name="clipRegion" className="cn.edu.sdu.uims.itms.cursor.ICursorClipRegion" />
+	<cursor name="changeColorRect"
+		className="cn.edu.sdu.uims.itms.cursor.ICursorChangeColorRect" />
+	<cursor name="changeColorEllipse"
+		className="cn.edu.sdu.uims.itms.cursor.ICursorChangeColorEllipse" />
+	<cursor name="changeColorLeanEllipse"
+		className="cn.edu.sdu.uims.itms.cursor.ICursorChangeColorLeanEllipse" />
+	<cursor name="changeColorArcStrip"
+		className="cn.edu.sdu.uims.itms.cursor.ICursorChangeColorArcStrip" />
+	<cursor name="changeColorDiamond"
+		className="cn.edu.sdu.uims.itms.cursor.ICursorChangeColorDiamond" />
+	<cursor name="changeColorParallelogram"
+		className="cn.edu.sdu.uims.itms.cursor.ICursorChangeColorParallelogram" />
+	<cursor name="changeColorCnvxPoly"
+		className="cn.edu.sdu.uims.itms.cursor.ICursorChangeColorCnvxPoly" />
+	<cursor name="changeColorConcavePolygon"
+		className="cn.edu.sdu.uims.itms.cursor.ICursorChangeColorConcavePolygon" />
+	<cursor name="changeColorMulArc"
+		className="cn.edu.sdu.uims.itms.cursor.ICursorChangeColorMulArc" />
+	<cursor name="changeColorMulLine"
+		className="cn.edu.sdu.uims.itms.cursor.ICursorChangeColorMulLine" />
+	<cursor name="changeColorMulBezier"
+		className="cn.edu.sdu.uims.itms.cursor.ICursorChangeColorMulBezier" />
+	<cursor name="castLine" className="cn.edu.sdu.uims.itms.cursor.ICursorCastLine" />
+	<cursor name="singleLine" className="cn.edu.sdu.uims.itms.cursor.ICursorLine" />
+	<cursor name="snowPoint" className="cn.edu.sdu.uims.itms.cursor.ICursorSnowPoint" />
+	<cursor name="drag" className="cn.edu.sdu.uims.itms.cursor.ICursorDrag" />
+	<!-- 勾头 光标-->
+	<cursor name="outLine" className="cn.edu.sdu.uims.itms.cursor.ICursorOutLine" />
+	<cursor name="crossLine" className="cn.edu.sdu.uims.itms.cursor.ICursorCrossLine" />
+	<!-- 组版中测量距离的光标 -->
+	<cursor name="computeDistance"
+		className="cn.edu.sdu.uims.itms.cursor.ICursorCombineComputeDistance" />
+	<cursor name ="defaultCursorWithGElement" className = "cn.edu.sdu.uims.itms.cursor.ICursorDefaultCursorWithGElement" />
+</cursortemplate>

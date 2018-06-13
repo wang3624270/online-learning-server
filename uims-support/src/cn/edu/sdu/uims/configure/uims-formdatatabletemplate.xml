@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<formtabletemplate>
+	<table name="uimsTableDetailInfoTable"
+		type="formDataTable" rowNum="-1"
+		itemFormClassName="cn.edu.sdu.uims.form.impl.TableAttributeValueForm">
+		<columns>
+			<column width="200" itemFormMember="title" />
+			<column width="500" itemFormMember="value" />
+		</columns>
+		<topItems>
+			<item value="标题" />
+			<item value="内容" />
+		</topItems>
+	</table>	
+	<table name="uimsTableColumnSortItemTable"
+		type="formDataTable" rowNum="-1"
+		itemFormClassName="cn.edu.sdu.uims.form.impl.UTableColumnSortItemForm">
+		<no width="50" font="font10" />
+		<columns>
+			<column name = "col" width="200" itemFormMember="col" comType="comboBoxType" filter="uims_common_filter" editable="true"/>
+			<column name = "asc" width="100" itemFormMember="asc" comType="comboBoxType" editable="true"> 
+				<addedData label = "升序" value ="1" />
+				<addedData label = "降序" value ="0" />
+			</column>
+		</columns>
+		<topItems>
+			<item value="排序项" />
+			<item value="排序方式" />
+		</topItems>
+		<actionBar>
+			<button name="addRow" content="添加一行" cmd="addRow" />
+			<button name="deleteRow" content="删除一行" cmd="deleteRow" />
+			<button name="okCommand" content="确认" cmd="okCommand" />
+			<button name="cancelCommand" content="取消" cmd="cancelCommand" />
+		</actionBar>
+	</table>	
+	<table name="csUimsTestTable"
+		type="formDataTable" rowNum="-1"
+		itemFormClassName="cn.edu.sdu.uims.form.UTestItemForm">
+		<columns>
+			<column width="200" itemFormMember="dateTime"   />
+			<column width="200" itemFormMember="dateSection"  />
+			<column width="200" itemFormMember="roomList"  />
+		</columns>
+		<topItems>
+			<item value="日期" />
+			<item value="时间段" />
+			<item value="房间" />
+		</topItems>
+	</table>	
+	<table name="uimsScheduleInfoTable"
+		type="formDataTable" rowNum="-1"
+		itemFormClassName="cn.edu.sdu.uims.component.complex.calendar.schedule.form.WorkScheWorkForm">
+		<columns>
+			<column width="100" itemFormMember="title" />
+			<column width="150" itemFormMember="startTime" format="yyyy-MM-dd HH:mm:ss"/>
+			<column width="150" itemFormMember="endTime" format="yyyy-MM-dd HH:mm:ss"/>
+			<column width="150" itemFormMember="startTime" format="yyyy-MM-dd HH:mm:ss"/>
+			<column width="150" itemFormMember="endTime" format="yyyy-MM-dd HH:mm:ss"/>
+			<column width="200" itemFormMember="description" />
+		</columns>
+		<topItems>
+			<item value="标题" />
+			<item value="计划开始" />
+			<item value="计划结束" />
+			<item value="执行开始" />
+			<item value="执行结束结束" />
+			<item value="描述" />
+		</topItems>
+	</table>	
+</formtabletemplate>

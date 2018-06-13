@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<steps>
+	<step name="导出开始" num="1" stepProcessHandlerName="defaultBeginHandler"
+		stepForwardHandlerName="defaultForwardHandler">
+		<forward property="next" value="2" />
+	</step>
+	<step name="导出预处理" num="2" stepProcessHandlerName="defaultPreProcessHandler"
+		stepForwardHandlerName="defaultForwardHandler">
+		<forward property="next" value="3" />
+	</step>
+	<step name="导出加载数据" num="3" stepProcessHandlerName="defaultLoadDataHandler"
+		stepForwardHandlerName="defaultForwardHandler">
+		<forward property="next" value="4" />
+	</step>
+	<step name="导出中间数据转换" num="4" stepProcessHandlerName="defaultMidDataGenerateHandler"
+		stepForwardHandlerName="defaultForwardHandler">
+		<forward property="next" value="5" />
+	</step>
+	<step name="加载显示模型" num="5" stepProcessHandlerName="defaultLoadShowModelHandler"
+		stepForwardHandlerName="defaultForwardHandler">
+		<forward property="next" value="6" />
+	</step>
+	<step name="数据注入显示模型" num="6" stepProcessHandlerName="defaultDataInjectShowModelHandler"
+		stepForwardHandlerName="defaultForwardHandler">
+		<forward property="next" value="7" />
+	</step>
+	<step name="导出报表" num="7" stepProcessHandlerName="defaultExportReportHandler"
+		stepForwardHandlerName="exportNextPageForwardHandler">
+		<forward property="pageEnd" value="8" />
+		<forward property="pageNext" value="3" />
+	</step>
+	<step name="导出结束" num="8" stepProcessHandlerName="defaultBeginHandler"
+		stepForwardHandlerName="defaultForwardHandler">
+		<forward property="next" value="0" />
+	</step>
+</steps>

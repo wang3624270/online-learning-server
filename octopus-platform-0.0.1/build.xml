@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ====================================================================== 
+	Ant build.xml ====================================================================== -->
+<project name="octopus-deploy" default="deploy">
+
+	<property name="octopusDir" value="${basedir}/../octopus-platform-0.0.1" />
+	<!-- ================================= target: deploy ================================= -->
+	<target name="deploy">
+		<copy todir="${deployDir}/">
+			<fileset dir="${octopusDir}/WebContent">
+				<exclude name="**/WEB-INF/lib/javax.el-api-*.jar" />
+				<exclude name="**/WEB-INF/lib/javax.servlet-api-*.jar" />
+				<exclude name="**/WEB-INF/lib/javax.servlet.jsp-api-*.jar" />
+				<exclude name="**/WEB-INF/lib/javax.websocket-api-*.jar" />
+				<exclude name="**/WEB-INF/lib/javax.faces-*.jar" />
+			</fileset>
+		</copy>
+
+	</target>
+</project>

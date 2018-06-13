@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<filtertemplate>
+	<filter name="uims_common_filter"
+		className="cn.edu.sdu.uims.filter.UFilter" />
+	<filter name="uims_tree_filter"
+		className="cn.edu.sdu.uims.filter.UTreeFilter" parameter="models" />
+	<filter name="uims_tree_filterRegion"
+		className="cn.edu.sdu.uims.filter.UTreeFilter" parameter="论坛" />
+	<filter name="pinyin"
+		className="cn.edu.sdu.uims.filter.DefaultCompletionFilter" />
+	<filter name="checkRuleDay" className="cn.edu.sdu.uims.filter.CheckFilter"
+		parameter="Day" />
+	<filter name="checkRuleInteger" className="cn.edu.sdu.uims.filter.CheckFilter"
+		parameter="Integer" />
+	<filter name="checkRuleFloat" className="cn.edu.sdu.uims.filter.CheckFilter"
+		parameter="Float" />
+	<filter name="project_fee_dictionary_filter"
+		className="cn.edu.sdu.uims.filter.DictionaryFilter" parameter="XMBXLXM"/>
+
+	<filter name="uims_combox_filter"
+		className="cn.edu.sdu.uims.filter.UComboBoxFilter"  />
+	<filter name="uims_multillevelcombobox_filter"
+		className="cn.edu.sdu.uims.filter.MultiLevelComboBoxFilter" />
+</filtertemplate>

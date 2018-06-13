@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="config"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/common-support-0.0.1"/>
+	<classpathentry kind="lib" path="/common-support-0.0.1/lib/jackson-databind-2.4.6.jar"/>
+	<classpathentry kind="lib" path="/common-support-0.0.1/lib/spring-support-4.2.4.jar" sourcepath="/spring-support-4.2.4"/>
+	<classpathentry kind="lib" path="/common-support-0.0.1/lib/httpclient-4.5.3.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/apache-com-support-0.0.1"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/grape-system-1.0.1s"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/octopus-platform-0.0.1"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/uims-support"/>
+	<classpathentry kind="lib" path="/octopus-platform-0.0.1/WebContent/WEB-INF/lib/hibernate-core-4.3.11.Final.jar" sourcepath="/hibernate-core-4.3.11"/>
+	<classpathentry kind="lib" path="/common-support-0.0.1/lib/jave-1.0.2.jar"/>
+	<classpathentry kind="lib" path="/uims-support/lib/ffmpeg-windows-x86_64.jar"/>
+	<classpathentry kind="lib" path="/uims-support/lib/ffmpeg.jar"/>
+	<classpathentry kind="lib" path="/uims-support/lib/javacpp.jar"/>
+	<classpathentry kind="lib" path="/uims-support/lib/javacv.jar"/>
+	<classpathentry kind="lib" path="/uims-support/lib/opencv-windows-x86_64.jar"/>
+	<classpathentry kind="lib" path="/uims-support/lib/opencv.jar" sourcepath="/uims-support/lib/opencv.jar"/>
+	<classpathentry kind="lib" path="/common-support-0.0.1/lib/hibernate-jpa-2.1-api-1.0.0.Final.jar"/>
+	<classpathentry kind="output" path="WebContent/WEB-INF/classes"/>
+</classpath>

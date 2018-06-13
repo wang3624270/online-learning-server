@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report>
+	<media name="xxx" type="pdf"></media>
+	<page name="xxxxx" pageModel="singlePage">
+		<paragraph name="p4" type="table" colCount="3" widths="23,23,23"
+			templateName="pt17">
+			<tr height="40" id="aaa">
+				<td width="50" content="${v1}" colspan="1" />
+				<td width="50" content="${v1}" colspan="1" />
+				<td width="50" content="${v1}" colspan="1" />
+			</tr>
+		</paragraph>
+	</page>
+	<data>
+		<block id="aaa" provider="reportdog" method="testReportData" />
+	</data>
+</report>

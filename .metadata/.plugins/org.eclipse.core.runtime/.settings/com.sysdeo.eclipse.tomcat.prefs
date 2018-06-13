@@ -1,0 +1,10 @@
+computeSourcePath=true
+configMode=serverFile
+contextsDir=D\:\\apache-tomcat-7.0.72\\conf\\Catalina\\localhost
+eclipse.preferences.version=1
+jvmParameters=-Xms512m+-Xmx1024m+-XX%3AMaxNewSize%3D512m+-XX%3AMaxPermSize%3D512m;
+tomcatBase=D\:\\apache-tomcat-7.0.72
+tomcatConfigFile=D\:\\apache-tomcat-7.0.72\\conf\\server.xml
+tomcatDir=D\:\\apache-tomcat-7.0.72
+tomcatJRE=1525023058878
+tomcatVersion=tomcatV7

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+	<bean id="grapeDBSystem" class="org.shandong_univ.grapedb.GrapeDBSystem">
+		<property name="enableGrapeDB" value="true" />
+		<property name="deriveTable" value="true" />
+	</bean>
+
+</beans>

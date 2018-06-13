@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/octopus-platform-0.0.1/WebContent/WEB-INF/lib/javax.faces-2.2.8.jar"/>
+	<classpathentry kind="lib" path="/octopus-platform-0.0.1/WebContent/WEB-INF/lib/javax.websocket-api-1.0.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/apache-com-support-0.0.1"/>
+	<classpathentry kind="lib" path="/octopus-platform-0.0.1/WebContent/WEB-INF/lib/hibernate-validator-4.3.2.Final.jar"/>
+	<classpathentry kind="lib" path="/octopus-platform-0.0.1/WebContent/WEB-INF/lib/validation-api-1.0.0.GA.jar" sourcepath="E:/apache-maven-3.0.5/repo/javax/validation/validation-api/1.0.0.GA/validation-api-1.0.0.GA-sources.jar"/>
+	<classpathentry kind="lib" path="/common-support-0.0.1/lib/spring-support-4.2.4.jar" sourcepath="/spring-support-4.2.4"/>
+	<classpathentry kind="lib" path="/apache-com-support-0.0.1/lib/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="/common-support-0.0.1/lib/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="/common-support-0.0.1/lib/javax.servlet-api-3.0.1.jar"/>
+	<classpathentry kind="lib" path="/common-support-0.0.1/lib/jackson-annotations-2.4.6.jar"/>
+	<classpathentry kind="lib" path="/common-support-0.0.1/lib/jackson-core-2.4.6.jar"/>
+	<classpathentry kind="lib" path="/common-support-0.0.1/lib/grape-system-1.0.1s.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/octopus-platform-0.0.1"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/common-support-0.0.1"/>
+	<classpathentry kind="lib" path="/common-support-0.0.1/lib/jackson-databind-2.4.6.jar"/>
+	<classpathentry kind="lib" path="/common-support-0.0.1/lib/hibernate-jpa-2.1-api-1.0.0.Final.jar"/>
+	<classpathentry kind="output" path="WebContent/WEB-INF/classes"/>
+</classpath>

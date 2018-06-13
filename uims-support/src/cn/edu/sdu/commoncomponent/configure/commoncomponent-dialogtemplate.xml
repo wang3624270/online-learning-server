@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<formpaneltemplate>
+	<panel name="classMutiCommonQueryDialog" type="dialog"
+		title="班级查询" locateMode="vdiv"
+		className="cn.edu.sdu.uims.component.dialog.UDialogPanel"
+		dataFormClassName="cn.edu.sdu.uims.form.impl.UTableForm"
+		handlerClassName="cn.edu.sdu.commoncomponent.handler.ClassMutiCommonQueryHandler"
+		width="700" height="400" ok="" cancel="" divh = "40">
+		<components>
+			<component name="queryPanel" type="commonBaseDataQuery"
+				 border="f1"
+				x="10" y="10" w="500" h="20" font="formFont">
+ 				<parameters name = "visibleItems" value="college/major/grade/query"/> 
+				<event type="action"></event>
+			</component>
+			<component name="classTable"
+				type="formDataTable"
+				templateName="baseClassInfoTable"  
+				dataFormMember="items" border="f1" font="formFont" x="10" y="100"
+				w="500" h="500">
+				<event type="action"></event>
+			</component>
+		</components>
+	</panel>
+	<panel name="classCommonAddAndModifyDialog" type="dialog"
+		title="班级添加修改查询" locateMode="vdiv"
+		className="cn.edu.sdu.uims.component.dialog.UDialogPanel"
+		dataFormClassName="cn.edu.sdu.commoncomponent.form.CommonAddAndModifyForm"
+		handlerClassName="cn.edu.sdu.commoncomponent.handler.ClassCommonAddAndModifyHandler"
+		width="700" height="400" ok="添加" cancel="替换" divh = "40">
+		<components>
+			<component name="queryPanel" type="commonBaseDataQuery"
+				 border="f1"
+				x="10" y="10" w="500" h="20" font="formFont">
+ 				<parameters name = "bType" value="teacherQuery"/> 
+ 				<parameters name = "visibleItems" value="college/major/grade/query"/> 
+				<event type="action"></event>
+			</component>
+			<component name="classTable"
+				type="formDataTable"
+				templateName="baseClassInfoAddAndModifyTable"  
+				dataFormMember="items" border="f1" font="formFont" x="10" y="100"
+				w="500" h="500">
+				<event type="action"></event>
+			</component>
+		</components>
+	</panel>
+	<panel name="classCommonModifyDialog" type="dialog"
+		title="班级修改查询" locateMode="vdiv"
+		className="cn.edu.sdu.uims.component.dialog.UDialogPanel"
+		dataFormClassName="cn.edu.sdu.commoncomponent.form.CommonModifyForm"
+		handlerClassName="cn.edu.sdu.commoncomponent.handler.ClassCommonModifyHandler"
+		width="700" height="400" ok="" cancel="" divh = "40">
+		<components>
+			<component name="queryPanel" type="commonBaseDataQuery"
+				 border="f1"
+				x="10" y="10" w="500" h="20" font="formFont">
+ 				<parameters name = "visibleItems" value="college/major/grade/query"/> 
+				<event type="action"></event>
+			</component>
+			<component name="classTable"
+				type="formDataTable"
+				templateName="baseClassInfoModifyTable"  
+				dataFormMember="items" border="f1" font="formFont" x="10" y="100"
+				w="500" h="500">
+				<event type="mouse"></event>
+			</component>
+		</components>
+	</panel>
+	<panel name="infoPersonInfoTeacherTableEditDialog" type="dialog"
+		className="cn.edu.sdu.uims.component.dialog.UDialogPanel" title="教师添加"
+		locateMode="vdiv" dataFormClassName="cn.edu.sdu.uims.form.impl.UTableForm" divh = "80"
+		handlerClassName="cn.edu.sdu.commoncomponent.handler.InfoPersonInfoTableEditDialogHandler" width="600"
+		height="300" ok="确认" cancel="取消">
+		<components>
+			<component name="queryPanel" type="commonBaseDataQuery"  layout = "top"
+				border="f1" x="10" y="15" w="600" h="40" font="formFont">
+				<parameters name="perTypeCode" value="2" />
+				<parameters name="perNumLabel" value="教工号" />
+				<parameters name="computeLabel" value="添加" />
+			    <parameters name="visibleItems" value="college/perNum/perName/compute" />
+				<event type="action"></event>
+			</component>
+			<component name="dataTable" type="formDataTable"  layout = "conter"
+				border="fnull" x="10" y="65" w="1050" h="400" templateName="infoPersonInfoTeacherTableEditItemTable"
+				dataFormMember="items"  >
+				<event type="mouse"></event>
+			</component>
+		</components>
+	</panel>
+</formpaneltemplate>

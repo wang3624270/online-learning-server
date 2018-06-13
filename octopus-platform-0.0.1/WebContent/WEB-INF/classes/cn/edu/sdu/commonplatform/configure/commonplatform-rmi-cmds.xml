@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rmi-cmd-set>
+	<cmd key="commonplatformGetInfoPersonInfoformListUserChoose" method="getInfoPersonInfoformListUserChoose"
+		beanId="infoPersonInfoChooseBean" description="删除选中的程序信息" />
+		
+</rmi-cmd-set>

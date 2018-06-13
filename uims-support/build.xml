@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ====================================================================== 
+	Ant build.xml ====================================================================== -->
+<project name="uims-support-deploy" default="deploy">
+
+	<!-- ================================= property: jsf ================================= -->
+	<property name="uims-support-dir" value="${basedir}/../uims-support" />
+	<!-- ================================= target: deploy ================================= -->
+	<target name="deploy">
+		<copy todir="${deployDir}/WEB-INF/classes/">
+			<fileset dir="${uims-support-dir}/bin">
+			    <include name="cn/edu/sdu/uims/graph/form/USinglePdfViewDataForm.class" />
+			    <include name="cn/edu/sdu/uims/component/complex/UMapViewPanel.class" />
+				<include name="cn/edu/sdu/uims/base/CheckObject.class" />
+				<include name="cn/edu/sdu/uims/service/GetQueryDataListProcessorI.class" />
+				<include name="cn/edu/sdu/uims/service/SubComponentsGeneratorI.class" />
+				<include name="cn/edu/sdu/uims/def/UElementTemplate.class" />
+				<include name="cn/edu/sdu/uims/form/UTextFieldDataFormI.class" />
+				<include name="cn/edu/sdu/uims/form/UWarnnigDataI.class" />
+				<include name="cn/edu/sdu/uims/form/UHtmlItemFormI.class" />
+				<include name="cn/edu/sdu/uims/form/impl/CommonQueryBaseForm.class" />
+				<include name="cn/edu/sdu/uims/form/impl/USFormI.class" />
+				<include name="cn/edu/sdu/uims/form/impl/USForm.class" />
+				<include name="cn/edu/sdu/uims/form/impl/USMForm.class" />
+				<include name="cn/edu/sdu/uims/form/impl/UMForm.class" />
+				<include name="cn/edu/sdu/uims/form/impl/UTableForm.class" />
+				<include name="cn/edu/sdu/uims/form/impl/UTreeNodeForm.class" />
+				<include name="cn/edu/sdu/uims/form/impl/PasswdForm.class" />				
+				<include name="cn/edu/sdu/uims/component/complex/form/ImageDataFormI.class" />
+				<include name="cn/edu/sdu/uims/component/table/rowrender/RowSpecificRenderWarningColorRule.class" />
+				<include name="cn/edu/sdu/commoncomponent/utils/UCommonQueryUtils.class" />			
+				<include name="cn/edu/sdu/uims/util/UimsUtils.class" />
+				<include name="cn/edu/sdu/uims/service/UimsRmiRequestProcessRule.class" />
+				<include name="cn/edu/sdu/commonplatform/util/BaeProTownUtil.class" />
+				<include name="cn/edu/sdu/commonplatform/handler/InfoPersonInfoChooseDialogHandler.class" />
+				<include name="cn/edu/sdu/commonplatform/handler/NewsInfoManageHandler.class" />
+				<include name="cn/edu/sdu/commonplatform/handler/NewsInfoInfoHandler.class" />
+				<include name="cn/edu/sdu/commonplatform/handler/UserChangePasswordHandler.class" />
+				<include name="cn/edu/sdu/uims/component/complex/avsdk/**/*.class"/>
+				<include name="cn/edu/sdu/commonplatform/handler/UserHelpInfoEditHandler.class" />
+				
+			</fileset>
+			</copy>
+	</target>
+</project>

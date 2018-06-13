@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+    http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+    http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.2.xsd
+    http://www.springframework.org/sfchema/aop http://www.springframework.org/schema/aop/spring-aop-4.2.xsd
+    http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.2.xsd ">
+
+ 
+
+	<bean id="Starfish" class="org.starfish.Starfish" scope="singleton"
+		init-method="init" depends-on="commonSpringSecurityCheck"> 
+		<property name="configurePath" value="/starfish" />
+		<property name="pageAccessConfigurePlace" value="database" />
+		<property name="dataSource" ref="dataSource" />
+		<property name="codeForCheckUrlInSpringSecurity" value="commonSpringSecurityCheck.checkURLAuth" />
+	</bean>
+	<bean id="loginPortalsManager" class="org.starfish.sf_auth.LoginPortalsManager"
+		init-method="init">
+		<property name="portals">
+			<list>
+				<ref bean="seascape_demo" />
+
+			</list>
+		</property>
+
+	</bean>
+	<bean id="seascape_demo" class="org.starfish.sf_auth.UserPortal">
+		<property name="portalName" value="seascape_demo" />
+		<property name="successURL" value="/mainFrame.html" />
+		<property name="logoutURL" value="/login.jsp" />
+		<property name="failURL" value="/login.jsp" />
+	</bean>
+
+	<bean id="commonSpringSecurityCheck" class="org.starfish.CommonSpringSecurityCheck">
+	</bean>
+
+	<!-- <bean id="npt" class="com.topwellsoft.common_auth.PermissionHelper_nepenthes"> -->
+
+	<!-- </bean> -->
+
+	<!-- <bean id="nepenthesService" class="com.topwellsoft.npt_auth.NepenthesService"> -->
+
+	<!-- </bean> -->
+
+</beans>

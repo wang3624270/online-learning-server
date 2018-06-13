@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shortcutkeytemplate>
+	<shortcutkey name="ctrlA" ctrl="true" char="A" />
+	<shortcutkey name="shiftA" shift="true" char="A" />
+</shortcutkeytemplate>

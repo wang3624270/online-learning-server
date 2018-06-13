@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="deploy" default="default">
+
+	<property environment="env" />
+	<property name="appname" value="onlinelearningstart" />
+
+	<property name="tmpdir" value="${java.io.tmpdir}/${appname}/" />
+	<property name="clientjar.file" value="${user.home}/${appname}.jar" />
+	<property name="onlinelearningDir" value="${basedir}/../onlinelearning" />
+
+
+	<import file="${basedir}/../apache-com-support-0.0.1/build.xml"
+		as="apache" />
+	<import file="${basedir}/../common-support-0.0.1/build.xml" as="common" />
+	<import file="${basedir}/../octopus-platform-0.0.1/build.xml" as="octopus" />
+	<import file="${basedir}/../octopus-auth-0.0.1/build.xml" as="auth" />
+	<import file="${basedir}/../uims-support/build.xml" as="uims" />
+
+
+
+	<!-- ================================= target: clientjar ================================= -->
+	<target name="default">
+		<mkdir dir="${tmpdir}" />
+
+		<delete file="${clientjar.file}" />
+		<jar destfile="${clientjar.file}" duplicate="preserve" index="on">
+
+			<fileset dir="${common-support-dir}/bin">
+				<include name="org/sdu/**/*.*" />
+			</fileset>
+			
+			<fileset dir="${uims-support-dir}/bin">
+				<include name="cn/edu/sdu/uims/frame/MyProperties.class" />
+				<include name="cn/edu/sdu/uims/component/DownloadPromptDialog.class" />
+			</fileset>
+
+			<fileset dir="${onlinelearningDir}/WebContent/WEB-INF/classes">
+				<include name="cn/edu/sdu/onlinelearning/OnlinelearningStart.class" />
+				<include name="client.properties" />
+			</fileset>
+			<fileset dir="${tmpdir}">
+			</fileset>
+			<manifest id="MANIFEST.MF">
+				<attribute name="Main-Class" value="cn.edu.sdu.onlinelearning.OnlinelearningStart" />
+				<attribute name="Class-Path" value="" />
+			</manifest>
+		</jar>
+		<delete dir="${tmpdir}" />
+	</target>
+</project>

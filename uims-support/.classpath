@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="lib/dsj.jar"/>
+	<classpathentry kind="lib" path="lib/jfreechart-1.0.19.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/common-support-0.0.1"/>
+	<classpathentry kind="lib" path="lib/slf4j-api-1.7.21.jar"/>
+	<classpathentry kind="lib" path="lib/jcommon-1.0.23.jar"/>
+	<classpathentry kind="lib" path="lib/pinyin4j-2.5.0.jar"/>
+	<classpathentry kind="lib" path="lib/jacob.jar"/>
+	<classpathentry kind="lib" path="lib/QRCode.jar"/>
+	<classpathentry kind="lib" path="lib/itext-1.3.1.jar"/>
+	<classpathentry kind="lib" path="lib/sam.jar"/>
+	<classpathentry kind="lib" path="lib/SHEF.jar"/>
+	<classpathentry kind="lib" path="lib/novaworx-syntax-0.0.7.jar"/>
+	<classpathentry kind="lib" path="lib/pagelayout1.16.jar"/>
+	<classpathentry kind="lib" path="lib/commons-digester-1.7.jar"/>
+	<classpathentry kind="lib" path="lib/javax.servlet-api-3.0.1.jar"/>
+	<classpathentry kind="lib" path="lib/vlcj-3.10.1.jar"/>
+	<classpathentry kind="lib" path="lib/javadbf.jar"/>
+	<classpathentry kind="lib" path="lib/pdfbox-1.8.2.jar"/>
+	<classpathentry kind="lib" path="/common-support-0.0.1/lib/spring-support-4.2.4.jar" sourcepath="/spring-support-4.2.4"/>
+	<classpathentry kind="lib" path="/common-support-0.0.1/lib/gson-2.5.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/apache-com-support-0.0.1"/>
+	<classpathentry kind="lib" path="lib/icepdf-viewer.jar"/>
+	<classpathentry kind="lib" path="lib/jmf.jar"/>
+	<classpathentry kind="lib" path="lib/kabeja-0.4.jar"/>
+	<classpathentry kind="lib" path="/common-support-0.0.1/lib/jxl-2.6.12.jar"/>
+	<classpathentry kind="lib" path="/common-support-0.0.1/lib/sdu_itext.jar"/>
+	<classpathentry kind="lib" path="lib/jtidy-8.0.jar"/>
+	<classpathentry kind="lib" path="/common-support-0.0.1/lib/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="lib/okhttp-3.9.0.jar"/>
+	<classpathentry kind="lib" path="lib/okio-1.13.0.jar"/>
+	<classpathentry kind="lib" path="lib/junit-4.9.jar"/>
+	<classpathentry kind="lib" path="lib/ffmpeg-macosx-x86_64.jar"/>
+	<classpathentry kind="lib" path="lib/ffmpeg.jar"/>
+	<classpathentry kind="lib" path="lib/javacpp.jar"/>
+	<classpathentry kind="lib" path="lib/javacv.jar"/>
+	<classpathentry kind="lib" path="lib/opencv-macosx-x86_64.jar"/>
+	<classpathentry kind="lib" path="lib/ffmpeg-windows-x86_64.jar"/>
+	<classpathentry kind="lib" path="lib/opencv-windows-x86_64.jar"/>
+	<classpathentry kind="lib" path="lib/ffmpeg-linux-x86_64.jar"/>
+	<classpathentry kind="lib" path="lib/opencv-linux-x86_64.jar"/>
+	<classpathentry kind="lib" path="lib/opencv.jar"/>
+	<classpathentry kind="lib" path="/common-support-0.0.1/lib/jave-1.0.2.jar"/>
+	<classpathentry kind="lib" path="lib/videoplayer.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

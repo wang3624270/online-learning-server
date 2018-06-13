@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="GB18030"?>
+<page-models>
+	<page-model>
+		<paragraph name="table" type="table" templateName="pt4"
+			tableBorderWidth="0" colCount="0" tableWidthPercentage="90">
+			<tr height="30">
+				<td content="山东大学招收硕士研究生教师申请表" templateName="ph19" />
+			</tr>
+			<tr height="3">
+				<td content = ""/>
+			</tr>
+			<tr>
+				<td colspan="1" isFixedHeight="0" content="contentTable3" type="childTable" />
+			</tr>
+		</paragraph>
+		<paragraph name="contentTable3" type="childTable" templateName="pt4"
+			tableBorderWidth="1" colCount="6" widths="15,43,22,21,17,30" tableWidthPercentage="90">
+			<tr height="25" id="info">
+				<td content="  姓名" /> 
+				<td content="   ${applyPerName}"/>
+				<td content=" 身份证号码"/>
+				<td content="  ${perIdCard}"  colspan="3" />
+			</tr>
+			<tr height="25" id="info">
+				<td content="教师编号" />
+				<td content="  ${applyPerNum}" />
+				<td content="  性别" />
+				<td content="  ${applyPerGender}" />
+				<td content="出生年月" />
+				<td content=" ${applyPerBirth}" />
+			</tr>
+			<tr height="30" id="info">
+				<td content="人事关系所在单位（院、部、所）" colspan="2" />
+				<td content="${trainUnit}" />
+				<td content="专业技术职务及定职时间" colspan="2" />
+				<td content="${proTimeAndTechPosition}" />
+			</tr>
+			<tr height="25" id="info">
+				<td content="最高学位（包括时间、学校、专业、学位级别)"  rowspan="2" colspan="2" valign="4"/>
+				<td content="国内：${lastDegreeCivil}" colspan="4"/>
+			</tr>
+			<tr height="25" id="info">
+				<td content="国外：" colspan="4" />
+			</tr>
+			<tr height="50" id="info">
+				<td content="  申请招收学术学位硕士生   一级学科名称" colspan="2" />
+				<td content="${masterFirstDiscipline}" colspan="1" />
+				<td content="申请招收学术学位硕士生  二级学科名称(可多个)" colspan="2" />
+				<td content="${masterSecondDiscipline}" colspan="1" />
+			</tr>
+			<tr height="30" id="info">
+				<td content="申请招收专业学位硕士生名称（工程硕士要具体到工程领域）" colspan="4" />
+				<td content="${engineerDiscipline}" colspan="2" />
+			</tr>
+			<tr height="25" id="info">
+				<td content="   联系方式" colspan="2" />
+				<td content=" 办公电话：${perTel}    电子邮箱：${perEmail}"
+					colspan="4" />：
+			</tr>
+			<tr height="45" id="info">
+				<td content="科研情况汇总" colspan="1" />
+				<td 
+					content="近五年来，作为首位或通讯作者发表的CSSCI、SSCI、AHCI、SCI、EI收录论文共（${disserAmount}）篇。作为主持人 承担省、部级以上科研项目共（${longProNum}）项 ，目前可支配科研经费（${tranProNum}）万元。"
+					colspan="5" />
+			</tr>
+			<tr height="70" id="info">
+			<td colspan="6" isFixedHeight="0" content="contentTable" type="childTable" />
+			</tr>
+			<tr height="45" id="info">
+				<td content="  序号"  colspan="1" />
+				<td content="论文、著作题目、奖励或专利名称"  colspan="1"/>
+				<td content="发表刊物、出版单位名称；获奖名称、等级；鉴定部门等"  colspan="2"/>
+				<td content="  时间"  colspan="1" />
+				<td content="本人位次"  colspan="1" />
+			</tr>
+			<tr height="45" id="info2">
+				<td content=" ${disserNum}" colspan="1" />
+				<td content=" ${disserName}   " colspan="1"/>
+				<td content="  ${disserPublic}  " colspan="2"/>
+				<td content=" ${publishTime}" colspan="1"/>
+				<td content="  ${perPublicRank}   " colspan="1"/>
+			</tr>
+		</paragraph>
+		<paragraph name="contentTable" type="childTable" templateName="pt4"
+			tableBorderWidth="0" colCount="1" widths="150" tableWidthPercentage="90">
+			<tr  height="25">
+				<td templateName="ph3" 
+					content=" 近五年主要科研成果（包括论文、专著、获奖成果、发明专利等）"/>
+			</tr>
+			<tr height="30" id="info">
+				<td valign="2" content="【只填写第一作者或通讯作者CSSCI、SSCI、AHCI、SCI、EI收录期刊论文，独著或第一主编专著，省部级二等奖以上奖励，第一发明人国家发明专利】"/>
+			</tr>
+		</paragraph>
+		<paragraph name="table" type="table" templateName="pt4"
+			tableBorderWidth="1" colCount="6" widths="12,30,20,30,23,35" tableWidthPercentage="90" newPage="true">
+			<tr height="25" id="info">
+				<td content=" 近五年来承担的省部级及以上（纵向）科研项目共（${longProNum}）项  "
+					colspan="6" />
+			</tr>
+			<tr height="25" id="info">
+				<td content="  序号  " colspan="1" />
+				<td content="    项目名称及编号 " colspan="2" />
+				<td content="    项目来源 " colspan="1" />
+				<td content="    起止时间    " colspan="1" />
+				<td content=" 实际到账经费 (万元) " colspan="1" />
+			</tr>
+			<tr height="45" id="info3">
+				<td content="  ${projectNum} " colspan="1" rowspan="2"/>
+				<td content=" ${projectName}" colspan="2" rowspan="2"/>
+				<td content="${projectSource}" colspan="1" rowspan="2" />
+				<td content=" ${projectEndAndStartTime}" colspan="1" rowspan="2"/>
+				<td content="    ${projectFee}" colspan="1"  rowspan="2"/>
+			</tr>
+			<tr height="45" id="info">
+				<td
+					content=" 近五年来承担的企事业单位或政府机构委托（横向）项目共（${tranProNum}）万元   \n（申请招收专业学位研究生人员填写) "
+					rowspan="2" colspan="6"></td>
+			</tr>
+
+			<tr height="25" id="info">
+				<td content="  序号  " colspan="1" />
+				<td content="   项目名称及编号 " colspan="2" />
+				<td content="   项目来源 " colspan="1" />
+				<td content="   起止时间    " colspan="1" />
+				<td content=" 实际到账经费(万元)  " colspan="1" />
+			</tr>
+			<tr height="45" id="info4">
+				<td content="  ${projectNum} " colspan="1" rowspan="2"/>
+				<td content=" ${projectName}" colspan="2" rowspan="2"/>
+				<td content="${projectSource}" colspan="1" rowspan="2"/>
+				<td content=" ${projectEndAndStartTime}" colspan="1" rowspan="2"/>
+				<td content="    ${projectFee}" colspan="1" rowspan="2"/>
+			</tr>
+			<tr height="25" id="info">
+				<td content="            目前指导在校全日制硕士研究生总数（${stuNums}）人 "
+					colspan="6" />
+			</tr>
+			<tr height="25" id="info">
+				<td content="       学位类型  " colspan="2" halign="2" />
+				<td content="    专业或领域名称  " colspan="2" halign="0" />
+				<td content="       人    数(人) " colspan="2" halign="4" />
+			</tr>
+			<tr height="25" id="info">
+				<td content="       学术型  " colspan="2" rowspan="2" />
+				<td content="    ${stuGradXLY1} " colspan="2" />
+				<td content="         ${stuGradXRS1} " colspan="2" />
+			</tr>
+			<tr height="25" id="info">
+
+				<td content="    ${stuGradXLY2}  " colspan="2" />
+				<td content="         ${stuGradXRS2}" colspan="2" />
+			</tr>
+
+			<tr height="25" id="info">
+				<td content="       专业型 " colspan="2" rowspan="2" />
+				<td content="    ${stuGradZLY1} " colspan="2" />
+				<td content="         ${stuGradZRS1} " colspan="2" />
+			</tr>
+			<tr height="25" id="info">
+
+				<td content="    ${stuGradZLY2} " colspan="2" />
+				<td content="         ${stuGradZRS2} " colspan="2" />
+			</tr>
+			<tr height="70" id="info">
+				<td content=" 审核人签字：\n\n\n" colspan="2" />
+				<td	content=" 学位评定分委员会审核意见：\n\n\n    学位评定分委员会主席签字：               年       月       日 "
+					colspan="4" />
+			</tr>
+		</paragraph>
+
+			</page-model>
+</page-models>

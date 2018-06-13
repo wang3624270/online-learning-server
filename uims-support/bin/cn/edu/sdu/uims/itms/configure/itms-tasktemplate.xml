@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tasktemplate>
+
+	<task name="line" op="sel">
+		<subTask name="st1" type="diagram" cursor="line"
+			dataMember="points" templateName="rectDiagram" />
+	</task>
+	<task name="rect" op="sel">
+		<subTask name="st1" type="diagram" cursor="rectangle"
+			dataMember="points" templateName="rectDiagram" />
+	</task>
+	<task name="polyLine" op="sel">
+		<subTask name="st1" type="diagram" cursor="polyLine"
+			dataMember="points" templateName="polyLineDiagram" />
+	</task>
+	<task name="zoom" op="sel">
+		<subTask name="st1" type="diagram" cursor="rectangle"
+			dataMember="points" templateName="zoomDiagram" />
+	</task>
+	<task name="point" op="sel">
+		<subTask name="st1" type="diagram" dataMember="points"
+			templateName="pointDiagram" />
+	</task>
+	<task name="directionLine" op="sel">
+		<subTask name="st1" type="diagram" cursor="directionLine"
+			dataMember="points" templateName="directionLineDiagram" />
+	</task>
+	<task name="polyLineTask" op="sel">
+		<subTask name="st1" type="diagram" cursor="polyLine"
+			dataMember="points" templateName="polyLineDiagram" />
+	</task>
+	<task name="crossPoint" op="sel">
+		<subTask name="st1" type="diagram" cursor="crossLine"
+			dataMember="points" templateName="pointDiagram" />
+	</task>
+	<task name="crossPointWithCoordinatesValues" op="sel">
+		<subTask name="st1" type="diagram" cursor="coordinatesValues"
+			dataMember="points" templateName="pointDiagram" />
+	</task>
+	<task name="adjustCalendar" op="seq">
+		<subTask name="st1" type="diagram" cursor="coordinatesValuesWithGElement"
+			dataMember="points" templateName="rectDiagram" />
+	</task>
+	<task name="drag" op="sel">
+		<subTask name="st1" type="diagram" cursor="drag" dataMember="points"
+			templateName="dragDiagram" />
+	</task>
+	<task name="adjustElementPosition" op="seq">
+		<subTask name="st1" type="diagram" cursor="default"
+			dataMember="points" templateName="moveDiagram" />
+	</task>
+</tasktemplate>
+
+
+
+

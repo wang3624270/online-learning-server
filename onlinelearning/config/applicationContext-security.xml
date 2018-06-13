@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+	xmlns:beans="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+                        http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-4.0.xsd">
+
+	<beans:bean id="authenticationProcessingFilterEntryPoint"
+		class="org.starfish.web_security.SFLoginUrlAuthenticationEntryPoint">
+
+		<beans:property name="loginFormUrl" value="/login.jsp"></beans:property>
+		<beans:property name="loginUrlMap">
+			<beans:map>
+				<beans:entry key="/func" value="/func/auth/failure" />
+			</beans:map>
+		</beans:property>
+	</beans:bean>
+	<beans:bean id="userDetailsService"
+		class="org.springframework.security.core.userdetails.jdbc.JdbcDaoImpl">
+		<beans:property name="dataSource" ref="dataSource" />
+		<beans:property name="usersByUsernameQuery"
+			value="select loginName,password,enabled from sys_user where loginName = ?"></beans:property>
+		<beans:property name="authoritiesByUsernameQuery"
+			value="select loginName,authority from sys_user where loginName = ?"></beans:property>
+	</beans:bean>
+	<beans:bean id="passwordEncoder"
+		class="org.springframework.security.authentication.encoding.MessageDigestPasswordEncoder">
+		<beans:constructor-arg value="MD5" />
+	</beans:bean>
+
+
+
+	<beans:bean id="authenticationProvider"
+		class="org.springframework.security.authentication.dao.DaoAuthenticationProvider">
+		<beans:property name="userDetailsService" ref="userDetailsService" />
+		<beans:property name="hideUserNotFoundExceptions"
+			value="false" />
+		<beans:property name="passwordEncoder" ref="passwordEncoder" />
+
+	</beans:bean>
+
+	<http use-expressions="true" entry-point-ref="authenticationProcessingFilterEntryPoint">
+		<csrf disabled="true" />
+		<headers>
+			<frame-options policy="SAMEORIGIN" />
+		</headers>
+		<!-- 登录主页必须的样式 -->
+		<intercept-url pattern="/webFramework/**" access="permitAll" />
+		<!-- 登录主页 -->
+		<intercept-url pattern="/login.jsp*" access="permitAll" />
+		<!-- 登录请求 -->
+		<intercept-url pattern="/func/auth/webLogin" access="permitAll" />
+		<!-- 主页新闻加载请求 -->
+		<intercept-url pattern="/func/homepageBean/**" access="permitAll" />
+		<!-- 登录失败请求 -->
+		<intercept-url pattern="/func/auth/failure" access="permitAll" />
+		<!-- 登录超时退出 -->
+		<intercept-url pattern="/**" access="starfishAuthenticated()" />
+		
+	</http>
+
+	<authentication-manager alias="authenticationManager">
+		<authentication-provider ref="authenticationProvider" />
+	</authentication-manager>
+	<global-method-security secured-annotations="enabled"
+		jsr250-annotations="enabled" pre-post-annotations="enabled">
+	</global-method-security>
+</beans:beans>

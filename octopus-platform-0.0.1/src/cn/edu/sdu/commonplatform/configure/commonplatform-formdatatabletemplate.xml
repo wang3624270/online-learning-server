@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<formtabletemplate>
+	<table name="commonplatformNewsInfoItemTable"
+		type="formDataTable"  rowNum="-1"  
+		itemFormClassName="org.octopus.common_business.news.form.NewsInfoForm">
+		<no width="40" font="formFont"></no>
+		<columns>
+			<column width="80" itemFormMember="newsType" dictionary ="XWLXM" />
+			<column width="100" itemFormMember="newsNum" />
+			<column width="200" itemFormMember="title" />
+			<column width="300" itemFormMember="brief"  />
+			<column width="100" itemFormMember="orderNum"  />
+			<column width="80" itemFormMember="isVisableBoolean"  />
+			<column width="100" itemFormMember="createrName" />
+			<column width="120" itemFormMember="createTimeStr" />
+			<column width="80" itemFormMember="readCount" />
+			<column width="120" itemFormMember="modifyTimeStr" />			
+		</columns>
+		<topItems>
+			<item value="类型" />
+			<item value="编号" />
+			<item value="标题" />
+			<item value="简述" />
+			<item value="新闻顺序" />
+			<item value="是否可见" />
+			<item value="作者" />
+			<item value="创建时间" />
+			<item value="阅读数" />
+			<item value="修改时间" />
+		</topItems>
+	</table>
+	
+	<table name="commonplatformInfoPersonInfoItemTable"
+		type="formDataTable"  rowNum="-1"  
+		itemFormClassName="cn.edu.sdu.common.form.InfoPersonInfoForm">
+		<no width="40" font="formFont"></no>
+		<columns>
+			<column width="100" itemFormMember="perTypeCode" dictionary = "RYLXM"/>
+			<column width="100" itemFormMember="perNum"  />
+			<column width="80" itemFormMember="perName"  />
+			<column width="80" itemFormMember="genderCode" dictionary = "XMB"  />
+			<column width="130" itemFormMember="mobilePhone" />
+			<column width="120" itemFormMember="perIdCard" />
+		</columns>
+		<topItems>
+			<item value="人员类型" />
+			<item value="用户名" />
+			<item value="姓名" />
+			<item value="性别" />
+			<item value="手机号" />
+			<item value="证件号" />
+		</topItems>
+	</table>			
+
+	<table name="commonplatformInfoPersonInfoItemTableMulti"
+		type="formDataTable"  rowNum="-1"  
+		itemFormClassName="cn.edu.sdu.common.form.InfoPersonInfoForm">
+		<no width="40" font="formFont"></no>
+		<columns>
+			<column width="100" itemFormMember="select" editable = "true"/>
+			<column width="100" itemFormMember="perTypeCode" dictionary = "RYLXM"/>
+			<column width="100" itemFormMember="perNum"  />
+			<column width="80" itemFormMember="perName"  />
+			<column width="80" itemFormMember="genderCode" dictionary = "XMB" />
+			<column width="130" itemFormMember="mobilePhone" />
+			<column width="120" itemFormMember="perIdCard" />
+		</columns>
+		<topItems>
+			<item value="选中" />
+			<item value="人员类型" />
+			<item value="用户名" />
+			<item value="姓名" />
+			<item value="性别" />
+			<item value="手机号" />
+			<item value="证件号" />
+		</topItems>
+		<actionBar startEndField="false" rowArrange="close">
+			<button name="selectAll" content="全选"  cmd = "selectAll"/>
+			<button name="selectAllNot" content="全不选"  cmd = "selectAllNot"/>
+			<button name="okCommand" content="确认"  cmd = "okCommand"/>
+			<button name="cancelCommand" content="取消"  cmd = "cancelCommand"/>
+		 </actionBar>
+	</table>			
+				
+</formtabletemplate>

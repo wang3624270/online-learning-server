@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<formpaneltemplate>
+    <panel name="commonplatformUserPasswordChangePanel" type="formPanel"
+		locateMode="locate"
+		dataFormClassName="cn.edu.sdu.uims.form.impl.PasswdForm"
+		handlerClassName="cn.edu.sdu.commonplatform.handler.UserChangePasswordHandler">
+		<components>
+			<component name="oldPwdLabel" type="label" horizontalAlignment = "right" text ="旧密码"  enLabel ="CLAVE ANTERIOR"
+				border="fnull" font="formFont" x="10" y="10" w="100" h="30">
+			</component>
+		    <component name="enterOldPwd" type="passwordField"  dataFormMember="enterOldPwd"
+				border="f1" font="formFont" x="110" y="10" w="150" h="30">
+			</component>
+			<component name="newPwdLabel" type="label" horizontalAlignment = "right" text ="新密码"  enLabel ="CLAVE NUEVA"
+				border="fnull" font="formFont" x="10" y="60" w="100" h="30">
+			</component>
+		    <component name="enterNewPwd" type="passwordField"  dataFormMember="enterNewPwd"
+				border="f1" font="formFont" x="110" y="60" w="150" h="30">
+			</component>
+			<component name="conPwdLabel" type="label" horizontalAlignment = "right" text ="确认密码" enLabel ="REPETIR CLAVE"
+				border="fnull" font="formFont" x="10" y="110" w="100" h="30">
+			</component>
+		    <component name="enterRepeatNewPwd" type="passwordField"  dataFormMember="enterRepeatNewPwd"
+				border="f1" font="formFont" x="110" y="110" w="150" h="30">
+			</component>
+		    <component name="ok" type="button" border="f1"   horizontalAlignment = "center"
+				font="formFont" text="确认" x="120" y="160" w="100" h="30"  enLabel ="ACEPTAR" >
+				<event type="action" />
+			</component>
+		</components>
+	</panel>   
+	<panel name="commonplatformPersonChooseQueryPanel" type="formPanel"
+		locateMode="flow"
+		dataFormClassName="cn.edu.sdu.common.form.InfoPersonInfoForm"
+		handlerClassName="cn.edu.sdu.uims.handler.impl.UInnerHandler">
+		<components>
+			<component name="perNumLabel" type="label" border="fnull" horizontalAlignment ="right"
+				x="0" y="10" w="100" h="25" text="登录名"  >
+			</component>
+			<component name="perNum" type="textField" border="f1" horizontalAlignment ="left" maxLength = "15" 
+				x="110"	y="10" w="150" h="25" dataFormMember="perNum" >
+			</component>
+			<component name="perNameLabel" type="label" border="fnull" horizontalAlignment ="right"
+				x="0" y="50" w="100" h="25" text="姓名"  >
+			</component>
+			<component name="perName" type="textField" border="f1" horizontalAlignment ="left" maxLength = "15"  
+				x="110"	y="50" w="150" h="25" dataFormMember="perName" >
+			</component>
+			<component name="mobilePhoneLabel" type="label" border="fnull" horizontalAlignment ="right"
+				x="0" y="50" w="100" h="25" text="手机号"  >
+			</component>
+			<component name="mobilePhone" type="textField" border="f1" horizontalAlignment ="left"  
+				x="110"	y="50" w="150" h="25" dataFormMember="mobilePhone" maxLength = "15" >
+			</component>
+			<component name="query" type="button" border="f1" horizontalAlignment ="center"  
+				x="110"	y="50" w="150" h="25"  text="查询" >
+				<event type="action" />				
+			</component>
+		</components>
+	</panel>
+
+	<panel name="commonplatformPersonChooseQueryPanel" type="formPanel"
+		locateMode="flow"
+		dataFormClassName="cn.edu.sdu.common.form.InfoPersonInfoForm"
+		handlerClassName="cn.edu.sdu.uims.handler.impl.UInnerHandler">
+		<components>
+			<component name="perNumLabel" type="label" border="fnull" horizontalAlignment ="right"
+				x="0" y="10" w="100" h="25" text="登录名"  >
+			</component>
+			<component name="perNum" type="textField" border="f1" horizontalAlignment ="left" maxLength = "15" 
+				x="110"	y="10" w="150" h="25" dataFormMember="perNum" >
+			</component>
+			<component name="perNameLabel" type="label" border="fnull" horizontalAlignment ="right"
+				x="0" y="50" w="100" h="25" text="姓名"  >
+			</component>
+			<component name="perName" type="textField" border="f1" horizontalAlignment ="left" maxLength = "15"  
+				x="110"	y="50" w="150" h="25" dataFormMember="perName" >
+			</component>
+			<component name="mobilePhoneLabel" type="label" border="fnull" horizontalAlignment ="right"
+				x="0" y="50" w="100" h="25" text="手机号"  >
+			</component>
+			<component name="mobilePhone" type="textField" border="f1" horizontalAlignment ="left"  
+				x="110"	y="50" w="150" h="25" dataFormMember="mobilePhone" maxLength = "15" >
+			</component>
+			<component name="query" type="button" border="f1" horizontalAlignment ="center"  
+				x="110"	y="50" w="150" h="25"  text="查询" >
+				<event type="action" />				
+			</component>
+		</components>
+	</panel>
+
+	<panel name="commonplatformNewsQueryPanel" type="formPanel"
+		locateMode="flow"
+		dataFormClassName="org.octopus.common_business.news.form.NewsInfoQueryForm"
+		handlerClassName="cn.edu.sdu.uims.handler.impl.UInnerHandler">
+		<components>
+			<component name="newsTypeLabel" type="label" border="fnull" horizontalAlignment ="right"
+				x="0" y="10" w="100" h="25" text="新闻类型"  >
+			</component>
+			<component name="newsType" type="comboBoxDict" border="f1" dictionary= "XWLXM"
+				x="110"	y="10" w="150" h="25" dataFormMember="newsType" addSelectItem ="true">
+			</component>
+			<component name="newsNumLabel" type="label" border="fnull" horizontalAlignment ="right"
+				x="0" y="50" w="100" h="25" text="消息编号"  >
+			</component>
+			<component name="newsNum" type="textField" border="f1" horizontalAlignment ="left" maxLength = "15"  
+				x="110"	y="50" w="150" h="25" dataFormMember="newsNum" >
+			</component>
+			<component name="titleLabel" type="label" border="fnull" horizontalAlignment ="right"
+				x="0" y="50" w="100" h="25" text="消息标题"  >
+			</component>
+			<component name="title" type="textField" border="f1" horizontalAlignment ="left"  
+				x="110"	y="50" w="150" h="25" dataFormMember="title" maxLength = "15" >
+			</component>
+			<component name="statetDateLabel" type="label" border="fnull" horizontalAlignment ="right"
+				x="0" y="50" w="100" h="25" text="起止时间"  >
+			</component>
+			<component name="statetDate" type="comboBoxDate" border="f1" horizontalAlignment ="left"  
+				x="110"	y="50" w="150" h="25" dataFormMember="statetDate" maxLength = "15"  defaultCurrentDate ="false">
+			</component>
+			<component name="endDate" type="comboBoxDate" border="f1" horizontalAlignment ="left"  
+				x="110"	y="50" w="150" h="25" dataFormMember="statetDate" maxLength = "15" defaultCurrentDate ="false" >
+			</component>
+			<component name="isVisable" type="checkBox" border="f1" horizontalAlignment ="left"  text ="新闻是否显示"
+				x="110"	y="50" w="150" h="25" dataFormMember="isVisable" maxLength = "15" >
+			</component>
+			<component name="query" type="button" border="f1" horizontalAlignment ="center"  
+				x="110"	y="50" w="80" h="25"  text="查询" >
+				<event type="action" />				
+			</component>
+		</components>
+	</panel>
+	 
+	<panel name="commonplatformNewsInfoPanel" type="formPanel"
+		locateMode="locate" 
+		dataFormClassName = "org.octopus.common_business.news.form.NewsInfoForm"
+		handlerClassName="cn.edu.sdu.commonplatform.handler.NewsInfoInfoHandler"
+		 width = "1000" height = "90" >
+		<components>
+			<component name="titleLabel" type="label" text="标题"  horizontalAlignment= "right"
+				font="formFont" border="fnull" x="0" y="10" w="60" h="30" />
+			<component name="title" type="textField" text="" dataFormMember ="title" 
+				font="formFont" border="f1" x="70" y="10" w="430" h="30" >
+			</component>
+			<component name="briefLabel" type="label" text="简述"  horizontalAlignment= "right"
+				font="formFont" border="fnull" x="0" y="50" w="60" h="30" />
+			<component name="brief" type="textArea" text="" dataFormMember ="brief" 
+				font="formFont" border="f1" x="70" y="50" w="430" h="150" >
+			</component>
+			<component name="URLLabel" type="label" text="URL"  horizontalAlignment= "right"
+				font="formFont" border="fnull" x="0" y="210" w="60" h="30" />
+			<component name="URL" type="textField" text="" dataFormMember ="URL" editable = "false"
+				font="formFont" border="f1" x="70" y="210" w="430" h="30" >
+				<event type="mouse" />
+			</component>
+		
+			<component name="newTypeLabel" type="label" text="通知类型" horizontalAlignment= "right"
+				font="formFont" border="fnull" x="510" y="10" w="90" h="30" />
+			<component name="newsType" type="comboBoxDict" dataFormMember="newsType" dictionary="XWLXM"
+				font="formFont"  x="610" y="10" w="100" h="30" addSelectItem ="true" horizontalAlignment="left"    >
+			</component>
+			<component name="newsNumLabel" type="label" text="新闻编号"  horizontalAlignment= "right"
+				font="formFont" border="fnull" x="510" y="50" w="90" h="30" />
+			<component name="newsNum" type="textField" text="" dataFormMember ="newsNum" editable = "false"
+				font="formFont" border="f1" x="610" y="50" w="100" h="30" />
+			<component name="orderNumLabel" type="label" text="指定新闻顺序" horizontalAlignment= "right"
+				font="formFont" border="fnull" x="510" y="90" w="90" h="30" />
+			<component name="orderNum" type="textField" text="" dataFormMember ="orderNum"
+				font="formFont" border="f1" x="610" y="90" w="100" h="30" />
+			<component name="createTimeLabel" type="label" text="创建时间" horizontalAlignment= "right"
+				font="formFont" border="fnull" x="510" y="130" w="90" h="30" />
+			<component name="createTime" type="comboBoxDate"  text=""	font="formFont" 
+				border="f1" x="610" y="130" w="100" h="30"  defaultCurrentDate= "false"
+				dataFormMember ="createTime"/>
+			<component name="createrNameLabel" type="label" text="创建者" horizontalAlignment= "right"
+				font="formFont" border="fnull" x="510" y="170" w="90" h="30" />
+			<component name="createrName" type="textField" text="" dataFormMember ="createrName" editable = "false"
+				font="formFont" border="f1" x="610" y="170" w="100" h="30" />
+			<component name="personSearch" type="button" text="查询" horizontalAlignment= "center"
+				font="formFont" border="f1" x="720" y="170" w="100" h="30" >
+				<event type="action" />
+			</component>
+			<component name="isVisable" type="checkBox01I" text="新闻是否可见" dataFormMember ="isVisable"
+				font="formFont" border="f1" x="610" y="210" w="100" h="30" />
+			<component name="attachId" type="imageAttach"  dataFormMember ="attachId"
+				font="formFont" border="f1" x="720" y="10" w="100" h="100" />
+
+			<component name="createButton" type="button" text="新建" horizontalAlignment= "center"
+				font="formFont" border="f1" x="150" y="250" w="90" h="30" >
+				<event type="action" />				
+			</component>
+			<component name="saveButton" type="button" text="保存" horizontalAlignment= "center"
+				font="formFont" border="f1" x="250" y="250" w="90" h="30" >
+				<event type="action" />				
+			</component>
+			<component name="deleteButton" type="button" text="删除"  horizontalAlignment= "center"
+				font="formFont" border="f1" x="350" y="250" w="90" h="30" >
+				<event type="action" />				
+			</component>
+			<component name="uploadImage" type="button" text="照片上传"  horizontalAlignment = "center"
+				font="formFont" border="f1" x="450" y="250" w="90" h="30" >
+				<event type="action" />
+			</component>
+			<component name="uploadHtml" type="button" text="网页上传"  horizontalAlignment = "center"
+				font="formFont" border="f1" x="550" y="250" w="90" h="30" >
+				<event type="action" />
+			</component>
+		</components>
+	</panel>
+	<panel name="commonplatformNewsEditPanel" type="formPanel"
+		locateMode="border" 
+		dataFormClassName="cn.edu.sdu.uims.form.impl.UTableForm"
+		handlerClassName="cn.edu.sdu.uims.handler.impl.UInnerHandler">
+		<components>
+			<component name="newsTable" type="formDataTable" border="fnull" layout = "center"
+				x="60" y="110" w="800" h="800" dataFormMember ="items" templateName= "commonplatformNewsInfoItemTable" >
+				<event type="mouse" />				
+			</component>
+			<component name="infoPanel" type="formPanel" border="fnull" layout = "bottom"
+				x="60" y="110" w="1000" h="350" templateName= "commonplatformNewsInfoPanel" >
+				<event type="action" />				
+			</component>
+		</components>
+	</panel>    		
+	<panel name="commonplatformNewsManagePanel" type="formPanel"
+		locateMode="border" 
+		dataFormClassName="cn.edu.sdu.uims.form.impl.UTableForm"
+		handlerClassName="cn.edu.sdu.commonplatform.handler.NewsInfoManageHandler">
+		<components>
+			<component name="queryPanel" type="formPanel" border="fnull" layout = "top"
+				x="0" y="0" w="1000" h="40" templateName= "commonplatformNewsQueryPanel" >
+				<event type="action" />				
+			</component>
+			<component name="editPanel" type="formPanel" border="fnull" layout = "center"
+				x="0" y="0" w="1000" h="1000" templateName= "commonplatformNewsEditPanel" >
+				<event type="action" />				
+			</component>
+		</components>
+	</panel>    		
+	
+    <panel name="commonplatformUserHelpInfoQueryPanel"	type="formPanel" className="cn.edu.sdu.uims.component.panel.UFPanel"
+		locateMode="flow" text=""	
+		dataFormClassName="org.octopus.common_business.help.form.UserHelpInfoForm"
+		handlerClassName="cn.edu.sdu.uims.handler.impl.UInnerHandler">
+		<components>
+			<component name="perTypeLable" type="label" border="fnull" horizontalAlignment="right"
+				x="10" y="10" w="100" h="25" text="商户类型" enLabel = "TIPO DE USUARIO" >
+			</component>
+			<component name="perType" type="comboBoxDict" border="f1"  dictionary = "JYSHLXM"
+				x="110"	y="10" w="150" h="25" dataFormMember="perType"  >
+		        <event type = "action" />
+			</component>
+			<component name="studyLevelLabel" type="label" border="fnull" horizontalAlignment="right"
+				x="10" y="10" w="100" h="25" text="学习级别" enLabel = "PAGINA" >
+			</component>
+			<component name="studyLevel" type="comboBoxType" border="f1"  
+				x="110"	y="10" w="150" h="25" dataFormMember="studyLevel" filter="uims_common_filter"  >
+		        <event type = "action" />
+			</component>
+			<component name="doQuery" type="button" border="fnull" horizontalAlignment="center"
+				x="10" y="10" w="100" h="25" text="查询" enLabel = "CONSULTA" >
+		        <event type = "action" />
+			</component>
+			<component name="doModify" type="button" border="fnull" horizontalAlignment="center"
+				x="10" y="10" w="150" h="25" text="修改" enLabel = "GUARDAR"  cmd="doModify">
+		        <event type = "action" />
+			</component>
+			<component name="doAdd" type="button" border="fnull" horizontalAlignment="center"
+				x="10" y="10" w="150" h="25" text="添加" enLabel = "AGREGAR PAGINA"  cmd="doAdd">
+		        <event type = "action" />
+			</component>
+		</components>
+	</panel>
+	
+    <panel name="commonplatformUserHelpInfoContentPanel"
+		type="formPanel" className="cn.edu.sdu.uims.component.panel.UFPanel"
+		locateMode="table" text=""
+		dataFormClassName="org.octopus.common_business.help.form.UserHelpInfoForm"
+		handlerClassName="cn.edu.sdu.uims.handler.impl.UInnerHandler">
+		<components>
+		    <component name="content" type="textArea" dataFormMember="content" text = "中文内容"
+				x="10" y="440" w="720" h="200" >
+		    </component>
+		    <component name="contentApp" type="textArea" dataFormMember="contentApp" text = "App中文内容"
+				x="10" y="440" w="720" h="200" >
+		    </component>
+		</components>
+	</panel>
+    <panel name="commonplatformUserHelpInfoEditPanel"
+		type="formPanel" className="cn.edu.sdu.uims.component.panel.UFPanel"
+		locateMode="border" divh = "40" 
+		dataFormClassName="cn.edu.sdu.common.form.UForm"
+		handlerClassName="cn.edu.sdu.commonplatform.handler.UserHelpInfoEditHandler">
+		<components>
+	  		<component name="queryPanel" type="formPanel" border="f1" 
+				x="10" y="40" w="10000" h="40" templateName = "commonplatformUserHelpInfoQueryPanel" layout = "top">
+				<event type="action"></event>
+	  		</component>
+		    <component name="helpList" type="list"  filter = "uims_common_filter"
+				x="10" y="400" w="700" h="200" >
+				<event type="listSelection"></event>
+	  		</component>			
+	  		<component name="contentPanel" type="formPanel" border="f1" 
+				x="10" y="40" w="10000" h="900" templateName = "commonplatformUserHelpInfoContentPanel" layout = "center">
+	  		</component>
+		</components>
+	</panel>
+
+    <panel name="commonplatformNoticeInfoEditPanel"
+		type="formPanel" className="cn.edu.sdu.uims.component.panel.UFPanel"
+		locateMode="border" divh = "40" 
+		dataFormClassName="cn.edu.sdu.common.form.UForm"
+		handlerClassName="cn.edu.sdu.commonplatform.handler.UserHelpInfoEditHandler">
+		<components>
+	  		<component name="queryPanel" type="formPanel" border="f1" 
+				x="10" y="40" w="10000" h="40" templateName = "commonplatformUserHelpInfoQueryPanel" layout = "top">
+				<event type="action"></event>
+	  		</component>
+		    <component name="helpList" type="list"  filter = "uims_common_filter"
+				x="10" y="400" w="700" h="200" >
+				<event type="listSelection"></event>
+	  		</component>			
+	  		<component name="contentPanel" type="formPanel" border="f1" 
+				x="10" y="40" w="10000" h="900" templateName = "commonplatformUserHelpInfoContentPanel" layout = "center">
+	  		</component>
+		</components>
+	</panel>
+	
+	<panel name="commonplatformVediosManagePanel" type="formPanel"
+		locateMode="border" 
+		dataFormClassName="cn.edu.sdu.uims.form.impl.UTableForm"
+		handlerClassName="cn.edu.sdu.commonplatform.handler.VediosInfoManageHandler">
+		<components>
+			<component name="queryPanel" type="formPanel" border="fnull" layout = "top"
+				x="0" y="0" w="1000" h="40" templateName= "commonplatformNewsQueryPanel" >
+				<event type="action" />				
+			</component>
+			<component name="editPanel" type="formPanel" border="fnull" layout = "center"
+				x="0" y="0" w="1000" h="1000" templateName= "commonplatformNewsEditPanel" >
+				<event type="action" />				
+			</component>
+		</components>
+	</panel>
+</formpaneltemplate>

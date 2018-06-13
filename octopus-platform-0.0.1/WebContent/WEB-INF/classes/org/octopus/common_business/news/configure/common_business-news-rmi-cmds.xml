@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rmi-cmd-set>
+		<cmd key="newsGetNewsInfoList" method="getNewsInfoList"
+			beanId="newsInfoProcessRmi" description="获取通讯地址信息列表" />
+		<cmd key="newsGetNewsInfoFormListByQueryForm" method="getNewsInfoFormListByQueryForm"
+			beanId="newsInfoProcessRmi" description="获取所有的新闻信息" />
+		<cmd key="newsSaveOrUpdateNewsInfo" method="saveOrUpdateNewsInfo"
+			beanId="newsInfoProcessRmi" description="获取所有的新闻信息" />
+		<cmd key="newsDeleteNewsInfo" method="deleteNewsInfo"
+			beanId="newsInfoProcessRmi" description="获取所有的新闻信息" />
+		<cmd key="newsUpLoadImageFile" method="upLoadImageFile"
+			beanId="newsInfoProcessRmi" description="获取所有的新闻信息" />
+		<cmd key="newsUploadNewsFile" method="uploadNewsFile"
+			beanId="newsInfoProcessRmi" description="获取所有的新闻信息" />	
+</rmi-cmd-set>

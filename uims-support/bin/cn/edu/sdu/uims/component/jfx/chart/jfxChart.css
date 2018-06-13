@@ -1,0 +1,65 @@
+ 
+.chart{
+    -fx-background-color:#efefef;
+} 
+
+.chart-title {
+  -fx-text-fill: #000000;
+  -fx-font-size: 2.2em;
+}
+.chart-content {
+    -fx-padding: 20px;  /* chart标题与图的距离  */   
+} 
+
+.axis {
+    -fx-font-size: 1.4em;    
+    -fx-tick-label-fill: #914800;
+    -fx-tick-label-font-size:1.2em;	
+    -fx-font-family: Tahoma;
+    -fx-tick-length: 20;
+    -fx-minor-tick-length: 10;
+}
+ 
+.axis-label {
+   -fx-text-fill: #462300; 
+}
+.xAxis-label {
+    -fx-font-size: 1.0em;    
+}
+.axis-tick-mark {
+    -fx-stroke: #804040;
+    /* -fx-stroke-width: 3;  */  /* 线宽 */
+      
+}
+.axis-minor-tick-mark {
+    -fx-stroke: #804040;
+}
+
+/* 扇形CSS样式 */
+.chart-pie-label{
+	-fx-fill:#000000;
+	-fx-font-size:1.4em;
+}
+.chart-pie-label-line{
+	-fx-stroke:#000000;
+	-fx-fill:red;
+}
+.pie-legend-symbol{	
+	/*
+	-fx-background-color:transparent;*/
+	-fx-padding:20px;	
+}
+.pie-legend{
+	-fx-font-size:1.4em;
+}
+
+.default-color0.chart-pie { -fx-pie-color: #0000ff; }
+.default-color1.chart-pie { -fx-pie-color: #ff00ff; }
+.default-color2.chart-pie { -fx-pie-color: #00ff80; }
+.default-color3.chart-pie { -fx-pie-color: #860061; }
+.default-color4.chart-pie { -fx-pie-color: #adff2f; }
+.default-color5.chart-pie { -fx-pie-color: #ff5700; }
+.default-color6.chart-pie { -fx-pie-color: #05fae1; }
+.default-color7.chart-pie { -fx-pie-color: #fbd72b; }
+.default-color8.chart-pie { -fx-pie-color: #fb0435; }
+.default-color9.chart-pie { -fx-pie-color: #8000ff; }

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<formtabletemplate>
+	<table name="baseClassInfoTable"
+		type="formDataTable"  rowNum="-1"
+		itemFormClassName="cn.edu.sdu.service.base.form.BaseClassInfoForm">
+		<columns>
+			<column width="50"  itemFormMember="select"  editable = "true"/>
+			<column width="200" itemFormMember="className" />
+			<column width="200" itemFormMember="collegeName" />
+			<column width="200" itemFormMember="majorName" />
+			<column width="200" itemFormMember="grade" />
+		</columns>
+		<topItems>
+			<item value="选中" />
+			<item value="名称" />
+			<item value="学院" />
+			<item value="专业" />
+			<item value="年级" />
+		</topItems>
+		<actionBar startEndField="false" rowArrange="loose">
+			<button name ="selectAll" content = "全选" cmd = "selectAll" />
+			<button name ="notSelect" content = "全不选" cmd = "notAll" />
+			<button name ="doOk" content = "确认" cmd = "doOk" />
+			<button name ="doCancel" content = "取消" cmd = "doCancel" />
+		</actionBar>
+	</table>
+	<table name="baseClassInfoAddAndModifyTable"
+		type="formDataTable"  rowNum="-1"
+		itemFormClassName="cn.edu.sdu.service.base.form.BaseClassInfoForm">
+		<columns>
+			<column width="50"  itemFormMember="select"  editable = "true"/>
+			<column width="200" itemFormMember="className" />
+			<column width="200" itemFormMember="collegeName" />
+			<column width="200" itemFormMember="majorName" />
+			<column width="200" itemFormMember="grade" />
+		</columns>
+		<topItems>
+			<item value="选中" />
+			<item value="名称" />
+			<item value="学院" />
+			<item value="专业" />
+			<item value="年级" />
+		</topItems>
+	</table>
+	<table name="baseClassInfoModifyTable"
+		type="formDataTable"  rowNum="-1"
+		itemFormClassName="cn.edu.sdu.service.base.form.BaseClassInfoForm">
+		<columns>
+			<column width="200" itemFormMember="className" />
+			<column width="200" itemFormMember="collegeName" />
+			<column width="200" itemFormMember="majorName" />
+			<column width="200" itemFormMember="grade" />
+		</columns>
+		<topItems>
+			<item value="名称" />
+			<item value="学院" />
+			<item value="专业" />
+			<item value="年级" />
+		</topItems>
+	</table>
+	
+	<table name="infoPersonInfoTeacherTableEditItemTable" type="formDataTable" rowHeight="25"
+		rowNum="-1" itemFormClassName="cn.edu.sdu.commoncomponent.form.InfoPersonInfoTableItemForm">
+		<no width="40" />
+		<columns>
+			<column width="80" itemFormMember="collegeName" />
+			<column width="100" itemFormMember="perNum" />
+			<column width="80" itemFormMember="perName" />
+		</columns>
+		<topItems>
+		    <item value="学院" />
+		    <item value="工号" />
+			<item value="姓名" />
+		</topItems>
+	</table>	
+		
+</formtabletemplate>

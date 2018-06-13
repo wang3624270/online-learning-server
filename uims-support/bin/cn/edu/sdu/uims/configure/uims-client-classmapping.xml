@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classmapping>
+
+	<map type="fileChooser" class="cn.edu.sdu.uims.component.complex.UFileChooserPanel" />
+	<map type="fileDownload" class="cn.edu.sdu.uims.component.complex.UFileDownloadPanel" />
+	<map type="fileUpload" class="cn.edu.sdu.uims.component.complex.UFileUploadPanel" />
+	<map type="dataImport" class="cn.edu.sdu.uims.component.complex.UDataImportPanel" />
+	<map type="dataExport" class="cn.edu.sdu.uims.component.complex.UDataExportPanel" />
+	<map type="videoPlay" class="cn.edu.sdu.uims.component.complex.UVideoPlayPanel" />
+	<map type="liveBroadcast" class="cn.edu.sdu.uims.component.complex.ULiveBroadcastPanel" />
+	<map type="livePlayer" class="cn.edu.sdu.uims.component.complex.ULivePlayerPanel" />
+	<map type="webAppView" class="cn.edu.sdu.uims.component.complex.UWebViewPanel" />
+	<map type="webApp" class="cn.edu.sdu.uims.component.complex.UWebAppPanel" />
+	<map type="mapView" class="cn.edu.sdu.uims.component.complex.UMapViewPanel" />
+	<map type="imageView" class="cn.edu.sdu.uims.component.complex.UPageImageViewPanel" />
+	<map type="pdfView" class="cn.edu.sdu.uims.component.complex.UPdfViewPanel" />
+	<map type="twoList" class="cn.edu.sdu.uims.component.complex.UTwoListPanel" />
+	<map type="timeInput" class="cn.edu.sdu.uims.component.complex.UTimeInputPanel" />
+	<map type="imageIcon" class="cn.edu.sdu.uims.component.complex.UImageIconPanel" />
+	<map type="curriculum" class="cn.edu.sdu.uims.component.complex.curriculum.UCurriculumPanel" />
+	<map type="curriculumEdit" class="cn.edu.sdu.uims.component.complex.UCurriculumEditPanel" />
+	<map type="calendar" class="cn.edu.sdu.uims.component.complex.calendar.UCalendarPanel" />
+	<map type="schedule" class="cn.edu.sdu.uims.component.complex.calendar.schedule.USchedulePanel" />
+	<map type="columnInfo" class="cn.edu.sdu.uims.component.complex.UColumnInfoPanel" />
+	<map type="treeList" class="cn.edu.sdu.uims.component.complex.UTreeListPanel" />
+	<map type="roomPlaneGraph" class="cn.edu.sdu.uims.component.complex.URoomPlaneGraphPanel" />
+	<map type="roomDistributeGraph" class="cn.edu.sdu.distribute.cs.URoomDistributeGraphPanel" />
+	<map type="buildingDistributeGraph" class="cn.edu.sdu.distribute.cs.UBuildingDistributeGraphPanel" />
+	<map type="floorDormInfoGraph" class="cn.edu.sdu.distribute.cs.UFloorDormInfoGraphPanel" />
+	<map type="graphEdit" class="cn.edu.sdu.uims.component.complex.UGraphEditPanel" />
+	<map type="3DMap" class="cn.edu.sdu.uims.component.complex.U3DMapPanel" />
+	<map type="roomLayoutEdit" class="cn.edu.sdu.roomlayout.component.URoomLayoutEditPanel" />
+	<map type="componentListList" class="cn.edu.sdu.uims.component.complex.UComponentListList" />
+	<map type="graphControl" class="cn.edu.sdu.uims.component.complex.UGraphControlPanel" />
+	<map type="multiLevelComTable" class="cn.edu.sdu.uims.component.complex.UMultiLevelComTablePanel" />
+	<map type="multiLevelComboBox" class="cn.edu.sdu.uims.component.complex.UMultiLevelComboBox" />
+	<map type="attachFile" class="cn.edu.sdu.uims.component.complex.UAttachFilePanel" />
+
+	<map type="commonQuery" class="cn.edu.sdu.commoncomponent.cs.UQueryComplexPanel" />
+	<map type="commonBaseDataQuery" class="cn.edu.sdu.commoncomponent.cs.UCommonBaseDataQueryPanel" />
+	<map type="commonRegionQuery" class="cn.edu.sdu.commoncomponent.cs.UCommonRegionQueryPanel" />
+	<map type="commonRoomQuery" class="cn.edu.sdu.commoncomponent.cs.UCommonRoomQueryPanel" />
+	<map type="commonDormQuery" class="cn.edu.sdu.commonquery.dorm.cs.UCommonDormQueryPanel" />
+	<map type="commonFeeQuery" class="cn.edu.sdu.commonquery.fee.cs.UCommonFeeQueryPanel" />
+	<map type="commonCommodityQuery" class="cn.edu.sdu.commodity.component.UCommodityQueryPanel" />
+	<map type="commonRelicQuery" class="cn.edu.sdu.relic.component.URelicQueryPanel" />
+	<map type="commonVideQuery" class="cn.edu.sdu.video.component.UVideoQueryPanel" />
+	<map type="commonBadmintonQuery" class="cn.edu.sdu.badminton.component.UBadmintonQueryPanel" />
+	<map type="commonSupnuevoQuery" class="cn.edu.sdu.supnuevo.component.USupnuevoQueryPanel" />
+	<map type="commonInsuranceQuery" class="cn.edu.sdu.insurance.component.UInsuranceQueryPanel" />
+	<map type="commonSupnuevoVentasQuery" class="cn.edu.sdu.supnuevo.ventas.component.USupnuevoVentasQueryPanel" />
+		
+	<map type="commonPersonQuery" class="cn.edu.sdu.commoncomponent.cs.UCommonPersonQueryPanel" />
+	<map type="commonPersonQueryScene" class="cn.edu.sdu.sceneinfo.base.cs.SceneCommonPersonQueryPanel" />
+
+	<map type="dataStatistics" class="cn.edu.sdu.datastatistics.cs.UDataStatisticsPanel" />
+
+	<map type="htmlEdit" class="cn.edu.sdu.uims.component.complex.UHtmlEditPanel" />
+	<map type="htmlAttach" class="cn.edu.sdu.uims.component.complex.UHtmlAttachPanel" />
+	<map type="commonGFDormQuery" class="cn.edu.sdu.commonquery.dorm.cs.UCommonGFDormQueryPanel" />
+	<map type="commonIaimsQuery" class="cn.edu.sdu.commonquery.iaims.cs.UCommonIaimsQueryPanel" />
+	
+
+	<map type="label" class="cn.edu.sdu.uims.component.label.ULabel" />
+	<map type="labelTitle"
+		class="cn.edu.sdu.uims.component.label.ULabelTitle" />
+	<map type="pdfLabel"
+		class="cn.edu.sdu.uims.component.label.UPdfLabel" />
+	<map type="audioLabel"
+		class="cn.edu.sdu.uims.component.label.UAudioLabel" />
+	<map type="videoLabel"
+		class="cn.edu.sdu.uims.component.label.UVideoLabel" />
+	<map type="imageLabel"
+		class="cn.edu.sdu.uims.component.label.UImageLabel" />
+	<map type="imageAttach"
+		class="cn.edu.sdu.uims.component.label.UImageAttach" />
+	<map type="attachFileLabel"
+		class="cn.edu.sdu.attachment.cs.UAttachFileLabel" />
+	<map type="labelMultiLine"
+		class="cn.edu.sdu.uims.component.label.ULabelMultiLine" />
+	<map type="labelAction" class="cn.edu.sdu.uims.component.label.ULabelAction" />
+
+	<map type="labelTextField"
+		class="cn.edu.sdu.uims.component.textfield.ULabelTextField" />
+	<map type="textField"
+		class="cn.edu.sdu.uims.component.textfield.UTextField" />
+	<map type="textFieldInt"
+		class="cn.edu.sdu.uims.component.textfield.UTextFieldInt" />
+	<map type="textFieldDate"
+		class="cn.edu.sdu.uims.component.textfield.UTextFieldDate" />
+	<map type="textFieldDouble"
+		class="cn.edu.sdu.uims.component.textfield.UTextFieldDouble" />
+	<map type="numberField"
+		class="cn.edu.sdu.uims.component.textfield.UNumberField" />
+	<map type="numberFieldWithAddMinus"
+		class="cn.edu.sdu.uims.component.textfield.UNumberFieldWithAddMinus" />
+	<map type="copositeFieldIP"
+		class="cn.edu.sdu.uims.component.textfield.UIPCompositeField" />
+	<map type="campusCardField"
+		class="cn.edu.sdu.uims.component.textfield.UCampusCardField" />
+	<map type="idCardField"
+		class="cn.edu.sdu.uims.component.textfield.UIdCardField" />
+	<map type="passwordField"
+		class="cn.edu.sdu.uims.component.textfield.UPasswordField" />
+	<map type="textFieldExpression"
+		class="cn.edu.sdu.uims.component.textfield.UTextFieldExpression" />
+	<map type="textFieldFixLength"
+		class="cn.edu.sdu.uims.component.textfield.UTextFieldFixLength" />
+	<map type="textFieldCheck"
+		class="cn.edu.sdu.uims.component.textfield.UTextFieldcheck" />
+	<map type="textFieldPinyin"
+		class="cn.edu.sdu.uims.component.textfield.UTextFieldPinyin" />
+	<map type="textFieldUnit"
+		class="cn.edu.sdu.uims.component.textfield.UTextFieldUnit" />
+	<map type="textFieldDateYearMonth"
+		class="cn.edu.sdu.uims.component.textfield.UTextFiledDateYearMonth" />
+	<map type="textFieldQuery"
+		class="cn.edu.sdu.uims.component.textfield.UTextFieldQuery" />
+	<map type="textFieldAttach"
+		class="cn.edu.sdu.uims.component.textfield.UTextFieldAttach" />
+	<map type="textFieldTable"
+		class="cn.edu.sdu.uims.component.textfield.UTextFieldTable" />
+	<map type="textFieldWithSelectedList"
+		class="cn.edu.sdu.uims.component.textfield.UTextFieldWithSelectedList" />
+	<map type="textFieldFormat"
+		class="cn.edu.sdu.uims.component.textfield.UTextFieldFormat" />
+					
+		
+	<map type="button" class="cn.edu.sdu.uims.component.button.UButton" />
+	<map type="buttonFold" class="cn.edu.sdu.uims.component.button.UButtonFold" />
+	<map type="toggleButton"
+		class="cn.edu.sdu.uims.component.button.UToggleButton" />
+	<map type="colorButton"
+		class="cn.edu.sdu.uims.component.button.UColorButton" />
+	<map type="radioButton"
+		class="cn.edu.sdu.uims.component.button.URadioButton" />
+	<map type="iconButton"
+		class="cn.edu.sdu.uims.component.button.UIconButton" />
+	<map type="toggleIconButton"
+		class="cn.edu.sdu.uims.component.button.UIconToggleButton" />
+	<map type="radioGroup"
+		class="cn.edu.sdu.uims.component.button.URadioGroup" />
+	<map type="buttonGroup"
+		class="cn.edu.sdu.uims.component.button.UButtonGroup" />
+	<map type="checkBox" class="cn.edu.sdu.uims.component.checkbox.UCheckBox" />
+	<map type="checkBox01" class="cn.edu.sdu.uims.component.checkbox.UCheckBox01" />
+	<map type="checkBox01I" class="cn.edu.sdu.uims.component.checkbox.UCheckBox01I" />
+	<map type="checkBoxValue" class="cn.edu.sdu.uims.component.checkbox.UCheckBoxValue" />
+	<map type="checkBoxGroup" class="cn.edu.sdu.uims.component.checkbox.UCheckBoxGroup" />
+	<map type="checkBoxGroupLayer" class="cn.edu.sdu.uims.graph.interaction.UCheckBoxGroupLayer" />
+	<map type="comboBox"	class="cn.edu.sdu.uims.component.combobox.UComboBox" />
+	<map type="comboBoxType" class="cn.edu.sdu.uims.component.combobox.UComboBoxType" />
+	<map type="comboBoxDate" class="cn.edu.sdu.uims.component.combobox.UComboBoxDate" />
+	<map type="comboBoxDateTime" class="cn.edu.sdu.uims.component.combobox.UComboBoxDateTime" />
+	<map type="comboBoxValue" class="cn.edu.sdu.uims.component.combobox.UComboBoxValue" />
+	<map type="comboBoxIndex" class="cn.edu.sdu.uims.component.combobox.UComboBoxIndex" />
+	<map type="comboBoxYear" class="cn.edu.sdu.uims.component.combobox.UComboBoxYear" />
+	<map type="comboBoxRecentYear" class="cn.edu.sdu.uims.component.combobox.UComboBoxRecentYear" />
+	<map type="comboBoxMonth" class="cn.edu.sdu.uims.component.combobox.UComboBoxMonth" />
+	<map type="comboBoxDay" class="cn.edu.sdu.uims.component.combobox.UComboBoxDay" />
+	<map type="comboBoxHour" class="cn.edu.sdu.uims.component.combobox.UComboBoxHour" />
+	<map type="comboBoxMinute" class="cn.edu.sdu.uims.component.combobox.UComboBoxMinute" />
+	<map type="comboBoxMinute1" class="cn.edu.sdu.uims.component.combobox.UComboBoxMinute1" />
+	<map type="comboBoxMinute2" class="cn.edu.sdu.uims.component.combobox.UComboBoxMinute2" />
+	<map type="comboBoxMinute3" class="cn.edu.sdu.uims.component.combobox.UComboBoxMinute3" />
+	<map type="comboBoxHour" class="cn.edu.sdu.uims.component.combobox.UComboBoxHour" />
+	<map type="comboBoxDict" class="cn.edu.sdu.uims.component.combobox.UComboBoxDict" />
+	<map type="comboBoxKeyFilter" class="cn.edu.sdu.uims.component.combobox.UComboBoxKeyFilter" />
+	<map type="comboBoxCollege" class="cn.edu.sdu.commoncomponent.cs.UComboBoxCollege" />
+	<map type="comboBoxCollegeFilter" class="cn.edu.sdu.commoncomponent.cs.UComboBoxCollegeFilter" />
+
+
+	<map type="list" class="cn.edu.sdu.uims.component.list.UList" />
+	<map type="listDict" class="cn.edu.sdu.uims.component.list.UListDict" />
+	<map type="iconList" class="cn.edu.sdu.uims.component.list.UIconList" />
+	<map type="listSelect"	class="cn.edu.sdu.uims.component.list.UListSelect" />
+	<map type="listData" class="cn.edu.sdu.uims.component.list.UListData" />
+	<map type="listMulti" class="cn.edu.sdu.uims.component.list.UListMulti" />
+	<map type="listCheck" class="cn.edu.sdu.uims.component.list.UListCheck" />
+
+	<map type="tree" class="cn.edu.sdu.uims.component.tree.UTreePanel" />
+	<map type="treeRegion" class="cn.edu.sdu.uims.component.tree.UTreeRegion" />
+	<map type="textArea" class="cn.edu.sdu.uims.component.UTextArea" />
+	<map type="htmlArea" class="cn.edu.sdu.uims.component.UHtmlArea" />
+	<map type="graphView" class="cn.edu.sdu.uims.graph.view.UGraphView" />
+	<map type="biGraphView" class="cn.edu.sdu.fuims.graph.bi.FBIGraphView" />
+	<map type="camera" class="cn.edu.sdu.uims.component.camera.CameraPanel" />
+	<map type="spinner" class="cn.edu.sdu.uims.component.spinner.USpinner" />
+
+
+	<map type="cubeView" class="cn.edu.sdu.uims.cube.CubeDataDispView" />
+	<map type="cubeViewGraph" class="cn.edu.sdu.uims.cube.CubeViewGraph" />
+	<map type="cubeViewTable" class="cn.edu.sdu.uims.cube.CubeViewTable" />
+	
+	<map type="separator" class="cn.edu.sdu.uims.component.USeparator" />
+	<map type="progressBar"
+		class="cn.edu.sdu.uims.component.UProgressBar" />
+	<map type="gedit" class="cn.edu.sdu.design.UGEditPanel" />
+	<map type="formImage"
+		class="cn.edu.sdu.uims.component.panel.UImagePanel" />
+
+	<map type="formPanel"
+		class="cn.edu.sdu.uims.component.panel.UFPanel" />
+	<map type="printPanel" class="cn.edu.sdu.uims.print.UPPanel" />
+	<map type="printDataTable"
+		class="cn.edu.sdu.uims.print.UPDataTable" />
+	<map type="paragraph" class="cn.edu.sdu.uims.doc.UDParagraph" />
+	<map type="date" class="cn.edu.sdu.uims.doc.UDDate" />
+	<map type="formFixTable"
+		class="cn.edu.sdu.uims.component.UFFixTable" />
+	<map type="checkTable"
+		class="cn.edu.sdu.uims.component.table.UCheckTable" />
+	<map type="formDataTable"
+		class="cn.edu.sdu.uims.component.table.UTablePanel" />
+	<map type="formDataTableCheck"
+		class="cn.edu.sdu.uims.component.table.UFDataTableCheck" />
+		
+	<map type="viewFixTable" class="cn.edu.sdu.uims.view.UVFixTable" />
+	<map type="pageFixTable" class="cn.edu.sdu.uims.view.UPFixTable" />
+	<map type="docDataTable" class="cn.edu.sdu.uims.doc.UDDataTable" />
+	<map type="sheetDataTable"
+		class="cn.edu.sdu.uims.sheet.USDataTable" />
+	<map type="sheetRandomTable"
+		class="cn.edu.sdu.uims.sheet.USRandomTable" />
+	<map type="viewPanel" class="cn.edu.sdu.uims.view.UVPanel" />
+	<map type="docPanel" class="cn.edu.sdu.uims.doc.UDPanel" />
+	<map type="sheetPanel" class="cn.edu.sdu.uims.sheet.USPanel" />
+	<map type="dialog"
+		class="cn.edu.sdu.uims.component.dialog.UDialogPanel" />
+	<map type="printDialog"
+		class="cn.edu.sdu.uims.component.dialog.UPrintDialogPanel" />
+	<map type="workbench"
+		class="cn.edu.sdu.uims.component.workbench.UWorkbench" />
+	<map type="docDataTable" class="cn.edu.sdu.uims.doc.UDDataTable" />
+	<map type="docRowSpanTable"
+		class="cn.edu.sdu.uims.doc.UDRowSpanDataTable" />
+	<map type="docFixTable" class="cn.edu.sdu.uims.doc.UDFixTable" />
+	<map type="docRandomTable" class="cn.edu.sdu.uims.doc.UDRandomTable" />
+	<map type="sheetDataTable" class="cn.edu.sdu.uims.sheet.USDataTable" />
+	<map type="sheetRandomTable" class="cn.edu.sdu.uims.sheet.USRandomTable" />
+
+
+
+
+	<!-- menu mapping-->
+	<map type="menu" class="cn.edu.sdu.uims.component.menu.UMenu" />
+	<map type="treeMenu"
+		class="cn.edu.sdu.uims.component.menu.UTreeMenu" />
+	<map type="menuItem"
+		class="cn.edu.sdu.uims.component.menu.UMenuItem" />
+	<map type="radioMenuItem"
+		class="cn.edu.sdu.uims.component.menu.URadioMenuItem" />
+	<map type="menuBar" class="cn.edu.sdu.uims.component.menu.UMenuBar" />
+	<!-- menu -->
+	<map type="toolbar" class="cn.edu.sdu.uims.component.UToolBar" />
+	<map type="statusBar" class="cn.edu.sdu.uims.component.UStatusBar" />
+
+	<map type="graphButtonBar" class="cn.edu.sdu.uims.graph.interaction.UGraphButtonBar" />
+	<map type="graphToolBar" class="cn.edu.sdu.uims.graph.interaction.UGraphToolBar" />
+	<map type="graphViewRegion" class="cn.edu.sdu.uims.graph.view.UGraphViewRegion" />
+
+	<map type="graphInteractionPnael" class="cn.edu.sdu.uims.graph.interaction.UGraphInteractionPanel" />
+	
+	<map type="line" class="cn.edu.sdu.uims.graph.model.GElementLine2" />
+	<map type="polygon" class="cn.edu.sdu.uims.graph.model.GElementPolygon2" />
+	<map type="text" class="cn.edu.sdu.uims.graph.model.GElementText" />
+	<map type="image" class="cn.edu.sdu.uims.graph.model.GElementImage" />
+	<map type="arc" class="cn.edu.sdu.uims.graph.model.GElementArc2" />
+	<map type="subGraph" class="cn.edu.sdu.uims.graph.model.GElementSubGraph" />
+	<map type="pie" class="cn.edu.sdu.uims.graph.model.GElementPie" />
+	<map type="histogram" class="cn.edu.sdu.uims.graph.model.GElementHistogram" />
+	<map type="polyline" class="cn.edu.sdu.uims.graph.model.GElementPolyline" />
+	<map type="pie3D" class="cn.edu.sdu.uims.graph.model.GElementPie3D" />
+	<map type="histogram3D" class="cn.edu.sdu.uims.graph.model.GElementHistogram3Dm" />
+	<map type="taskNode" class="cn.edu.sdu.uims.graph.model.GElementTaskNode" />
+	<map type="startNode" class="cn.edu.sdu.uims.graph.model.GElementStartNode"/>
+	<map type="endNode" class="cn.edu.sdu.uims.graph.model.GElementEndNode" />
+	<map type="transitionLine" class="cn.edu.sdu.uims.graph.model.GElementTransition" />
+	<map type="polyline3D" class="cn.edu.sdu.uims.graph.model.GElementPolyline3D" />
+	<map type="barCode" class="cn.edu.sdu.uims.graph.model.GElementBarCode" />
+	<map type="rect" class="cn.edu.sdu.uims.graph.model.GElementRectangle" />
+	<map type="fact" class="cn.edu.sdu.bi.visual.model.GElementFactTable"/>
+	<map type="dimension" class="cn.edu.sdu.bi.visual.model.GElementDimensionTable" /> 
+	
+	<map type = "layoutMode_locate" class= "cn.edu.sdu.uims.component.groupcomponent.UGroupComponentLocate"/>
+	<map type = "layoutMode_shift" class= "cn.edu.sdu.uims.component.groupcomponent.UGroupComponentShift"/>
+	<map type = "layoutMode_card" class= "cn.edu.sdu.uims.component.groupcomponent.UGroupComponentCard"/>
+	<map type = "layoutMode_page" class= "cn.edu.sdu.uims.component.groupcomponent.UGroupComponentPage"/>
+	<map type = "layoutMode_pageLabel" class= "cn.edu.sdu.uims.component.groupcomponent.UGroupComponentPageLabel"/>
+	<map type = "layoutMode_pageIcon" class= "cn.edu.sdu.uims.component.groupcomponent.UGroupComponentPageIcon"/>
+	<map type = "layoutMode_pageList" class= "cn.edu.sdu.uims.component.groupcomponent.UGroupComponentPageList"/>
+	<map type = "layoutMode_pageTree" class= "cn.edu.sdu.uims.component.groupcomponent.UGroupComponentPageTree"/>
+	<map type = "layoutMode_table" class= "cn.edu.sdu.uims.component.groupcomponent.UGroupComponentTable"/>
+	<map type = "layoutMode_hdiv" class= "cn.edu.sdu.uims.component.groupcomponent.UGroupComponentHDiv"/>
+	<map type = "layoutMode_vdiv" class= "cn.edu.sdu.uims.component.groupcomponent.UGroupComponentVDiv"/>
+	<map type = "layoutMode_vhdiv" class= "cn.edu.sdu.uims.component.groupcomponent.UGroupComponentVHDiv"/>
+	<map type = "layoutMode_hvdiv" class= "cn.edu.sdu.uims.component.groupcomponent.UGroupComponentHVDiv"/>
+	<map type = "layoutMode_border" class= "cn.edu.sdu.uims.component.groupcomponent.UGroupComponentBorder"/>
+	<map type = "layoutMode_borderRegion" class= "cn.edu.sdu.uims.component.groupcomponent.UGroupComponentBorderRegion"/>
+	<map type = "layoutMode_flow" class= "cn.edu.sdu.uims.component.groupcomponent.UGroupComponentFlow"/>
+	<map type = "layoutMode_lineFlow" class= "cn.edu.sdu.uims.component.groupcomponent.UGroupComponentLineFlow"/>
+	<map type = "layoutMode_hideable" class= "cn.edu.sdu.uims.component.groupcomponent.UGroupComponentHideable"/>
+	<map type = "layoutMode_vhdivns" class= "cn.edu.sdu.uims.component.groupcomponent.UGroupComponentVHDivNS"/>
+	<map type = "layoutMode_hvdivns" class= "cn.edu.sdu.uims.component.groupcomponent.UGroupComponentHVDivNS"/>
+	<map type = "layoutMode_one" class= "cn.edu.sdu.uims.component.groupcomponent.UGroupComponentOne"/>
+	<map type = "layoutMode_boxv" class= "cn.edu.sdu.uims.component.groupcomponent.UGroupComponentBoxV"/>
+	<map type = "layoutMode_boxh" class= "cn.edu.sdu.uims.component.groupcomponent.UGroupComponentBoxH"/>
+	<map type = "layoutMode_grid" class= "cn.edu.sdu.uims.component.groupcomponent.UGroupComponentGrid"/>
+	<map type = "layoutMode_gridBag" class= "cn.edu.sdu.uims.component.groupcomponent.UGroupComponentGridBag"/>
+	<map type = "layoutMode_adaptive" class= "cn.edu.sdu.uims.component.groupcomponent.UGroupComponentAdaptive"/>
+	<map type = "layoutMode_cell" class= "cn.edu.sdu.uims.component.groupcomponent.UGroupComponentCell"/>
+	<map type = "layoutMode_column" class= "cn.edu.sdu.uims.component.groupcomponent.UGroupComponentColumn"/>
+	<map type = "layoutMode_row" class= "cn.edu.sdu.uims.component.groupcomponent.UGroupComponentRow"/>
+	<map type = "layoutMode_user" class= "cn.edu.sdu.uims.component.groupcomponent.UGroupComponentUser"/>
+	
+	<map type = "comparator_stringfirstLength" class= "cn.edu.sdu.uims.comparator.ComparatorStringFirstLength"/>
+	<map type = "comparator_stringpinyin" class= "cn.edu.sdu.uims.comparator.ComparatorStringPinyin"/>
+	<map type = "comparator_stringNomLenFir" class = "cn.edu.sdu.uims.comparator.ComparatorStringNomLenFir"/>
+	
+	<map type = "visualViewGraph" class="cn.edu.sdu.visualization.component.VisualizationViewGraph"/>
+	
+	<map type = "validatorNotEmpty" class = "cn.edu.sdu.uims.validator.NotEmptyValidator"/>
+	<map type = "validatorInteger" class = "cn.edu.sdu.uims.validator.IntegerValidator"/>
+	<map type = "validatorFloat" class = "cn.edu.sdu.uims.validator.FloatValidator"/>
+	<map type = "validatorNaturalNum" class = "cn.edu.sdu.uims.validator.NaturalNumberValidator"/><!-- xs -->
+	<map type = "validatorPositiveInteger" class = "cn.edu.sdu.uims.validator.PositiveIntegerValidator"/><!-- xs -->
+	<map type = "validatorDouble" class = "cn.edu.sdu.uims.validator.DoubleDataValidator"/><!-- xs -->
+	<map type = "validatorDoubleNotEmpty" class = "cn.edu.sdu.uims.validator.DoubleDataNotEmptyValidator"/><!-- xs -->
+	
+	<map type="photoCollect" class="cn.edu.sdu.personinfo.photo.component.UPhotoCollectPanel" />
+
+	<map type="jfxButton" class="cn.edu.sdu.uims.component.jfx.control.JFXButton" />
+	<map type="jfxCheckBox" class="cn.edu.sdu.uims.component.jfx.control.JFXCheckBox" />
+	<map type="jfxChoiceBox" class="cn.edu.sdu.uims.component.jfx.control.JFXChoiceBox" />
+	<map type="jfxComboBox" class="cn.edu.sdu.uims.component.jfx.control.JFXComboBox" />
+	<map type="jfxHtmlEditor" class="cn.edu.sdu.uims.component.jfx.control.JFXHtmlEditor" />
+	<map type="jfxHyperLink" class="cn.edu.sdu.uims.component.jfx.control.JFXHyperLink" />
+	<map type="jfxLabel" class="cn.edu.sdu.uims.component.jfx.control.JFXLabel" />
+	<map type="jfxListView" class="cn.edu.sdu.uims.component.jfx.control.JFXListView" />
+	<map type="jfxRadioButton" class="cn.edu.sdu.uims.component.jfx.control.JFXRadioButton" />
+	<map type="jfxSlider" class="cn.edu.sdu.uims.component.jfx.control.JFXSlider" />
+	<map type="jfxTableView" class="cn.edu.sdu.uims.component.jfx.control.JFXTableView" />
+	<map type="jfxTextField" class="cn.edu.sdu.uims.component.jfx.control.JFXTextField" />
+	<map type="jfxToggleButton" class="cn.edu.sdu.uims.component.jfx.control.JFXToggleButton" />
+	<map type="jfxTreeView" class="cn.edu.sdu.uims.component.jfx.control.JFXTreeView" />
+											
+	<map type="jfxAreaChart" class="cn.edu.sdu.uims.component.jfx.chart.JFXAreaChart" />
+	<map type="jfxBarChart" class="cn.edu.sdu.uims.component.jfx.chart.JFXBarChart" />
+	<map type="jfxBubbleChart" class="cn.edu.sdu.uims.component.jfx.chart.JFXBubbleChart" />
+	<map type="jfxLineChart" class="cn.edu.sdu.uims.component.jfx.chart.JFXLineChart" />
+	<map type="jfxPieChart" class="cn.edu.sdu.uims.component.jfx.chart.JFXPieChart" />
+	<map type="jfxScatterChart" class="cn.edu.sdu.uims.component.jfx.chart.JFXScatterChart" />
+									
+</classmapping>

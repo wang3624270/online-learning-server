@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+       http://www.springframework.org/schema/tx
+       http://www.springframework.org/schema/tx/spring-tx-4.1.xsd
+       http://www.springframework.org/schema/aop
+       http://www.springframework.org/schema/aop/spring-aop-4.1.xsd">
+	<bean id="reportdog" class="cn.edu.sdu.service.reportdog.service.Reportdog"
+		init-method="initReportdog">
+		<property name="hibernateTemplate">
+			<ref bean="hibernateTemplate" />
+		</property>
+	</bean>
+	<bean id="defaultSourceHandler"
+		class="cn.edu.sdu.service.reportdog.handler.DefaultSourceHandler">
+		<property name="jdbcTemplate">
+			<ref bean="jdbcTemplate" />
+		</property>
+	</bean>
+	<bean id="defaultPageSourceHandler"
+		class="cn.edu.sdu.service.reportdog.handler.DefaultPageSourceHandler">
+		<property name="jdbcTemplate">
+			<ref bean="jdbcTemplate" />
+		</property>
+	</bean>
+
+
+	<bean id="defaultDocumentHandler"
+		class="cn.edu.sdu.service.reportdog.handler.DefaultDocumentHandler">
+	</bean>
+	<bean id="defaultXLSDocumentHandler"
+		class="cn.edu.sdu.service.reportdog.handler.DefaultXLSDocumentHandler">
+	</bean>
+
+	<bean id="userDefHandler" class="cn.edu.sdu.service.reportdog.handler.UserDefinedHandler">
+		<property name="jdbcTemplate">
+			<ref bean="jdbcTemplate" />
+		</property>
+	</bean>
+	<bean id="defaultMidHandler" class="cn.edu.sdu.service.reportdog.handler.DefaultMidHandler">
+	</bean>
+
+	<bean id="defaultMidPropertyHandler"
+		class="cn.edu.sdu.service.reportdog.handler.DefaultMidPropertyHandler">
+	</bean>
+	<bean id="defaultTransHandler"
+		class="cn.edu.sdu.service.reportdog.handler.DefaultTransHandler">
+	</bean>
+
+	<bean id="pageDataController"
+		class="cn.edu.sdu.service.reportdog.controller.PageDataController">
+	</bean>
+
+	<bean id="multiPageDataController"
+		class="cn.edu.sdu.service.reportdog.controller.MultiPageDataController">
+		<property name="jdbcTemplate">
+			<ref bean="jdbcTemplate" />
+		</property>
+	</bean>
+	<bean id="streamDocumentHandler"
+		class="cn.edu.sdu.service.reportdog.handler.StreamDocumentHandler">
+	</bean>
+	
+</beans>
+

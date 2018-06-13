@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classmapping>
+	<map type="line" class="cn.edu.sdu.uims.view.UVLine" />
+	<map type="box" class="cn.edu.sdu.uims.view.UVBox" />
+	<map type="barcode" class="cn.edu.sdu.uims.view.UVBarCode" />
+	<map type="text" class="cn.edu.sdu.uims.view.UVText" />
+	<map type="paragraph" class="cn.edu.sdu.uims.doc.UDParagraph" />
+	<map type="image" class="cn.edu.sdu.uims.view.UVImage" />
+	<map type="date" class="cn.edu.sdu.uims.doc.UDDate" />
+	<map type="viewFixTable" class="cn.edu.sdu.uims.view.UVFixTable" />
+	<map type="viewPanel" class="cn.edu.sdu.uims.view.UVPanel" />
+	<map type="viewChart"      class ="cn.edu.sdu.uims.view.UVChart" />
+</classmapping>
+	

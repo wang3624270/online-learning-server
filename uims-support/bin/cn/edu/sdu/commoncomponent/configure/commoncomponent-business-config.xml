@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rmi-config>
+	<action-mappings>
+	    		
+		<action cmd="commonBaseDataQueryRequestGroupRoleList" method="requestGroupRoleList"
+			beanId="commonBaseDataQueryProcessRuleBean" description="获得下级单位列表">
+		</action>
+		<action cmd="commonBaseDataQueryRequestProcessStateList" method="requestProcessStateList"
+			beanId="commonBaseDataQueryProcessRuleBean" description="获得下级单位列表">
+		</action>
+		<action cmd="commonBaseDataQueryRequestProvinceList" method="requestProvinceList"
+			beanId="commonBaseDataQueryProcessRuleBean" description="获得友好交流学校列表" />
+		<action cmd="commonBaseDataQueryRequestCityListByProvince" method="requestCityListByProvince"
+			beanId="commonBaseDataQueryProcessRuleBean" description="获得友好交流学校列表" />
+		<action cmd="commonBaseDataQueryRequestTownListByProvinceAndCity" method="requestTownListByProvinceAndCity"
+			beanId="commonBaseDataQueryProcessRuleBean" description="获得友好交流学校列表" />
+					    
+	    <action cmd="commonBaseDataQueryRequestFriendlySchoolList" method="requestFriendlySchoolList"
+			beanId="commonBaseDataQueryProcessRuleBean" description="获得友好交流学校列表" />
+
+		<action cmd="commonBaseDataQueryRequestPostgraduateMajorOptionList" method="requestPostgraduateMajorOptionList"
+			beanId="commonBaseDataQueryProcessRuleBean" description="获得友好交流学校列表" />
+		<action cmd="commonBaseDataQueryRequestUndergraduateMajorOptionList" method="requestUndergraduateMajorOptionList"
+			beanId="commonBaseDataQueryProcessRuleBean" description="获得友好交流学校列表" />
+		<action cmd="commonBaseDataQueryRequestCultivateUnitOptionList" method="requestCultivateUnitOptionList"
+			beanId="commonBaseDataQueryProcessRuleBean" description="获得友好交流学校列表" />
+				
+						
+		
+		<action cmd="commonBaseDataQueryRequestDictCodeList" method="requestDictCodeList"
+			beanId="commonBaseDataQueryProcessRuleBean" description="获得地区列表" />
+	    <action cmd="commonBaseDataQueryRequestAreaList" method="requestAreaList"
+			beanId="commonBaseDataQueryProcessRuleBean" description="获得地区列表" />
+		<action cmd="commonBaseDataQueryRequestCampusList" method="requestCampusList"
+			beanId="commonBaseDataQueryProcessRuleBean" description="获得校区列表" />
+		<action cmd="commonBaseDataQueryRequestFacultyList" method="requestFacultyList"
+			beanId="commonBaseDataQueryProcessRuleBean" description="获得校区列表" />
+		<action cmd="commonBaseDataQueryRequestCollegeAllList" method="requestCollegeAllList"
+			beanId="commonBaseDataQueryProcessRuleBean" description="获得学院列表" />
+		<action cmd="commonBaseDataQueryRequestCollegeList" method="requestCollegeList"
+			beanId="commonBaseDataQueryProcessRuleBean" description="获得学院列表" />
+		<action cmd="commonBaseDataQueryRequestCollegeTypeById" method="requestCollegeTypeById"
+			beanId="commonBaseDataQueryProcessRuleBean" description="获得学院列表" />
+		<action cmd="commonBaseDataQueryRequestSecondTypeLevelList" method="requestSecondTypeLevelList"
+			beanId="commonBaseDataQueryProcessRuleBean" description="获得学生类型层次列表" />
+		<action cmd="commonBaseDataQueryRequestSecondTypeCodeList" method="requestSecondTypeCodeList"
+			beanId="commonBaseDataQueryProcessRuleBean" description="获得学生类型编码列表" />
+		<action cmd="commonBaseDataQueryRequestMajorList" method="requestMajorList"
+			beanId="commonBaseDataQueryProcessRuleBean" description="获得专业列表" />
+		<action cmd="commonBaseDataQueryRequestCollegeMajorList" method="requestCollegeMajorList"
+			beanId="commonBaseDataQueryProcessRuleBean" description="获得专业列表" />
+		<action cmd="commonBaseDataQueryRequestClassList" method="requestClassList"
+			beanId="commonBaseDataQueryProcessRuleBean" description="获得班级列表" />		
+		<action cmd="commonBaseDataQueryRequestClassListByBean" method="requestClassListByBean"
+			beanId="commonBaseDataQueryProcessRuleBean" description="获得班级列表" />		
+		<action cmd="commonBaseDataQueryRequestGroupList" method="requestGroupList"
+			beanId="commonBaseDataQueryProcessRuleBean" description="获得组列表" />		
+		<action cmd="commonBaseDataQueryRequestProcessList" method="requestProcessList"
+			beanId="commonBaseDataQueryProcessRuleBean" description="获得学期列表" />		
+		<action cmd="commonBaseDataQueryRequestTermList" method="requestTermList"
+			beanId="commonBaseDataQueryProcessRuleBean" description="获得学期列表" />		
+		<action cmd="commonBaseDataQueryRequestGradeList" method="requestGradeList"
+			beanId="commonBaseDataQueryProcessRuleBean" description="获得学期列表" />		
+				<action cmd="commonBaseDataQueryRequestStatusList" method="requestStatusList"
+			beanId="commonBaseDataQueryProcessRuleBean" description="获得状态列表" />
+		<action cmd="commonBaseDataQueryRequestLoanStatusList" method="requestLoanStatusList"
+			beanId="commonBaseDataQueryProcessRuleBean" description="获得贷款状态列表" />
+		<action cmd="commonBaseDataQueryRequestLoanStatusNameList" method="requestLoanStatusNameList"
+			beanId="commonBaseDataQueryProcessRuleBean" description="获得贷款状态列表" />
+			
+		<action cmd="commonBaseDataQueryRequestScholarTypeList" method="requestScholarTypeList"
+			beanId="commonBaseDataQueryProcessRuleBean" description="获得奖学金列表" />	
+				
+		<action cmd="commonBaseDataQueryRequestDataSourceList" method="requestDataSourceList"
+			beanId="commonBaseDataQueryProcessRuleBean" description="获得数据源列表" />		
+
+		<action cmd="commonBaseDataQueryRequestTeachTaskList" method="requestTeachTaskList"
+			beanId="commonBaseDataQueryProcessRuleBean" description="获得教学任务列表" />
+			
+			
+		<action cmd="commonBaseDataQueryRequestNationList" method="requestNationList"
+			beanId="commonBaseDataQueryProcessRuleBean" description="获得国家列表" />		
+		<action cmd="commonBaseDataQueryRequestPeopleCodeList" method="requestPeopleCodeList"
+			beanId="commonBaseDataQueryProcessRuleBean" description="获得民族列表" />		
+
+		<action cmd="commonBaseDataQueryRequestClassInfoList" method="requestClassInfoList"
+			beanId="commonBaseDataQueryProcessRuleBean" description="获得班级列表" />		
+		<action cmd="commonBaseDataQueryRequestCourseNoList" method="requestCourseNoList"
+			beanId="commonBaseDataQueryProcessRuleBean" description="获得课序号列表" />		
+		<action cmd="commonRoomQueryRequestGetUserManageStudentTypeArray" method="getUserManageStudentTypeArray"
+			beanId="commonBaseDataQueryProcessRuleBean" description="获得下级单位列表">
+		</action>	
+		<action cmd="commonBaseDataQueryRequestInfoPersonTableItemFormList" method="requestInfoPersonTableItemFormList"
+			beanId="commonBaseDataQueryProcessRuleBean" description="获得友好交流学校列表" />
+
+		<action cmd="commonBaseDataQueryClearCommonQueryBufferMap" method="clearCommonQueryBufferMap"
+			beanId="commonBaseDataQueryProcessRuleBean" description="获得友好交流学校列表" />
+				
+
+		<action cmd="commonRegionQueryRequestProvinceList" method="requestProvinceList"
+			beanId="commonRegionQueryProcessRuleBean" description="获得省列表" />		
+		<action cmd="commonRegionQueryRequestCityList" method="requestCityList"
+			beanId="commonRegionQueryProcessRuleBean" description="获得市列表" />		
+		<action cmd="commonRegionQueryRequestTownList" method="requestTownList"
+			beanId="commonRegionQueryProcessRuleBean" description="获得区县列表" />		
+
+
+			
+			
+		<action cmd="commonRoomQueryRequestBuildingNumList" method="requestBuildingNumList"
+			beanId="commonRoomQueryProcessRuleBean" description="获得楼宇列表" />		
+		<action cmd="commonRoomQueryRequestBuildingIdList" method="requestBuildingIdList"
+			beanId="commonRoomQueryProcessRuleBean" description="获得楼宇列表" />		
+		<action cmd="commonRoomQueryRequestRoomListByForm" method="requestRoomListByForm"
+			beanId="commonRoomQueryProcessRuleBean" description="获得房间类型方式" />		
+		<action cmd="commonRoomQueryRequestRoomTreeByForm" method="requestRoomTreeByForm"
+			beanId="commonRoomQueryProcessRuleBean" description="获得房间分类列表" />		
+
+		<action cmd="commonRoomQueryRequestBuildingTreeListByForm" method="requestBuildingTreeListByForm"
+			beanId="commonRoomQueryProcessRuleBean" description="获得房间分类列表" />					
+		<action cmd="commonRoomQueryRequestgetRoomMessageByRoomId" method="requestgetRoomMessageByRoomId"
+			beanId="commonRoomQueryProcessRuleBean" description="获得房间信息" />		
+			
+		<action cmd="commonRoomQueryRequestRoomListOfBuilding" method="requestRoomListOfBuilding"
+			beanId="commonRoomQueryProcessRuleBean" description="获得房间分类列表" />		
+
+		<action cmd="commonRoomQueryRequestGetRoomListOfFloorByFloorId" method="requestgetRoomListOfFloorByFloorId"
+			beanId="commonRoomQueryProcessRuleBean" description="根据楼层id获取房间列表">
+		</action>
+		<action cmd="commonRoomQueryRequestGetMaxRoomIdByBuildingId" method="requestGetMaxRoomIdByBuildingId"
+			beanId="commonRoomQueryProcessRuleBean" description="根据楼层id自动获取新建房间编号">
+		</action>
+		<action cmd="commonRoomQueryRequestGetMaxBuildingNumByCampusNum" method="requestGetMaxBuildingNumByCampusNum"
+			beanId="commonRoomQueryProcessRuleBean" description="根据校区id自动获取新建楼宇编号">
+		</action>
+		<action cmd="get_building_list_tree" method="requestBuildingTreeListByForm"
+			beanId="commonRoomQueryProcessRuleBean" description="根据校区id获取楼宇树状列表">
+		</action>
+		<action cmd="commonRoomQueryRequestFloorIdListByBuidingId" method="requestFloorIdListByBuidingId"
+			beanId="commonRoomQueryProcessRuleBean" description="根据校区id获取楼宇树状列表">
+		</action>
+			
+		<action cmd="commonRoomQueryRequestOrganizationList" method="requestSecondCollegeList"
+			beanId="commonRoomQueryProcessRuleBean" description="获得下级单位列表">
+		</action>
+        <action cmd="commonDateQueryRequestAchieveModelItems" method="requestAchieveModelItems"
+			beanId="commonBaseDataQueryProcessRuleBean" description="获得下级单位列表">
+		</action>
+        <action cmd="commonDateQueryRequestRefreshBufferData" method="requestRefreshBufferData"
+			beanId="commonBaseDataQueryProcessRuleBean" description="获得下级单位列表">
+		</action>
+        									
+          
+	</action-mappings>
+</rmi-config>

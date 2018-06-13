@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classmapping>
+	<map type="label" class="label" />
+	<map type="textField" class="input type='text'" />
+	<map type="submit" class="input type = 'submit'" />
+	<map type="reset" class="input type = 'reset'" />
+	<map type="hideTextField" class="input type = 'hidden'" />
+	<map type="checkBox" class="input type = 'checkbox'" />
+	<map type="radioButton" class="input type = 'radio'" />
+	<map type="comboBox" class="select" />
+	<map type="list" class="select" />
+	<map type="file" class="input type = 'file'" />
+	<map type="password" class="input type = 'password'" />
+	<map type="docPanel" class="cn.edu.sdu.uims.doc.UDPanel" />
+	<map type="paragraph" class="cn.edu.sdu.uims.doc.UDParagraph" />
+	<!-- liuyang added start-->
+	<map type="image" class="cn.edu.sdu.uims.doc.UDImage" />
+	<!-- liuyang added end -->
+	<map type="docDataTable" class="cn.edu.sdu.uims.doc.UDDataTable" />
+	<map type="docRowSpanTable"
+		class="cn.edu.sdu.uims.doc.UDRowSpanDataTable" />
+	<map type="docFixTable" class="cn.edu.sdu.uims.doc.UDFixTable" />
+	<map type="docRandomTable" class="cn.edu.sdu.uims.doc.UDRandomTable" />
+	<map type="sheetPanel" class="cn.edu.sdu.uims.sheet.USPanel" />
+	<map type="sheetDataTable" class="cn.edu.sdu.uims.sheet.USDataTable" />
+	<map type="sheetRandomTable" class="cn.edu.sdu.uims.sheet.USRandomTable" />
+</classmapping>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ====================================================================== 
+	Ant build.xml ====================================================================== -->
+<project name="apache-com-support-deploy" default="deploy">
+
+	<!-- ================================= property: jsf ================================= -->
+	<property name="apache-com-support-supportDir" value="${basedir}/../apache-com-support-0.0.1" />
+	<!-- ================================= target: deploy ================================= -->
+	<target name="deploy">
+		<copy todir="${deployDir}/WEB-INF/classes/">
+			<fileset dir="${apache-com-support-supportDir}/bin">
+
+			</fileset>
+		</copy>
+		<copy todir="${deployDir}/WEB-INF/lib/">
+			<fileset dir="${apache-com-support-supportDir}/lib">
+
+			</fileset>
+		</copy>
+	</target>
+</project>

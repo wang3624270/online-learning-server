@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rmi-cmd-set>
+		<cmd key="attachmentGetBaseAttachmentInfoFormList" method="getBaseAttachmentInfoFormList"
+			beanId="baseAttachmentInfoProcessRule" description="获取通讯地址信息列表" />
+		<cmd key="attachmentReplaceAttachmentFileOfAttachId" method="replaceAttachmentFileOfAttachId"
+			beanId="baseAttachmentInfoProcessRule" description="获取通讯地址信息列表" />
+		<cmd key="attachmentUpLoadAttachmentFile" method="upLoadAttachmentFile"
+			beanId="baseAttachmentInfoProcessRule" description="获取通讯地址信息列表" />
+		<cmd key="attachmentDownloadAttachmentFile" method="downloadAttachmentFile"
+			beanId="baseAttachmentInfoProcessRule" description="获取通讯地址信息列表" />
+		<cmd key="attachmentDeleteAttachmentFile" method="deleteAttachmentFile"
+			beanId="baseAttachmentInfoProcessRule" description="获取通讯地址信息列表" />
+		<cmd key="attachmentDownloadAttachmentBSFile" method="downloadAttachmentBSFile"
+			beanId="baseAttachmentInfoProcessRule" description="获取通讯地址信息列表" />
+		<cmd key="attachmentDownloadAttachmentBSFileMulti" method="downloadAttachmentBSFileMulti"
+			beanId="baseAttachmentInfoProcessRule" description="获取通讯地址信息列表" />
+		
+		<cmd key="attachmentDownloadAttachmentBSFileTemp" method="downloadAttachmentBSFileTemp"
+			beanId="baseAttachmentInfoProcessRule" description="临时下载" />
+		<cmd key="attachmentGetAttachmentFileModifyTimee" method="getAttachmentFileModifyTime"
+			beanId="baseAttachmentInfoProcessRule" description="获取通讯地址信息列表" />
+		<cmd key="attachmentOpenDownloadAttachmentFile" method="openDownloadAttachmentFile"
+			beanId="baseAttachmentInfoProcessRule" description="获取通讯地址信息列表" authToken="permitAll" />
+		<cmd key="attachmentReadAttachmentFileData" method="readAttachmentFileData"
+			beanId="baseAttachmentInfoProcessRule" description="获取通讯地址信息列表" authToken="permitAll" />
+		<cmd key="attachmentOpenUploadAttachmentFile" method="openUploadAttachmentFile"
+			beanId="baseAttachmentInfoProcessRule" description="获取通讯地址信息列表" />
+		<cmd key="attachmentWriteAttachmentFileData" method="writeAttachmentFileData"
+			beanId="baseAttachmentInfoProcessRule" description="获取通讯地址信息列表" />
+												
+		<cmd key="attachmentClearAttachmentFileByDateAndType" method="clearAttachmentFileByDateAndType"
+			beanId="baseAttachmentInfoProcessRule" description="获取通讯地址信息列表" />
+</rmi-cmd-set>

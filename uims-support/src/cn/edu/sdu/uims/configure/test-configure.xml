@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="GB2312"?>
+<tabmenu-configs>
+	<url-configs>
+		<url-config name="1" path="" />
+		<url-config name="21" path="" />
+	</url-configs>
+	<user-filters>
+		<filter urlName="1" enableFilter="1">
+			<role id="1" />
+		</filter>
+	</user-filters>
+</tabmenu-configs>

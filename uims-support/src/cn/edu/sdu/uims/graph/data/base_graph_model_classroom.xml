@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<graph_model_template>
+<!-- 整个教室的seat模型 -->
+	<graph_model name="classroom" xpoint="15" ypoint="10">
+		<rows>
+		<!-- 第一行 门和讲台的安排 -->
+			
+			<!-- 第二行 座位的安排 -->
+			<row space="110" count="12">
+				<columns>
+					<column  dx="110" dy="0" count="4" dsx="0"	dsy="0" dra="0">
+						<elements>
+							<element type ="subGraph" subName = "seat"/>
+						</elements>
+					</column>
+					<column  dx="140" dy="0" count="1" dsx="0"	dsy="0" dra="0">
+						<elements>
+							<element type ="subGraph" subName = "seat"/>
+						</elements>
+					</column>
+					<column  dx="110" dy="0" count="6" dsx="0"	dsy="0" dra="0">
+						<elements>
+							<element type ="subGraph" subName = "seat"/>
+						</elements>
+					</column>
+					<column  dx="140" dy="0" count="1" dsx="0"	dsy="0" dra="0">
+						<elements>
+							<element type ="subGraph" subName = "seat"/>
+						</elements>
+					</column>
+					<column  dx="110" dy="0" count="3" dsx="0"	dsy="0" dra="0">
+						<elements>
+							<element type ="subGraph" subName = "seat"/>
+						</elements>
+					</column>
+				</columns>
+			</row>
+			
+		</rows>
+	</graph_model>
+	</graph_model_template>

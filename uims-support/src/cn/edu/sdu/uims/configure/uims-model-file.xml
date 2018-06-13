@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<modetemplate>
+	<mode method="initConstants" fileName="uims/configure/uims-constantsdef.xml" />
+	<mode method="initParameterTemplate" fileName="uims/configure/uims-parametertemplate.xml" />
+	<mode method="initTemplateMapping" fileName="uims/configure/uims-templatemapping.xml" />
+	<mode method="initClassMapping" fileName="uims/configure/uims-client-classmapping.xml" />
+	<mode method="initShortcutkeyTemplate" key="shortcutkey"
+		fileName="uims/configure/uims-shortcutkeytemplate.xml" />
+	<mode method="initToolbarTemplate" key="toolbar"
+		fileName="uims/configure/uims-toolbartemplate.xml" />
+	<mode method="initFilterTemplate" key="filter"
+		fileName="uims/configure/uims-filtertemplate.xml" />
+	<mode method="initTableTemplate" key="formDataTable"
+		fileName="uims/configure/uims-formdatatabletemplate.xml" />
+	<mode method="initPanelTemplate" key="formPanel"
+		fileName="uims/configure/uims-formpaneltemplate.xml" />
+	<mode method="initPanelTemplate" key="dialog"
+		fileName="uims/configure/uims-dialogtemplate.xml" />		
+	<mode method="initMenuTemplate" key="menu" fileName="uims/configure/uims-menutemplate.xml" />	
+	<mode method="initDictionaryMappingTemplate" key="dictionaryMapping"
+		fileName="uims/configure/uims-dictionarymappingtemplate.xml" />
+	<mode method="initGraphButtonBarTemplate" key="graphButtonBar"
+		fileName="uims/configure/uims-graphbuttonbartemplate.xml" />
+		
+	<mode method="initParameterTemplate" fileName="uims/configure/uims-parametertemplate-prompt.xml" />
+
+</modetemplate>

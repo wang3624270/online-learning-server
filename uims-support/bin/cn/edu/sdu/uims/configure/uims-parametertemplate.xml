@@ -1,0 +1,782 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<parametertemplate>
+	<!--
+		Agency FB;Algerian;Arial;Arial Black;Arial Narrow;Arial Rounded MT
+		Bold;Arial Unicode MS;Baskerville Old Face;Batang;BatangChe; Bauhaus
+		93;Bell MT;Berlin Sans FB;Berlin Sans FB Demi;Bernard MT
+		Condensed;Bitstream Vera Sans Mono;Blackadder ITC;Bodoni MT;Bodoni MT
+		Black;Bodoni MT Condensed; Bodoni MT Poster Compressed;Book
+		Antiqua;Bookman Old Style;Bookshelf Symbol 7;Bradley Hand
+		ITC;Britannic Bold;Broadway;Brush Script MT;Californian FB;Calisto MT;
+		Castellar;Centaur;Century;Century Gothic;Century
+		Schoolbook;Chiller;Colonna MT;Comic Sans MS;Cooper Black;Copperplate
+		Gothic Bold; Copperplate Gothic Light;Courier New;Curlz MT;
+		Dialog;DialogInput;Dotum;DotumChe;Edwardian Script
+		ITC;Elephant;Engravers MT; Eras Bold ITC;Eras Demi ITC;Eras Light
+		ITC;Eras Medium ITC;Estrangelo Edessa;Euro Sign;Felix
+		Titling;Footlight MT Light;Forte;Franklin Gothic Book; Franklin Gothic
+		Demi;Franklin Gothic Demi Cond;Franklin Gothic Heavy;Franklin Gothic
+		Medium;Franklin Gothic Medium Cond;Freestyle Script;French Script
+		MT;Garamond;Gautami;Georgia; Gigi;Gill Sans MT;Gill Sans MT
+		Condensed;Gill Sans MT Ext Condensed Bold;Gill Sans Ultra Bold;Gill
+		Sans Ultra Bold Condensed;Gloucester MT Extra Condensed;Goudy Old
+		Style;Goudy Stout;Gulim;
+		GulimChe;Gungsuh;GungsuhChe;Haettenschweiler;Harlow Solid
+		Italic;Harrington;High Tower Text;Impact;Imprint MT Shadow;Informal
+		Roman; Jokerman;Juice ITC;Kristen ITC;Kunstler Script;Latha;Lucida
+		Bright;Lucida Calligraphy;Lucida Console;Lucida Fax;Lucida
+		Handwriting; Lucida Sans;Lucida Sans Typewriter;Lucida Sans
+		Unicode;Magneto;Maiandra GD;Mangal;Marlett;Matura MT Script
+		Capitals;Microsoft Sans Serif;MingLiU; Mistral;Modern No.
+		20;Monospaced;Monotype Corsiva; MS Gothic;MS Mincho;MS Outlook;MS
+		PGothic;MS PMincho;MS Reference Sans Serif; MS Reference Specialty;MS
+		UI Gothic;MT Extra;MV Boli;Niagara Engraved;Niagara Solid;Nina;OCR A
+		Extended;Old English Text MT;Onyx; Palace Script MT;Palatino
+		Linotype;Papyrus;Parchment;Perpetua;Perpetua Titling
+		MT;Playbill;PMingLiU;Poor Richard;Pristina; Raavi;Rage
+		Italic;Ravie;Rockwell;Rockwell Condensed;Rockwell Extra Bold;
+		SansSerif;Script MT Bold;Serif;Showcard Gothic; Shruti;Snap
+		ITC;Stencil;Sylfaen;Symbol;Tahoma;Tempus Sans ITC;Times New
+		Roman;Trebuchet MS;Tunga; Tw Cen MT;Tw Cen MT Condensed;Tw Cen MT
+		Condensed Extra Bold;Verdana;Viner Hand ITC;Vivaldi;Vladimir
+		Script;Webdings;Wide Latin;Wingdings; Wingdings 2;Wingdings
+		3;ZWAdobeF; 仿宋_GB2312;华文中宋;华文仿宋;华文宋体;华文彩云;华文新魏;华文楷体;
+		华文琥珀;华文细黑;华文行楷;华文隶书;宋体;宋体-18030;宋体-方正超大字符集;幼圆;新宋体;新宋体-18030;
+		方正姚体;方正舒体;楷体_GB2312;隶书;黑体;
+	-->
+	<fonts>
+		<font name="titleFont" fontName="宋体" style="bold" size="40" fileName ="simsun"/>
+		<font name="normalFont" fontName="宋体" style="plain" size="16" fileName ="simsun"/>
+		<font name="formFont" fontName="宋体" style="plain" size="12" fileName ="simsun"/>
+		<font name="dialogFont" fontName="Dialog" style="bold" size="15" fileName ="simsun"/>
+		<font name="dialogFontS" fontName="Dialog" style="bold" size="13" fileName ="simsun"/>
+		<font name="dialogFontB" fontName="Dialog" style="bold" size="18" fileName ="simsun"/>
+		<font name="dialogFontBS" fontName="Dialog" style="bold" size="80" fileName ="simsun"/>
+		<font name="font40" fontName="宋体" style="plain" size="40" fileName ="simsun"/>
+		<font name="font38" fontName="宋体" style="plain" size="38" fileName ="simsun"/>
+		<font name="font39" fontName="宋体" style="plain" size="39" fileName ="simsun"/>
+		<font name="font37" fontName="宋体" style="plain" size="37" fileName ="simsun"/>
+		<font name="font36" fontName="宋体" style="plain" size="36" fileName ="simsun"/>
+		<font name="font30" fontName="宋体" style="plain" size="30" fileName ="simsun"/>
+		<font name="font24" fontName="宋体" style="plain" size="24" fileName ="simsun"/>
+		<font name="font21" fontName="宋体" style="plain" size="21" fileName ="simsun"/>
+		<font name="font20" fontName="宋体" style="plain" size="20" fileName ="simsun"/>
+		<font name="font19" fontName="宋体" style="plain" size="19" fileName ="simsun"/>
+		<font name="font18" fontName="宋体" style="plain" size="18" fileName ="simsun"/>
+		<font name="font17" fontName="宋体" style="plain" size="17" fileName ="simsun"/>
+		<font name="font16" fontName="宋体" style="plain" size="16" fileName ="simsun"/>
+		<font name="font15" fontName="宋体" style="plain" size="15" fileName ="simsun"/>
+		<font name="font14" fontName="宋体" style="plain" size="14" fileName ="simsun"/>
+		<font name="font12" fontName="宋体" style="plain" size="12" fileName ="simsun"/>
+		<font name="font10" fontName="宋体" style="plain" size="10" fileName ="simsun"/>
+		<font name="font11" fontName="宋体" style="plain" size="11" fileName ="simsun"/>
+		<font name="font101" fontName="宋体" style="bold" size="10" fileName ="simsun"/>
+		<font name="font9" fontName="宋体" style="plain" size="9" fileName ="simsun"/>
+		<font name="font8" fontName="宋体" style="plain" size="8" fileName ="simsun"/>
+		<font name="font7" fontName="宋体" style="plain" size="7" fileName ="simsun"/>
+		<font name="font6" fontName="宋体" style="plain" size="6" fileName ="simsun"/>
+		<font name="font5" fontName="宋体" style="plain" size="5" fileName ="simsun"/>
+		<font name="font4" fontName="宋体" style="plain" size="4" fileName ="simsun"/>
+		<font name="font3" fontName="宋体" style="plain" size="3" fileName ="simsun"/>
+		<font name="font002" fontName="宋体" style="plain" size="2" fileName ="simsun"/>
+	<!--	<font name="font12" fontName="宋体" style="plain" size="16" fileName ="simsun"/>  -->
+		<font name="boldfont10" fontName="宋体" style="bold" size="10" fileName ="simsun"/>
+		<font name="boldfont18" fontName="宋体" style="bold" size="18" fileName ="simsun"/>
+		<font name="boldfont50" fontName="宋体" style="bold" size="50" fileName ="simsun"/>
+		<font name="font8" fontName="宋体" style="normal" size="8" fileName ="simsun"/>
+		<font name="boldfont14" fontName="宋体" style="bold" size="14" fileName ="simsun"/>
+		<font name="boldfont24" fontName="宋体" style="bold" size="24" fileName ="simsun"/>
+		<font name="boldfont19" fontName="宋体" style="bold" size="19" fileName ="simsun"/>
+		<font name="boldfont12" fontName="宋体" style="bold" size="12" fileName ="simsun"/>
+		<font name="boldfont9" fontName="宋体" style="bold" size="9" fileName ="simsun"/>
+		<font name="font12" fontName="宋体" style="plain" size="12" fileName ="simsun"/>
+		<font name="hfont8" fontName="黑体" style="plain" size="8" fileName ="simhei"/>
+		<font name="hfont9" fontName="黑体" style="plain" size="9" fileName ="simhei"/>
+		<font name="hfont10" fontName="黑体" style="plain" size="10" fileName ="simhei"/>
+		<font name="hfont12" fontName="黑体" style="plain" size="12" fileName ="simhei"/>
+		<font name="hfont14" fontName="黑体" style="plain" size="14" fileName ="simhei"/>
+		<font name="hfont16" fontName="黑体" style="plain" size="16" fileName ="simhei"/>
+		<font name="hfont18" fontName="黑体" style="plain" size="18" fileName ="simhei"/>
+		<font name="hbfont18" fontName="黑体" style="bold" size="18" fileName ="simhei"/>
+		<font name="hfont20" fontName="黑体" style="plain" size="20" fileName ="simhei"/>
+		<font name="hfont26" fontName="黑体" style="plain" size="26" fileName ="simhei"/>
+		<font name="hboldfont16" fontName="黑体" style="bold" size="16" fileName ="simhei"/>
+		<font name="kfont16" fontName="楷体_GB2312" style="plain" size="16" fileName ="simkai"/>
+		<font name="kfont14" fontName="楷体_GB2312" style="plain" size="14" fileName ="simkai"/>
+		<font name="kfont17" fontName="楷体_GB2312" style="bold" size="17" fileName ="simkai"/>
+		<font name="kpfont17" fontName="楷体_GB2312" style="plain" size="17" fileName ="simkai"/>
+		<font name="kbfont16" fontName="楷体_GB2312" style="bold" size="16" fileName ="simkai"/>
+		<font name="kfont24" fontName="楷体_GB2312" style="plain" size="30" fileName ="simkai"/>
+		<font name="hboldfont14" fontName="黑体" style="bold" size="14" fileName ="simhei"/>
+		<font name="hplainfont14" fontName="黑体" style="plain" size="14" fileName ="simhei"/>
+		<font name="kfont15" fontName="楷体_GB2312" style="bold" size="15" fileName ="simkai"/>
+		<font name="kont16" fontName="楷体_GB2312" style="plain" size="16" fileName ="simkai"/>
+		<font name="kfont12" fontName="楷体_GB2312" style="plain" size="12" fileName ="simkai"/>
+		<font name="kfont13" fontName="楷体_GB2312" style="plain" size="13" fileName ="simkai"/>
+		<font name="kfont9" fontName="楷体_GB2312" style="plain" size="9" fileName ="simkai"/>
+		<font name="kfontbold9" fontName="楷体_GB2312" style="bold" size="9" fileName ="simkai"/>
+		<font name="kfontbold26" fontName="楷体_GB2312" style="bold" size="26" fileName ="simkai"/>
+
+		<font name="fontFanfSong12" fontName="仿宋_GB2312" style="plain" size="12" fileName ="simsun"/>
+		<font name="fontFanfSong14" fontName="仿宋_GB2312" style="plain" 	size="14" fileName ="simsun"/>
+		<font name="fontFanfSong16" fontName="仿宋_GB2312" style="plain" 	size="16" fileName ="simsun"/>
+		<font name="boldFanfSong18" fontName="仿宋_GB2312" style="bold"	size="18" fileName ="simsun"/>
+		<font name="boldFanfSong22" fontName="仿宋_GB2312" style="bold"	size="22" fileName ="simsun"/>
+		
+		<font name="fontBoldFanfSong14" fontName="华文中宋" style="bold" 	size="14" fileName ="simsun"/>
+		<font name="boldFont16" fontName="宋体" style="bold" size="16" fileName ="simsun"/>
+		<font name="boldFont22" fontName="华文中宋" style="bold" size="22" fileName ="simsun"/>
+		<font name="boldFont20" fontName="华文中宋" style="bold" size="20" fileName ="simsun"/>
+		<font name="boldFont30" fontName="华文中宋" style="bold" size="30" fileName ="simsun"/>
+		<font name="boldFont40" fontName="华文中宋" style="bold" size="40" fileName ="simsun"/>
+		<font name="bFont12" fontName="楷体_GB2312" style="bold" size="12" fileName ="simkai"/>
+		<font name="fontxinsong18" fontName="新宋体" style="bold" size="18" fileName ="simsun"/>
+		<!-- liuyang start -->
+		<font name="font22" fontName="宋体" style="plain" size="22" fileName ="simsun"/>
+		<!-- liuyang end -->
+		<!-- zxm start -->
+		<font name="dialogFont20" fontName="楷体_GB2312" style="bold" size="22" fileName ="simkai"/>
+		<font name="dialogFont15" fontName="楷体_GB2312" style="bold" size="15" fileName ="simkai"/>
+		<font name="cardFont20" fontName="华文行楷" style="bold" size="20" fileName ="simkai"/>
+		<font name="nameFont20" fontName="宋体" style="bold" size="20" fileName ="simsun"/>
+		<font name="coverFont16" fontName="宋体" style="bold" size="16" fileName ="simsun"/>
+		<font name="font0" size="20" fontName="宋体" fileName ="simsun"/>
+		<font name="font1" size="25" fontName="黑体" fileName ="simhei"/>
+		<font name="font2" size="20" fontName="黑体" fileName ="simhei"/>
+		<font name="font3" size="8" fontName="宋体" fileName ="simsun"/>
+		<!-- zxm end -->
+		<!-- ldg start -->
+		<font name="lfont22" fontName="隶书" style="bold" size="22" fileName ="simli"/>
+		<font name="lfont16" fontName="隶书" style="bold" size="16" fileName ="simli"/>
+		<font name="lfont14" fontName="隶书" style="bold" size="14" fileName ="simli"/>
+		<font name="lfont12" fontName="隶书" style="bold" size="12" fileName ="simli"/>
+		<font name="lfont40" fontName="隶书" style="bold" size="80" fileName ="simli"/>
+		<!-- ldg end -->
+		<font name="hkFont20" fontName="华文楷体" style="plain" size="20" fileName ="simkai"/>
+		<font name="hxkFont20" fontName="华文行楷" style="plain" size="20" fileName ="simkai"/>
+		<font name="kFont20" fontName="楷体_GB2312" style="italic" size="20" fileName ="simkai"/>
+		<!-- xxk start -->
+		<font name="hfont56" fontName="黑体" style="plain" size="56" fileName ="simhei"/>
+		<font name="font11" fontName="宋体" style="plain" size="11" fileName ="simsun"/>
+		<font name="boldfont11" fontName="宋体" style="bold" size="11" fileName ="simsun"/>
+		<font name="font31" fontName="宋体" style="plain" size="31" fileName ="simsun"/>
+		<font name="tFont16" fontName="Times New Roman" style="plain" size="16" fileName ="simsun"/>
+		<font name="tFont18" fontName="Times New Roman" style="plain" size="18" fileName ="simsun"/>
+		<font name="eFont28" fontName="Monotype Corsiva" style="plain" size="28" fileName ="simsun"/>
+		<font name="kFont30" fontName="Korinna BT " style="plain" size="30" fileName ="simsun"/> 
+		<font name="evfont15" fontName="verdana" style="plain" size="15" fileName ="simsun"/> 
+		<font name="evfont16" fontName="verdana" style="plain" size="16" fileName ="simsun"/> 
+		<font name="evfont18" fontName="verdana" style="plain" size="18" fileName ="simsun"/> 
+		 		<!--  <font name="kFont30" fontName="楷体_GB2312" style="bold" size="30" fileName ="simsun"/>  -->
+		<!-- xxk end -->
+	
+		<!-- 基金科打印 start -->
+		<font name="jjk_font11" fontName="宋体" style="italic" size="11" fileName ="simsun"/>
+		<!-- 基金科打印 end -->
+		<font name="kfontbold12" fontName="楷体_GB2312" style="bold" size="12" fileName ="simkai"/>
+		
+		<font name="boldfont22" fontName="宋体" style="bold" size="22" fileName ="simsun"/>
+	<!-- 教育厅打印 start -->
+	    <font name="boldfont26" fontName="宋体" style="bold" size="26" fileName ="simsun"/>
+	    <font name="boldfont15" fontName="宋体" style="bold" size="15" fileName ="simsun"/>
+	<!-- 教育厅打印 end -->
+	</fonts>
+	<colors>
+		<color name="colorBlack" r="0" g="0" b="0" />
+		<color name="colorRed" r="255" g="0" b="0" />
+		<color name="colorGreen" r="0" g="255" b="0" />
+		<color name="colorBlue" r="0" g="0" b="255" />
+		<color name="colorWhite" r="255" g="255" b="255" />
+		<color name="colorGray" r="192" g="192" b="192" />
+		<color name="colorBoldBlue1" r="78" g="84" b="145" />
+		<color name="colorBoldBlue2" r="28" g="24" b="165" />
+		<color name="colorBoldGray" r="28" g="28" b="28" />
+		<color name="colorSdRed" r="155" g="14" b="21" />
+		<color name="colorLightGreen" r="151" g="204" b="152" />
+		
+		<color name="colorCrimson" r="220" g="20" b="60" />
+		<color name="colorHotpink" r="255" g="105" b="180" />
+		<color name="colorPurple" r="128" g="0" b="128" />
+		<color name="colorDarkviolet" r="148" g="0" b="211" />
+		<color name="colorIndigo" r="75" g="0" b="130" />
+		<color name="colorDeepskyblue" r="0" g="191" b="255" />
+		<color name="colorRoyalblue" r="65" g="105" b="225" />
+		<color name="colorYellow" r="200" g="190" b="6" />
+	</colors>
+	<borders>
+		<border name="null" type="stroke" layout="null" />
+		<border name="sa1" layout="all" width="1" />
+		<border name="sa05" layout="all" width="0.5" />
+		<border name="sa2" layout="all" width="1.5" />
+		<border name="sa5" layout="all" width="5" />
+		<border name="sb1" layout="bottom" width="1" />
+		<border name="sad1" layout="all" width="1">
+			<dash value="10" />
+			<dash value="4" />
+		</border>
+		<border name="fnull" type="form" layout="null" />
+		<border name="f1" type="form" layout="all" width="1" />
+	</borders>
+	<cursors>
+		<cursor name="default" type="0" />
+		<cursor name="crosshair" type="1" />
+		<cursor name="text" type="2" />
+		<cursor name="wait" type="3" />
+		<cursor name="swResize" type="4" />
+		<cursor name="seResize" type="5" />
+		<cursor name="nwResize" type="6" />
+		<cursor name="neResize" type="7" />
+		<cursor name="nResize" type="8" />
+		<cursor name="sResize" type="9" />
+		<cursor name="wResize" type="10" />
+		<cursor name="eResize" type="11" />
+		<cursor name="hand" type="12" />
+		<cursor name="move" type="13" />
+	</cursors>
+	<uistyles>
+		<uistyle name="basicFlatButton" frontColor="balck" backColor="white"
+			border="null" selectedFrontColor="blue" selectedBackColor="blue"
+			selectedBorder="null" />
+	</uistyles>
+	<!--
+		纸型命名规则:可直接用标准纸型命名,如name="A4",name="B5"等,也可在标准纸型后加括号,如name="A4(1)",name="B5{s1}"等
+	-->
+	<papers>
+		<paper name="A3" width="841.89" height="1190.5511" left="15.0"
+			right="15.0" top="20.0" bottom="20.0" scale="1.0" />
+		<paper name="A3b" width="841.89" height="1190.5511" left="15.0"
+			right="15.0" top="20.0" bottom="20.0" scale="1.0" orientation="1" />
+		<paper name="A3(horizontal)" width="841.89" height="1190.5511"
+			left="15.0" right="15.0" top="20.0" bottom="20.0" scale="1.0"
+			orientation="1" />
+		<paper name="A4L" width="595.27559" height="841.88976" left="15.0"
+			right="15.0" top="40.0" bottom="20.0" scale="1.0" />
+		<paper name="A4" width="595.27559" height="841.88976" left="15.0"
+			right="15.0" top="40.0" bottom="20.0" scale="1.0" />
+		<paper name="A4z" width="595.27559" height="841.88976" left="15.0"
+			right="15.0" top="40.0" bottom="20.0" scale="1.0" orientation="1"/>
+		<paper name="A43" width="595.27559" height="841.88976" left="20.0"
+			right="20.0" top="28.5" bottom="28.5" scale="1.0" />
+		<paper name="A41" width="595.27559" height="841.88976" left="80.0"
+			right="40.0" top="20.0" bottom="20.0" scale="1.0" />
+		<paper name="A42" width="595.27559" height="841.88976" left="110.0"
+			right="60.0" top="20.0" bottom="20.0" scale="1.0" />
+		<paper name="A4(2)" width="595.27559" height="841.88976" left="110.0"
+			right="60.0" top="20.0" bottom="20.0" scale="1.0" />
+		<paper name="A4(3)" width="595.27559" height="841.88976" left="15.0"
+			right="15.0" top="40.0" bottom="20.0" scale="1.0" orientation="1" />
+		<paper name="A4(4)" width="595.27559" height="841.88976" left="15.0"
+			right="15.0" top="20.0" bottom="20.0" scale="1.0" orientation="0" />
+		<paper name="A4(5)" width="595.27559" height="841.88976" left="15.0"
+			right="15.0" top="40.0" bottom="20.0" scale="1.0" orientation="1" />
+		<paper name="A4(jx)" width="595.27559" height="841.88976" left="25.0"
+			right="5.0" top="1.0" bottom="10.0" scale="1.0" orientation="1" />	
+		<paper name="A4a" width="595.27559" height="841.88976" left="70.0"
+			right="70.0" top="30.0" bottom="30.0" scale="1.0" />
+		<paper name="A4b" width="595.27559" height="841.88976" left="85.0"
+			right="45.0" top="50.0" bottom="40.0" scale="1.0" />
+		<paper name="A44" width="595.27559" height="841.88976" left="87.0"
+			right="67.0" top="20.0" bottom="20.0" scale="1.0" />
+		<paper name="A4(16)" width="595.27559" height="841.88976" left="15.0"
+			right="15.0" top="40.0" bottom="20.0" scale="1.0" />	
+		<paper name="A4(6)" width="539.72" height="754.02" left="0.0"
+			right="0.0" top="60.0" bottom="61.0" scale="1.0" />	
+		<paper name="A4(0)" width="595.27559" height="841.88976" left="5.0"
+			right="5.0" top="0.0" bottom="0.0" scale="1.0" />
+		<paper name="A4(10)" width="595.27559" height="841.88976" left="2.0"
+			right="2.0" top="1.3" bottom="1.3" scale="1.0" />
+		<paper name="A4(11)" width="595.27559" height="841.88976" left="0"
+			right="0" top="15.0" bottom="5.0" scale="1.0" orientation="1"  />
+		<!--打印在职通知书用-->
+			<paper name="A4(7)" width="841.88976" height="595.27559" left="15.0"
+			right="15.0" top="40.0" bottom="20.0" scale="1.0" />
+		<!--打印出国部分专用 -->
+		<paper name="A4abroad" width="595.27559" height="841.88976"
+			left="5.0" right="5.0" top="40.0" bottom="20.0" scale="1.0" />
+		<paper name="B5" width="595.27559" height="841.88976" left="5.0"
+			right="5.0" top="20.0" bottom="5.0" scale="1.0" />
+		<paper name="B5(2)" width="595.27559" height="841.88976" left="5.0"
+			right="5.0" top="15.0" bottom="5.0" scale="1.0" orientation="1" />
+		<paper name="B4" width="595.27559" height="841.88976" left="5.0"
+			right="5.0" top="5.0" bottom="5.0" scale="1.0" />
+		<paper name="B3" width="595.27559" height="841.88976" left="5.0"
+			right="5.0" top="5.0" bottom="5.0" scale="1.0" />
+		<paper name="B5(3)" width="498.897" height="708.94" left="30.0"
+			right="30.0" top="45.0" bottom="10.0" scale="1.0" orientation="1" />
+		<paper name="B4b" width="1031.8109" height="728.787" left="0.0"
+			right="0.0" top="0.0" bottom="0.0" scale="1.0" orientation="1" />
+		<paper name="B4(2)" height="1031.8109" width="728.787" left="0.0"
+			right="0.0" top="0.0" bottom="0.0" scale="1.0" orientation="1" />
+		<!-- 中加班使用 -->
+		<paper name="A4can" width="595.27559" height="288.2992" left="20.0"
+			right="20.0" top="20.0" bottom="10.0" scale="1.0" />
+			
+		<paper name="iaimsTuitionBill" width="595.27559" height="288.2" left="20.0"
+			right="20.0" top="20.0" bottom="0" scale="1.0" />
+
+		<!--打印出国部分专用 -->
+		<paper name="fp(101)" width="595.27559" height="288.2" left="0.0"
+			right="0.0" top="0.0" bottom="0.0" scale="1.0" orientation="0" />
+			
+		<paper name="fp(010)" width="592.46" height="263.64" left="0.0"
+			right="0.0" top="0.0" bottom="0.0" scale="1.0" orientation="0" />
+
+		<paper name="POS508" width="164.40" height="260.00" left="0.0"
+			right="0.0" top="0.0" bottom="0.0" scale="1.0" orientation="0" />
+		<paper name="IMG1" width="529.00" height="700.00" left="0.0"
+			right="0.0" top="40.0" bottom="0.0" scale="1.0" orientation="0" />
+
+				<!-- 留学生发票 -->
+		<paper name="feeBillPage" width="536.59843" height="317.48031" left="0"
+				right="0" top="0" bottom="0" scale="1.0" />
+		<paper name="A4fee" width="595.27559" height="286.2992" left="20.0"
+				right="20.0" top="20.0" bottom="20.0" scale="1.0" />
+		<!-- End -->
+		<paper name="barCodePage" width="150" height="126" left="5.0"
+				right="5.0" top="5.0" bottom="5.0" scale="1.0" />
+	</papers>
+	<paragraphs>
+		<paragraph name="ph00" type="heading0" font="font12" color="black"
+			height="10" before="50" after="20" bold="ture" horizontalAlignment="center"
+			verticalAlignment="center" />
+		<paragraph name="ph0" type="heading0" font="font20" color="black"
+			height="1" before="10" after="0" horizontalAlignment="center"
+			verticalAlignment="center" />
+		<paragraph name="ph01" type="heading0" font="font20" color="black"
+			height="1" before="10" after="0" horizontalAlignment="center"
+			verticalAlignment="center" />
+		<paragraph name="ph02" type="heading0" font="font20" color="black"
+			height="1" before="0" after="20" horizontalAlignment="center"
+			verticalAlignment="center" />
+		<paragraph name="ph1" type="heading1" font="font16" color="black"
+			height="-1" before="0" after="20" horizontalAlignment="center"
+			verticalAlignment="center" />
+		<paragraph name="ph2" type="heading2" font="font48" color="black"
+			height="-1" before="0" after="0" horizontalAlignment="center"
+			verticalAlignment="center" />
+		<paragraph name="ph3" type="heading3" font="boldfont10"
+			color="black" height="-1" before="50" after="0" horizontalAlignment="center"
+			verticalAlignment="center" />
+		<paragraph name="ph4" type="heading4" font="font16" color="black"
+			height="-1" firstSpace="0" before="50" after="0" horizontalAlignment="center"
+			verticalAlignment="center" />
+		<paragraph name="ph5" type="heading5" font="font16" color="black"
+			height="-1" firstSpace="0" before="0" after="50" horizontalAlignment="center"
+			verticalAlignment="center" />
+		<paragraph name="ph6" type="heading6" font="font20" color="black"
+			height="-1" firstSpace="0" before="5" after="5" horizontalAlignment="left"
+			verticalAlignment="center" />
+		<paragraph name="ph7" type="heading6" font="font16" color="black"
+			height="-1" before="10" after="10" horizontalAlignment="left"
+			verticalAlignment="center" />
+		<paragraph name="ph10" type="heading0" font="hfont20" color="black"
+			height="10" before="150" after="50" bold="ture" horizontalAlignment="center"
+			verticalAlignment="center" />
+		<paragraph name="pt0" type="text" font="font10" color="black"
+			height="-1" firstSpace="2" before="0" after="0" horizontalAlignment="center"
+			verticalAlignment="center" />
+		<paragraph name="pt1" type="text" font="font10" color="black"
+			height="-1" firstSpace="2" before="0" after="0" horizontalAlignment="left"
+			verticalAlignment="center" />
+
+		<paragraph name="ptCenter1" type="text" font="font10" color="black"
+			height="-1" firstSpace="2" before="0" after="0" horizontalAlignment="center"
+			verticalAlignment="center" />
+
+		<paragraph name="pt00" type="text" font="font002" color="black"
+			height="-1" firstSpace="0" before="0" after="0" horizontalAlignment="left"
+			verticalAlignment="center" />
+
+		<paragraph name="pt2" type="text" font="font10" color="black"
+			height="-1" firstSpace="0" before="0" after="0" horizontalAlignment="right"
+			verticalAlignment="center" />
+		<paragraph name="pt20" type="text" color="black" height="-1"
+			firstSpace="0" before="0" after="50" font="fontFanfSong16"
+			horizontalAlignment="center" verticalAlignment="center" />
+		<paragraph name="pt3" type="text" font="font10" color="black"
+			height="-1" firstSpace="0" before="0" after="0" horizontalAlignment="left"
+			verticalAlignment="center" />
+		<paragraph name="pt419" type="text" font="font10" color="black"
+			height="10" firstSpace="0" before="50" after="0"
+			horizontalAlignment="left" verticalAlignment="center" />
+		<paragraph name="pt4" type="text" font="font11" color="black"
+			height="10" firstSpace="0" before="50" after="0"
+			horizontalAlignment="left" verticalAlignment="center" />
+		<paragraph name="pt411" type="text" font="font10" color="black"
+			height="10" firstSpace="0" before="50" after="50"
+			horizontalAlignment="left" verticalAlignment="left" />
+		<paragraph name="pt5" type="text" font="borderfont10" color="black"
+			height="10" firstSpace="0" before="10" after="10"
+			horizontalAlignment="right" verticalAlignment="center" />
+		<paragraph name="pt6" type="text" font="font10" color="black"
+			height="10" before="10" after="10" firstSpace="30"
+			horizontalAlignment="center" verticalAlignment="center" />
+		<paragraph name="pt60" type="text" font="font12" color="black"
+			height="10" before="30" after="10" firstSpace="80"
+			horizontalAlignment="center" verticalAlignment="center" />
+		<paragraph name="pt7" type="text" font="font10" color="black"
+			height="10" before="0" after="0" firstSpace="30" horizontalAlignment="center"
+			verticalAlignment="center" />
+		<paragraph name="pt8" type="text" font="font12" color="black"
+			height="10" before="60" after="0" firstSpace="30"
+			horizontalAlignment="left" verticalAlignment="center" />
+		<paragraph name="pt9" type="text" color="black" height="-1"
+			firstSpace="0" before="0" after="0" font="font12"
+			horizontalAlignment="left" verticalAlignment="center" />
+		<paragraph name="pt10" type="text" font="font12" color="black"
+			height="-1" firstSpace="2" before="10" after="0" horizontalAlignment="left"
+			verticalAlignment="center" />
+		<paragraph name="pt11" type="text" font="fontFanfSong16"
+			color="black" height="-1" firstSpace="2" before="0" after="0"
+			horizontalAlignment="left" verticalAlignment="center" />
+		<paragraph name="pt12" type="text" font="fontFanfSong16"
+			color="black" height="-1" firstSpace="0" before="0" after="0"
+			horizontalAlignment="left" verticalAlignment="center" />
+		<paragraph name="pt13" type="text" font="font12" color="black"
+			height="-1" firstSpace="0" before="0" after="0" horizontalAlignment="right"
+			verticalAlignment="center" />
+		<paragraph name="pt14" type="text" font="font16" color="black"
+			height="-1" firstSpace="0" before="5" after="5" horizontalAlignment="left"
+			verticalAlignment="center" />
+		<paragraph name="pt14(1)" type="text" font="font14" color="black"
+			height="-1" firstSpace="0" before="5" after="5" horizontalAlignment="left"
+			verticalAlignment="center" />
+		<paragraph name="pt15" type="text" font="font16" color="black"
+			height="-1" firstSpace="0" before="5" after="5" horizontalAlignment="right"
+			verticalAlignment="center" />
+		<paragraph name="pt16" type="text" font="font10" color="black"
+			height="-1" firstSpace="6" before="10" after="0" horizontalAlignment="left"
+			verticalAlignment="center" />
+		<paragraph name="pt17" type="text" font="font6" height="20"
+			firstSpace="0" before="0" after="0" horizontalAlignment="left"
+			verticalAlignment="center" />
+		<paragraph name="pt8s" type="text" font="font8" height="20"
+			firstSpace="0" before="0" after="0" horizontalAlignment="left"
+			verticalAlignment="center" />
+		<paragraph name="pt22" type="text" font="font22" height="23"
+			firstSpace="0" before="0" after="0" horizontalAlignment="left"
+			verticalAlignment="center" />
+		<paragraph name="pt221" type="text" font="font22" height="23"
+			firstSpace="0" before="0" after="0" horizontalAlignment="right"
+			verticalAlignment="center" />
+		<paragraph name="pt122" type="text" font="kfont12" height="23"
+			firstSpace="0" before="0" after="0" horizontalAlignment="right"
+			verticalAlignment="center" />	
+			
+		<paragraph name="ptkf212" type="text" font="kont16" height="23"
+			firstSpace="0" before="0" after="0" horizontalAlignment="right"
+			verticalAlignment="center" />
+		<!--国际部 通知书打印用 -->
+		<paragraph name="ptkf16" type="text" font="kfont16"
+			color="black" height="23" firstSpace="0" before="0" after="0"
+			horizontalAlignment="center" verticalAlignment="center" />
+		<paragraph name="ptkf17" type="text" font="kpfont17"
+			color="black" height="23" firstSpace="0" before="0" after="0"
+			horizontalAlignment="center" verticalAlignment="center" />
+		<paragraph name="tf16" type="heading1" font="tFont16"
+			color="black" height="23" firstSpace="0" before="0" after="0"
+			horizontalAlignment="center" verticalAlignment="center" />
+		<paragraph name="evf18" type="text" font="evfont18"
+			color="black" height="23" firstSpace="0" before="0" after="0"
+			horizontalAlignment="center" verticalAlignment="center" />
+		<paragraph name="evf16" type="text" font="evfont16"
+			height="23" firstSpace="0" before="0" after="0"
+			horizontalAlignment="center" verticalAlignment="center" />
+		<paragraph name="evf15" type="text" font="evfont15"
+			color="black" height="23" firstSpace="0" before="0" after="0"
+			horizontalAlignment="center" verticalAlignment="center" />
+		
+		<paragraph name="ptkf14" type="text" font="kfont14" height="23"
+			firstSpace="0" before="0" after="0" horizontalAlignment="center"
+			verticalAlignment="center" />		
+		<paragraph name="ptkf13" type="text" font="kfont13" height="23"
+			firstSpace="0" before="0" after="0" horizontalAlignment="center"
+			verticalAlignment="center" />		
+		<paragraph name="ptkf12" type="text" font="kfont12" height="23"
+			firstSpace="0" before="0" after="0" horizontalAlignment="center"
+			verticalAlignment="center" />		
+		<paragraph name="ptsf18" type="text" font="font18" height="23"
+			firstSpace="0" before="0" after="0" horizontalAlignment="center"
+			verticalAlignment="center" />
+		<paragraph name="ptsf20" type="text" font="font20" height="23"
+			firstSpace="0" before="0" after="0" horizontalAlignment="center"
+			verticalAlignment="center" />
+			
+		<!-- 以下2种字体是为出国使用 start-->
+		<paragraph name="pt250" type="text" font="font10" height="20"
+			firstSpace="0" before="0" after="0" horizontalAlignment="left"
+			verticalAlignment="center" />
+		<paragraph name="pt25023" type="text" font="font10" height="23"
+			firstSpace="0" before="0" after="0" horizontalAlignment="left"
+			verticalAlignment="center" />
+		<paragraph name="pt251" type="text" font="kfont9" height="20"
+			firstSpace="0" before="0" after="0" horizontalAlignment="left"
+			verticalAlignment="center" />
+		<paragraph name="pt2511" type="text" font="kfontbold9" height="20"
+			firstSpace="0" before="0" after="0" horizontalAlignment="left"
+			verticalAlignment="center" />
+		<paragraph name="pt2501" type="text" font="font101" height="20"
+			firstSpace="0" before="0" after="0" horizontalAlignment="left"
+			verticalAlignment="center" />
+		<paragraph name="pt25011" type="text" font="kfont9" height="20"
+			firstSpace="0" before="0" after="0" horizontalAlignment="left"
+			verticalAlignment="center" />
+		<paragraph name="pt2502" type="text" font="font12" height="20"
+			firstSpace="0" before="0" after="0" horizontalAlignment="left"
+			verticalAlignment="center" />
+		<paragraph name="pt2503" type="text" font="font11" height="20"
+			firstSpace="0" before="0" after="0" horizontalAlignment="left"
+			verticalAlignment="center" />	
+		<paragraph name="pt2503b" type="text" font="boldfont11" height="20"
+			firstSpace="0" before="0" after="0" horizontalAlignment="center"
+			verticalAlignment="center" />	
+		<paragraph name="pt1701" type="text" font="font7" height="20"
+			firstSpace="0" before="0" after="0" horizontalAlignment="left"
+			verticalAlignment="center" />
+		<!--以上2种字体是为出国使用 end -->
+
+		<paragraph name="pt18" type="text" font="font8" height="-1"
+			firstSpace="200" before="0" after="0" horizontalAlignment="right"
+			verticalAlignment="bottom" />
+		<!-- 新增的样式 在读证明用start-->
+		<paragraph name="ptr11" type="text" font="font16" color="black"
+			height="-1" firstSpace="0" before="1" after="1" horizontalAlignment="left"
+			verticalAlignment="center" />
+		<paragraph name="ptr14" type="text" font="font16" color="black"
+			height="-1" firstSpace="0" before="5" after="5" horizontalAlignment="left"
+			verticalAlignment="center" leading="30" />
+
+		<!-- 新增的样式 在读证明用end-->
+		<!-- liuyang start -->
+		<paragraph name="ph7" type="heading0" font="font22" color="black"
+			height="1" firstSpace="0" before="0" after="0" horizontalAlignment="center"
+			verticalAlignment="center" />
+		<paragraph name="ph8" type="heading1" font="hboldfont16"
+			color="black" height="1" firstSpace="0" before="0" after="0"
+			horizontalAlignment="center" verticalAlignment="center" />
+		<paragraph name="ph85" type="heading1" font="kbfont16"
+			color="black" height="1" firstSpace="0" before="0" after="0"
+			horizontalAlignment="center" verticalAlignment="center" />
+		<paragraph name="ph82" type="heading1" font="kfont16"
+			color="black" height="1" firstSpace="0" before="0" after="0"
+			horizontalAlignment="center" verticalAlignment="center" />
+		<paragraph name="ph9" type="text" font="boldfont14" color="black"
+			height="1" firstSpace="0" before="0" after="0" horizontalAlignment="center"
+			verticalAlignment="center" />
+		<paragraph name="ph11" type="heading0" font="font26" color="black"
+			height="1" firstSpace="0" before="0" after="0" horizontalAlignment="center"
+			verticalAlignment="center" />
+		<paragraph name="ph20" type="heading5" font="boldFont16"
+			color="black" height="-1" firstSpace="0" before="0" after="90"
+			horizontalAlignment="center" verticalAlignment="center" />
+		<paragraph name="ph21" type="heading4" font="font16" color="black"
+			height="-1" firstSpace="0" before="90" after="0" horizontalAlignment="center"
+			verticalAlignment="center" />
+		<paragraph name="ph22" type="heading5" font="boldFont16"
+			color="black" height="-1" firstSpace="0" before="0" after="40"
+			horizontalAlignment="center" verticalAlignment="center" />
+		<paragraph name="ph23" type="heading4" font="font16" color="black"
+			height="-1" firstSpace="0" before="80" after="0" horizontalAlignment="center"
+			verticalAlignment="center" />
+		<paragraph name="ph25" type="text" font="fontxinsong18"
+			color="black" height="1" firstSpace="0" before="0" after="0"
+			horizontalAlignment="center" verticalAlignment="center" />
+		<paragraph name="ph26" type="heading4" font="font16" color="black"
+			height="-1" firstSpace="0" before="70" after="0" horizontalAlignment="center"
+			verticalAlignment="center" />
+		<paragraph name="ph27" type="heading4" font="font16" color="black"
+			height="-1" firstSpace="0" before="120" after="0"
+			horizontalAlignment="center" verticalAlignment="center" />
+		<!-- liuyang end -->
+		<!-- xujuan start -->
+		<paragraph name="ph16" type="heading0" font="kfontbold26"
+			color="black" height="-1" firstSpace="0" before="5" after="5"
+			horizontalAlignment="center" verticalAlignment="center" />
+		<paragraph name="ph17" type="heading1" font="boldFont16"
+			color="black" height="-1" firstSpace="0" before="5" after="5"
+			horizontalAlignment="center" verticalAlignment="center" />
+		<paragraph name="ph18" type="heading2" font="boldFanfSong18"
+			color="black" height="1" firstSpace="0" before="0" after="0"
+			horizontalAlignment="center" verticalAlignment="center" />
+		<paragraph name="ph19" type="heading2" font="boldFanfSong22"
+			color="black" height="1" firstSpace="0" before="0" after="0"
+			horizontalAlignment="center" verticalAlignment="center" />			
+		<paragraph name="pt19" type="text" font="fontFanfSong12"
+			color="black" height="1" firstSpace="0" before="0" after="0"
+			horizontalAlignment="center" verticalAlignment="center" />
+		<paragraph name="ph24" type="text" font="fontxinsong18"
+			color="black" height="1" firstSpace="0" before="0" after="40"
+			horizontalAlignment="center" verticalAlignment="center" />
+		<!-- xujuan end -->
+		<!-- zzl start  -->
+		<paragraph name="ph80" type="text" font="font14" color="black"
+			height="-1" firstSpace="0" before="5" after="5" horizontalAlignment="left"
+			verticalAlignment="center" />
+		<paragraph name="ph81" type="heading0" font="boldfont14"
+			color="black" height="-1" firstSpace="0" before="5" after="5"
+			horizontalAlignment="center" verticalAlignment="center" />
+		<paragraph name="ph79" type="text" font="font10" color="black"
+			height="-1" firstSpace="5" before="5" after="5" horizontalAlignment="left"
+			verticalAlignment="left" />
+		<paragraph name="ph78" type="heading0" font="font102" color="black"
+			height="-1" firstSpace="0" before="5" after="5" horizontalAlignment="center"
+			verticalAlignment="center" />
+		<paragraph name="ph83" type="heading0" font="boldfont12"
+			color="black" height="-1" firstSpace="5" before="5" after="5"
+			horizontalAlignment="left" verticalAlignment="left" />
+		<paragraph name="ph88" type="text" font="font108" color="black"
+			height="-1" firstSpace="0" before="0" after="0" horizontalAlignment="left"
+			verticalAlignment="left" />
+		<paragraph name="lfont40" type="heading0" font="boldfont12"
+			color="black" height="-1" firstSpace="5" before="5" after="5"
+			horizontalAlignment="left" verticalAlignment="left" />
+		<!-- zzl end  -->
+		<!-- guo -->
+		<paragraph name="pc0" type="heading0" font="cardFont20" color="black"
+			height="1" before="10" after="0" horizontalAlignment="center"
+			verticalAlignment="center" />
+		<paragraph name="ca14" type="text" font="hfont12" color="black"
+			height="1" firstSpace="0" before="0" after="0" horizontalAlignment="center"
+			verticalAlignment="center" />
+		<!-- lsn -->		
+		<paragraph name="st36" type="heading0" font="font36" color="black"
+			height="1" firstSpace="0" before="0" after="0" horizontalAlignment="center"
+			verticalAlignment="center" />
+			<!-- xxk -->
+			<paragraph name="pt40" type="heading0" font="font16" color="black"
+			height="1" firstSpace="0" before="0" after="0" horizontalAlignment="center"
+			verticalAlignment="center" /><!-- 编号字体 -->
+			<paragraph name="pt41" type="heading0" font="hfont56" color="colorRed"
+			height="1" firstSpace="0" before="0" after="0" horizontalAlignment="center"
+			verticalAlignment="center" /><!-- 聘书字体 -->
+			<paragraph name="pt42" type="heading0" font="font31" color="black"
+			height="1" firstSpace="0" before="0" after="0" horizontalAlignment="center"
+			verticalAlignment="center" /><!-- 兹敦聘字体 -->
+			<paragraph name="pt43" type="heading0" font="font21" color="black"
+			height="1" firstSpace="0" before="0" after="0" horizontalAlignment="center"
+			verticalAlignment="center" /><!-- 校长字体 -->
+			<paragraph name="pt40e" type="heading0" font="tFont16" color="black"
+			height="1" firstSpace="0" before="0" after="0" horizontalAlignment="center"
+			verticalAlignment="center" /><!--ENG 编号字体 -->
+			<paragraph name="pt41e" type="heading0" font="eFont28" color="black"
+			height="1" firstSpace="0" before="0" after="0" horizontalAlignment="center"
+			verticalAlignment="center" /><!--ENG 字体 -->
+			<paragraph name="pt42e" type="heading0" font="kFont30" color="black"
+			height="1" firstSpace="0" before="0" after="0" horizontalAlignment="center"
+			verticalAlignment="center" /><!-- ENG兹敦聘字体 -->
+			<paragraph name="pt43e" type="heading0" font="tFont18" color="black"
+			height="1" firstSpace="0" before="0" after="0" horizontalAlignment="center"
+			verticalAlignment="center" /><!-- ENG校长字体 -->
+			<paragraph name="pt44" type="heading0" font="hbfont18" color="black"
+			height="1" firstSpace="0" before="0" after="0" horizontalAlignment="center"
+			verticalAlignment="center" />
+			<!-- 出入境 start-->
+			<paragraph name="pt111" type="text" font="font17" height="1" 
+			firstSpace="1" before="0" after="0" horizontalAlignment="left"
+			verticalAlignment="center" />
+			<paragraph name="pt112" type="text" font="font16" height="1" 
+			firstSpace="1" before="0" after="0" horizontalAlignment="left"
+			verticalAlignment="center" />
+			<paragraph name="st37" type="heading0" font="font30" color="black"
+			height="1" firstSpace="0" before="5" after="5" horizontalAlignment="center"
+			verticalAlignment="center" />
+			<paragraph name="st38" type="heading0" font="font36" color="black"
+			height="1" firstSpace="0" before="5" after="5" horizontalAlignment="center"
+			verticalAlignment="center" />
+			<paragraph name="st39" type="heading0" font="font12" color="black"
+		 	height="1" firstSpace="0" before="5" after="5" horizontalAlignment="center"
+			verticalAlignment="center" />
+			<paragraph name="st1" type="heading0" font="font15" color="black"
+			height="1" firstSpace="0" before="5" after="5" horizontalAlignment="center"
+			verticalAlignment="center" />
+			<paragraph name="st2" type="text" font="hboldfont12"  color="black" height="20"
+			firstSpace="0" before="0" after="0" horizontalAlignment="left"
+			verticalAlignment="center" />
+			<paragraph name="st3" type="text" font="kfontbold12"  color="black" height="20"
+			firstSpace="0" before="0" after="0" horizontalAlignment="left"
+			verticalAlignment="center" />
+			<paragraph name="st4" type="text" font="boldFont16"  color="black" height="20"
+			firstSpace="0" before="0" after="0" horizontalAlignment="left"
+			verticalAlignment="center" />
+			<paragraph name="st5" type="text" font="boldfont22" color="black" height="20"
+			firstSpace="0" before="0" after="0" horizontalAlignment="left"
+			verticalAlignment="center" />
+	<!-- 出入境 end-->
+	<!-- 教育厅打印 start -->
+			<paragraph name="jyt1" type="text" font="boldfont26"  color="black" height="60"
+			firstSpace="0" before="0" after="0" horizontalAlignment="center"
+			verticalAlignment="center" />
+			<paragraph name="jyt2" type="text" font="boldfont15"  color="black" height="20"
+			firstSpace="0" before="0" after="0" horizontalAlignment="left"
+			verticalAlignment="center" />
+			<paragraph name="jyt3" type="text" font="boldFont16"  color="black" height="20"
+			firstSpace="0" before="0" after="0" horizontalAlignment="center"
+			verticalAlignment="center" />
+			<paragraph name="jyt4" type="text" font="font10"  color="black" height="20"
+			firstSpace="0" before="0" after="0" horizontalAlignment="center"
+			verticalAlignment="center" />
+			<paragraph name="jyt5" type="text" font="boldfont18"  color="black" height="20"
+			firstSpace="0" before="0" after="0" horizontalAlignment="center"
+			verticalAlignment="center" />
+			<paragraph name="jyt6" type="text" font="font12"  color="black" height="20"
+			firstSpace="0" before="0" after="0" horizontalAlignment="left"
+			verticalAlignment="center" />
+			<paragraph name="jyt7" type="text" font="boldfont14"  color="black" height="20"
+			firstSpace="0" before="0" after="0" horizontalAlignment="left"
+			verticalAlignment="center" />
+			<paragraph name="jyt8" type="text" font="boldfont9"  color="black" height="20"
+			firstSpace="0" before="0" after="0" horizontalAlignment="center"
+			verticalAlignment="center" />
+			<paragraph name="jyt9" type="text" font="font9"  color="black" height="20"
+			firstSpace="0" before="0" after="0" horizontalAlignment="center"
+			verticalAlignment="center" />
+			<paragraph name="jyt10" type="text" font="boldfont10"  color="black" height="20"
+			firstSpace="0" before="0" after="0" horizontalAlignment="left"
+			verticalAlignment="center" />
+			<paragraph name="jyt11" type="text" font="hfont12"  color="black" height="20"
+			firstSpace="0" before="0" after="0" horizontalAlignment="left"
+			verticalAlignment="center" />
+			<paragraph name="jyt12" type="text" font="kfont12"  color="black" height="20"
+			firstSpace="0" before="0" after="0" horizontalAlignment="left"
+			verticalAlignment="center" />
+	<!-- 教育厅打印 end -->
+	
+
+				
+	<!-- 学工部国贷 start-->
+	<paragraph name="ph014" type="heading0" font="hfont14" color="black"
+			height="-1" firstSpace="0" before="5" after="5" horizontalAlignment="left"
+			verticalAlignment="center" />
+	<paragraph name="pt09" type="text" color="black" height="-1"
+			firstSpace="0" before="0" after="0" font="font9"
+			horizontalAlignment="left" verticalAlignment="center" />
+	<paragraph name="pt09(1)" type="text" color="black" height="-1"
+			firstSpace="0" before="0" after="0" font="hfont9"
+			horizontalAlignment="left" verticalAlignment="center" />
+	<paragraph name="pt011" type="text" color="black" height="-1"
+			firstSpace="0" before="0" after="0" font="font11"
+			horizontalAlignment="left" verticalAlignment="center" />
+	<paragraph name="ph018" type="heading0" font="hfont18" color="black"
+			height="-1" firstSpace="0" before="5" after="5" horizontalAlignment="left"
+			verticalAlignment="center" />
+	<!-- 学工部国贷 end-->
+
+	</paragraphs>
+	<pagenumbers>
+		<pagenumber name="pageNumberNull" layoutType="null" font="font8"
+			color="black" numberType="1" />
+	</pagenumbers>
+	<!-- liuyang start -->
+	<strokes>
+		<stroke name="dash1" width="1" dash="16,4" />
+		<stroke name="dash2" width="2" />
+		<stroke name="dash3" width="3" />
+		<stroke name="dash4" width="4" />
+		<stroke name="dash6" width="6" />
+		<stroke name="dash15" width="15" />
+		<stroke name="dash30" width="30" />
+	</strokes>
+	<!-- liuyang end -->
+	
+	
+</parametertemplate>
