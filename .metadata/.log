@@ -1013,3 +1013,9 @@ user global configuration and to define the default location to store repositori
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY com.android.ide.eclipse.adt 1 0 2018-06-15 10:25:30.713
+!MESSAGE No valid Android XML Editor Delegate found for file /onlinelearning/config/onlinelearning-datasource.xml [Res null, type null]
+
+!ENTRY com.android.ide.eclipse.adt 1 0 2018-06-15 10:25:56.034
+!MESSAGE No valid Android XML Editor Delegate found for file /onlinelearning/config/onlinelearning-datasource-local.xml [Res null, type null]
