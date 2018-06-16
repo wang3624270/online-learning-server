@@ -84,7 +84,7 @@ public class CommonAuthBean {
 		return true;
 	}
 
-	@RequestMapping(value = "/auth/webLogin", method = RequestMethod.POST)
+	@RequestMapping(value = "/auth/webLogin")
 	public UserTokenClientSide webLogin(HttpServletRequest request,
 			@RequestBody WebLoginForm loginForm) {
 

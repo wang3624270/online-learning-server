@@ -6,4 +6,4 @@ PLUGINS_NOT_ACTIVATED_ON_STARTUP=org.eclipse.m2e.discovery;com.android.ide.eclip
 RUN_IN_BACKGROUND=true
 eclipse.preferences.version=1
 org.eclipse.jface.bannerfont=1|Segoe UI|18.0|1|WINDOWS|1|-24|0|0|0|700|0|0|0|0|3|2|1|34|Segoe UI;
-org.eclipse.jface.textfont=1|Consolas|12.0|0|WINDOWS|1|-16|0|0|0|400|0|0|0|0|3|2|1|49|Consolas;
+org.eclipse.jface.textfont=1|Consolas|14.25|0|WINDOWS|1|-19|0|0|0|400|0|0|0|0|3|2|1|49|Consolas;
