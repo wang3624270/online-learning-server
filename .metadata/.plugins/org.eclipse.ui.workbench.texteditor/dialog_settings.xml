@@ -2,19 +2,20 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="jsonPost" key="selection"/>
+		<item value="" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
-			<item value="jsonPost"/>
-			<item value="getTermInfo"/>
-			<item value="sessionStorage"/>
-			<item value="sessionS"/>
-			<item value="auth/webLogin"/>
-			<item value="webLogin"/>
-			<item value="HttpSessionListener"/>
+			<item value="addQuestionFromHouse"/>
+			<item value="getHouseQustionList"/>
+			<item value="@RequestMapping(value = &quot;/examBean/adjustExamQuestion&quot;, method = RequestMethod.POST)"/>
+			<item value="adjustExamQuestion"/>
+			<item value="addExamCompletionQuestion"/>
+			<item value="getExamInfo"/>
+			<item value="getAllQustionList"/>
+			<item value="getAllExamList"/>
 		</list>
 		<list key="replacehistory">
 		</list>
