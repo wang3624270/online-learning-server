@@ -1411,3 +1411,73 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY com.android.ide.eclipse.adt 1 0 2018-10-05 14:15:10.302
 !MESSAGE No valid Android XML Editor Delegate found for file /onlinelearning/config/applicationContext-security.xml [Res null, type null]
+
+!ENTRY com.android.ide.eclipse.adt 1 0 2018-10-05 16:16:12.312
+!MESSAGE No valid Android XML Editor Delegate found for file /onlinelearning/build.xml [Res null, type null]
+
+!ENTRY com.android.ide.eclipse.adt 1 0 2018-10-05 16:16:27.748
+!MESSAGE No valid Android XML Editor Delegate found for file /onlinelearning/WebContent/WEB-INF/web.xml [Res null, type null]
+
+!ENTRY com.android.ide.eclipse.adt 2 0 2018-10-05 16:17:40.107
+!MESSAGE No projects found for [D:\online-learning-server\onlinelearning\WebContent\WEB-INF\web.xml]
+
+!ENTRY com.android.ide.eclipse.adt 2 0 2018-10-05 16:24:49.252
+!MESSAGE No projects found for [D:\online-learning-server\onlinelearning\WebContent\WEB-INF\web.xml]
+
+!ENTRY com.android.ide.eclipse.adt 2 0 2018-10-05 16:24:53.072
+!MESSAGE No projects found for [D:\online-learning-server\onlinelearning\WebContent\WEB-INF\web.xml]
+
+!ENTRY com.android.ide.eclipse.adt 1 0 2018-10-05 16:38:43.239
+!MESSAGE No valid Android XML Editor Delegate found for file /onlinelearning/build.xml [Res null, type null]
+
+!ENTRY com.android.ide.eclipse.adt 1 0 2018-10-05 16:38:56.258
+!MESSAGE No valid Android XML Editor Delegate found for file /onlinelearning/build-start.xml [Res null, type null]
+
+!ENTRY com.android.ide.eclipse.adt 1 0 2018-10-05 16:39:02.936
+!MESSAGE No valid Android XML Editor Delegate found for file /onlinelearning/build-client.xml [Res null, type null]
+
+!ENTRY com.android.ide.eclipse.adt 2 0 2018-10-05 16:40:31.253
+!MESSAGE No projects found for [D:\online-learning-server\onlinelearning\WebContent\WEB-INF\web.xml]
+
+!ENTRY com.android.ide.eclipse.adt 2 0 2018-10-05 16:40:43.496
+!MESSAGE No projects found for [D:\online-learning-server\onlinelearning\WebContent\WEB-INF\web.xml]
+
+!ENTRY com.android.ide.eclipse.ddms 4 0 2018-10-05 19:11:33.604
+!MESSAGE DDMS files not found: D:\eclipse\platform-tools\adb.exe D:\eclipse\platform-tools\hprof-conv.exe D:\eclipse\tools\traceview.bat 
+
+!ENTRY com.android.ide.eclipse.adt 2 0 2018-10-05 19:15:03.119
+!MESSAGE No projects found for [D:\online-learning-server\onlinelearning\WebContent\WEB-INF\web.xml]
+
+!ENTRY com.android.ide.eclipse.adt 2 0 2018-10-05 19:17:36.020
+!MESSAGE No projects found for [D:\online-learning-server\onlinelearning\WebContent\WEB-INF\web.xml]
+!SESSION 2018-10-08 09:12:09.103 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-10-08 09:13:13.598
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\wangqianqian01_sx'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2018-10-08 11:28:58.338 -----------------------------------------------
+eclipse.buildId=4.4.2.M20150204-1700
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2018-10-08 11:29:20.242
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\wangqianqian01_sx'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY com.android.ide.eclipse.adt 1 0 2018-10-08 19:58:51.368
+!MESSAGE No valid Android XML Editor Delegate found for file /onlinelearning/config/onlinelearning-datasource-local.xml [Res null, type null]
