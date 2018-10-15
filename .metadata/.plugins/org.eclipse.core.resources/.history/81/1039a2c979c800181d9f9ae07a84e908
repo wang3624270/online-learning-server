@@ -1,5 +1,0 @@
-package kit.filter;
-
-public class CorsFilter {
-
-}
