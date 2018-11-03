@@ -20,7 +20,6 @@
 	<classpathentry kind="lib" path="/common-support-0.0.1/lib/spring-support-4.2.4.jar" sourcepath="/spring-support-4.2.4"/>
 	<classpathentry kind="lib" path="/common-support-0.0.1/lib/slf4j-log4j12-1.7.21.jar"/>
 	<classpathentry kind="lib" path="/common-support-0.0.1/lib/log4j-1.2.15.jar"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/octopus-video"/>
 	<classpathentry kind="lib" path="/octopus-platform-0.0.1/WebContent/WEB-INF/lib/poi-ooxml-3.8-20120326.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/antlr-2.7.6.jar"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib/aopalliance-1.0.jar"/>

@@ -39,8 +39,9 @@
 	<import file="${basedir}/../octopus-platform-0.0.1/build.xml" as="octopus" />
 	<import file="${basedir}/../octopus-auth-0.0.1/build.xml" as="auth" />
 	<import file="${basedir}/../uims-support/build.xml" as="uims" />
+	<import file="${basedir}/../octopus-video/build.xml" as="video" />
 
 	<!-- ================================= target: deploy ================================= -->
-	<target name="default" depends="init_deploy,apache.deploy,common.deploy,octopus.deploy,auth.deploy,uims.deploy,deploy_onlinelearning">
+	<target name="default" depends="init_deploy,apache.deploy,common.deploy,octopus.deploy,auth.deploy,uims.deploy,video.deploy,deploy_onlinelearning">
 	</target>
 </project>
