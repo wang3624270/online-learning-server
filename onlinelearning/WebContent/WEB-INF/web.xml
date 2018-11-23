@@ -153,13 +153,13 @@
 	</filter>
 	<!-- CORS过滤器 start -->
     <filter>
-<filter-name>contextfilter</filter-name>
-<filter-class>kit.filter.WebContextFilter</filter-class>
-</filter>
-<filter-mapping>
-<filter-name>contextfilter</filter-name>
-<url-pattern>/*</url-pattern>
-</filter-mapping>
+	<filter-name>contextfilter</filter-name>
+	<filter-class>kit.filter.WebContextFilter</filter-class>
+	</filter>
+	<filter-mapping>
+	<filter-name>contextfilter</filter-name>
+	<url-pattern>/*</url-pattern>
+	</filter-mapping>
     <!-- CORS过滤器 end -->
 
 	<filter-mapping>

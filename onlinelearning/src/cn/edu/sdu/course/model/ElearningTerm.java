@@ -16,8 +16,8 @@ public class ElearningTerm {
 	private Integer termId;
     private String termName;
     private String termEngName;
-    private Date startTime;
-    private Date endTime;
+    private String startTime;
+    private String endTime;
     private String remark;
     private String examTime;
     private String termNum;
@@ -42,16 +42,17 @@ public class ElearningTerm {
 	public void setTermEngName(String termEngName) {
 		this.termEngName = termEngName;
 	}
-	public Date getStartTime() {
+
+	public String getStartTime() {
 		return startTime;
 	}
-	public void setStartTime(Date startTime) {
+	public void setStartTime(String startTime) {
 		this.startTime = startTime;
 	}
-	public Date getEndTime() {
+	public String getEndTime() {
 		return endTime;
 	}
-	public void setEndTime(Date endTime) {
+	public void setEndTime(String endTime) {
 		this.endTime = endTime;
 	}
 	public String getRemark() {

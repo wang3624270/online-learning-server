@@ -92,8 +92,77 @@ public class BaseCourseActionForm extends UForm{
 	private String coverImg;
 	private String comment;
 	private Integer commentId;
+	private String startTimeStr;
+	private String endTimeStr;
+	private String label;
+	private String value;
+	private Integer videoAcc;
+	private Integer audioAcc;
+	private Integer pptAcc;
+	private Integer videoId;
+	private Integer audioId;
+	private Integer pptId;
 	
-	
+	public Integer getVideoId() {
+		return videoId;
+	}
+	public void setVideoId(Integer videoId) {
+		this.videoId = videoId;
+	}
+	public Integer getAudioId() {
+		return audioId;
+	}
+	public void setAudioId(Integer audioId) {
+		this.audioId = audioId;
+	}
+	public Integer getPptId() {
+		return pptId;
+	}
+	public void setPptId(Integer pptId) {
+		this.pptId = pptId;
+	}
+	public Integer getVideoAcc() {
+		return videoAcc;
+	}
+	public void setVideoAcc(Integer videoAcc) {
+		this.videoAcc = videoAcc;
+	}
+	public Integer getAudioAcc() {
+		return audioAcc;
+	}
+	public void setAudioAcc(Integer audioAcc) {
+		this.audioAcc = audioAcc;
+	}
+	public Integer getPptAcc() {
+		return pptAcc;
+	}
+	public void setPptAcc(Integer pptAcc) {
+		this.pptAcc = pptAcc;
+	}
+	public String getLabel() {
+		return label;
+	}
+	public void setLabel(String label) {
+		this.label = label;
+	}
+	public String getValue() {
+		return value;
+	}
+	public void setValue(String value) {
+		this.value = value;
+	}
+	public String getStartTimeStr() {
+		return startTimeStr;
+	}
+	public void setStartTimeStr(String startTimeStr) {
+		this.startTimeStr = startTimeStr;
+	}
+	public String getEndTimeStr() {
+		return endTimeStr;
+	}
+	public void setEndTimeStr(String endTimeStr) {
+		this.endTimeStr = endTimeStr;
+	}
 	public Integer getCommentId() {
 		return commentId;
 	}

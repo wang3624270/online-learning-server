@@ -228,6 +228,26 @@ public class InfoPersonInfoDaoImpl extends GenericServiceImpl<InfoPersonInfo> im
 		}
 		return null;
 	}
+	
+	@Override
+	public List getPersonListbyConditions(Integer personId,String perName,Integer groupid){
+		// TODO Auto-generated method stub
+		String sql = "select DISTINCT a from InfoPersonInfo a, SysUser s , UserGroup u where a.personId=s.userid ";
+		if(personId!=null && !personId.equals("")){
+			sql+="and a.personId='"+personId+"'";
+		}
+		if(perName!=null && !perName.equals("")){
+			sql+="and a.perName='"+perName+"'";
+		}
+		if(groupid!=null && !groupid.equals("")){
+			sql+="and s.sysusrid=u.sysusrid and u.groupid='"+groupid+"'";
+		}
+		List list = this.queryForList(sql);
+		if (list != null && list.size() > 0) {
+			return list;
+		}
+		return null;
+	}
 
 
 }

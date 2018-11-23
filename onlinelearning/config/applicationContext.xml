@@ -74,12 +74,7 @@
 			expression=".*web\.[^.]*" />
 	</context:component-scan>
 	
-	<context:component-scan base-package="com.badminton">
-		<context:exclude-filter type="regex"
-			expression=".*web\.[^.]*" />
-	</context:component-scan>
-
-	<context:component-scan base-package="com.video">
+	<context:component-scan base-package="cn.edu.sdu.manage">
 		<context:exclude-filter type="regex"
 			expression=".*web\.[^.]*" />
 	</context:component-scan>

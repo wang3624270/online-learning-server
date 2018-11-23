@@ -49,8 +49,8 @@
 		<intercept-url pattern="/login.jsp*" access="permitAll" />
 		<!-- 登录请求 -->
 		<intercept-url pattern="/func/auth/webLogin" access="permitAll" />
-		<!-- 主页新闻加载请求 -->
-		<intercept-url pattern="/func/homepageBean/**" access="permitAll" />
+		<!-- 数据请求 -->
+		<intercept-url pattern="/func/**" access="permitAll" />
 		<!-- 登录失败请求 -->
 		<intercept-url pattern="/func/auth/failure" access="permitAll" />
 		<!-- 登录超时退出 -->

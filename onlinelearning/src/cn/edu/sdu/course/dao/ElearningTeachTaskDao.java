@@ -14,4 +14,5 @@ public interface ElearningTeachTaskDao extends GenericServiceI<ElearningTeachTas
 	public ElearningTeachTask getTeachTaskByTaskId(Integer taskId);
 	public List getTeachTaskListOfNotOverDateByTaskId(Integer taskId)throws ParseException;
 	public Integer getTaskIdByCourseId(Integer courseId);
+	public List getTeachTaskListByConditions(String taskName,String courseType);
 }

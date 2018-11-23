@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete element from project &apos;onlinelearning&apos;&#x0D;&#x0A;- Original project: &apos;onlinelearning&apos;&#x0D;&#x0A;- Original element: &apos;onlinelearning/src/cn.edu.sdu.manage.bean.web&apos;" description="Delete element" element1="/src&lt;cn.edu.sdu.manage.bean.web" element2="/src&lt;cn.edu.sdu.manage.bean" elements="2" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1541232467549" subPackages="false" version="1.0"/>
+</session>

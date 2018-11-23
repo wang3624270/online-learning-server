@@ -12,4 +12,5 @@ public interface ElearningCourseDao extends GenericServiceI<ElearningCourse>{
 	public List getCoursesListByPersonId(Integer personId);
 	public ElearningCourse getCourseInfoByCourseId(Integer courseId);
 	public List<ElearningCourse> getCourseInfoByCourseType(String courseType);
+	public List getCoursesListByConditions(String courseName,String courseType);
 }

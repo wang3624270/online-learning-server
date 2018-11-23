@@ -12,6 +12,7 @@ import org.springframework.stereotype.Repository;
 import cn.edu.sdu.course.dao.AccessoriesFolderAccDao;
 import cn.edu.sdu.course.dao.ElearningTeachTaskDao;
 import cn.edu.sdu.course.model.AccessoriesFolderAcc;
+import cn.edu.sdu.course.model.ElearningCourse;
 import cn.edu.sdu.course.model.ElearningTeachTask;
 
 @Repository
@@ -112,7 +113,27 @@ implements ElearningTeachTaskDao {
 				}
 	
 			return taskId;
+	}
+
+	
+	@Override
+	public List getTeachTaskListByConditions(String taskName,String courseType) {
+		// TODO Auto-generated method stub
+		String hql = "select distinct a from ElearningTeachTask a ,ElearningCourse b where 1 = 1 ";
+		if(taskName!=null && !taskName.equals("")){
+			hql+="and a.taskName='"+taskName+"'";
 		}
+		if(courseType!=null && !courseType.equals("")){
+			hql+="and a.elearningCourse.courseId=b.courseId and b.courseType='"+courseType+"'";
+		}
+		hql+="order by a.modifyTime desc";
+		List list = this.queryForList(hql);
+		if(list == null || list.size()== 0)
+			return null;
+		else{
+			return list;
+		}
+	}
 	
 
 }

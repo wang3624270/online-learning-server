@@ -19,5 +19,15 @@
 			<type>2</type>
 			<location>D:/mojarra_document</location>
 		</link>
+		<link>
+			<name>.link2</name>
+			<type>2</type>
+			<location>D:/spring-support-4.2.4/src</location>
+		</link>
+		<link>
+			<name>.link3</name>
+			<type>2</type>
+			<location>D:/mojarra_document</location>
+		</link>
 	</linkedResources>
 </projectDescription>

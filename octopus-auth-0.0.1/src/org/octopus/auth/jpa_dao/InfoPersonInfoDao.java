@@ -33,4 +33,5 @@ public interface InfoPersonInfoDao extends GenericServiceI<InfoPersonInfo>{
 	
 	public ListOptionInfo getInfoPersonInfoPerNameOptionInfoList(Integer personId);
     public InfoPersonInfo getInfoPersonInfobyPrecisePerName(String perName);
+    public List getPersonListbyConditions(Integer personId,String perName,Integer groupid);
 }

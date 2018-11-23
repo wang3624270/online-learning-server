@@ -73,7 +73,24 @@ implements ElearningCourseDao {
 		else{
 			return  list;
 		}
-		
-		
+	}
+	
+	@Override
+	public List getCoursesListByConditions(String courseName,String courseType) {
+		// TODO Auto-generated method stub
+		String hql = "from ElearningCourse a where 1 = 1";
+		if(courseName!=null && !courseName.equals("")){
+			hql+="and a.courseName='"+courseName+"'";
+		}
+		if(courseType!=null && !courseType.equals("")){
+			hql+="and a.courseType='"+courseType+"'";
+		}
+		hql+="order by a.createTime desc";
+		List list = this.queryForList(hql);
+		if(list == null || list.size()== 0)
+			return null;
+		else{
+			return list;
+		}
 	}
 }

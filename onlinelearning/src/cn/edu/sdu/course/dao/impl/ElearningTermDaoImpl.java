@@ -23,7 +23,7 @@ implements ElearningTermDao {
 	public List getAllTermList() {
 		// TODO Auto-generated method stub
 		String hql = "from ElearningTerm a where 1 = 1";
-		hql+="order by termNum desc";
+		hql+="order by startTime desc";
 		List list = this.queryForList(hql);
 		if(list == null || list.size()== 0)
 			return null;

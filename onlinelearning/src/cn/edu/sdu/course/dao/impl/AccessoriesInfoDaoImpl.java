@@ -49,6 +49,27 @@ public class AccessoriesInfoDaoImpl extends GenericServiceImpl<AccessoriesInfo>
 			return list;
 		}
 	}
+	
+	@Override
+	public List getResourceListByConditions(String accName,String accType,String uploader){
+		// TODO Auto-generated method stub
+		String hql = "select distinct a from AccessoriesInfo a,InfoPersonInfo i where 1 = 1 ";
+		if(accName!=null && !accName.equals("")){
+			hql+="and a.accName like'%"+accName+"%'";
+		}
+		if(accType!=null && !accType.equals("")){
+			hql+="and a.accType='"+accType+"'";
+		}
+		if(uploader!=null && !uploader.equals("")){
+			hql+="and a.accUploader=i.personId and i.perName='"+uploader+"'";
+		}
+		List list = this.queryForList(hql);
+		if(list == null || list.size()== 0)
+			return null;
+		else{
+			return list;
+		}
+	}
 
 
 

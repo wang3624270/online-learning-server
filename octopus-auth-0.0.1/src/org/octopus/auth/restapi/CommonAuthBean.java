@@ -1,7 +1,7 @@
 package org.octopus.auth.restapi;
 
 import java.io.IOException;
-
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -15,10 +15,17 @@ import javax.servlet.http.HttpSession;
 import org.apache.log4j.Logger;
 import org.octopus.auth.client_data_model.WebMenuStruct;
 import org.octopus.auth.client_form.WebLoginForm;
+import org.octopus.auth.jpa_dao.GroupFunresDao;
 import org.octopus.auth.jpa_dao.InfoPersonInfoDao;
+import org.octopus.auth.jpa_dao.SysFunResDao;
 import org.octopus.auth.jpa_dao.SysUserDao;
+import org.octopus.auth.jpa_dao.SysUserGroupDao;
+import org.octopus.auth.jpa_dao.UserGroupDao;
 import org.octopus.auth.jpa_model.InfoPersonInfo;
+import org.octopus.auth.jpa_model.SysFunRes;
 import org.octopus.auth.jpa_model.SysUser;
+import org.octopus.auth.jpa_model.SysUserGroup;
+import org.octopus.auth.jpa_model.UserGroup;
 import org.octopus.auth.sdjpa_dao.SecurityUsersJpaDao;
 import org.octopus.spring_utils.SpringContextHelper;
 import org.octopus.web_ui.easyui.data_struct.EUMenuNode;
@@ -51,6 +58,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 
 import cn.edu.sdu.common.util.Base64;
+import cn.edu.sdu.common.util.CommonTool;
 import cn.edu.sdu.common.util.Md5Util;
 
 @RestController
@@ -63,6 +71,18 @@ public class CommonAuthBean {
 	private SysUserDao sysUsersDao;
 	@Autowired
 	private InfoPersonInfoDao personInfoDao;
+	@Autowired
+	private SysUserDao sysUserDao;
+	@Autowired
+	private InfoPersonInfoDao infoPersonInfoDao;
+	@Autowired
+	private UserGroupDao userGroupDao;
+	@Autowired
+	private SysUserGroupDao sysUserGroupDao;
+	@Autowired
+	private GroupFunresDao groupFunresDao;
+	@Autowired
+	private SysFunResDao sysFunResDao;
 	@Autowired
 	private ObjectMapper objectMapper;
 	@Autowired
@@ -162,7 +182,7 @@ public class CommonAuthBean {
 	}
 
 	// 登出
-	@RequestMapping(value = "/auth/webLogout", method = RequestMethod.GET)
+	@RequestMapping(value = "/auth/webLogout")
 	public UserTokenClientSide webLogout(HttpServletRequest request) {
 
 		UserTokenServerSide userToken = (UserTokenServerSide) request
@@ -191,6 +211,40 @@ public class CommonAuthBean {
 		transEUMenuNode(request, euMenu, n);
 		webMenuStruct.setRootMenu(euMenu);
 		return webMenuStruct;
+	}
+	
+	@RequestMapping(value = "/auth/menuInit", method = RequestMethod.GET)
+	public Map menuInit(HttpServletRequest request) {
+		UserTokenServerSide userToken = (UserTokenServerSide) request
+				.getSession().getAttribute("userToken");
+		Map data = new HashMap();
+		if (userToken != null) {// 登录信息不为空
+			Integer personId=userToken.getPersonId();
+			InfoPersonInfo personInfo=infoPersonInfoDao.getInfoPersonInfoByPersonId(personId);
+			SysUser sysuser=sysUserDao.getSysUsersByUserid(personId);
+			UserGroup re=userGroupDao.getRelationBySys(sysuser.getSysusrid());
+			SysUserGroup group=sysUserGroupDao.find(re.getGroupid());
+			List idList=groupFunresDao.getIdListByGroupId(group.getGroupid());
+			List reList=new ArrayList();
+			if(idList!=null){
+				for(int i=0;i<idList.size();i++){
+					Integer id=(Integer)idList.get(i);
+					reList.add(sysFunResDao.find(id));
+				}
+			}
+			List menuList=new ArrayList();
+			for(int i=0;i<reList.size();i++){
+				List tList=new ArrayList();
+				SysFunRes res=(SysFunRes) reList.get(i);
+				menuList.add(res);
+			}
+			data.put("perTypeCode", personInfo.getPerTypeCode());
+			data.put("loginName", userToken.getLoginName());
+			data.put("perName", personInfo.getPerName());
+			data.put("menuList", menuList);
+			return CommonTool.getNodeMap(data, null);
+		} else
+			return CommonTool.getNodeMapError("抱歉，请重新登录！");
 	}
 
 	public static void transEUMenuNode(HttpServletRequest request,

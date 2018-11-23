@@ -1,2 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<qualifiedTypeNameHistroy/>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.octopus.auth.jpa_dao.UserGroupDao"/>
+<fullyQualifiedTypeName name="org.octopus.auth.jpa_dao.SysUserGroupDao"/>
+<fullyQualifiedTypeName name="org.octopus.auth.jpa_dao.GroupFunresDao"/>
+<fullyQualifiedTypeName name="org.octopus.auth.jpa_dao.SysFunResDao"/>
+<fullyQualifiedTypeName name="org.octopus.auth.jpa_model.SysFunRes"/>
+<fullyQualifiedTypeName name="com.itextpdf.text.pdf.codec.Base64.InputStream"/>
+<fullyQualifiedTypeName name="java.io.InputStream"/>
+<fullyQualifiedTypeName name="java.util.logging.Logger"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="org.octopus.auth.jpa_model.GroupFunres"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="cn.edu.sdu.manage.form.BaseManageActionForm"/>
+<fullyQualifiedTypeName name="cn.edu.sdu.common.util.Base64"/>
+<fullyQualifiedTypeName name="org.octopus.auth.jpa_model.UserGroup"/>
+<fullyQualifiedTypeName name="org.octopus.auth.jpa_model.SysUserGroup"/>
+<fullyQualifiedTypeName name="org.octopus.auth.jpa_model.SysUser"/>
+<fullyQualifiedTypeName name="org.octopus.auth.jpa_model.InfoPersonInfo"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+</qualifiedTypeNameHistroy>

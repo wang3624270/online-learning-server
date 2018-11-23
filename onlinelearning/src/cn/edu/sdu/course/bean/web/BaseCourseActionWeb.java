@@ -860,8 +860,8 @@ public class BaseCourseActionWeb {
 				teachTaskForm.setTaskName(teachTask.getTaskName());
 				teachTaskForm.setStartDate(teachTask.getStartDate());
 				teachTaskForm.setEndDate(teachTask.getEndDate());
-				ElearningTerm term=teachTask.getElearningTerm();
-				teachTaskForm.setTermName(term.getTermName());
+//				ElearningTerm term=teachTask.getElearningTerm();
+//				teachTaskForm.setTermName(term.getTermName());
 				ElearningCourse course=teachTask.getElearningCourse();
 				teachTaskForm.setCourseNum(course.getCourseNum());
 				teachTaskForm.setCourseName(course.getCourseName());
