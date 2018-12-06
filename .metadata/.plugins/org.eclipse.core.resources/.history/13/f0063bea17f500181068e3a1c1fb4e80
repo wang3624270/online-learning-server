@@ -1,0 +1,38 @@
+package cn.edu.sdu.lecture.dao.impl;
+
+import java.util.List;
+
+import org.octopus.spring_utils.jpa.GenericServiceImpl;
+import org.springframework.stereotype.Repository;
+
+import cn.edu.sdu.course.model.ElearningCourseSection;
+import cn.edu.sdu.lecture.dao.ElearningLectureEntryDao;
+import cn.edu.sdu.lecture.model.ElearningLectureEntry;
+
+@Repository
+public class ElearningLectureEntryDaoImpl extends GenericServiceImpl<ElearningLectureEntry>
+implements ElearningLectureEntryDao {
+
+	public ElearningLectureEntryDaoImpl(){
+		super(ElearningLectureEntry.class);
+		}
+	
+	@Override
+	public ElearningCourseSection getSectionByConditions(Integer taskId,Integer orderNum) {
+		// TODO Auto-generated method stub
+		String hql = "from ElearningCourseSection a where 1=1";
+		if(taskId!=null && !taskId.equals("")){
+			hql+="and a.taskId="+taskId;
+		}
+		if(orderNum!=null && !orderNum.equals("")){
+			hql+="and a.orderNum="+orderNum;
+		}
+		List list = this.queryForList(hql);
+		if(list == null || list.size()== 0)
+			return null;
+		else{
+			return (ElearningCourseSection) list.get(0);
+		}
+	}
+
+}

@@ -1,0 +1,14 @@
+package cn.edu.sdu.lecture.dao.impl;
+
+import org.octopus.spring_utils.jpa.GenericServiceImpl;
+
+import cn.edu.sdu.course.dao.ElearningCourseDao;
+import cn.edu.sdu.course.model.ElearningCourse;
+
+public class ElearningLectureDaoImpl extends GenericServiceImpl<ElearningCourse>
+implements ElearningCourseDao {
+
+	public ElearningCourseDaoImpl(){
+		super(ElearningCourse.class);
+		}
+}

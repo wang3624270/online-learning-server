@@ -32,5 +32,23 @@ implements ElearningExamInfoDao{
 		}
 	}
 	
+	@Override
+	public List getExamListByConditions(String examTitle,String taskName) {
+		// TODO Auto-generated method stub
+		String hql = "select distinct a from ElearningExamInfo a , ElearningTeachTask t where 1 = 1 ";
+		if(examTitle!=null && !examTitle.equals("")){
+			hql+="and a.examTitle like '%"+examTitle+"%'";
+		}
+		if(taskName!=null && !taskName.equals("")){
+			hql+=" and a.taskId=t.taskId and t.taskName like '%"+taskName+"%'";
+		}
+		List list = this.queryForList(hql);
+		if(list == null || list.size()== 0)
+			return null;
+		else{
+			return list;
+		}
+	}
+	
 	
 }

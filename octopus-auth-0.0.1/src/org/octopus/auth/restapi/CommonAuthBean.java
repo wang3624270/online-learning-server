@@ -1,6 +1,7 @@
 package org.octopus.auth.restapi;
 
 import java.io.IOException;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -63,7 +64,7 @@ import cn.edu.sdu.common.util.Md5Util;
 
 @RestController
 @Scope("session")
-public class CommonAuthBean {
+public class CommonAuthBean implements Serializable{
 	private static Logger logger = Logger.getLogger(CommonAuthBean.class);
 	@Autowired
 	private SecurityUsersJpaDao securityUsersJpaDao;

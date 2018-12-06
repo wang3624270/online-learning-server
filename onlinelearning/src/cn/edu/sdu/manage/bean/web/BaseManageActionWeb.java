@@ -151,6 +151,7 @@ public class BaseManageActionWeb {
 			}
 			data.put("personId", personId);
 			data.put("perName", info.getPerName());
+			data.put("mobilePhone", info.getMobilePhone());
 			return CommonTool.getNodeMap(data, null);
 		} else
 			return CommonTool.getNodeMapError("±§Ç¸£¬ÇëÖØÐÂµÇÂ¼£¡");

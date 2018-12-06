@@ -13,16 +13,16 @@
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="getPersonalCoursesList" key="selection"/>
+		<item value="addOrEditCourseInfo" key="selection"/>
 		<list key="findhistory">
+			<item value="addOrEditCourseInfo"/>
 			<item value="getPersonalCoursesList"/>
-			<item value="cancelMatchSectionAndResource"/>
-			<item value="matchSectionAndResource"/>
-			<item value="getResourceList"/>
-			<item value="getAllResourceList"/>
-			<item value="editCourseSection"/>
-			<item value="getCourseSectionInfo"/>
-			<item value="editTeachTask"/>
+			<item value="&lt;div class=&apos;tpl-table-images-content&apos;&gt;"/>
+			<item value="/getEntryList"/>
+			<item value="getEntryList"/>
+			<item value="getPersonInfo"/>
+			<item value="getAllCollegeOption"/>
+			<item value="deleteCourse"/>
 		</list>
 		<list key="replacehistory">
 		</list>

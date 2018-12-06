@@ -58,5 +58,31 @@ public class ElearningPlanCourseDaoImpl extends GenericServiceImpl<ElearningPlan
 			return list;
 		}
 	}
+	
+
+
+	@Override
+	public List getTaskListByConditions(Integer personId,String courseName,String courseType,Integer taskId) {
+		// TODO Auto-generated method stub
+		String hql = "from ElearningPlanCourse a where 1=1";
+		if (personId != null && !personId.equals("")) {
+			hql += "and a.stuId='" + personId + "'";
+		}
+		if (courseName != null && !courseName.equals("")) {
+			hql += "and a.elearningTeachTask.elearningCourse.courseName like'%" + courseName + "%'";
+		}
+		if (courseType != null && !courseType.equals("")) {
+			hql += "and a.elearningTeachTask.elearningCourse.courseType='" + courseType + "'";
+		}
+		if (taskId != null && !taskId.equals("")) {
+			hql += "and a.elearningTeachTask.taskId='" + taskId + "'";
+		}
+		List list = this.queryForList(hql);
+		if (list == null || list.size() == 0)
+			return null;
+		else {
+			return list;
+		}
+	}
 
 }

@@ -1,0 +1,11 @@
+package cn.edu.sdu.lecture.dao;
+
+import org.octopus.spring_utils.jpa.GenericServiceI;
+
+import cn.edu.sdu.lecture.model.ElearningLectureAttendance;
+import cn.edu.sdu.lecture.model.ElearningLectureEntry;
+
+public interface ElearningLectureAttendanceDao extends GenericServiceI<ElearningLectureAttendance> {
+
+	public ElearningLectureAttendance getAttendanceByConditions(Integer lectureId,Integer entryId);
+}

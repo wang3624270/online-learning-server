@@ -35,12 +35,35 @@ public class ElearningPlanCourse {
      private String remark;
      private Date modifyTime;
      private Integer modifyerId;
+     private Date createTime;
+     private Integer creator;
+     private String state;
+     
 
      @OneToMany(targetEntity=ElearningTeachTask.class,cascade=CascadeType.ALL)
      @Fetch(FetchMode.JOIN)
      @JoinColumn(name="taskId",updatable=false)  
      private Set elearningTeachTasks = new LinkedHashSet();
      
+     
+	public Date getCreateTime() {
+		return createTime;
+	}
+	public void setCreateTime(Date createTime) {
+		this.createTime = createTime;
+	}
+	public Integer getCreator() {
+		return creator;
+	}
+	public void setCreator(Integer creator) {
+		this.creator = creator;
+	}
+	public String getState() {
+		return state;
+	}
+	public void setState(String state) {
+		this.state = state;
+	}
 	public Integer getId() {
 		return id;
 	}

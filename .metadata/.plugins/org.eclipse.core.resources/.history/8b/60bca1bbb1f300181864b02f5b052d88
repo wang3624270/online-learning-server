@@ -1,0 +1,9 @@
+package cn.edu.sdu.lecture.dao;
+
+import org.octopus.spring_utils.jpa.GenericServiceI;
+
+import cn.edu.sdu.lecture.model.ElearningLecture;
+
+public interface ElearningLectureEntryDao extends GenericServiceI<ElearningLectureEntry>{
+
+}

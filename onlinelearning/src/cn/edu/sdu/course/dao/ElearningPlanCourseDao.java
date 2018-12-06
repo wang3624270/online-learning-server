@@ -12,4 +12,5 @@ public interface ElearningPlanCourseDao extends GenericServiceI<ElearningPlanCou
 	public List getCoursesListByPersonId(Integer personId);
 	public List getTaskIdByStuId(Integer personId);
 	public List getPlanListByTaskId(Integer taskId);
+	public List getTaskListByConditions(Integer personId,String courseName,String courseType,Integer taskId);
 }

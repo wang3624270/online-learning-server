@@ -1,6 +1,7 @@
 package cn.edu.sdu.exam.form;
 
 import java.util.Date;
+import java.util.List;
 
 public class BaseExamActionForm {
 	private Integer courseId;// øŒ≥ÃID
@@ -90,8 +91,29 @@ public class BaseExamActionForm {
 	private String isRelation;
 	private Integer practiceId;// ≤‚ ‘ID
 	private String practiceTitle;//≤‚ ‘√˚≥∆
+	private String answer;//¥∞∏
+	private String analysis;//Ω‚Œˆ
+	private List optionList;
 	
 	
+	public List getOptionList() {
+		return optionList;
+	}
+	public void setOptionList(List optionList) {
+		this.optionList = optionList;
+	}
+	public String getAnswer() {
+		return answer;
+	}
+	public void setAnswer(String answer) {
+		this.answer = answer;
+	}
+	public String getAnalysis() {
+		return analysis;
+	}
+	public void setAnalysis(String analysis) {
+		this.analysis = analysis;
+	}
 	public Integer getPracticeId() {
 		return practiceId;
 	}

@@ -11,12 +11,24 @@
 <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
 <fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="org.octopus.auth.jpa_model.GroupFunres"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="cn.edu.sdu.manage.form.BaseManageActionForm"/>
 <fullyQualifiedTypeName name="cn.edu.sdu.common.util.Base64"/>
 <fullyQualifiedTypeName name="org.octopus.auth.jpa_model.UserGroup"/>
 <fullyQualifiedTypeName name="org.octopus.auth.jpa_model.SysUserGroup"/>
-<fullyQualifiedTypeName name="org.octopus.auth.jpa_model.SysUser"/>
-<fullyQualifiedTypeName name="org.octopus.auth.jpa_model.InfoPersonInfo"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="cn.edu.sdu.lecture.dao.ElearningLectureLiveDao"/>
+<fullyQualifiedTypeName name="cn.edu.sdu.lecture.model.ElearningLectureLive"/>
+<fullyQualifiedTypeName name="cn.edu.sdu.lecture.dao.ElearningLectureDao"/>
+<fullyQualifiedTypeName name="cn.edu.sdu.lecture.form.BaseLectureActionForm"/>
+<fullyQualifiedTypeName name="cn.edu.sdu.lecture.model.ElearningLecture"/>
+<fullyQualifiedTypeName name="java.io.Serializable"/>
+<fullyQualifiedTypeName name="cn.edu.sdu.lecture.model.ElearningLectureEntry"/>
+<fullyQualifiedTypeName name="cn.edu.sdu.lecture.dao.ElearningLectureEntryDao"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="org.octopus.auth.jpa_model.InfoPersonInfo"/>
+<fullyQualifiedTypeName name="org.octopus.auth.jpa_model.SysUser"/>
+<fullyQualifiedTypeName name="org.octopus.auth.jpa_dao.SysUserDao"/>
+<fullyQualifiedTypeName name="cn.edu.sdu.lecture.model.ElearningLectureAttendance"/>
+<fullyQualifiedTypeName name="cn.edu.sdu.lecture.dao.ElearningLectureAttendanceDao"/>
+<fullyQualifiedTypeName name="java.util.List"/>
 </qualifiedTypeNameHistroy>

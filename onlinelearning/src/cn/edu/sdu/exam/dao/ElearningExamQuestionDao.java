@@ -11,4 +11,5 @@ public interface ElearningExamQuestionDao extends GenericServiceI<ElearningExamQ
 
 	public List getQuestionListByQuestionType(String questionType);
 	public List getQuestionListOrderByQuestionType();
+	public List getQuestionListByConditions(String question,String questionType);
 }

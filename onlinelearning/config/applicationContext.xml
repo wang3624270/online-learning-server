@@ -79,6 +79,11 @@
 			expression=".*web\.[^.]*" />
 	</context:component-scan>
 	
+	<context:component-scan base-package="cn.edu.sdu.lecture">
+		<context:exclude-filter type="regex"
+			expression=".*web\.[^.]*" />
+	</context:component-scan>
+	
 	<tx:annotation-driven transaction-manager="transactionManager"
 		proxy-target-class="true" />
 

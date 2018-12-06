@@ -46,6 +46,24 @@ implements ElearningExamQuestionDao{
 			return  list;
 		}
 	}
+	
+	@Override
+	public List getQuestionListByConditions(String question,String questionType) {
+		// TODO Auto-generated method stub
+		String hql = "from ElearningExamQuestion a where 1 = 1 ";
+		if(question!=null && !question.equals("")){
+			hql+="and a.question like '%"+question+"%'";
+		}
+		if(questionType!=null && !questionType.equals("")){
+			hql+="and a.questionType='"+questionType+"'";
+		}
+		List list = this.queryForList(hql);
+		if(list == null || list.size()== 0)
+			return null;
+		else{
+			return  list;
+		}
+	}
 
 	
 }

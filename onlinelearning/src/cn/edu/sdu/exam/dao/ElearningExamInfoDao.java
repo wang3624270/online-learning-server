@@ -10,4 +10,5 @@ import cn.edu.sdu.exam.model.ElearningExamInfo;
 public interface ElearningExamInfoDao extends GenericServiceI<ElearningExamInfo>{
 
 	public List getExamListByTaskId(Integer taskId);
+	public List getExamListByConditions(String examTitle,String taskName);
 }
