@@ -29,6 +29,24 @@ implements ElearningPracticeInfoDao{
 			return list;
 		}
 	}
+	
+	@Override
+	public List getPracticeListByConditions(String practiceTitle,String taskName){
+		// TODO Auto-generated method stub
+		String hql = "select distinct a from ElearningPracticeInfo a , ElearningTeachTask t ,ElearningSectionAcc s ,ElearningCourseSection c  where 1 = 1 ";
+		if(practiceTitle!=null && !practiceTitle.equals("")){
+			hql+="and a.practiceTitle like '%"+practiceTitle+"%'";
+		}
+		if(taskName!=null && !taskName.equals("")){
+			hql+=" and a.practiceId=s.accId and c.sectionId=s.sectionId and t.taskId=c.taskId and t.taskName like '%"+taskName+"%'";
+		}
+		List list = this.queryForList(hql);
+		if(list == null || list.size()== 0)
+			return null;
+		else{
+			return list;
+		}
+	}
 
 	
 }

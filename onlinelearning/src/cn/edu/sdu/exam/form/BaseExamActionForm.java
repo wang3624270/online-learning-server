@@ -94,8 +94,22 @@ public class BaseExamActionForm {
 	private String answer;//´ð°¸
 	private String analysis;//½âÎö
 	private List optionList;
+	private String finish;
+	private Integer achieve;
 	
 	
+	public Integer getAchieve() {
+		return achieve;
+	}
+	public void setAchieve(Integer achieve) {
+		this.achieve = achieve;
+	}
+	public String getFinish() {
+		return finish;
+	}
+	public void setFinish(String finish) {
+		this.finish = finish;
+	}
 	public List getOptionList() {
 		return optionList;
 	}

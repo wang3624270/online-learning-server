@@ -24,11 +24,22 @@
 <fullyQualifiedTypeName name="java.io.Serializable"/>
 <fullyQualifiedTypeName name="cn.edu.sdu.lecture.model.ElearningLectureEntry"/>
 <fullyQualifiedTypeName name="cn.edu.sdu.lecture.dao.ElearningLectureEntryDao"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="org.octopus.auth.jpa_model.InfoPersonInfo"/>
 <fullyQualifiedTypeName name="org.octopus.auth.jpa_model.SysUser"/>
 <fullyQualifiedTypeName name="org.octopus.auth.jpa_dao.SysUserDao"/>
 <fullyQualifiedTypeName name="cn.edu.sdu.lecture.model.ElearningLectureAttendance"/>
 <fullyQualifiedTypeName name="cn.edu.sdu.lecture.dao.ElearningLectureAttendanceDao"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RestController"/>
 <fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="cn.edu.sdu.course.model.ElearningTaskNews"/>
+<fullyQualifiedTypeName name="cn.edu.sdu.course.model.ElearningTeachTask"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="cn.edu.sdu.exam.model.ElearningExamStuAnswer"/>
+<fullyQualifiedTypeName name="cn.edu.sdu.exam.dao.ElearningExamStuAnswerDao"/>
+<fullyQualifiedTypeName name="cn.edu.sdu.exam.dao.ElearningExamQuestionDao"/>
+<fullyQualifiedTypeName name="cn.edu.sdu.exam.model.ElearningExamOption"/>
+<fullyQualifiedTypeName name="cn.edu.sdu.exam.model.ElearningExamInfo"/>
+<fullyQualifiedTypeName name="cn.edu.sdu.exam.model.ElearningExamQuestion"/>
+<fullyQualifiedTypeName name="cn.edu.sdu.exam.model.ElearningExamScoreInfo"/>
+<fullyQualifiedTypeName name="cn.edu.sdu.exam.dao.ElearningExamScoreInfoDao"/>
 </qualifiedTypeNameHistroy>

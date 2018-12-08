@@ -1,5 +1,7 @@
 package cn.edu.sdu.exam.dao.impl;
 
+import java.util.List;
+
 import org.octopus.spring_utils.jpa.GenericServiceImpl;
 import org.springframework.stereotype.Repository;
 
@@ -16,6 +18,23 @@ implements ElearningExamScoreInfoDao {
 		super(ElearningExamScoreInfo.class);
 		}
 	
+	@Override
+	public ElearningExamScoreInfo getElearningExamScoreInfoByConditions(Integer stuId,Integer examId) {
+		// TODO Auto-generated method stub
+		String hql = "from ElearningExamScoreInfo a where 1 = 1 ";
+		if(stuId!=null && !stuId.equals("")){
+			hql+="and a.stuId ='"+stuId+"'";
+		}
+		if(examId!=null && !examId.equals("")){
+			hql+="and a.examId ='"+examId+"'";
+		}
+		List list = this.queryForList(hql);
+		if(list == null || list.size()== 0)
+			return null;
+		else{
+			return (ElearningExamScoreInfo) list.get(0);
+		}
+	}
 	
 	
 }

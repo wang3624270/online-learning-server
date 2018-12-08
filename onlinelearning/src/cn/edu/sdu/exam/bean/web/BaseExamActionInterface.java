@@ -6,6 +6,7 @@ import java.io.File;
 import java.io.IOException;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -70,6 +71,8 @@ import cn.edu.sdu.exam.dao.ElearningExamInfoDao;
 import cn.edu.sdu.exam.dao.ElearningExamOptionDao;
 import cn.edu.sdu.exam.dao.ElearningExamQRelationDao;
 import cn.edu.sdu.exam.dao.ElearningExamQuestionDao;
+import cn.edu.sdu.exam.dao.ElearningExamScoreInfoDao;
+import cn.edu.sdu.exam.dao.ElearningExamStuAnswerDao;
 import cn.edu.sdu.exam.dao.ElearningPracticeInfoDao;
 import cn.edu.sdu.exam.dao.ElearningPracticeQRelationDao;
 import cn.edu.sdu.exam.form.BaseExamActionForm;
@@ -77,7 +80,10 @@ import cn.edu.sdu.exam.model.ElearningExamInfo;
 import cn.edu.sdu.exam.model.ElearningExamOption;
 import cn.edu.sdu.exam.model.ElearningExamQRelation;
 import cn.edu.sdu.exam.model.ElearningExamQuestion;
+import cn.edu.sdu.exam.model.ElearningExamScoreInfo;
+import cn.edu.sdu.exam.model.ElearningExamStuAnswer;
 import cn.edu.sdu.exam.model.ElearningPracticeInfo;
+import cn.edu.sdu.exam.model.ElearningPracticeQRelation;
 import cn.edu.sdu.lecture.model.ElearningLectureEntry;
 
 @RestController
@@ -125,6 +131,10 @@ public class BaseExamActionInterface {
 	private ElearningPracticeInfoDao elearningPracticeInfoDao;
 	@Autowired
 	private ElearningPracticeQRelationDao elearningPracticeQRelationDao;
+	@Autowired
+	private ElearningExamStuAnswerDao elearningExamStuAnswerDao;
+	@Autowired
+	private ElearningExamScoreInfoDao elearningExamScoreInfoDao;
 	
 	@RequestMapping(value = "/exam/getQustionList", method = RequestMethod.POST)
 	public Map getQustionList(HttpServletRequest httpRequest,
@@ -170,6 +180,7 @@ public class BaseExamActionInterface {
 		Map data = new HashMap();
 		if (userToken != null) {// 登录信息不为空
 			Integer examId = (Integer) m.get("examId");
+			Integer practiceId = (Integer) m.get("practiceId");
 			Integer score = (Integer) m.get("score");
 			Integer questionId = (Integer) m.get("questionId");
 			String question = (String) m.get("question");
@@ -278,6 +289,20 @@ public class BaseExamActionInterface {
 					relation.setScore(score);
 					relation.setNumber(hasNum+1);
 					elearningExamQRelationDao.save(relation);//与考试关联
+				}	
+				if(practiceId!=null){
+					//获得已有题目个数
+					Integer hasNum=0;
+					List havList=elearningPracticeQRelationDao.getQuestionListByPracticeId(practiceId);
+					if(havList!=null){
+						hasNum=havList.size();
+					}
+					ElearningPracticeQRelation relation=new ElearningPracticeQRelation();
+					relation.setId(relation.getId());
+					relation.setPracticeId(practiceId);
+					relation.setQuestionId(examQuestion.getQuestionId());
+					relation.setNumber(hasNum+1);
+					elearningPracticeQRelationDao.save(relation);//与考试关联
 				}
 			}
 			return CommonTool.getNodeMapOk("恭喜您，添加成功！");
@@ -288,7 +313,7 @@ public class BaseExamActionInterface {
 	
 	@RequestMapping(value = "/exam/getExamList", method = RequestMethod.POST)
 	public Map getExamList(HttpServletRequest httpRequest,
-			@RequestBody Object obj) {
+			@RequestBody Object obj) throws ParseException {
 		Map m = (Map) obj;
 		Map data = new HashMap();
 		UserTokenServerSide userToken = CommonAuthUseInfoTool.checkUser(
@@ -310,7 +335,14 @@ public class BaseExamActionInterface {
 					examForm.setCourseName(task.getElearningCourse().getCourseName());
 					examForm.setStartDate(exam.getStartTime());
 					examForm.setEndDate(exam.getEndTime());
+					Date startTime = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse(exam.getStartTime());
+					Date endTime=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse(exam.getEndTime());
+					Date currentTime=new Date();
+					if(currentTime.getTime()>endTime.getTime()){
+						examForm.setFinish("1");
+					}
 					examForm.setRemark(exam.getRemark());
+					examForm.setState(exam.getState());
 					dataList.add(examForm);
 				}
 			}
@@ -334,21 +366,28 @@ public class BaseExamActionInterface {
 			String startTime = (String) m.get("startTime");
 			String endTime = (String) m.get("endTime");
 			String remark = (String) m.get("remark");
+			String state = (String) m.get("state");
 			if(examId!=null){
 				ElearningExamInfo exam=elearningExamInfoDao.find(examId);
 				exam.setExamTitle(examTitle);
 				exam.setTaskId(taskId);
 				exam.setStartTime(startTime);
+				exam.setPersonId(userToken.getPersonId());
+				exam.setCreateTime(new Date());
 				exam.setEndTime(endTime);
 				exam.setRemark(remark);
+				exam.setState(state);
 				elearningExamInfoDao.update(exam);
 			}else{
 				ElearningExamInfo exam=new ElearningExamInfo();
+				exam.setPersonId(userToken.getPersonId());
+				exam.setCreateTime(new Date());
 				exam.setExamTitle(examTitle);
 				exam.setTaskId(taskId);
 				exam.setStartTime(startTime);
 				exam.setEndTime(endTime);
 				exam.setRemark(remark);
+				exam.setState("0");
 				elearningExamInfoDao.save(exam);
 			}
 			return CommonTool.getNodeMapOk("恭喜您，操作成功！");
@@ -555,5 +594,545 @@ public class BaseExamActionInterface {
 			return CommonTool.getNodeMapError("抱歉，请重新登录！");
 		}
 	}
+	
+	@RequestMapping(value = "/exam/getPracticeList", method = RequestMethod.POST)
+	public Map getPracticeList(HttpServletRequest httpRequest,
+			@RequestBody Object obj) {
+		Map m = (Map) obj;
+		Map data = new HashMap();
+		UserTokenServerSide userToken = CommonAuthUseInfoTool.checkUser(
+				httpRequest, obj);
+		List dataList = new ArrayList();
+		if (userToken != null) {// 登录信息不为空
+			String practiceTitle = (String) m.get("practiceTitle");
+			String taskName = (String) m.get("taskName");
+			List examList=elearningPracticeInfoDao.getPracticeListByConditions(practiceTitle, taskName);
+			if(examList!=null){
+				for(int i=0;i<examList.size();i++){
+					ElearningPracticeInfo exam=(ElearningPracticeInfo) examList.get(i);
+					BaseExamActionForm examForm=new BaseExamActionForm();
+					examForm.setPracticeId(exam.getPracticeId());
+					examForm.setPracticeTitle(exam.getPracticeTitle());
+					String sdate=(new SimpleDateFormat("yyyy-MM-dd HH:mm:ss")).format(exam.getCreateTime());
+					examForm.setCreateTimeStr(sdate);
+					ElearningSectionAcc acc=elearningSectionAccDao.getMapBySectionIdAndAccId(null, examForm.getPracticeId(), "PRACTICE");
+					if(acc!=null){
+						examForm.setState("已绑定");
+					}else{
+						examForm.setState("未绑定");
+					}
+					dataList.add(examForm);
+				}
+			}
+			data.put("practiceList", dataList);
+			return CommonTool.getNodeMap(data, null);
+		} else
+			return CommonTool.getNodeMapError("抱歉，请重新登录！");
+	}
+	
+	@RequestMapping(value = "/exam/addOrEditPracticeInfo", method = RequestMethod.POST)
+	public Map addOrEditPracticeInfo(HttpServletRequest httpRequest,
+			@RequestBody Object obj) {
+		Map request = (Map) obj;
+		UserTokenServerSide userToken = CommonAuthUseInfoTool.checkUser(
+				httpRequest, obj);
+		List dataList = new ArrayList();
+		if (userToken != null) {// 登录信息不为空
+			Integer practiceId = (Integer) request.get("practiceId");
+			String practiceTitle = (String) request.get("practiceTitle");
+			if(practiceId!=null){
+				ElearningPracticeInfo p=elearningPracticeInfoDao.find(practiceId);
+				p.setPracticeTitle(practiceTitle);
+				p.setCreateTime(new Date());
+				p.setPersonId(userToken.getPersonId());
+				elearningPracticeInfoDao.update(p);
+			}else{
+				ElearningPracticeInfo p=new ElearningPracticeInfo();
+				p.setPracticeTitle(practiceTitle);
+				p.setCreateTime(new Date());
+				p.setPersonId(userToken.getPersonId());
+				elearningPracticeInfoDao.save(p);
+			}
+			return CommonTool.getNodeMapOk("恭喜您，操作成功！");
+		} else
+			return CommonTool.getNodeMapError("抱歉，请重新登录！");
+	}
+	
+	@RequestMapping(value = "/exam/getPracticeQustionList", method = RequestMethod.POST)
+	public Map getPracticeQustionList(HttpServletRequest httpRequest,
+			@RequestBody Object obj) {
+		Map m = (Map) obj;
+		Map data = new HashMap();
+		UserTokenServerSide userToken = CommonAuthUseInfoTool.checkUser(
+				httpRequest, obj);
+		Integer practiceId = (Integer) m.get("practiceId");
+		List dataList = new ArrayList();
+		if (userToken != null) {// 登录信息不为空
+			List questionList = elearningPracticeQRelationDao.getQuestionListByPracticeId(practiceId);
+			if (questionList != null) {
+				for (int i = 0; i < questionList.size(); i++) {
+					BaseExamActionForm qForm = new BaseExamActionForm();
+					ElearningPracticeQRelation re = (ElearningPracticeQRelation) questionList.get(i);
+					ElearningExamQuestion question=elearningExamQuestionDao.find(re.getQuestionId());
+					qForm.setNumber(re.getNumber());
+					qForm.setId(re.getId());
+					qForm.setQuestionId(re.getQuestionId());
+					qForm.setQuestion(question.getQuestion());
+					qForm.setQuestionType(question.getQuestionType());
+					qForm.setAnswer(question.getAnswer());
+					qForm.setAnalysis(question.getAnalysis());
+					List optionList=elearningExamOptionDao.getOptionListByQuestionId(question.getQuestionId());
+					if(optionList!=null){
+						qForm.setOptionList(optionList);
+					}
+					dataList.add(qForm);
+				}
+			}
+			data.put("practiceQustionList", dataList);
+			return CommonTool.getNodeMap(data, null);
+		} else {
+			return CommonTool.getNodeMapError("抱歉，请重新登录！");
+		}
+	}
+	
+	@RequestMapping(value = "/exam/deletePracticeQuestionR", method = RequestMethod.POST)
+	public Map deletePracticeQuestionR(HttpServletRequest httpRequest,
+			@RequestBody Object obj) {
+		Map m = (Map) obj;
+		UserTokenServerSide userToken = CommonAuthUseInfoTool.checkUser(
+				httpRequest, obj);
+		Map data = new HashMap();
+		if (userToken != null) {// 登录信息不为空
+			Integer id = (Integer) m.get("id");
+			ElearningPracticeQRelation r= elearningPracticeQRelationDao.find(id);
+			Integer practiceId=r.getPracticeId();
+			Integer number=r.getNumber();
+			List questionList=elearningPracticeQRelationDao.getQuestionListByPracticeId(practiceId);
+			for(int i=0;i<questionList.size();i++){
+				ElearningPracticeQRelation rr=(ElearningPracticeQRelation) questionList.get(i);
+				Integer num=rr.getNumber();
+				if(num>number){
+					num--;
+					rr.setNumber(num);
+				}
+				elearningPracticeQRelationDao.update(rr);
+			}
+			elearningPracticeQRelationDao.delete(r);
+			return CommonTool.getNodeMapOk("恭喜您，删除关联成功！");
+		} else {
+			return CommonTool.getNodeMapError("抱歉，请重新登录！");
+		}
+	}
+	
+	@RequestMapping(value = "/exam/getHouseQustionListOfPractice", method = RequestMethod.POST)
+	public Map getHouseQustionListOfPractice(HttpServletRequest httpRequest,
+			@RequestBody Object obj) {
+		Map m = (Map) obj;
+		Map data = new HashMap();
+		UserTokenServerSide userToken = CommonAuthUseInfoTool.checkUser(
+				httpRequest, obj);
+		List dataList = new ArrayList();
+		if (userToken != null) {// 登录信息不为空
+			Integer practiceId = (Integer) m.get("practiceId");
+			String question0 = (String) m.get("question");
+			String questionType = (String) m.get("questionType");
+			List rList=elearningPracticeQRelationDao.getQuestionListByPracticeId(practiceId);
+			List questionList = elearningExamQuestionDao.getQuestionListByConditions(question0,questionType);;
+			if (questionList != null) {
+				for (int i = 0; i < questionList.size(); i++) {
+					BaseExamActionForm qForm = new BaseExamActionForm();
+					ElearningExamQuestion question = (ElearningExamQuestion) questionList.get(i);
+					boolean flag=false;
+					if(rList!=null){
+						for(int j=0;j<rList.size();j++){
+							ElearningPracticeQRelation r=(ElearningPracticeQRelation) rList.get(j);
+							if(r.getQuestionId().equals(question.getQuestionId())){
+								flag=true;
+								break;
+							}
+						}
+					}
+					if(flag==true){
+						continue;
+					}
+					if(question.getQuestionType().equals("3")){
+						continue;
+					}
+					qForm.setQuestionId(question.getQuestionId());
+					qForm.setQuestion(question.getQuestion());
+					qForm.setQuestionType(question.getQuestionType());
+					dataList.add(qForm);
+				}
+			}
+			data.put("questionList", dataList);
+			return CommonTool.getNodeMap(data, null);
+		} else {
+			return CommonTool.getNodeMapError("抱歉，请重新登录！");
+		}
+	}
+	
+	@RequestMapping(value = "/exam/addQuestionFormHouseOfPractice", method = RequestMethod.POST)
+	public Map addQuestionFormHouseOfPractice(HttpServletRequest httpRequest,
+			@RequestBody Object obj) {
+		Map m = (Map) obj;
+		UserTokenServerSide userToken = CommonAuthUseInfoTool.checkUser(
+				httpRequest, obj);
+		List dataList = new ArrayList();
+		if (userToken != null) {// 登录信息不为空
+			Integer practiceId = (Integer) m.get("practiceId");
+			Integer questionId = (Integer) m.get("questionId");
+			//获得已有题目个数
+			Integer hasNum=0;
+			List havList=elearningPracticeQRelationDao.getQuestionListByPracticeId(practiceId);
+			if(havList!=null){
+				hasNum=havList.size();
+			}
+			ElearningPracticeQRelation relation=new ElearningPracticeQRelation();
+			relation.setPracticeId(Integer.valueOf(practiceId));
+			relation.setQuestionId(questionId);
+			relation.setNumber(hasNum+1);
+			elearningPracticeQRelationDao.save(relation);//与考试关联
+			return CommonTool.getNodeMapOk("恭喜您，添加成功！");
+		} else {
+			return CommonTool.getNodeMapError("抱歉，请重新登录！");
+		}
+	}
+	
+	@RequestMapping(value = "/exam/adjustPracticeQuestion", method = RequestMethod.POST)
+	public Map adjustPracticeQuestion(HttpServletRequest httpRequest,
+			@RequestBody Object obj) {
+		Map m = (Map) obj;
+		UserTokenServerSide userToken = CommonAuthUseInfoTool.checkUser(
+				httpRequest, obj);
+		Map data = new HashMap();
+		if (userToken != null) {// 登录信息不为空
+			Integer id = (Integer) m.get("id");
+			Integer direction = (Integer) m.get("direction");
+			ElearningPracticeQRelation r= elearningPracticeQRelationDao.find(id);
+			Integer practiceId=r.getPracticeId();
+			Integer number=r.getNumber();
+			List questionList=elearningPracticeQRelationDao.getQuestionListByPracticeId(practiceId);
+			if(direction.equals(1)){
+				if(number==1){
+					return CommonTool.getNodeMapError("抱歉，调整失败！");
+				}else{
+					ElearningPracticeQRelation rr=(ElearningPracticeQRelation) questionList.get(number-2);
+					Integer temp=rr.getNumber();
+					rr.setNumber(number);
+					r.setNumber(temp);
+					elearningPracticeQRelationDao.update(r);
+					elearningPracticeQRelationDao.update(rr);
+				}
+			}else{
+				if(number==questionList.size()){
+					return CommonTool.getNodeMapError("抱歉，调整失败！");
+				}else{
+					ElearningPracticeQRelation rr=(ElearningPracticeQRelation) questionList.get(number);
+					Integer temp=rr.getNumber();
+					rr.setNumber(number);
+					r.setNumber(temp);
+					elearningPracticeQRelationDao.update(r);
+					elearningPracticeQRelationDao.update(rr);
+				}
+			}
+			return CommonTool.getNodeMapOk("恭喜您，操作成功！");
+		} else {
+			return CommonTool.getNodeMapError("抱歉，请重新登录！");
+		}
+	}
+	
+	@RequestMapping(value = "/exam/getUnfinishedExamList", method = RequestMethod.GET)
+	public Map getUnfinishedExamList(HttpServletRequest httpRequest) throws ParseException {
+		UserTokenServerSide userToken = (UserTokenServerSide) httpRequest.getSession().getAttribute("userToken");
+		Map data = new HashMap();
+		if (userToken != null) {// 登录信息不为空
+			List planList = elearningPlanCourseDao.getCoursesListByPersonId(userToken.getPersonId());
+			List list=new ArrayList();
+			if(planList!=null){
+				for (int i = 0; i < planList.size(); i++) {
+					ElearningPlanCourse plan = (ElearningPlanCourse) planList.get(i);
+					ElearningTeachTask task=plan.getElearningTeachTask();
+					Integer taskId=task.getTaskId();
+					List examList=elearningExamInfoDao.getExamListByTaskId(taskId);
+					if(examList!=null){
+						for(int j=0;j<examList.size();j++){
+							BaseExamActionForm form = new BaseExamActionForm();
+							ElearningExamInfo exam=(ElearningExamInfo) examList.get(j);
+						    Date startTime = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse(exam.getStartTime());
+							Date endTime=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse(exam.getEndTime());
+							Date currentTime=new Date();
+							if(currentTime.getTime()>endTime.getTime()){
+								continue;
+							}
+							if(startTime.getTime()<currentTime.getTime() && currentTime.getTime()<endTime.getTime()){
+								form.setState("1");
+							}else{
+								form.setState("0");
+							}
+							form.setTaskId(taskId);
+							form.setCourseId(task.getElearningCourse().getCourseId());
+							form.setExamId(exam.getExamId());
+							form.setExamTitle(exam.getExamTitle());
+							form.setTaskName(task.getTaskName());
+							form.setStartDate(exam.getStartTime());
+							form.setEndDate(exam.getEndTime());
+							List questionList = elearningExamQRelationDao.getQuestionListByExamId(exam.getExamId());
+							Integer score=0;
+							if(questionList!=null){
+								for(int k=0;k<questionList.size();k++){
+									ElearningExamQRelation r=(ElearningExamQRelation) questionList.get(k);
+									score+=r.getScore();
+								}
+							}
+							form.setScore(score);
+							list.add(form);
+						}
+					}
+				}
+			}
+			data.put("examList", list);
+			return CommonTool.getNodeMap(data, null);
+		} else
+			return CommonTool.getNodeMapError("抱歉，请重新登录！");
+	}
+	
+	@RequestMapping(value = "/exam/getOnlineExamQustionList", method = RequestMethod.POST)
+	public Map getOnlineExamQustionList(HttpServletRequest httpRequest,
+			@RequestBody Object obj) {
+		Map m = (Map) obj;
+		Map data = new HashMap();
+		UserTokenServerSide userToken = CommonAuthUseInfoTool.checkUser(
+				httpRequest, obj);
+		List dataList = new ArrayList();
+		if (userToken != null) {// 登录信息不为空
+			Integer examId = (Integer) m.get("examId");
+			Integer pageIndex = (Integer) m.get("pageIndex");
+			Integer pageSize = (Integer) m.get("pageSize");
+			List questionList = elearningExamQRelationDao.getQuestionListByExamId(examId);
+			if (questionList != null) {
+				for (int i = (pageIndex-1)*pageSize; i < questionList.size() && i< pageIndex*pageSize; i++) {
+					BaseExamActionForm qForm = new BaseExamActionForm();
+					ElearningExamQRelation re = (ElearningExamQRelation) questionList.get(i);
+					ElearningExamQuestion question=elearningExamQuestionDao.find(re.getQuestionId());
+					qForm.setExamId(examId);
+					qForm.setNumber(re.getNumber());
+					qForm.setScore(re.getScore());
+					//qForm.setId(re.getId());
+					qForm.setQuestionId(re.getQuestionId());
+					qForm.setQuestion(question.getQuestion());
+					qForm.setQuestionType(question.getQuestionType());
+					ElearningExamStuAnswer examAnswer=elearningExamStuAnswerDao.getElearningExamStuAnswerByQuestionId(examId, re.getQuestionId(), userToken.getPersonId());
+					String answer="";
+					if(examAnswer!=null){
+						answer=examAnswer.getAnswer();
+					}
+					qForm.setAnswer(answer);
+					//qForm.setAnswer(question.getAnswer());
+					//qForm.setAnalysis(question.getAnalysis());
+					List optionList=elearningExamOptionDao.getOptionListByQuestionId(question.getQuestionId());
+					if(optionList!=null){
+						qForm.setOptionList(optionList);
+					}
+					dataList.add(qForm);
+				}
+				data.put("resultSize", questionList.size());
+			}
+			data.put("examQustionList", dataList);
+			return CommonTool.getNodeMap(data, null);
+		} else {
+			return CommonTool.getNodeMapError("抱歉，请重新登录！");
+		}
+	}
+	
+	@RequestMapping(value = "/exam/submitExamAnswers", method = RequestMethod.POST)
+	public Map submitExamAnswers(HttpServletRequest httpRequest,
+			@RequestBody Object obj) {
+		Map m = (Map) obj;
+		UserTokenServerSide userToken = CommonAuthUseInfoTool.checkUser(
+				httpRequest, obj);
+		Map data = new HashMap();
+		if (userToken != null) {// 登录信息不为空
+			List list = (List) m.get("list");
+			for(int i=0;i<list.size();i++){
+				Map q=(Map) list.get(i);
+				Integer examId=(Integer) q.get("examId");
+				Integer questionId=(Integer) q.get("questionId");
+				Integer stuId=userToken.getPersonId();
+				Integer score=(Integer) q.get("score");
+				String questionType=(String) q.get("questionType");
+				ElearningExamStuAnswer examAnswer=elearningExamStuAnswerDao.getElearningExamStuAnswerByQuestionId(examId, questionId, stuId);
+				String answer="";
+				if(questionType.equals("1") || questionType.equals("3")){
+					answer=(String) q.get("answer");
+				}
+				if(questionType.equals("2")){
+					List aList=(List) q.get("answer");
+					for(int j=0;j<aList.size();j++){
+						String num=(String) aList.get(j);
+						if(j!=0){
+							answer+=",";
+						}
+						answer+=num;
+					}
+				}
+				if(examAnswer!=null){
+					examAnswer.setAnswer(answer);
+					examAnswer.setExamId(examId);
+					examAnswer.setQuestionId(questionId);
+					examAnswer.setStuId(stuId);
+					examAnswer.setAnswerTime(new Date());
+					examAnswer.setScore(score);
+					elearningExamStuAnswerDao.update(examAnswer);
+				}else{
+					ElearningExamStuAnswer po=new ElearningExamStuAnswer();
+					po.setAnswer(answer);
+					po.setExamId(examId);
+					po.setQuestionId(questionId);
+					po.setStuId(stuId);
+					po.setAnswerTime(new Date());
+					po.setScore(score);
+					elearningExamStuAnswerDao.save(po);
+				}
+			}
+			return CommonTool.getNodeMapOk("恭喜您，操作成功！");
+		} else {
+			return CommonTool.getNodeMapError("抱歉，请重新登录！");
+		}
+	}
+	
+	@RequestMapping(value = "/exam/getFinishNumber", method = RequestMethod.POST)
+	public Map submitExam(HttpServletRequest httpRequest,
+			@RequestBody Object obj) {
+		Map m = (Map) obj;
+		Map data = new HashMap();
+		UserTokenServerSide userToken = CommonAuthUseInfoTool.checkUser(
+				httpRequest, obj);
+		List dataList = new ArrayList();
+		if (userToken != null) {// 登录信息不为空
+			Integer examId = (Integer) m.get("examId");
+			List questionList = elearningExamQRelationDao.getQuestionListByExamId(examId);
+			Integer total=0;
+			Integer finish=0;
+			if (questionList != null) {
+				total=questionList.size();
+			}
+			List list=elearningExamStuAnswerDao.getListByConditions(examId, null, userToken.getPersonId());
+			if(list!=null){
+				finish=list.size();
+			}
+			data.put("total",total);
+			data.put("finish", finish);
+			return CommonTool.getNodeMap(data, null);
+		} else {
+			return CommonTool.getNodeMapError("抱歉，请重新登录！");
+		}
+	}
+	
+	@RequestMapping(value = "/exam/getFinishedExamList", method = RequestMethod.GET)
+	public Map getFinishedExamList(HttpServletRequest httpRequest) throws ParseException {
+		UserTokenServerSide userToken = (UserTokenServerSide) httpRequest.getSession().getAttribute("userToken");
+		Map data = new HashMap();
+		if (userToken != null) {// 登录信息不为空
+			List planList = elearningPlanCourseDao.getCoursesListByPersonId(userToken.getPersonId());
+			List list=new ArrayList();
+			if(planList!=null){
+				for (int i = 0; i < planList.size(); i++) {
+					ElearningPlanCourse plan = (ElearningPlanCourse) planList.get(i);
+					ElearningTeachTask task=plan.getElearningTeachTask();
+					Integer taskId=task.getTaskId();
+					List examList=elearningExamInfoDao.getExamListByTaskId(taskId);
+					if(examList!=null){
+						for(int j=0;j<examList.size();j++){
+							BaseExamActionForm form = new BaseExamActionForm();
+							ElearningExamInfo exam=(ElearningExamInfo) examList.get(j);
+							Date startTime = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse(exam.getStartTime());
+							Date endTime=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse(exam.getEndTime());
+							Date currentTime=new Date();
+							if(currentTime.getTime()<endTime.getTime()){
+								continue;
+							}
+							form.setTaskId(taskId);
+							form.setCourseId(task.getElearningCourse().getCourseId());
+							form.setExamId(exam.getExamId());
+							form.setExamTitle(exam.getExamTitle());
+							form.setTaskName(task.getTaskName());
+							form.setStartDate(exam.getStartTime());
+							form.setEndDate(exam.getEndTime());
+							List questionList = elearningExamQRelationDao.getQuestionListByExamId(exam.getExamId());
+							Integer score=0;
+							if(questionList!=null){
+								for(int k=0;k<questionList.size();k++){
+									ElearningExamQRelation r=(ElearningExamQRelation) questionList.get(k);
+									score+=r.getScore();
+								}
+							}
+							form.setScore(score);
+							ElearningExamScoreInfo scoreInfo=elearningExamScoreInfoDao.getElearningExamScoreInfoByConditions(userToken.getPersonId(), exam.getExamId());
+							form.setAchieve(scoreInfo.getScore());
+							form.setState(exam.getState());
+							list.add(form);
+						}
+					}
+				}
+			}
+			data.put("examList", list);
+			return CommonTool.getNodeMap(data, null);
+		} else
+			return CommonTool.getNodeMapError("抱歉，请重新登录！");
+	}
+	
+	@RequestMapping(value = "/exam/calculateScore", method = RequestMethod.POST)
+	public Map calculateScore(HttpServletRequest httpRequest,
+			@RequestBody Object obj) {
+		Map m = (Map) obj;
+		UserTokenServerSide userToken = CommonAuthUseInfoTool.checkUser(
+				httpRequest, obj);
+		Map data = new HashMap();
+		if (userToken != null) {// 登录信息不为空
+			Integer examId = (Integer) m.get("examId");
+			ElearningExamInfo exam=elearningExamInfoDao.find(examId);
+			List planList=elearningPlanCourseDao.getTaskListByConditions(null, null, null, exam.getTaskId());
+			if(planList!=null){
+				for(int i=0;i<planList.size();i++){
+					ElearningPlanCourse plan=(ElearningPlanCourse) planList.get(i);
+					Integer personId=plan.getStuId();
+					List answerList=elearningExamStuAnswerDao.getListByConditions(examId, null, personId);
+					Integer score=0;
+					if(answerList!=null){
+						for(int j=0;j<answerList.size();j++){
+							ElearningExamStuAnswer answer=(ElearningExamStuAnswer) answerList.get(j);
+							Integer questionId=answer.getQuestionId();
+							ElearningExamQuestion question=elearningExamQuestionDao.find(questionId);
+							if(question.getAnswer().equals(answer.getAnswer())){
+								score+=answer.getScore();
+							}
+						}
+					}
+					ElearningExamScoreInfo scoreInfo=elearningExamScoreInfoDao.getElearningExamScoreInfoByConditions(personId, examId);
+					if(scoreInfo!=null){
+						scoreInfo.setScore(score);
+						scoreInfo.setCreateTime(new Date());
+						elearningExamScoreInfoDao.update(scoreInfo);
+					}else{
+						ElearningExamScoreInfo sI=new ElearningExamScoreInfo();
+						sI.setScore(score);
+						sI.setExamId(examId);
+						sI.setStuId(personId);
+						sI.setCreateTime(new Date());
+						elearningExamScoreInfoDao.save(sI);
+					}
+					
+				}
+			}
+			exam.setState("1");
+			elearningExamInfoDao.update(exam);
+			return CommonTool.getNodeMapOk("恭喜您，操作成功！");
+		} else {
+			return CommonTool.getNodeMapError("抱歉，请重新登录！");
+		}
+	}
+	
+	
+	
 
 }

@@ -1,7 +1,0 @@
-package cn.edu.sdu.lecture.form;
-
-import cn.edu.sdu.common.form.UForm;
-
-public class BaseLectureActionForm extends UForm{
-
-}

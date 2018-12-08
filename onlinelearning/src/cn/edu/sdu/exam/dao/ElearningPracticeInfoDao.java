@@ -10,4 +10,5 @@ import cn.edu.sdu.exam.model.ElearningPracticeInfo;
 public interface ElearningPracticeInfoDao extends GenericServiceI<ElearningPracticeInfo>{
 
 	public List getPracticeList();
+	public List getPracticeListByConditions(String practiceTitle,String taskName);
 }

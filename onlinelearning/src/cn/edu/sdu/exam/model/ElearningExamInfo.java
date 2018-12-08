@@ -21,7 +21,14 @@ public class ElearningExamInfo {
 	private String endTime;
 	private Date createTime;
 	private String remark;
+	private String state;
 	
+	public String getState() {
+		return state;
+	}
+	public void setState(String state) {
+		this.state = state;
+	}
 	public String getRemark() {
 		return remark;
 	}
