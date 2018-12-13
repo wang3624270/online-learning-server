@@ -100,8 +100,29 @@ public class BaseManageActionForm extends UForm{
 	private String mobilePhone;
 	private Integer sysusrid;
 	private Integer groupid;
+	private String genderCode;
+	private String pwd;
+	private String perIdCard;
 	
 	
+	public String getPerIdCard() {
+		return perIdCard;
+	}
+	public void setPerIdCard(String perIdCard) {
+		this.perIdCard = perIdCard;
+	}
+	public String getPwd() {
+		return pwd;
+	}
+	public void setPwd(String pwd) {
+		this.pwd = pwd;
+	}
+	public String getGenderCode() {
+		return genderCode;
+	}
+	public void setGenderCode(String genderCode) {
+		this.genderCode = genderCode;
+	}
 	public Integer getGroupid() {
 		return groupid;
 	}

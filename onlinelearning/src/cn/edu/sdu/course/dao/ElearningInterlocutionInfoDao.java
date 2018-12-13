@@ -9,5 +9,7 @@ import cn.edu.sdu.course.model.AccessoriesCourseFolder;
 import cn.edu.sdu.course.model.ElearningInterlocutionInfo;
 
 public interface ElearningInterlocutionInfoDao extends GenericServiceI<ElearningInterlocutionInfo>{
+	
 	public List getInterlocutionListByCourseIdAndSectionId(Integer taskId, Integer sectionId);
+	public List getInterlocutionListByConditions(Integer taskId, String state);
 }

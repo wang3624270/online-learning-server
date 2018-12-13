@@ -13,5 +13,6 @@ public interface AccessoriesCourseFolderDao extends GenericServiceI<AccessoriesC
 	public List getFolferTreeById(Integer id);
 	public AccessoriesCourseFolder getFolderById(Integer id);
 	public List getFolferListByCourseId(Integer courseId);
+	public List getFolferListByTaskId(Integer taskId);
 	public List getAllListByCourseId(Integer courseId);
 }

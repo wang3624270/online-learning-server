@@ -23,7 +23,15 @@ public class ElearningInterlocutionInfo {
 	private Date answerTime;
 	private Integer teacherId;
 	private Integer taskId;
+	private String state;
 	
+	
+	public String getState() {
+		return state;
+	}
+	public void setState(String state) {
+		this.state = state;
+	}
 	public Integer getTaskId() {
 		return taskId;
 	}

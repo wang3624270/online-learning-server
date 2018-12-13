@@ -102,6 +102,21 @@ public class AccessoriesCourseFolderDaoImpl extends GenericServiceImpl<Accessori
 			return list;
 		}
 	}
+	
+	@Override
+	public List getFolferListByTaskId(Integer taskId) {
+		// TODO Auto-generated method stub
+		String hql = "from AccessoriesCourseFolder a where 1=1";
+		if(taskId!=null && !taskId.equals("")){
+			hql+="and a.taskId='"+taskId+"'";
+		}
+		List list = this.queryForList(hql);
+		if(list == null || list.size()== 0)
+			return null;
+		else{
+			return list;
+		}
+	}
 
 
 

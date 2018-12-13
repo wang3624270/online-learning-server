@@ -1,5 +1,7 @@
 package cn.edu.sdu.course.model;
 
+import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -17,7 +19,29 @@ public class AccessoriesCourseFolder{
 	private Integer fatherId;
 	private Integer orderNum;
 	private Integer isLeaf;
+	private Integer taskId;
+	private Integer personId;
+	private Date createTime;
 	
+	
+	public Integer getTaskId() {
+		return taskId;
+	}
+	public void setTaskId(Integer taskId) {
+		this.taskId = taskId;
+	}
+	public Integer getPersonId() {
+		return personId;
+	}
+	public void setPersonId(Integer personId) {
+		this.personId = personId;
+	}
+	public Date getCreateTime() {
+		return createTime;
+	}
+	public void setCreateTime(Date createTime) {
+		this.createTime = createTime;
+	}
 	public Integer getId() {
 		return id;
 	}

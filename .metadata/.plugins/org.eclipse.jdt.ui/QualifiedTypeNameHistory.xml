@@ -15,7 +15,6 @@
 <fullyQualifiedTypeName name="cn.edu.sdu.common.util.Base64"/>
 <fullyQualifiedTypeName name="org.octopus.auth.jpa_model.UserGroup"/>
 <fullyQualifiedTypeName name="org.octopus.auth.jpa_model.SysUserGroup"/>
-<fullyQualifiedTypeName name="java.util.Date"/>
 <fullyQualifiedTypeName name="cn.edu.sdu.lecture.dao.ElearningLectureLiveDao"/>
 <fullyQualifiedTypeName name="cn.edu.sdu.lecture.model.ElearningLectureLive"/>
 <fullyQualifiedTypeName name="cn.edu.sdu.lecture.dao.ElearningLectureDao"/>
@@ -24,16 +23,12 @@
 <fullyQualifiedTypeName name="java.io.Serializable"/>
 <fullyQualifiedTypeName name="cn.edu.sdu.lecture.model.ElearningLectureEntry"/>
 <fullyQualifiedTypeName name="cn.edu.sdu.lecture.dao.ElearningLectureEntryDao"/>
-<fullyQualifiedTypeName name="org.octopus.auth.jpa_model.InfoPersonInfo"/>
-<fullyQualifiedTypeName name="org.octopus.auth.jpa_model.SysUser"/>
-<fullyQualifiedTypeName name="org.octopus.auth.jpa_dao.SysUserDao"/>
 <fullyQualifiedTypeName name="cn.edu.sdu.lecture.model.ElearningLectureAttendance"/>
 <fullyQualifiedTypeName name="cn.edu.sdu.lecture.dao.ElearningLectureAttendanceDao"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RestController"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="cn.edu.sdu.course.model.ElearningTaskNews"/>
 <fullyQualifiedTypeName name="cn.edu.sdu.course.model.ElearningTeachTask"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="cn.edu.sdu.exam.model.ElearningExamStuAnswer"/>
 <fullyQualifiedTypeName name="cn.edu.sdu.exam.dao.ElearningExamStuAnswerDao"/>
 <fullyQualifiedTypeName name="cn.edu.sdu.exam.dao.ElearningExamQuestionDao"/>
@@ -42,4 +37,13 @@
 <fullyQualifiedTypeName name="cn.edu.sdu.exam.model.ElearningExamQuestion"/>
 <fullyQualifiedTypeName name="cn.edu.sdu.exam.model.ElearningExamScoreInfo"/>
 <fullyQualifiedTypeName name="cn.edu.sdu.exam.dao.ElearningExamScoreInfoDao"/>
+<fullyQualifiedTypeName name="java.util.Date"/>
+<fullyQualifiedTypeName name="cn.edu.sdu.course.model.AccessoriesFolderAcc"/>
+<fullyQualifiedTypeName name="java.util.Arrays"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="org.octopus.auth.jpa_dao.SysUserDao"/>
+<fullyQualifiedTypeName name="org.octopus.auth.jpa_model.SysUser"/>
+<fullyQualifiedTypeName name="org.octopus.auth.jpa_dao.InfoPersonInfoDao"/>
+<fullyQualifiedTypeName name="org.octopus.auth.jpa_model.InfoPersonInfo"/>
+<fullyQualifiedTypeName name="cn.edu.sdu.common.util.Md5Util"/>
 </qualifiedTypeNameHistroy>

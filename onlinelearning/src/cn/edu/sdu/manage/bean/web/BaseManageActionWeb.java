@@ -55,6 +55,7 @@ import org.starfish.login_users.UserTokenServerSide;
 import cn.edu.sdu.common.form.ListOptionInfo;
 import cn.edu.sdu.common.util.Base64;
 import cn.edu.sdu.common.util.CommonTool;
+import cn.edu.sdu.common.util.Md5Util;
 import cn.edu.sdu.course.dao.AccessoriesCourseFolderDao;
 import cn.edu.sdu.course.dao.AccessoriesFolderAccDao;
 import cn.edu.sdu.course.dao.AccessoriesInfoDao;
@@ -388,10 +389,14 @@ public class BaseManageActionWeb {
 					personForm.setPersonId(person.getPersonId());
 					personForm.setPerName(person.getPerName());
 					personForm.setLoginName(user.getLoginName());
+					personForm.setPerNum(user.getLoginName());
 					personForm.setPassword(new String(Base64.decode(user.getPwd().getBytes())));
+					personForm.setPwd(new String(Base64.decode(user.getPwd().getBytes())));
 					personForm.setGroupName(groupName);
 					personForm.setMobilePhone(person.getMobilePhone());
+					personForm.setGenderCode(person.getGenderCode());
 					personForm.setSysusrid(user.getSysusrid());
+					personForm.setPerIdCard(person.getPerIdCard());
 					personList.add(personForm);
 				}
 			}
@@ -418,6 +423,83 @@ public class BaseManageActionWeb {
 				userGroupDao.save(ug);
 			}
 			return CommonTool.getNodeMap(data, null);
+		} else
+			return CommonTool.getNodeMapError("抱歉，请重新登录！");
+	}
+	
+	@RequestMapping(value = "/manage/addOrEditUser", method = RequestMethod.POST)
+	public Map addOrEditUser(HttpServletRequest httpRequest, @RequestBody Object obj) {
+		Map m = (Map) obj;
+		UserTokenServerSide userToken = CommonAuthUseInfoTool.checkUser(
+				httpRequest, obj);
+		Map data = new HashMap();
+		Integer personId = (Integer) m.get("personId");
+		String perNum = (String) m.get("perNum");
+		String pwd = (String) m.get("pwd");
+		Integer groupid = (Integer) m.get("groupid");
+		String perName = (String) m.get("perName");
+		String perIdCard = (String) m.get("perIdCard");
+		String genderCode = (String) m.get("genderCode");
+		String mobilePhone = (String) m.get("mobilePhone");
+		String perTypeCode = (String) m.get("perTypeCode");
+		if (userToken != null) {// 登录信息不为空
+			if(personId!=null){
+				InfoPersonInfo po=infoPersonInfoDao.getInfoPersonInfoByPerNum(perNum);
+				if(po!=null && !po.getPersonId().equals(personId)){
+					return CommonTool.getNodeMapError("抱歉，该登录名已存在，请重新输入！");
+				}
+				InfoPersonInfo info=infoPersonInfoDao.find(personId);
+				SysUser user=sysUserDao.getSysUsersByUserid(personId);
+				info.setPerNum(perNum);
+				info.setPerName(perName);
+				info.setPerIdCard(perIdCard);
+				info.setGenderCode(genderCode);
+				info.setMobilePhone(mobilePhone);
+				info.setPerTypeCode(perTypeCode);
+				info.setModifyTime(new Date());
+				info.setModifyerId(userToken.getPersonId());
+				infoPersonInfoDao.update(info);
+				user.setLoginName(perNum);
+				user.setPassword(Md5Util.GetMD5Code(pwd));
+				user.setPwd(Base64.getBase64Code(pwd));
+				sysUserDao.update(user);
+				UserGroup ug= userGroupDao.getUserGroup(user.getSysusrid(), groupid);
+				if(ug==null){
+					ug= new UserGroup();
+					ug.setGroupid(groupid);
+					ug.setSysusrid(user.getSysusrid());
+					userGroupDao.save(ug);
+				}else{
+					ug.setGroupid(groupid);
+					userGroupDao.update(ug);
+				}
+			}else{
+				InfoPersonInfo po=infoPersonInfoDao.getInfoPersonInfoByPerNum(perNum);
+				if(po!=null){
+					return CommonTool.getNodeMapError("抱歉，该登录名已存在，请重新输入！");
+				}
+				InfoPersonInfo info=new InfoPersonInfo();
+				SysUser user=new SysUser();
+				info.setPerNum(perNum);
+				info.setPerName(perName);
+				info.setPerIdCard(perIdCard);
+				info.setGenderCode(genderCode);
+				info.setPerTypeCode(perTypeCode);
+				info.setMobilePhone(mobilePhone);
+				info.setCreateTime(new Date());
+				infoPersonInfoDao.save(info);
+				user.setUserid(info.getPersonId());
+				user.setLoginName(perNum);
+				user.setPassword(Md5Util.GetMD5Code(pwd));
+				user.setPwd(Base64.getBase64Code(pwd));
+				user.setEnabled(1);
+				sysUserDao.save(user);
+				UserGroup ug= new UserGroup();
+				ug.setGroupid(groupid);
+				ug.setSysusrid(user.getSysusrid());
+				userGroupDao.save(ug);
+			}
+			return CommonTool.getNodeMapOk("恭喜您，操作成功！");
 		} else
 			return CommonTool.getNodeMapError("抱歉，请重新登录！");
 	}

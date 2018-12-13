@@ -36,4 +36,23 @@ public class ElearningInterlocutionInfoDaoImpl extends GenericServiceImpl<Elearn
 			return  list;
 		}
 	}
+	
+	@Override
+	public List getInterlocutionListByConditions(Integer taskId, String state) {
+		// TODO Auto-generated method stub
+		String hql = "from ElearningInterlocutionInfo a where 1 = 1 ";
+		if(taskId!=null && !taskId.equals("")){
+			hql+="and a.taskId='"+taskId+"'";
+		}
+		if(state!=null && !state.equals("")){
+			hql+="and a.state='"+state+"'";
+		}
+		hql+="order by a.createTime desc";
+		List list = this.queryForList(hql);
+		if(list == null || list.size()== 0)
+			return null;
+		else{
+			return  list;
+		}
+	}
 }

@@ -102,7 +102,64 @@ public class BaseCourseActionForm extends UForm{
 	private Integer videoId;
 	private Integer audioId;
 	private Integer pptId;
+	private String folderName;
+	private Integer folderId;
+	private String loginName;
+	private String mobilePhone;
+	private String perTypeCode;
+	private String title;
+	private String answer;
+	private String question;
 	
+	
+	public String getQuestion() {
+		return question;
+	}
+	public void setQuestion(String question) {
+		this.question = question;
+	}
+	public String getAnswer() {
+		return answer;
+	}
+	public void setAnswer(String answer) {
+		this.answer = answer;
+	}
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	public String getPerTypeCode() {
+		return perTypeCode;
+	}
+	public void setPerTypeCode(String perTypeCode) {
+		this.perTypeCode = perTypeCode;
+	}
+	public String getMobilePhone() {
+		return mobilePhone;
+	}
+	public void setMobilePhone(String mobilePhone) {
+		this.mobilePhone = mobilePhone;
+	}
+	public String getLoginName() {
+		return loginName;
+	}
+	public void setLoginName(String loginName) {
+		this.loginName = loginName;
+	}
+	public Integer getFolderId() {
+		return folderId;
+	}
+	public void setFolderId(Integer folderId) {
+		this.folderId = folderId;
+	}
+	public String getFolderName() {
+		return folderName;
+	}
+	public void setFolderName(String folderName) {
+		this.folderName = folderName;
+	}
 	public Integer getVideoId() {
 		return videoId;
 	}

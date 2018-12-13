@@ -34,7 +34,7 @@ implements UserGroupDao {
 	@Override
 	public UserGroup getUserGroup(Integer sysusrid, Integer groupid) {
 		// TODO Auto-generated method stub
-		String hql = "from UserGroup where 1=1";
+		String hql = "from UserGroup a where 1=1";
 		if(sysusrid!=null && !sysusrid.equals("")){
 			hql+="and a.sysusrid='"+sysusrid+"'";
 		}

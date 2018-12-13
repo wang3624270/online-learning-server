@@ -37,7 +37,7 @@ public class ElearningPlanCourse {
      private Integer modifyerId;
      private Date createTime;
      private Integer creator;
-     private String state;
+     private String state;//1 自主选择  0 教师导入
      
 
      @OneToMany(targetEntity=ElearningTeachTask.class,cascade=CascadeType.ALL)
