@@ -47,4 +47,22 @@ public class ElearningHomeworkInfoDaoImpl extends GenericServiceImpl<ElearningHo
 			return homework;
 		}
 	}
+	
+	@Override
+	public List getHomelistByConditions(String name,String taskName) {
+		// TODO Auto-generated method stub
+		String hql = "select distinct a from ElearningHomeworkInfo a , ElearningTeachTask t  where 1 = 1 ";
+		if(name!=null && !name.equals("")){
+			hql+="and a.name like '%"+name+"%'";
+		}
+		if(taskName!=null && !taskName.equals("")){
+			hql+=" and a.taskId=t.taskId and t.taskName like '%"+taskName+"%'";
+		}
+		List list = this.queryForList(hql);
+		if(list == null || list.size()== 0)
+			return null;
+		else{
+			return list;
+		}
+	}
 }

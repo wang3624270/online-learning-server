@@ -37,7 +37,11 @@ public class ElearningPlanCourse {
      private Integer modifyerId;
      private Date createTime;
      private Integer creator;
-     private String state;//1 自主选择  0 教师导入
+     private String state;//1 自主选择  2教师导入
+     private Integer time;//分钟
+     private Double completeDegree;
+     private Integer sectionIdNode;
+     private String isFinish;
      
 
      @OneToMany(targetEntity=ElearningTeachTask.class,cascade=CascadeType.ALL)
@@ -46,6 +50,31 @@ public class ElearningPlanCourse {
      private Set elearningTeachTasks = new LinkedHashSet();
      
      
+     
+	public Integer getTime() {
+		return time;
+	}
+	public void setTime(Integer time) {
+		this.time = time;
+	}
+	public Double getCompleteDegree() {
+		return completeDegree;
+	}
+	public void setCompleteDegree(Double completeDegree) {
+		this.completeDegree = completeDegree;
+	}
+	public Integer getSectionIdNode() {
+		return sectionIdNode;
+	}
+	public void setSectionIdNode(Integer sectionIdNode) {
+		this.sectionIdNode = sectionIdNode;
+	}
+	public String getIsFinish() {
+		return isFinish;
+	}
+	public void setIsFinish(String isFinish) {
+		this.isFinish = isFinish;
+	}
 	public Date getCreateTime() {
 		return createTime;
 	}

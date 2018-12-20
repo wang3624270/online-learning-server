@@ -153,6 +153,10 @@ public class BaseManageActionWeb {
 			data.put("personId", personId);
 			data.put("perName", info.getPerName());
 			data.put("mobilePhone", info.getMobilePhone());
+			data.put("loginName", user.getLoginName());
+			data.put("password", new String(Base64.decode(user.getPwd().getBytes())));
+			data.put("genderCode", info.getGenderCode());
+			data.put("perIdCard", info.getPerIdCard());
 			return CommonTool.getNodeMap(data, null);
 		} else
 			return CommonTool.getNodeMapError("抱歉，请重新登录！");
@@ -499,6 +503,35 @@ public class BaseManageActionWeb {
 				ug.setSysusrid(user.getSysusrid());
 				userGroupDao.save(ug);
 			}
+			return CommonTool.getNodeMapOk("恭喜您，操作成功！");
+		} else
+			return CommonTool.getNodeMapError("抱歉，请重新登录！");
+	}
+	
+	@RequestMapping(value = "/manage/editPersonInfo", method = RequestMethod.POST)
+	public Map editPersonInfo(HttpServletRequest httpRequest, @RequestBody Object obj) {
+		Map m = (Map) obj;
+		UserTokenServerSide userToken = CommonAuthUseInfoTool.checkUser(
+				httpRequest, obj);
+		Map data = new HashMap();
+		String loginName = (String) m.get("loginName");
+		String password = (String) m.get("password");
+		String perName = (String) m.get("perName");
+		String perIdCard = (String) m.get("perIdCard");
+		String genderCode = (String) m.get("genderCode");
+		String mobilePhone = (String) m.get("mobilePhone");
+		if (userToken != null) {// 登录信息不为空
+			InfoPersonInfo info=infoPersonInfoDao.find(userToken.getPersonId());
+			SysUser user=sysUserDao.getSysUsersByUserid(userToken.getPersonId());
+			info.setPerIdCard(perIdCard);
+			info.setGenderCode(genderCode);
+			info.setMobilePhone(mobilePhone);
+			info.setModifyTime(new Date());
+			info.setModifyerId(userToken.getPersonId());
+			infoPersonInfoDao.update(info);
+			user.setPassword(Md5Util.GetMD5Code(password));
+			user.setPwd(Base64.getBase64Code(password));
+			sysUserDao.update(user);
 			return CommonTool.getNodeMapOk("恭喜您，操作成功！");
 		} else
 			return CommonTool.getNodeMapError("抱歉，请重新登录！");

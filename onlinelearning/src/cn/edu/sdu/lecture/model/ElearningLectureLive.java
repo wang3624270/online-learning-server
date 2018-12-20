@@ -1,5 +1,7 @@
 package cn.edu.sdu.lecture.model;
 
+import java.util.Date;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -14,7 +16,43 @@ public class ElearningLectureLive {
 	private Integer liveId;
 	private Integer lectureId;
 	private String startTime;
+	private String endTime;
+	private String pushUrl;
+	private String outputUrl;
+	private Date createTime;
+	private Integer personId;
 	
+	
+	public String getEndTime() {
+		return endTime;
+	}
+	public void setEndTime(String endTime) {
+		this.endTime = endTime;
+	}
+	public String getPushUrl() {
+		return pushUrl;
+	}
+	public void setPushUrl(String pushUrl) {
+		this.pushUrl = pushUrl;
+	}
+	public String getOutputUrl() {
+		return outputUrl;
+	}
+	public void setOutputUrl(String outputUrl) {
+		this.outputUrl = outputUrl;
+	}
+	public Date getCreateTime() {
+		return createTime;
+	}
+	public void setCreateTime(Date createTime) {
+		this.createTime = createTime;
+	}
+	public Integer getPersonId() {
+		return personId;
+	}
+	public void setPersonId(Integer personId) {
+		this.personId = personId;
+	}
 	public Integer getLiveId() {
 		return liveId;
 	}

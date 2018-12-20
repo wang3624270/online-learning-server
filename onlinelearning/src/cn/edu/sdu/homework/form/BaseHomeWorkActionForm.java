@@ -63,8 +63,113 @@ public class BaseHomeWorkActionForm {
     private Double score;
     private String checkState;
     private String state;
+    private Integer total;
+    private Integer submit;
+    private String loginName;
+    private String createTimeStr;
+    private String checkTimeStr;
+    private String answerContent;
+    private Integer answerId;
+	private Integer activityId;
+	private String goal;
+	private String activityName;
+	private Integer scoreId;
+	private Integer stuId;
+	private Integer checkerId;
+	private Integer grade;
+	private String place;
     
     
+	public String getPlace() {
+		return place;
+	}
+	public void setPlace(String place) {
+		this.place = place;
+	}
+	public Integer getScoreId() {
+		return scoreId;
+	}
+	public void setScoreId(Integer scoreId) {
+		this.scoreId = scoreId;
+	}
+	public Integer getStuId() {
+		return stuId;
+	}
+	public void setStuId(Integer stuId) {
+		this.stuId = stuId;
+	}
+	public Integer getCheckerId() {
+		return checkerId;
+	}
+	public void setCheckerId(Integer checkerId) {
+		this.checkerId = checkerId;
+	}
+	public Integer getGrade() {
+		return grade;
+	}
+	public void setGrade(Integer grade) {
+		this.grade = grade;
+	}
+	public Integer getActivityId() {
+		return activityId;
+	}
+	public void setActivityId(Integer activityId) {
+		this.activityId = activityId;
+	}
+	public String getGoal() {
+		return goal;
+	}
+	public void setGoal(String goal) {
+		this.goal = goal;
+	}
+	public String getActivityName() {
+		return activityName;
+	}
+	public void setActivityName(String activityName) {
+		this.activityName = activityName;
+	}
+	public Integer getAnswerId() {
+		return answerId;
+	}
+	public void setAnswerId(Integer answerId) {
+		this.answerId = answerId;
+	}
+	public String getAnswerContent() {
+		return answerContent;
+	}
+	public void setAnswerContent(String answerContent) {
+		this.answerContent = answerContent;
+	}
+	public String getCreateTimeStr() {
+		return createTimeStr;
+	}
+	public void setCreateTimeStr(String createTimeStr) {
+		this.createTimeStr = createTimeStr;
+	}
+	public String getCheckTimeStr() {
+		return checkTimeStr;
+	}
+	public void setCheckTimeStr(String checkTimeStr) {
+		this.checkTimeStr = checkTimeStr;
+	}
+	public String getLoginName() {
+		return loginName;
+	}
+	public void setLoginName(String loginName) {
+		this.loginName = loginName;
+	}
+	public Integer getTotal() {
+		return total;
+	}
+	public void setTotal(Integer total) {
+		this.total = total;
+	}
+	public Integer getSubmit() {
+		return submit;
+	}
+	public void setSubmit(Integer submit) {
+		this.submit = submit;
+	}
 	public String getState() {
 		return state;
 	}

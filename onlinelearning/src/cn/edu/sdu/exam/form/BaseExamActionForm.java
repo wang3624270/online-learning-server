@@ -96,8 +96,15 @@ public class BaseExamActionForm {
 	private List optionList;
 	private String finish;
 	private Integer achieve;
+	private String answerStr;
 	
 	
+	public String getAnswerStr() {
+		return answerStr;
+	}
+	public void setAnswerStr(String answerStr) {
+		this.answerStr = answerStr;
+	}
 	public Integer getAchieve() {
 		return achieve;
 	}

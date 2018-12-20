@@ -48,6 +48,7 @@ import cn.edu.sdu.course.dao.ElearningCourseSectionDao;
 import cn.edu.sdu.course.dao.ElearningInterlocutionInfoDao;
 import cn.edu.sdu.course.dao.ElearningPlanCourseDao;
 import cn.edu.sdu.course.dao.ElearningSectionAccDao;
+import cn.edu.sdu.course.dao.ElearningTaskFinishDao;
 import cn.edu.sdu.course.dao.ElearningTaskNewsDao;
 import cn.edu.sdu.course.dao.ElearningTeachTaskDao;
 import cn.edu.sdu.course.dao.ElearningTermDao;
@@ -63,6 +64,7 @@ import cn.edu.sdu.course.model.ElearningCourseSection;
 import cn.edu.sdu.course.model.ElearningInterlocutionInfo;
 import cn.edu.sdu.course.model.ElearningPlanCourse;
 import cn.edu.sdu.course.model.ElearningSectionAcc;
+import cn.edu.sdu.course.model.ElearningTaskFinish;
 import cn.edu.sdu.course.model.ElearningTaskNews;
 import cn.edu.sdu.course.model.ElearningTeachTask;
 import cn.edu.sdu.course.model.ElearningTerm;
@@ -122,6 +124,8 @@ public class BaseCourseActionInterface {
 	private ElearningExamInfoDao elearningExamInfoDao;
 	@Autowired
 	private SysUserDao sysUserDao;
+	@Autowired
+	private ElearningTaskFinishDao elearningTaskFinishDao;
 	
 	@RequestMapping(value = "/course/getTermList", method = RequestMethod.GET)
 	public Map getTermList(HttpServletRequest httpRequest) {
@@ -405,7 +409,7 @@ public class BaseCourseActionInterface {
 			String book = (String) m.get("book");
 			String reference = (String) m.get("reference");
 			String briefIntroduction = (String) m.get("briefIntroduction");
-			if(courseId!=null){
+			if(courseId!=null && !courseId.equals("")){
 				ElearningCourse course = elearningCourseDao
 						.getCourseInfoByCourseId(Integer.valueOf(courseId));
 				course.setCourseName(courseName);
@@ -661,6 +665,7 @@ public class BaseCourseActionInterface {
 			List sectionList = elearningCourseSectionDao
 					.getSectionListByTaskId(taskId);
 			if (sectionList != null && sectionList.size() > 0) {
+				String last="0";
 				for (int i = 0; i < sectionList.size(); i++) {
 					ElearningCourseSection section = (ElearningCourseSection) sectionList
 							.get(i);
@@ -686,6 +691,27 @@ public class BaseCourseActionInterface {
 						sectionForm.setPptAcc(ppt.getAccId());
 						sectionForm.setPptId(ppt.getId());
 					}
+					ElearningSectionAcc practice=elearningSectionAccDao.getMapBySectionIdAndAccId(section.getSectionId(), null,"PRACTICE");
+					if(practice!=null){
+						sectionForm.setPracticeId(practice.getAccId());
+						sectionForm.setId(practice.getId());
+					}
+					String isFinish="0";
+					ElearningTaskFinish tf=elearningTaskFinishDao.getElearningTaskFinish(taskId, task.getElearningCourse().getCourseId(), section.getSectionId(), userToken.getPersonId(),null);
+					if(tf!=null){
+						isFinish=tf.getIsFinish();
+					}
+					sectionForm.setIsFinish(isFinish);
+					if(section.getOrderNum()==1){
+						sectionForm.setState("1");
+					}else{
+						if(last.equals("1")){
+							sectionForm.setState("1");
+						}else{
+							sectionForm.setState("0");
+						}
+					}
+					last=isFinish;
 					tree.add(sectionForm);
 				}
 			} 
@@ -849,6 +875,14 @@ public class BaseCourseActionInterface {
 					}else{
 						courseForm.setCoverImgAcc(0);
 					}
+					courseForm.setCompleteDegree(plan.getCompleteDegree());
+					courseForm.setTime(plan.getTime());
+					Integer sectionNum=0;
+					if(plan.getSectionIdNode()!=null){
+						ElearningCourseSection section=elearningCourseSectionDao.find(plan.getSectionIdNode());
+						sectionNum=section.getOrderNum();
+					}
+					courseForm.setSectionIdNode(sectionNum);
 					dataList.add(courseForm);
 				}
 		    }
@@ -935,6 +969,9 @@ public class BaseCourseActionInterface {
 			entry.setCreateTime(new Date());
 			entry.setCreator(userToken.getPersonId());
 			entry.setState("1");
+			entry.setTime(0);
+			entry.setIsFinish("0");
+			entry.setCompleteDegree(0.00);
 			elearningPlanCourseDao.save(entry);
 			return CommonTool.getNodeMapOk("恭喜您，操作成功！");
 		} else {
@@ -1158,6 +1195,9 @@ public class BaseCourseActionInterface {
 			plan.setCreateTime(new Date());
 			plan.setCreator(userToken.getPersonId());
 			plan.setState("2");
+			plan.setTime(0);
+			plan.setIsFinish("0");
+			plan.setCompleteDegree(0.00);
 			elearningPlanCourseDao.save(plan);
 			return CommonTool.getNodeMapOk("恭喜您，操作成功！");
 		} else
@@ -1369,9 +1409,11 @@ public class BaseCourseActionInterface {
 				}
 			};
 			data.put("folderList", dataList);
-			ElearningSectionAcc sa=elearningSectionAccDao.getMapBySectionIdAndAccId(sectionId, null, "VIDEO");
-			if(sa!=null){
-				data.put("videoAcc", sa.getAccId());
+			if(sectionId!=null){
+				ElearningSectionAcc sa=elearningSectionAccDao.getMapBySectionIdAndAccId(sectionId, null, "VIDEO");
+				if(sa!=null){
+					data.put("videoAcc", sa.getAccId());
+				}
 			}
 			return CommonTool.getNodeMap(data, null);
 		} else
@@ -1397,6 +1439,146 @@ public class BaseCourseActionInterface {
 			interlocution.setState("0");
 			elearningInterlocutionInfoDao.save(interlocution);
 			return CommonTool.getNodeMapOk("恭喜您，操作成功！");
+		} else
+			return CommonTool.getNodeMapError("抱歉，请重新登录！");
+	}
+	
+	@RequestMapping(value = "/course/matchSectionAndPractice", method = RequestMethod.POST)
+	public Map matchSectionAndPractice(HttpServletRequest httpRequest,
+			@RequestBody Object obj) {
+		Map request = (Map) obj;
+		UserTokenServerSide userToken = CommonAuthUseInfoTool.checkUser(
+				httpRequest, obj);
+		Integer practiceId = (Integer) request.get("practiceId");
+		String type = (String) request.get("type");
+		Integer sectionId = (Integer) request.get("sectionId");
+		Map data = new HashMap();
+		if (userToken != null) {// 登录信息不为空
+			//首先判断是否已经匹配该资源
+			ElearningSectionAcc map=elearningSectionAccDao.getMapBySectionIdAndAccId(sectionId, null,type);
+			if(map!=null){
+				map.setAccId(practiceId);
+				elearningSectionAccDao.update(map);
+			}else{
+				ElearningSectionAcc match=new ElearningSectionAcc();
+				match.setType(type);
+				match.setAccId(practiceId);
+				match.setSectionId(sectionId);
+				elearningSectionAccDao.save(match);
+			}
+			return CommonTool.getNodeMapOk("恭喜您，操作成功！");
+		} else
+			return CommonTool.getNodeMapError("抱歉，请重新登录！");
+	}
+	
+	@RequestMapping(value = "/course/videoPlayRecord", method = RequestMethod.POST)
+	public Map videoPlayRecord(HttpServletRequest httpRequest,
+			@RequestBody Object obj) {
+		Map request = (Map) obj;
+		UserTokenServerSide userToken = CommonAuthUseInfoTool.checkUser(
+				httpRequest, obj);
+		Integer taskId = (Integer) request.get("taskId");
+		Integer courseId = (Integer) request.get("courseId");
+		Integer sectionId = (Integer) request.get("sectionId");
+		Map data = new HashMap();
+		String practiceFinish="0";
+		if (userToken != null) {// 登录信息不为空
+			ElearningTaskFinish tf=elearningTaskFinishDao.getElearningTaskFinish(taskId, courseId, sectionId, userToken.getPersonId(),null);
+			if(tf!=null){
+				practiceFinish=tf.getPracticeFinish();
+				Integer time=tf.getTime();
+				time+=1;
+				tf.setTime(time);
+				elearningTaskFinishDao.update(tf);
+			}else{
+				tf=new ElearningTaskFinish();
+				tf.setStuId(userToken.getPersonId());
+				tf.setTaskId(taskId);
+				tf.setIsFinish("0");
+				tf.setCourseId(courseId);
+				tf.setSectionId(sectionId);
+				tf.setTime(1);
+				tf.setPracticeFinish("0");
+				elearningTaskFinishDao.save(tf);
+			}
+			Integer sectionSize=1;
+			List sectionList=elearningCourseSectionDao.getSectionListByTaskId(taskId);
+			if(sectionList!=null){
+				sectionSize=sectionList.size();
+			}
+			Integer finishSize=0;
+			List finishList=elearningTaskFinishDao.getListByConditions(taskId, courseId, null, userToken.getPersonId(), "1");
+			if(finishList!=null){
+				finishSize=finishList.size();
+			}
+			List planList=elearningPlanCourseDao.getTaskListByConditions(userToken.getPersonId(), null, null, taskId);
+			ElearningPlanCourse plan=(ElearningPlanCourse) planList.get(0);
+			plan.setCompleteDegree((double) finishSize/sectionSize);
+			Integer ti=plan.getTime();
+			plan.setTime(++ti);
+			plan.setSectionIdNode(sectionId);
+			if(finishSize==sectionSize){
+				plan.setIsFinish("1");
+			}
+			elearningPlanCourseDao.update(plan);
+			data.put("practiceFinish", practiceFinish);
+			return CommonTool.getNodeMap(data, null);
+		} else
+			return CommonTool.getNodeMapError("抱歉，请重新登录！");
+	}
+	
+	@RequestMapping(value = "/course/getNextSection", method = RequestMethod.POST)
+	public Map getNextSection(HttpServletRequest httpRequest,
+			@RequestBody Object obj) {
+		Map request = (Map) obj;
+		UserTokenServerSide userToken = CommonAuthUseInfoTool.checkUser(
+				httpRequest, obj);
+		Integer taskId = (Integer) request.get("taskId");
+		Integer courseId = (Integer) request.get("courseId");
+		Integer sectionId = (Integer) request.get("sectionId");
+		Map data = new HashMap();
+		if (userToken != null) {// 登录信息不为空
+			ElearningCourseSection section=elearningCourseSectionDao.find(sectionId);
+			Integer max=elearningCourseSectionDao.getMaxOrderNum(taskId);
+			Integer nextNum=section.getOrderNum()%max+1;
+			ElearningCourseSection next=elearningCourseSectionDao.getSectionByConditions(taskId, nextNum);
+			data.put("taskId",taskId);
+			data.put("courseId", courseId);
+			data.put("sectionId", next.getSectionId());
+			data.put("sectionName", next.getSectionName());
+			ElearningSectionAcc practice=elearningSectionAccDao.getMapBySectionIdAndAccId(section.getSectionId(), null,"PRACTICE");
+			if(practice!=null){
+				data.put("practiceId", practice.getAccId());
+				data.put("id", practice.getId());
+			}
+			return CommonTool.getNodeMap(data, null);
+		} else
+			return CommonTool.getNodeMapError("抱歉，请重新登录！");
+	}
+	
+	@RequestMapping(value = "/course/getTaskInfo", method = RequestMethod.POST)
+	public Map getTaskInfo(HttpServletRequest httpRequest, @RequestBody Object obj) {
+		Map m = (Map) obj;
+		Map data = new HashMap();
+		UserTokenServerSide userToken = CommonAuthUseInfoTool.checkUser(
+				httpRequest, obj);
+		List dataList = new ArrayList();
+		if (userToken != null) {// 登录信息不为空
+			Integer taskId=(Integer) m.get("taskId");
+			List newsList=elearningTaskNewsDao.getNewsListByTaskId(taskId);
+			if(newsList!=null){
+				ElearningTaskNews news=(ElearningTaskNews) newsList.get(0);
+				BaseCourseActionForm newsForm=new BaseCourseActionForm();
+				newsForm.setNewsId(news.getNewsId());
+				newsForm.setContent(news.getContent());
+				newsForm.setCreateTimeStr((new SimpleDateFormat("yyyy-MM-dd HH:mm:ss")).format(news.getCreateTime()));
+				newsForm.setTitle(news.getTitle());
+				data.put("news", newsForm);
+			}
+			ElearningTeachTask task=elearningTeachTaskDao.find(taskId);
+			data.put("taskName", task.getTaskName());
+			data.put("briefIntroduction", task.getElearningCourse().getBriefIntroduction());
+			return CommonTool.getNodeMap(data, null);
 		} else
 			return CommonTool.getNodeMapError("抱歉，请重新登录！");
 	}

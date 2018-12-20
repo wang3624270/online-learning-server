@@ -11,5 +11,5 @@ public interface ElearningHomeworkAnswerDao extends GenericServiceI<ElearningHom
 	
 	public List getAnswerListByHomeworkId(Integer homeworkId);
 	public ElearningHomeworkAnswer getAnswerByHomeworkIdAndStuId(Integer homeworkId,Integer stuId);
-	//public ElearningHomeworkAnswer submitHomeworkAnswer(ElearningHomeworkAnswer homeworkAnswer);
+	
 }

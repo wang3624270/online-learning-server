@@ -48,6 +48,7 @@ import cn.edu.sdu.course.dao.ElearningCourseSectionDao;
 import cn.edu.sdu.course.dao.ElearningInterlocutionInfoDao;
 import cn.edu.sdu.course.dao.ElearningPlanCourseDao;
 import cn.edu.sdu.course.dao.ElearningSectionAccDao;
+import cn.edu.sdu.course.dao.ElearningTaskFinishDao;
 import cn.edu.sdu.course.dao.ElearningTaskNewsDao;
 import cn.edu.sdu.course.dao.ElearningTeachTaskDao;
 import cn.edu.sdu.course.dao.ElearningTermDao;
@@ -63,6 +64,7 @@ import cn.edu.sdu.course.model.ElearningCourseSection;
 import cn.edu.sdu.course.model.ElearningInterlocutionInfo;
 import cn.edu.sdu.course.model.ElearningPlanCourse;
 import cn.edu.sdu.course.model.ElearningSectionAcc;
+import cn.edu.sdu.course.model.ElearningTaskFinish;
 import cn.edu.sdu.course.model.ElearningTaskNews;
 import cn.edu.sdu.course.model.ElearningTeachTask;
 import cn.edu.sdu.course.model.ElearningTerm;
@@ -135,6 +137,8 @@ public class BaseExamActionInterface {
 	private ElearningExamStuAnswerDao elearningExamStuAnswerDao;
 	@Autowired
 	private ElearningExamScoreInfoDao elearningExamScoreInfoDao;
+	@Autowired
+	private ElearningTaskFinishDao elearningTaskFinishDao;
 	
 	@RequestMapping(value = "/exam/getQustionList", method = RequestMethod.POST)
 	public Map getQustionList(HttpServletRequest httpRequest,
@@ -572,7 +576,7 @@ public class BaseExamActionInterface {
 					BaseExamActionForm qForm = new BaseExamActionForm();
 					ElearningExamQuestion question = (ElearningExamQuestion) questionList.get(i);
 					boolean flag=false;
-					for(int j=0;j<rList.size();j++){
+					for(int j=0;rList!=null && j<rList.size();j++){
 						ElearningExamQRelation r=(ElearningExamQRelation) rList.get(j);
 						if(r.getQuestionId().equals(question.getQuestionId())){
 							flag=true;
@@ -620,6 +624,10 @@ public class BaseExamActionInterface {
 						examForm.setState("已绑定");
 					}else{
 						examForm.setState("未绑定");
+					}
+					InfoPersonInfo info=infoPersonInfoDao.getInfoPersonInfoByPersonId(exam.getPersonId());
+					if(info!=null){
+						examForm.setUploader(info.getPerName());
 					}
 					dataList.add(examForm);
 				}
@@ -685,6 +693,17 @@ public class BaseExamActionInterface {
 					if(optionList!=null){
 						qForm.setOptionList(optionList);
 					}
+					String answerStr="";
+					String [] answers=question.getAnswer().split(",");
+					for(int j=0;j<answers.length;j++){
+						Integer optionId=Integer.valueOf(answers[j]);
+						ElearningExamOption option=elearningExamOptionDao.find(optionId);
+						if(j!=0){
+							answerStr+=";";
+						}
+						answerStr+=option.getOptionContent();
+					}
+					qForm.setAnswerStr(answerStr);
 					dataList.add(qForm);
 				}
 			}
@@ -1130,6 +1149,45 @@ public class BaseExamActionInterface {
 		} else {
 			return CommonTool.getNodeMapError("抱歉，请重新登录！");
 		}
+	}
+	
+	@RequestMapping(value = "/exam/submitPractice", method = RequestMethod.POST)
+	public Map submitPractice(HttpServletRequest httpRequest,
+			@RequestBody Object obj) {
+		Map request = (Map) obj;
+		UserTokenServerSide userToken = CommonAuthUseInfoTool.checkUser(
+				httpRequest, obj);
+		Integer taskId = (Integer) request.get("taskId");
+		Integer courseId = (Integer) request.get("courseId");
+		Integer sectionId = (Integer) request.get("sectionId");
+		Integer practiceId = (Integer) request.get("practiceId");
+		Map data = new HashMap();
+		if (userToken != null) {// 登录信息不为空
+			ElearningTaskFinish tf=elearningTaskFinishDao.getElearningTaskFinish(taskId, courseId, sectionId, userToken.getPersonId(),null);
+			tf.setPracticeFinish("1");
+			tf.setIsFinish("1");
+			elearningTaskFinishDao.update(tf);
+			Integer sectionSize=1;
+			List sectionList=elearningCourseSectionDao.getSectionListByTaskId(taskId);
+			if(sectionList!=null){
+				sectionSize=sectionList.size();
+			}
+			Integer finishSize=0;
+			List finishList=elearningTaskFinishDao.getListByConditions(taskId, courseId, null, userToken.getPersonId(), "1");
+			if(finishList!=null){
+				finishSize=finishList.size();
+			}
+			List planList=elearningPlanCourseDao.getTaskListByConditions(userToken.getPersonId(), null, null, taskId);
+			ElearningPlanCourse plan=(ElearningPlanCourse) planList.get(0);
+			plan.setCompleteDegree((double) finishSize/sectionSize);
+			plan.setSectionIdNode(sectionId);
+			if(finishSize==sectionSize){
+				plan.setIsFinish("1");
+			}
+			elearningPlanCourseDao.update(plan);
+			return CommonTool.getNodeMapOk("恭喜您，操作成功！");
+		} else
+			return CommonTool.getNodeMapError("抱歉，请重新登录！");
 	}
 	
 	

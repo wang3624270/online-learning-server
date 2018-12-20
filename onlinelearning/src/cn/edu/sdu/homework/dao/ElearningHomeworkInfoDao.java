@@ -14,6 +14,6 @@ import cn.edu.sdu.homework.model.ElearningHomeworkInfo;
 public interface ElearningHomeworkInfoDao extends GenericServiceI<ElearningHomeworkInfo>{
 	
 	public List getHomelistListByTaskId(Integer taskId);
-
 	public ElearningHomeworkInfo getHomeworkInfoById(Integer homeworkId);
+	public List getHomelistByConditions(String name,String taskName);
 }

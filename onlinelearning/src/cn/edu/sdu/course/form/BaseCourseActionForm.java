@@ -110,8 +110,57 @@ public class BaseCourseActionForm extends UForm{
 	private String title;
 	private String answer;
 	private String question;
+	private Integer practiceId;
+	private Integer practiceAcc;
+	private Integer nextSectionId;
+	private String isFinish;
+	private Double completeDegree;
+	private Integer time;
+    private Integer sectionIdNode;
 	
 	
+	public Double getCompleteDegree() {
+		return completeDegree;
+	}
+	public void setCompleteDegree(Double completeDegree) {
+		this.completeDegree = completeDegree;
+	}
+	public Integer getTime() {
+		return time;
+	}
+	public void setTime(Integer time) {
+		this.time = time;
+	}
+	public Integer getSectionIdNode() {
+		return sectionIdNode;
+	}
+	public void setSectionIdNode(Integer sectionIdNode) {
+		this.sectionIdNode = sectionIdNode;
+	}
+	public String getIsFinish() {
+		return isFinish;
+	}
+	public void setIsFinish(String isFinish) {
+		this.isFinish = isFinish;
+	}
+	public Integer getNextSectionId() {
+		return nextSectionId;
+	}
+	public void setNextSectionId(Integer nextSectionId) {
+		this.nextSectionId = nextSectionId;
+	}
+	public Integer getPracticeId() {
+		return practiceId;
+	}
+	public void setPracticeId(Integer practiceId) {
+		this.practiceId = practiceId;
+	}
+	public Integer getPracticeAcc() {
+		return practiceAcc;
+	}
+	public void setPracticeAcc(Integer practiceAcc) {
+		this.practiceAcc = practiceAcc;
+	}
 	public String getQuestion() {
 		return question;
 	}

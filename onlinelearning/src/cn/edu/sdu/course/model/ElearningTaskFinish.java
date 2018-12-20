@@ -25,44 +25,30 @@ public class ElearningTaskFinish {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer id;
-	
-	@ManyToOne    
-    @JoinColumn(name="stuId")  
-	@NotNull
-	private InfoPersonInfo infoPersonInfo;
-	@ManyToOne    
-    @JoinColumn(name="taskId")  
-	@NotNull
-	private ElearningTeachTask elearningTeachTask;
-	
+	private Integer stuId;
+	private Integer taskId;
 	private String isFinish;
-	
-	@OneToMany(targetEntity=InfoPersonInfo.class,cascade=CascadeType.ALL)
-    @Fetch(FetchMode.JOIN)
-    @JoinColumn(name="stuId",updatable=false)  
-    private Set infoPersonInfos = new LinkedHashSet();
-	@OneToMany(targetEntity=ElearningTeachTask.class,cascade=CascadeType.ALL)
-    @Fetch(FetchMode.JOIN)
-    @JoinColumn(name="taskId",updatable=false)  
-    private Set elearningTeachTasks = new LinkedHashSet();
-	
+	private Integer courseId;
+	private Integer sectionId;
+	private Integer time;
+	private String practiceFinish;
 	public Integer getId() {
 		return id;
 	}
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	public InfoPersonInfo getInfoPersonInfo() {
-		return infoPersonInfo;
+	public Integer getStuId() {
+		return stuId;
 	}
-	public void setInfoPersonInfo(InfoPersonInfo infoPersonInfo) {
-		this.infoPersonInfo = infoPersonInfo;
+	public void setStuId(Integer stuId) {
+		this.stuId = stuId;
 	}
-	public ElearningTeachTask getElearningTeachTask() {
-		return elearningTeachTask;
+	public Integer getTaskId() {
+		return taskId;
 	}
-	public void setElearningTeachTask(ElearningTeachTask elearningTeachTask) {
-		this.elearningTeachTask = elearningTeachTask;
+	public void setTaskId(Integer taskId) {
+		this.taskId = taskId;
 	}
 	public String getIsFinish() {
 		return isFinish;
@@ -70,17 +56,30 @@ public class ElearningTaskFinish {
 	public void setIsFinish(String isFinish) {
 		this.isFinish = isFinish;
 	}
-	public Set getInfoPersonInfos() {
-		return infoPersonInfos;
+	public Integer getCourseId() {
+		return courseId;
 	}
-	public void setInfoPersonInfos(Set infoPersonInfos) {
-		this.infoPersonInfos = infoPersonInfos;
+	public void setCourseId(Integer courseId) {
+		this.courseId = courseId;
 	}
-	public Set getElearningTeachTasks() {
-		return elearningTeachTasks;
+	public Integer getSectionId() {
+		return sectionId;
 	}
-	public void setElearningTeachTasks(Set elearningTeachTasks) {
-		this.elearningTeachTasks = elearningTeachTasks;
+	public void setSectionId(Integer sectionId) {
+		this.sectionId = sectionId;
 	}
+	public Integer getTime() {
+		return time;
+	}
+	public void setTime(Integer time) {
+		this.time = time;
+	}
+	public String getPracticeFinish() {
+		return practiceFinish;
+	}
+	public void setPracticeFinish(String practiceFinish) {
+		this.practiceFinish = practiceFinish;
+	}
+	
 	
 }

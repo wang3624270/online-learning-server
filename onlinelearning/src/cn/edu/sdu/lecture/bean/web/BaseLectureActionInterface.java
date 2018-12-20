@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -71,10 +72,12 @@ import cn.edu.sdu.exam.model.ElearningPracticeInfo;
 import cn.edu.sdu.lecture.dao.ElearningLectureAttendanceDao;
 import cn.edu.sdu.lecture.dao.ElearningLectureDao;
 import cn.edu.sdu.lecture.dao.ElearningLectureEntryDao;
+import cn.edu.sdu.lecture.dao.ElearningLectureLiveDao;
 import cn.edu.sdu.lecture.form.BaseLectureActionForm;
 import cn.edu.sdu.lecture.model.ElearningLecture;
 import cn.edu.sdu.lecture.model.ElearningLectureAttendance;
 import cn.edu.sdu.lecture.model.ElearningLectureEntry;
+import cn.edu.sdu.lecture.model.ElearningLectureLive;
 
 @RestController
 public class BaseLectureActionInterface {
@@ -119,6 +122,8 @@ public class BaseLectureActionInterface {
 	private ElearningLectureEntryDao elearningLectureEntryDao;
 	@Autowired
 	private ElearningLectureAttendanceDao elearningLectureAttendanceDao;
+	@Autowired
+	private ElearningLectureLiveDao elearningLectureLiveDao;
 	
 	@RequestMapping(value = "/lecture/getLectureList", method = RequestMethod.POST)
 	public Map getLectureList(HttpServletRequest httpRequest,
@@ -386,7 +391,7 @@ public class BaseLectureActionInterface {
 	
 	@RequestMapping(value = "/lecture/getEntryList", method = RequestMethod.POST)
 	public Map getEntryList(HttpServletRequest httpRequest,
-			@RequestBody Object obj) {
+			@RequestBody Object obj) throws ParseException {
 		Map m = (Map) obj;
 		UserTokenServerSide userToken = CommonAuthUseInfoTool.checkUser(
 				httpRequest, obj);
@@ -429,6 +434,13 @@ public class BaseLectureActionInterface {
 					    lectureForm.setAttendance(attend.getAttendance());
 					}else{
 					    lectureForm.setAttendance(null);
+					}
+					//判断是否在直播时间内
+					Date startTime = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse(lecture.getStartTime());
+					Date endTime=new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse(lecture.getEndTime());
+					Date currentTime=new Date();
+					if(currentTime.getTime()>startTime.getTime() && currentTime.getTime()<endTime.getTime()){
+						lectureForm.setValue("1");
 					}
 					dataList.add(lectureForm);
 				}
@@ -582,6 +594,74 @@ public class BaseLectureActionInterface {
 				data.put("showAttend", true);
 			}
 			return CommonTool.getNodeMap(data, null);
+		} else
+			return CommonTool.getNodeMapError("抱歉，请重新登录！");
+	}
+	
+	@RequestMapping(value = "/lecture/getLectureLiveInfo", method = RequestMethod.POST)
+	public Map getLectureLiveInfo(HttpServletRequest httpRequest,
+			@RequestBody Object obj) {
+		Map m = (Map) obj;
+		UserTokenServerSide userToken = CommonAuthUseInfoTool.checkUser(
+				httpRequest, obj);
+		Map data = new HashMap();
+		if (userToken != null) {// 登录信息不为空
+			Integer lectureId = (Integer) m.get("lectureId");
+			//直播信息
+			ElearningLectureLive live=elearningLectureLiveDao.getLiveByConditions(lectureId);
+			if(live!=null){
+				data.put("startTime",live.getStartTime());
+				data.put("endTime",live.getEndTime());
+				data.put("lectureId",lectureId);
+				data.put("pushUrl",live.getPushUrl());
+				data.put("outputUrl",live.getOutputUrl());
+			}else{
+				data.put("startTime","");
+				data.put("endTime","");
+				data.put("lectureId","");
+				data.put("pushUrl","");
+				data.put("outputUrl","");
+			}
+			data.put("lectureId",lectureId);
+			return CommonTool.getNodeMap(data, null);
+		} else
+			return CommonTool.getNodeMapError("抱歉，请重新登录！");
+	}
+	
+	@RequestMapping(value = "/lecture/submitLiveInfo", method = RequestMethod.POST)
+	public Map submitLiveInfo(HttpServletRequest httpRequest,
+			@RequestBody Object obj) {
+		Map m = (Map) obj;
+		UserTokenServerSide userToken = CommonAuthUseInfoTool.checkUser(
+				httpRequest, obj);
+		Map data = new HashMap();
+		if (userToken != null) {// 登录信息不为空
+			Integer lectureId = (Integer) m.get("lectureId");
+			String startTime = (String) m.get("startTime");
+			String endTime = (String) m.get("endTime");
+			String pushUrl = (String) m.get("pushUrl");
+			String outputUrl = (String) m.get("outputUrl");
+			ElearningLectureLive live=elearningLectureLiveDao.getLiveByConditions(lectureId);
+			if(live!=null){
+				live.setStartTime(startTime);
+				live.setEndTime(endTime);
+				live.setPersonId(userToken.getPersonId());
+				live.setCreateTime(new Date());
+				live.setPushUrl(pushUrl);
+				live.setOutputUrl(outputUrl);
+				elearningLectureLiveDao.update(live);
+			}else{
+				live=new ElearningLectureLive();
+				live.setLectureId(lectureId);
+				live.setStartTime(startTime);
+				live.setEndTime(endTime);
+				live.setPersonId(userToken.getPersonId());
+				live.setCreateTime(new Date());
+				live.setPushUrl(pushUrl);
+				live.setOutputUrl(outputUrl);
+				elearningLectureLiveDao.save(live);
+			}
+			return CommonTool.getNodeMapOk("恭喜您，操作成功！");
 		} else
 			return CommonTool.getNodeMapError("抱歉，请重新登录！");
 	}
