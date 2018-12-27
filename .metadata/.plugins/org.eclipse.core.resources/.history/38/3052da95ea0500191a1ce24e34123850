@@ -1,0 +1,5 @@
+package cn.edu.sdu.statistics.dao;
+
+public class ElearningTaskScoreDao {
+
+}

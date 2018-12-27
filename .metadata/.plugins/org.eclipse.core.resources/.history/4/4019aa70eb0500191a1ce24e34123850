@@ -1,0 +1,81 @@
+package cn.edu.sdu.statistics.bean.web;
+
+import org.octopus.auth.jpa_dao.InfoPersonInfoDao;
+import org.octopus.auth.jpa_dao.SysUserDao;
+import org.octopus.common_business.attachment.dao.BaseAttachmentInfoDao;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RestController;
+
+import cn.edu.sdu.course.dao.AccessoriesCourseFolderDao;
+import cn.edu.sdu.course.dao.AccessoriesFolderAccDao;
+import cn.edu.sdu.course.dao.AccessoriesInfoDao;
+import cn.edu.sdu.course.dao.BaseCollegeDao;
+import cn.edu.sdu.course.dao.ElearningCourseCommentInfoDao;
+import cn.edu.sdu.course.dao.ElearningCourseDao;
+import cn.edu.sdu.course.dao.ElearningCourseSectionDao;
+import cn.edu.sdu.course.dao.ElearningInterlocutionInfoDao;
+import cn.edu.sdu.course.dao.ElearningPlanCourseDao;
+import cn.edu.sdu.course.dao.ElearningSectionAccDao;
+import cn.edu.sdu.course.dao.ElearningTaskChargeDao;
+import cn.edu.sdu.course.dao.ElearningTaskFinishDao;
+import cn.edu.sdu.course.dao.ElearningTaskNewsDao;
+import cn.edu.sdu.course.dao.ElearningTeachTaskDao;
+import cn.edu.sdu.course.dao.ElearningTermDao;
+import cn.edu.sdu.exam.dao.ElearningExamInfoDao;
+import cn.edu.sdu.exam.dao.ElearningExamQRelationDao;
+import cn.edu.sdu.exam.dao.ElearningExamQuestionDao;
+import cn.edu.sdu.exam.dao.ElearningPracticeInfoDao;
+import cn.edu.sdu.exam.dao.ElearningPracticeQRelationDao;
+import cn.edu.sdu.manage.dao.ElearningPayRecordDao;
+
+@RestController
+public class BaseStatisticsActionInterface {
+	@Autowired
+	private InfoPersonInfoDao infoPersonInfoDao;
+	@Autowired
+	private ElearningCourseDao elearningCourseDao;
+	@Autowired
+	private ElearningPlanCourseDao elearningPlanCourseDao;
+	@Autowired
+	private BaseCollegeDao baseCollegeDao;
+	@Autowired
+	private AccessoriesCourseFolderDao accessoriesCourseFolderDao;
+	@Autowired
+	private ElearningTermDao elearningTermDao;
+	@Autowired
+	private AccessoriesInfoDao accessoriesInfoDao;
+	@Autowired
+	private AccessoriesFolderAccDao accessoriesFolderAccDao;
+	@Autowired
+	private ElearningTeachTaskDao elearningTeachTaskDao;
+	@Autowired
+	private ElearningCourseSectionDao elearningCourseSectionDao;
+	@Autowired
+	private ElearningSectionAccDao elearningSectionAccDao;
+	@Autowired
+	private ElearningTaskNewsDao elearningTaskNewsDao;
+	@Autowired
+	private ElearningCourseCommentInfoDao elearningCourseCommentInfoDao;
+	@Autowired
+	private ElearningInterlocutionInfoDao elearningInterlocutionInfoDao;
+	@Autowired
+	private ElearningPracticeInfoDao elearningPracticeInfoDao;
+	@Autowired
+	private BaseAttachmentInfoDao baseAttachmentInfoDao;
+	@Autowired
+	private ElearningExamQuestionDao elearningExamQuestionDao;
+	@Autowired
+	private ElearningExamQRelationDao elearningExamQRelationDao;
+	@Autowired
+	private ElearningPracticeQRelationDao elearningPracticeQRelationDao;
+	@Autowired
+	private ElearningExamInfoDao elearningExamInfoDao;
+	@Autowired
+	private SysUserDao sysUserDao;
+	@Autowired
+	private ElearningTaskFinishDao elearningTaskFinishDao;
+	@Autowired
+	private ElearningTaskChargeDao elearningTaskChargeDao;
+	@Autowired
+	private ElearningPayRecordDao elearningPayRecordDao;
+}

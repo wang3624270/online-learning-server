@@ -1,0 +1,18 @@
+package cn.edu.sdu.statistics.dao.impl;
+
+import org.octopus.spring_utils.jpa.GenericServiceImpl;
+import org.springframework.stereotype.Repository;
+
+import cn.edu.sdu.statistics.dao.ElearningTaskScoreDao;
+import cn.edu.sdu.statistics.model.ElearningTaskScore;
+
+
+@Repository
+public class ElearningTaskScoreDaoImpl extends GenericServiceImpl<ElearningTaskScore>
+implements ElearningTaskScoreDao {
+
+	public ElearningTaskScoreDaoImpl(){
+	super(ElearningTaskScore.class);
+	} 
+
+}

@@ -36,5 +36,23 @@ implements ElearningExamScoreInfoDao {
 		}
 	}
 	
+	@Override
+	public List getListByConditions(Integer stuId,Integer examId){
+		// TODO Auto-generated method stub
+		String hql = "from ElearningExamScoreInfo a where 1 = 1 ";
+		if(stuId!=null && !stuId.equals("")){
+			hql+="and a.stuId ='"+stuId+"'";
+		}
+		if(examId!=null && !examId.equals("")){
+			hql+="and a.examId ='"+examId+"'";
+		}
+		List list = this.queryForList(hql);
+		if(list == null || list.size()== 0)
+			return null;
+		else{
+			return list;
+		}
+	}
+	
 	
 }

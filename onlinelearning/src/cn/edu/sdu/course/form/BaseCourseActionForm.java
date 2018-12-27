@@ -117,8 +117,106 @@ public class BaseCourseActionForm extends UForm{
 	private Double completeDegree;
 	private Integer time;
     private Integer sectionIdNode;
+	private Integer chargeId;
+	private Double price;
+	private Integer payId;
+	private String payMode;
+	private String payNumber;
+	private Integer planId;
+	private Double amount;
+	private Double homeworkScore;
+	private Double activityScore;
+	private String activityName;
+	private Integer examScore;
+	private String scoreLevel;
+	private String name;
+	private String subject;
 	
 	
+	public String getSubject() {
+		return subject;
+	}
+	public void setSubject(String subject) {
+		this.subject = subject;
+	}
+	public Integer getExamScore() {
+		return examScore;
+	}
+	public void setExamScore(Integer examScore) {
+		this.examScore = examScore;
+	}
+	public String getScoreLevel() {
+		return scoreLevel;
+	}
+	public void setScoreLevel(String scoreLevel) {
+		this.scoreLevel = scoreLevel;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public Double getHomeworkScore() {
+		return homeworkScore;
+	}
+	public void setHomeworkScore(Double homeworkScore) {
+		this.homeworkScore = homeworkScore;
+	}
+	public Double getActivityScore() {
+		return activityScore;
+	}
+	public void setActivityScore(Double activityScore) {
+		this.activityScore = activityScore;
+	}
+	public String getActivityName() {
+		return activityName;
+	}
+	public void setActivityName(String activityName) {
+		this.activityName = activityName;
+	}
+	public Integer getPayId() {
+		return payId;
+	}
+	public void setPayId(Integer payId) {
+		this.payId = payId;
+	}
+	public String getPayMode() {
+		return payMode;
+	}
+	public void setPayMode(String payMode) {
+		this.payMode = payMode;
+	}
+	public String getPayNumber() {
+		return payNumber;
+	}
+	public void setPayNumber(String payNumber) {
+		this.payNumber = payNumber;
+	}
+	public Integer getPlanId() {
+		return planId;
+	}
+	public void setPlanId(Integer planId) {
+		this.planId = planId;
+	}
+	public Double getAmount() {
+		return amount;
+	}
+	public void setAmount(Double amount) {
+		this.amount = amount;
+	}
+	public Integer getChargeId() {
+		return chargeId;
+	}
+	public void setChargeId(Integer chargeId) {
+		this.chargeId = chargeId;
+	}
+	public Double getPrice() {
+		return price;
+	}
+	public void setPrice(Double price) {
+		this.price = price;
+	}
 	public Double getCompleteDegree() {
 		return completeDegree;
 	}

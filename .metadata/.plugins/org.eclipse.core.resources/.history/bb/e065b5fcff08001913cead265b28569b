@@ -1,0 +1,5 @@
+package cn.edu.sdu.manage.dao.impl;
+
+public class ElearningNoticeDaoImpl {
+
+}

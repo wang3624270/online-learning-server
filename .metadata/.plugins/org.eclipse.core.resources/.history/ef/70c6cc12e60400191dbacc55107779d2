@@ -1,0 +1,10 @@
+package cn.edu.sdu.manage.dao;
+
+import org.octopus.spring_utils.jpa.GenericServiceI;
+
+import cn.edu.sdu.course.model.ElearningTerm;
+import cn.edu.sdu.manage.model.ElearningPayRecord;
+
+public interface ElearningPayRecordDao extends GenericServiceI<ElearningPayRecord> {
+
+}

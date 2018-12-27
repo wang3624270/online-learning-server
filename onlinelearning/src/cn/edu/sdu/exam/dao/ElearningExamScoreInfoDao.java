@@ -10,4 +10,5 @@ import cn.edu.sdu.exam.model.ElearningExamScoreInfo;
 public interface ElearningExamScoreInfoDao extends GenericServiceI<ElearningExamScoreInfo>{
 
 	public ElearningExamScoreInfo getElearningExamScoreInfoByConditions(Integer stuId,Integer examId);
+	public List getListByConditions(Integer stuId,Integer examId);
 }

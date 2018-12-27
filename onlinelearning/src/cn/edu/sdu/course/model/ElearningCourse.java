@@ -29,7 +29,7 @@ public class ElearningCourse {
 	private String courseNum;// 课程号
 	private String courseName;// 课程名
 	private String courseEngName;// 英文课程名
-	private String courseType;// 2016新课程类别  NKCSXM  1 公共课  0 非公共课
+	private String courseType;
 	private String teachingWayCode;// 教学方式 数据字典JXFSM
 	private String examType;// 考核方式 数据字典KHFSM  考核类型
 	private String teachLanguage;// 授课语言 数据字典SKYYLXM  考核类型
@@ -55,6 +55,16 @@ public class ElearningCourse {
 	private String subSpec;// 课程说明
 	private Integer coverImgAcc;
 	private Integer coverVideoAcc;
+	private String subject;//学科门类
+
+	
+	public String getSubject() {
+		return subject;
+	}
+
+	public void setSubject(String subject) {
+		this.subject = subject;
+	}
 
 	public Integer getCourseId() {
 		return courseId;

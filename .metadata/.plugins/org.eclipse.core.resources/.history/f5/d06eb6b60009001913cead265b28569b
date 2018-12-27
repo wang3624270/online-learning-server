@@ -1,0 +1,20 @@
+package cn.edu.sdu.manage.dao.impl;
+
+import org.octopus.spring_utils.jpa.GenericServiceI;
+import org.octopus.spring_utils.jpa.GenericServiceImpl;
+import org.springframework.stereotype.Repository;
+
+import cn.edu.sdu.manage.dao.ElearningNoticeDao;
+import cn.edu.sdu.manage.dao.ElearningPayRecordDao;
+import cn.edu.sdu.manage.model.ElearningNotice;
+
+@Repository
+public class ElearningNoticeDaoImpl extends GenericServiceImpl<ElearningNotice>
+implements ElearningNoticeDao {
+
+	public ElearningNoticeDaoImpl(){
+	super(ElearningNotice.class);
+	} 
+	
+
+}

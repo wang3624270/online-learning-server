@@ -66,6 +66,7 @@ import cn.edu.sdu.course.dao.ElearningCourseSectionDao;
 import cn.edu.sdu.course.dao.ElearningInterlocutionInfoDao;
 import cn.edu.sdu.course.dao.ElearningPlanCourseDao;
 import cn.edu.sdu.course.dao.ElearningSectionAccDao;
+import cn.edu.sdu.course.dao.ElearningTaskChargeDao;
 import cn.edu.sdu.course.dao.ElearningTaskNewsDao;
 import cn.edu.sdu.course.dao.ElearningTeachTaskDao;
 import cn.edu.sdu.course.dao.ElearningTermDao;
@@ -81,6 +82,7 @@ import cn.edu.sdu.course.model.ElearningCourseSection;
 import cn.edu.sdu.course.model.ElearningInterlocutionInfo;
 import cn.edu.sdu.course.model.ElearningPlanCourse;
 import cn.edu.sdu.course.model.ElearningSectionAcc;
+import cn.edu.sdu.course.model.ElearningTaskCharge;
 import cn.edu.sdu.course.model.ElearningTaskNews;
 import cn.edu.sdu.course.model.ElearningTeachTask;
 import cn.edu.sdu.course.model.ElearningTerm;
@@ -88,7 +90,11 @@ import cn.edu.sdu.course.rule.BaseCourseActionRule;
 import cn.edu.sdu.exam.dao.ElearningPracticeInfoDao;
 import cn.edu.sdu.exam.model.ElearningPracticeInfo;
 import cn.edu.sdu.homework.model.ElearningHomeworkInfo;
+import cn.edu.sdu.manage.dao.ElearningNoticeDao;
+import cn.edu.sdu.manage.dao.ElearningPayRecordDao;
 import cn.edu.sdu.manage.form.BaseManageActionForm;
+import cn.edu.sdu.manage.model.ElearningNotice;
+import cn.edu.sdu.manage.model.ElearningPayRecord;
 
 @RestController
 public class BaseManageActionWeb {
@@ -135,6 +141,12 @@ public class BaseManageActionWeb {
 	private GroupFunresDao groupFunresDao;
 	@Autowired
 	private SysFunResDao sysFunResDao;
+	@Autowired
+	private ElearningTaskChargeDao elearningTaskChargeDao;
+	@Autowired
+	private ElearningPayRecordDao elearningPayRecordDao;
+	@Autowired
+	private ElearningNoticeDao elearningNoticeDao;
 	
 	@RequestMapping(value = "/manage/getPersonInfo", method = RequestMethod.GET)
 	public Map getPersonInfo(HttpServletRequest httpRequest) {
@@ -157,6 +169,7 @@ public class BaseManageActionWeb {
 			data.put("password", new String(Base64.decode(user.getPwd().getBytes())));
 			data.put("genderCode", info.getGenderCode());
 			data.put("perIdCard", info.getPerIdCard());
+			data.put("perTypeCode", info.getPerTypeCode());
 			return CommonTool.getNodeMap(data, null);
 		} else
 			return CommonTool.getNodeMapError("抱歉，请重新登录！");
@@ -532,6 +545,227 @@ public class BaseManageActionWeb {
 			user.setPassword(Md5Util.GetMD5Code(password));
 			user.setPwd(Base64.getBase64Code(password));
 			sysUserDao.update(user);
+			return CommonTool.getNodeMapOk("恭喜您，操作成功！");
+		} else
+			return CommonTool.getNodeMapError("抱歉，请重新登录！");
+	}
+	
+	@RequestMapping(value = "/manage/getPersonalPayList", method = RequestMethod.POST)
+	public Map getPersonalPayList(HttpServletRequest request,
+			@RequestBody Object obj) {
+		Map m = (Map) obj;
+		Map data = new HashMap();
+		UserTokenServerSide userToken = CommonAuthUseInfoTool.checkUser(
+				request, obj);
+		List dataList = new ArrayList();
+		if (userToken != null) {// 登录信息不为空
+			String taskName = (String) m.get("taskName");
+			String courseType = (String) m.get("courseType");
+			Integer personId = userToken.getPersonId();
+			List courseList = elearningPlanCourseDao
+					.getTaskListByConditions(personId, taskName, courseType,null);
+			if(courseList!=null){
+				for (int i = 0; i < courseList.size(); i++) {
+					BaseManageActionForm courseForm=new BaseManageActionForm();
+					ElearningPlanCourse plan = (ElearningPlanCourse) courseList
+							.get(i);
+					Integer planId=plan.getId();
+					ElearningPayRecord record=elearningPayRecordDao.getRecordByConditions(userToken.getPersonId(), "1", planId);
+					if(record!=null && record.getAmount()>0){
+						ElearningTeachTask task=plan.getElearningTeachTask();
+						courseForm.setTaskId(task.getTaskId());
+						courseForm.setTaskName(task.getTaskName());
+						ElearningCourse course=task.getElearningCourse();
+						courseForm.setCourseType(course.getCourseType());
+						courseForm.setPayNumber(record.getPayNumber());
+						courseForm.setPayMode(record.getPayMode());
+						courseForm.setCreateTimeStr((new SimpleDateFormat("yyyy-MM-dd HH:mm:ss")).format(record.getCreateTime()));
+						courseForm.setAmount(record.getAmount());
+						dataList.add(courseForm);
+					}
+				}
+		    }
+			data.put("recordList", dataList);
+			return CommonTool.getNodeMap(data, null);
+		} else {
+			return CommonTool.getNodeMapError("抱歉，请重新登录！");
+		}
+	}
+	
+	@RequestMapping(value = "/manage/editTeachTaskPrice", method = RequestMethod.POST)
+	public Map editTeachTaskPrice(HttpServletRequest httpRequest, @RequestBody Object obj) {
+		Map m = (Map) obj;
+		UserTokenServerSide userToken = CommonAuthUseInfoTool.checkUser(
+				httpRequest, obj);
+		List dataList = new ArrayList();
+		if (userToken != null) {// 登录信息不为空
+			Integer chargeId = (Integer) m.get("chargeId");
+			String price = (String) m.get("price");
+			if(chargeId!=null && !chargeId.equals("")){
+				ElearningTaskCharge charge=elearningTaskChargeDao.find(chargeId);
+				charge.setPrice(Double.valueOf(price));
+				elearningTaskChargeDao.update(charge);
+			}
+			return CommonTool.getNodeMapOk("恭喜您，操作成功！");
+		} else
+			return CommonTool.getNodeMapError("抱歉，请重新登录！");
+	}
+	
+	@RequestMapping(value = "/manage/getCourseChargeList", method = RequestMethod.POST)
+	public Map getCourseChargeList(HttpServletRequest httpRequest,
+			@RequestBody Object obj) {
+		Map request = (Map) obj;
+		UserTokenServerSide userToken = CommonAuthUseInfoTool.checkUser(
+				httpRequest, obj);
+		Map data = new HashMap();
+		if (userToken != null) {// 登录信息不为空
+			Integer taskId = (Integer) request.get("taskId");
+			String loginName = (String) request.get("loginName");
+			String perName = (String) request.get("perName");
+			String state = (String) request.get("state");
+			List rList=elearningPlanCourseDao.getPlanListByConditions(loginName, perName, taskId,state);
+			List dataList=new ArrayList();
+			if(rList!=null){
+				for(int i=0;i<rList.size();i++){
+					ElearningPlanCourse plan=(ElearningPlanCourse) rList.get(i);
+					BaseManageActionForm planForm=new BaseManageActionForm();
+					SysUser user=sysUserDao.getSysUsersByUserid(plan.getStuId());
+					InfoPersonInfo info=infoPersonInfoDao.find(plan.getStuId());
+					planForm.setPerTypeCode(info.getPerTypeCode());
+					planForm.setLoginName(user.getLoginName());
+					planForm.setPerName(info.getPerName());
+					planForm.setMobilePhone(info.getMobilePhone());
+					planForm.setId(plan.getId());
+					planForm.setState(plan.getState());
+					ElearningPayRecord record=elearningPayRecordDao.getRecordByConditions(plan.getStuId(), "1", plan.getId());
+					if(record!=null && record.getAmount()>0){
+						ElearningTeachTask task=plan.getElearningTeachTask();
+						planForm.setTaskId(task.getTaskId());
+						planForm.setTaskName(task.getTaskName());
+						ElearningCourse course=task.getElearningCourse();
+						planForm.setCourseType(course.getCourseType());
+						planForm.setPayNumber(record.getPayNumber());
+						planForm.setPayMode(record.getPayMode());
+						planForm.setCreateTimeStr((new SimpleDateFormat("yyyy-MM-dd HH:mm:ss")).format(record.getCreateTime()));
+						planForm.setAmount(record.getAmount());
+						dataList.add(planForm);
+					}
+				}
+			}
+			data.put("personList", dataList);
+			return CommonTool.getNodeMap(data, null);
+		} else
+			return CommonTool.getNodeMapError("抱歉，请重新登录！");
+	}
+	
+	@RequestMapping(value = "/manage/getPayRecordList", method = RequestMethod.POST)
+	public Map getPayRecordList(HttpServletRequest httpRequest,
+			@RequestBody Object obj) {
+		Map request = (Map) obj;
+		UserTokenServerSide userToken = CommonAuthUseInfoTool.checkUser(
+				httpRequest, obj);
+		Map data = new HashMap();
+		if (userToken != null) {// 登录信息不为空
+			String taskName = (String) request.get("taskName");
+			String courseType = (String) request.get("courseType");
+			String loginName = (String) request.get("loginName");
+			String perName = (String) request.get("perName");
+			List rList=elearningPayRecordDao.getRecordListByConditions(taskName, courseType, loginName, perName, "1");
+			List dataList=new ArrayList();
+			if(rList!=null){
+				for(int i=0;i<rList.size();i++){
+					ElearningPayRecord record=(ElearningPayRecord) rList.get(i);
+					BaseManageActionForm form=new BaseManageActionForm();
+					SysUser user=sysUserDao.getSysUsersByUserid(record.getPersonId());
+					InfoPersonInfo info=infoPersonInfoDao.find(record.getPersonId());
+					form.setPerTypeCode(info.getPerTypeCode());
+					form.setLoginName(user.getLoginName());
+					form.setPerName(info.getPerName());
+					form.setMobilePhone(info.getMobilePhone());
+					ElearningPlanCourse plan=elearningPlanCourseDao.find(record.getPlanId());
+					ElearningTeachTask task=plan.getElearningTeachTask();
+					form.setTaskId(task.getTaskId());
+					form.setTaskName(task.getTaskName());
+					ElearningCourse course=task.getElearningCourse();
+					form.setCourseName(course.getCourseName());
+					form.setCourseType(course.getCourseType());
+					form.setPayNumber(record.getPayNumber());
+					form.setPayMode(record.getPayMode());
+					form.setCreateTimeStr((new SimpleDateFormat("yyyy-MM-dd HH:mm:ss")).format(record.getCreateTime()));
+					form.setAmount(record.getAmount());
+					dataList.add(form);
+				}
+			}
+			data.put("payRecordList", dataList);
+			return CommonTool.getNodeMap(data, null);
+		} else
+			return CommonTool.getNodeMapError("抱歉，请重新登录！");
+	}
+	
+	@RequestMapping(value = "/manage/getNoticeList", method = RequestMethod.GET)
+	public Map getNoticeList(HttpServletRequest httpRequest) {
+		UserTokenServerSide userToken = (UserTokenServerSide) httpRequest.getSession().getAttribute("userToken");
+		Map data = new HashMap();
+		if (userToken != null) {// 登录信息不为空
+			Integer personId=userToken.getPersonId();
+			List noticeList=elearningNoticeDao.getListByConditions(null);
+			List dataList=new ArrayList();
+			for(int i=0;noticeList!=null && i<noticeList.size();i++){
+				ElearningNotice notice=(ElearningNotice) noticeList.get(i);
+				BaseManageActionForm form=new BaseManageActionForm();
+				form.setCreateTimeStr((new SimpleDateFormat("yyyy-MM-dd HH:mm:ss")).format(notice.getCreateTime()));
+				form.setTitle(notice.getTitle());
+				form.setContent(notice.getContent());
+				form.setNoticeId(notice.getNoticeId());
+				dataList.add(form);
+			}
+			data.put("noticeList", dataList);
+			return CommonTool.getNodeMap(data, null);
+		} else
+			return CommonTool.getNodeMapError("抱歉，请重新登录！");
+	}
+	
+	@RequestMapping(value = "/manage/addOrEditNotice", method = RequestMethod.POST)
+	public Map addOrEditNotice(HttpServletRequest httpRequest,
+			@RequestBody Object obj) {
+		Map request = (Map) obj;
+		UserTokenServerSide userToken = CommonAuthUseInfoTool.checkUser(
+				httpRequest, obj);
+		Map data = new HashMap();
+		if (userToken != null) {// 登录信息不为空
+			Integer noticeId = (Integer) request.get("noticeId");
+			String title = (String) request.get("title");
+			String content = (String) request.get("content");
+			if(noticeId!=null){
+				ElearningNotice notice=elearningNoticeDao.find(noticeId);
+				notice.setTitle(title);
+				notice.setContent(content);
+				notice.setPersonId(userToken.getPersonId());
+				notice.setCreateTime(new Date());
+				elearningNoticeDao.update(notice);
+			}else{
+				ElearningNotice notice=new ElearningNotice();
+				notice.setTitle(title);
+				notice.setContent(content);
+				notice.setPersonId(userToken.getPersonId());
+				notice.setCreateTime(new Date());
+				elearningNoticeDao.save(notice);
+			}
+			return CommonTool.getNodeMapOk("恭喜您，操作成功！");
+		} else
+			return CommonTool.getNodeMapError("抱歉，请重新登录！");
+	}
+	
+	@RequestMapping(value = "/manage/deleteNotice", method = RequestMethod.POST)
+	public Map deleteNotice(HttpServletRequest httpRequest,
+			@RequestBody Object obj) {
+		Map request = (Map) obj;
+		UserTokenServerSide userToken = CommonAuthUseInfoTool.checkUser(
+				httpRequest, obj);
+		Map data = new HashMap();
+		if (userToken != null) {// 登录信息不为空
+			Integer noticeId = (Integer) request.get("noticeId");
+			elearningNoticeDao.deleteById(noticeId);
 			return CommonTool.getNodeMapOk("恭喜您，操作成功！");
 		} else
 			return CommonTool.getNodeMapError("抱歉，请重新登录！");

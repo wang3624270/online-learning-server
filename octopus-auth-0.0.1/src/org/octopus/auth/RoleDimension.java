@@ -44,13 +44,13 @@ public class RoleDimension implements DimensionHandlerI {
 
 		SFIdentity sf = new SFIdentity(null);
 		sf.currentElement = SFModelUtils.getRootElement(au);
-		sf.parse();
-		ss.setSfIdentity(sf);
-		List<String> d = sf.getDimPositions(permissionDim.getDimensionName());
-		int i;
-		for (i = 0; i < d.size(); i++) {
-			permissionDim.addDimensionItem(d.get(i));
-		}
+		//sf.parse();
+//		ss.setSfIdentity(sf);
+//		List<String> d = sf.getDimPositions(permissionDim.getDimensionName());
+//		int i;
+//		for (i = 0; i < d.size(); i++) {
+//			permissionDim.addDimensionItem(d.get(i));
+//		}
 		return permissionDim;
 	}
 

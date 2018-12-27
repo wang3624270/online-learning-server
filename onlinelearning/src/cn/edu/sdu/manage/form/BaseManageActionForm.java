@@ -103,8 +103,71 @@ public class BaseManageActionForm extends UForm{
 	private String genderCode;
 	private String pwd;
 	private String perIdCard;
+	private Integer payId;
+	private String payMode;
+	private String payNumber;
+	private Integer chargeId;
+	private Integer planId;
+	private Double amount;
+	private String perTypeCode;
+	private Integer noticeId;
+	private String title;
 	
 	
+	public Integer getNoticeId() {
+		return noticeId;
+	}
+	public void setNoticeId(Integer noticeId) {
+		this.noticeId = noticeId;
+	}
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	public String getPerTypeCode() {
+		return perTypeCode;
+	}
+	public void setPerTypeCode(String perTypeCode) {
+		this.perTypeCode = perTypeCode;
+	}
+	public Integer getPayId() {
+		return payId;
+	}
+	public void setPayId(Integer payId) {
+		this.payId = payId;
+	}
+	public String getPayMode() {
+		return payMode;
+	}
+	public void setPayMode(String payMode) {
+		this.payMode = payMode;
+	}
+	public String getPayNumber() {
+		return payNumber;
+	}
+	public void setPayNumber(String payNumber) {
+		this.payNumber = payNumber;
+	}
+	public Integer getChargeId() {
+		return chargeId;
+	}
+	public void setChargeId(Integer chargeId) {
+		this.chargeId = chargeId;
+	}
+	public Integer getPlanId() {
+		return planId;
+	}
+	public void setPlanId(Integer planId) {
+		this.planId = planId;
+	}
+	public Double getAmount() {
+		return amount;
+	}
+	public void setAmount(Double amount) {
+		this.amount = amount;
+	}
 	public String getPerIdCard() {
 		return perIdCard;
 	}

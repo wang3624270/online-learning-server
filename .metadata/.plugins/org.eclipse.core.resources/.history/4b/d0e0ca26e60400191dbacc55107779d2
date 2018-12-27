@@ -1,0 +1,9 @@
+package cn.edu.sdu.course.dao.impl;
+
+import org.octopus.spring_utils.jpa.GenericServiceI;
+
+import cn.edu.sdu.course.model.ElearningTerm;
+
+public interface ElearningTaskChargeDaoImpl extends GenericServiceI<ElearningTerm> {
+
+}

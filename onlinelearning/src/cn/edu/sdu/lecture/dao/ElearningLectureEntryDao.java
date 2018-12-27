@@ -11,6 +11,5 @@ import cn.edu.sdu.lecture.model.ElearningLectureEntry;
 public interface ElearningLectureEntryDao extends GenericServiceI<ElearningLectureEntry>{
 	
 	public List getEntryListByConditions(Integer lectureId,Integer personId);
-	
 	public List getEntriedListByConditions(String theme, String lectureType,String state,Integer personId);
 }

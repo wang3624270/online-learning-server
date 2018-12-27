@@ -63,6 +63,12 @@
 		<context:include-filter type="regex"
 			expression=".*web\.[^.]*" />
 	</context:component-scan>
+	
+	<context:component-scan base-package="cn.edu.sdu.statistics"
+		use-default-filters="false">
+		<context:include-filter type="regex"
+			expression=".*web\.[^.]*" />
+	</context:component-scan>
 
 
 

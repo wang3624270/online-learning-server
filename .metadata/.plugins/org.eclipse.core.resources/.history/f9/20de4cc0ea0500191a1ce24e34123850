@@ -1,0 +1,8 @@
+package cn.edu.sdu.statistics.dao;
+
+import org.octopus.spring_utils.jpa.GenericServiceI;
+import cn.edu.sdu.manage.model.ElearningTaskScore;
+
+public interface ElearningTaskScoreDao extends GenericServiceI<ElearningTaskScore> {
+
+}
