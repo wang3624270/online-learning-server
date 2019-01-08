@@ -1,5 +1,0 @@
-package cn.edu.sdu.statistics.bean.web;
-
-public class BaseStatisticsActionInterface {
-
-}

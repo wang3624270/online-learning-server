@@ -63,7 +63,6 @@ public class AccessoriesInfoDaoImpl extends GenericServiceImpl<AccessoriesInfo>
 		if(uploader!=null && !uploader.equals("")){
 			hql+="and a.accUploader=i.personId and i.perName='"+uploader+"'";
 		}
-		hql+="order by a.uploadTime desc";
 		List list = this.queryForList(hql);
 		if(list == null || list.size()== 0)
 			return null;

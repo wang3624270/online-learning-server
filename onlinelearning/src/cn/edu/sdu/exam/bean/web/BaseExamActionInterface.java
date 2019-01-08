@@ -1087,8 +1087,10 @@ public class BaseExamActionInterface {
 							}
 							form.setScore(score);
 							ElearningExamScoreInfo scoreInfo=elearningExamScoreInfoDao.getElearningExamScoreInfoByConditions(userToken.getPersonId(), exam.getExamId());
-							form.setAchieve(scoreInfo.getScore());
-							form.setState(exam.getState());
+							if(scoreInfo!=null){
+								form.setAchieve(scoreInfo.getScore());
+								form.setState(exam.getState());
+							}
 							list.add(form);
 						}
 					}
