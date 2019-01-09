@@ -936,6 +936,7 @@ public class BaseExamActionInterface {
 					qForm.setExamId(examId);
 					qForm.setNumber(re.getNumber());
 					qForm.setScore(re.getScore());
+					//qForm.setId(re.getId());
 					qForm.setQuestionId(re.getQuestionId());
 					qForm.setQuestion(question.getQuestion());
 					qForm.setQuestionType(question.getQuestionType());
@@ -945,6 +946,8 @@ public class BaseExamActionInterface {
 						answer=examAnswer.getAnswer();
 					}
 					qForm.setAnswer(answer);
+					//qForm.setAnswer(question.getAnswer());
+					//qForm.setAnalysis(question.getAnalysis());
 					List optionList=elearningExamOptionDao.getOptionListByQuestionId(question.getQuestionId());
 					if(optionList!=null){
 						qForm.setOptionList(optionList);
