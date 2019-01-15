@@ -650,7 +650,7 @@ public class BaseCourseActionInterface {
 			String courseId = (String) m.get("courseId");
 			String startTime = (String) m.get("startTime");
 			String endTime = (String) m.get("endTime");
-			String price = (String) m.get("price");
+			Integer price = (Integer) m.get("price");
 			String remark = (String) m.get("remark");
 			if(taskId!=null && !taskId.equals("")){
 				ElearningTeachTask teachTask = elearningTeachTaskDao.getTeachTaskByTaskId(Integer.valueOf(taskId));

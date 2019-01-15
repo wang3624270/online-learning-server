@@ -3,26 +3,26 @@
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="273" key="DIALOG_WIDTH"/>
 		<item value="492" key="DIALOG_Y_ORIGIN"/>
-		<item value="398" key="DIALOG_HEIGHT"/>
 		<item value="885" key="DIALOG_X_ORIGIN"/>
+		<item value="398" key="DIALOG_HEIGHT"/>
 		<item value="1|微软雅黑|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|微软雅黑" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="true" key="wrap"/>
-		<item value="false" key="isRegEx"/>
 		<item value="false" key="casesensitive"/>
+		<item value="false" key="isRegEx"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="getPersonInfo" key="selection"/>
+		<item value="getOnlineExamQustionList" key="selection"/>
 		<list key="findhistory">
+			<item value="getOnlineExamQustionList"/>
+			<item value="submitExamAnswers"/>
+			<item value="adjust"/>
+			<item value="getPracticeQustionList"/>
+			<item value="getCourseSectionList"/>
+			<item value="cancelMatchSectionAndResource"/>
+			<item value="getResourceList"/>
 			<item value="getPersonInfo"/>
-			<item value="ss"/>
-			<item value="sss"/>
-			<item value="SS"/>
-			<item value="HH"/>
-			<item value="/getCourseInfo"/>
-			<item value="addOrEditCourseInfo"/>
-			<item value="getCourseInfo"/>
 		</list>
 		<list key="replacehistory">
 		</list>
